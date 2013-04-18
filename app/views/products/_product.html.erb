@@ -1,8 +1,5 @@
 <div class = "box">
 		<%= link_to image_tag(product.image(:medium)), product %>
-		<p>
-		<%= link_to (product.description), product %>
-		</p>
 	<% if current_user == product.user %>
 		<p>
 		<%= link_to 'Edit', edit_product_path(product) %>
