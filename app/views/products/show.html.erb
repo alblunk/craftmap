@@ -1,11 +1,17 @@
 <div class="row">
 	<div class="span6 offset3">
 		<div class="well">
-		<p>
-		  <%= @product.description %>
-		</p>
-		<%= link_to 'Edit', edit_product_path(@product) %> |
-		<%= link_to 'Back', products_path %>
+			<p>
+			  <%= @product.description %>
+			</p>
+			<p>
+				<%= @product.user.name %>
+			<p>
+				<% if current_user == @product.user %>
+					<%= link_to 'Edit', edit_product_path(@product) %> |
+					<%= link_to 'Back', products_path %>
+				<% end %>
+			</p>
 		</div>
 	</div>
 </div>
