@@ -1,21 +1,5 @@
-<h1>Listing products</h1>
+<%= render 'pages/home' %>
 
-<table class= "table table-striped">
-    <thead>
-      <tr>
-        <th>Image</th>
-        <th>Description</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-
-  <tbody>
-      <%= render @products %>
-  </tbody>
-</table>
-
-<br />
-
-<%= link_to 'New Product', new_product_path %>
+<div id="products">
+  <%= render @products %>
+</div>
