@@ -17,33 +17,38 @@ body {
 }
 
 .footer {
-	margin-top: 50px;
+    background-color: ghostwhite;
+    padding: 10px;
+	margin-bottom: 40px;
+    width: 103%;
+    margin-left:-10px;
 	color: $grayLight;
 	a {
 		color: $gray;
 	}
+
 }
 
 /* Required for jQuery Masonry */
 
 .box {
-    margin: 5px;
-    padding: 5px;
+    /*margin: 5px;*/
+    /*padding: 1px;*/
     font-size: 13px;
     line-height: 1.4em;
     float: left;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    /*-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;*/
+    /*border-radius: 5px;*/
     /*box-shadow: 1px 1px 10px #444;*/
     width: 214px;
 }
 
 .box img {
     width: 100%;
-    -webkit-border-radius: 5px;
+    /*-webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px;
+    border-radius: 5px;*/
 }
 
 .description {
