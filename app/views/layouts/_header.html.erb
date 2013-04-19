@@ -10,7 +10,7 @@
                 <div class="nav-collapse">
                     <ul class="nav">
                         <!-- NEED TO PUT IN ADMIN PRIV -->
-                        <% if current_user = 1 %>
+                        <% if current_user.try(:admin?) %>
                             <li><%= link_to "Add +", new_product_path %></li>
                         <% else %>
                             <li>
