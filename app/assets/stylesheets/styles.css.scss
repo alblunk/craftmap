@@ -9,19 +9,27 @@ $navbarBackground: white;
 
 body {
 	padding-top: 60px;
+
+}
+
+
+.beeline_name{
+    color:white;
 }
 
 .navbar-inner {
 	@include box-shadow(none !important);
+    background-color: black;
 	border: 0;
 }
 
 .footer {
-    background-color: ghostwhite;
+    background-color: black;
     padding: 10px;
 	margin-bottom: 40px;
     width: 103%;
     margin-left:-10px;
+    margin-top: 50px;
 	color: $grayLight;
 	a {
 		color: $gray;
