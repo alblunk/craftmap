@@ -8,14 +8,16 @@ $navbarBackground: white;
 @import 'bootstrap-responsive';
 
 body {
-	padding-top: 60px;
+	padding-top: 30px;
 
 }
 
 
 .beeline_name{
-    color:white;
+    float: left;
 }
+
+
 
 .navbar-inner {
 	@include box-shadow(none !important);
