@@ -7,17 +7,11 @@
                 <span class="icon-bar"></span>
             </a>
              <a class="beeline_name" href="/"><img src="https://s3.amazonaws.com/beelineco/BeelineLogo_v1.png" width=125px /></a>
-                <div class="nav-collapse" id="nav_button">
+                <div class="nav-collapse">
                     <ul class="nav">
                         <% if current_user.try(:admin?) %>
                             <li><%= link_to "Add +", new_product_path %></li>
-                        <% else %>
-                            <li>
-                                <%= link_to 'Home',  root_path %>
-                            </li>
-                            <li>    
-                                <%= link_to 'About',  about_path %>
-                            </li>
+                            
                         <% end %>
 
                     </ul>
