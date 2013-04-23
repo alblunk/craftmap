@@ -1,11 +1,24 @@
+<head> 
+	<script type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script> 
+	<script type="text/javascript" src="https://www.trycelery.com/js/progress-widget.js"></script>
+</head>
+
 <div class="row">
 	<div class="span6 offset3">
 		<div class="well">
 			<%= image_tag @product.image %>
-			<p>
+			<p id="product_title">
 			  <%= @product.description %>
 			</p>
-			
+			<hr>
+			<p>
+				<button data-celery=<%=@product.ecomm_url.html_safe%>>Come get it.</button>
+				<p>
+					<!-- success=green, warning=yellow, important=red, info=blue -->
+				Campaign Status: <span class="label label-warning"><i>Funding<i/></span>
+				<div class="celery-progress-bar" data-celery-slug="backpack" data-celery-words=" of funding accomplished" data-celery-color="#1a1a1a" data-celery-goal-text="Funded!"></div>
+				</p>
+			</p>
 				<% if current_user == @product.user %>
 					<p>
 						Uploading user: <%= @product.user.name %>
@@ -18,6 +31,10 @@
 					<p>
 						Image file name: <%= @product.image_file_name %>
 					</p>
+					<p>
+						Celery Button Code: <%= @product.ecomm_url %>
+					</p>
+					
 					<%= link_to 'Edit', edit_product_path(@product) %> |
 					<%= link_to 'Back', products_path %>
 				<% end %>

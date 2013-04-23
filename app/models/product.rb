@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  attr_accessible :description, :image, :image_remote_url
+  attr_accessible :description, :image, :image_remote_url, :ecomm_url
 
 
 

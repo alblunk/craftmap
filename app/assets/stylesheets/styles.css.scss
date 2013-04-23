@@ -8,16 +8,46 @@ $navbarBackground: white;
 @import 'bootstrap-responsive';
 
 body {
-	padding-top: 30px;
-
+	padding-top: 60px;
 }
 
-
-.beeline_name{
-    float: left;
+div.celery-progress {
+  margin-top:10px;
+  width:250px;
 }
 
+.beeline_name {
+  float:left;
+}
 
+div.celery-progress-tooltip {
+  color: darkgray;
+  font-style: italic;
+}
+
+.carousel-indicators li {
+  display: block;
+  float: left;
+  width: 5px;
+  height: 5px;
+  margin-left: 5px;
+  text-indent: -999px;
+  background-color: #ccc;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+}
+
+.celery_btn.button {
+color:blue;
+}
+
+#product_title {
+  margin-top:10px;
+  color:#505050;
+  font-style:italic;
+  font-size:25px;
+  font-family:Verdana;
+}
 
 .navbar-inner {
 	@include box-shadow(none !important);
@@ -59,8 +89,4 @@ body {
     /*-webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;*/
-}
-
-.description {
-    margin: 10px 0 5px;
 }
