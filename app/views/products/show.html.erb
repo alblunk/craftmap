@@ -1,45 +1,56 @@
+<br>
+<br>
+<br>
 <head> 
 	<script type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script> 
 	<script type="text/javascript" src="https://www.trycelery.com/js/progress-widget.js"></script>
 </head>
 
+
 <div class="row">
-	<div class="span6 offset3">
-		<div class="well">
-			<%= image_tag @product.image %>
+	<div class="span9">
 			<p id="product_title">
 			  <%= @product.description %>
 			</p>
-			<hr>
-			<p>
-				<button data-celery=<%=@product.ecomm_url.html_safe%>>Come get it.</button>
+			<a id="beeline_logo" href="/"><img src="https://s3.amazonaws.com/beelineco/BeelineLogo_v1.png" width=150px/></a>
+		<div class="row">
+		<div class="span4">
+			<div class="well">
+				<%= image_tag @product.image %>
+			</div>
+		</div>	
+		<div class="span5">
 				<p>
-					<!-- success=green, warning=yellow, important=red, info=blue -->
-				Campaign Status: <span class="label label-warning"><i>Funding<i/></span>
-				<div class="celery-progress-bar" data-celery-slug="backpack" data-celery-words=" of funding accomplished" data-celery-color="#1a1a1a" data-celery-goal-text="Funded!"></div>
+					<button data-celery=<%=@product.ecomm_url.html_safe%>>Come get it.</button>
+					<p>
+						<!-- success=green, warning=yellow, important=red, info=blue -->
+					Campaign Status: <span class="label label-warning"><i>Funding<i/></span>
+					<div class="celery-progress-bar" data-celery-slug="backpack" data-celery-words=" of funding accomplished" data-celery-color="#1a1a1a" data-celery-goal-text="Funded!"></div>
+					</p>
+					<hr>
 				</p>
-			</p>
-				<% if current_user == @product.user %>
-					<p>
-						Uploading user: <%= @product.user.name %>
-					</p>
-					<p>
-						Created at: <%= @product.created_at %>
-					</p>
-						Updated at: <%= @product.updated_at %>
-					</p>
-					<p>
-						Image file name: <%= @product.image_file_name %>
-					</p>
-					<p>
-						Celery Button Code: <%= @product.ecomm_url %>
-					</p>
-					
-					<%= link_to 'Edit', edit_product_path(@product) %> |
-					<%= link_to 'Back', products_path %>
-				<% end %>
-			</p>
-		</div>
+					<% if current_user == @product.user %>
+						<p>
+							Uploading user: <%= @product.user.name %>
+						</p>
+						<p>
+							Created at: <%= @product.created_at %>
+						</p>
+							Updated at: <%= @product.updated_at %>
+						</p>
+						<p>
+							Image file name: <%= @product.image_file_name %>
+						</p>
+						<p>
+							Celery Button Code: <%= @product.ecomm_url %>
+						</p>
+						
+						<%= link_to 'Edit', edit_product_path(@product) %> |
+						<%= link_to 'Back', products_path %>
+					<% end %>
+				</p>
+			</div>
+			</div>
 	</div>
 </div>
 

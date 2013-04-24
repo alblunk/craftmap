@@ -1,40 +1,77 @@
-
-$btnPrimaryBackground: green;
-$navbarBackgroundHighlight: white;
-$navbarBackground: white;
-
-
 @import 'bootstrap';
 @import 'bootstrap-responsive';
 
-body {
-	padding-top: 60px;
+
+/*TRANSPARENCIES*/
+.navbar-inner{
+    opacity:.8 !important;
+    }
+.navbar-inner container{
+    opacity:.8 !important;
+    }
+.navbar{
+    opacity:.8 !important;
+    }
+#nav-main{
+    opacity:.8 !important;
+    }
+#banner{
+    opacity:.8 !important;
+    }​
+
+/*#beeline_logo {
+  float:left;
+  position:absolute;
+  left:0px;
+  top:0px;
+  height:50px;
+}*/
+
+/*
+#MyCarousel {
+  top:0px;
+  left:0px;
+  width:100%;
+}*/
+
+.motto {
+  text-align:right;
+  font-size:1.35em;
+  line-height: 150%;
+  font-family: istok-web, serif;
+  margin-top:10px;
+}
+
+#btnStart {
+  background-color:#C0362C;
+  border-radius:2px;
+  font-size:.75em;
+  width:175px;
+  height:30px;
+  line-height: 265%;
+  border: 1px solid $grayLight;
+  float:right;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  margin-left:-100px;
 }
 
 div.celery-progress {
   margin-top:10px;
-  width:250px;
+  width:400px;
 }
 
-.beeline_name {
-  float:left;
-}
+
 
 div.celery-progress-tooltip {
-  color: darkgray;
+  color: black;
   font-style: italic;
+  width: 100%;
 }
 
-.carousel-indicators li {
-  display: block;
-  float: left;
-  width: 5px;
-  height: 5px;
-  margin-left: 5px;
-  text-indent: -999px;
-  background-color: #ccc;
-  background-color: rgba(255, 255, 255, 0.25);
-  border-radius: 5px;
+div.span5 {
+  font-size:1em;
 }
 
 .celery_btn.button {
@@ -49,14 +86,12 @@ color:blue;
   font-family:Verdana;
 }
 
-.navbar-inner {
-	@include box-shadow(none !important);
-    background-color: black;
-	border: 0;
+.foot_social {
+  text-align: right;
 }
 
 .footer {
-    background-color: black;
+  width:100%;
     padding: 10px;
 	margin-bottom: 40px;
     width: 103%;
@@ -65,6 +100,7 @@ color:blue;
 	color: $grayLight;
 	a {
 		color: $gray;
+    text-decoration: none;
 	}
 
 }
@@ -90,3 +126,4 @@ color:blue;
     -moz-border-radius: 5px;
     border-radius: 5px;*/
 }
+

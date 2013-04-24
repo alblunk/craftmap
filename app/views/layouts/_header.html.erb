@@ -1,4 +1,4 @@
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -6,7 +6,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-             <a class="beeline_name" href="/"><img src="https://s3.amazonaws.com/beelineco/BeelineLogo_v1.png" width=125px /></a>
+             
                 <div class="nav-collapse">
                     <ul class="nav">
                         <% if current_user.try(:admin?) %>
@@ -28,3 +28,39 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+<!-- <div class="bl_header">
+        <table>
+            <tr>
+                <td>
+                 <a id="beeline_logo" href="/"><img src="https://s3.amazonaws.com/beelineco/BeelineLogo_v1.png"/></a>
+                </td>
+                <td ="add" class="navigation-header">
+                    <% if current_user.try(:admin?) %>
+                            <%= link_to "ADD +", new_product_path %>
+                    <% end %>
+                </td>
+                <% if user_signed_in? %>
+                    <td id="edit" class="navigation-header">
+                        <%= link_to "EDIT PROFILE", edit_user_registration_path %>
+                    </td>
+                    <td id="logout" class="navigation-header">
+                        <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete %>
+                    </td>
+                <% else %>
+                    <td id="signup" class="navigation-header">
+                        <%= link_to 'SIGN UP',  new_user_registration_path %>
+                    </td>
+                    <td id="login" class="navigation-header">
+                        <%= link_to 'LOG IN',  new_user_session_path %>
+                    </td>
+                <% end %>
+                </td>
+            </tr>
+        </table>         
+   <div class="bl_header-bgd"> </div>
+</div> -->

@@ -1,7 +1,29 @@
 <%= render 'pages/home' %>
 
-<div id="products">
-  <%= render @products %>
+<div class="row">
+		<div class="span3">
+			<table>
+				<tr>
+					<p class="motto">THE NEWEST PRODUCTS.</p>
+					<p class="motto">FROM THE BEST BRANDS.</p>
+					<p class="motto">BACKED BY YOU, THE FANS.</p>
+				</tr>
+				<tr>
+					<hr>
+				</tr>
+				<tr>
+					<div id="btnStart">START EXPLORING HERE ›
+					</div>
+				</tr>
+				<tr>
+				</tr>
+			</table>
+		</div>
+		<div class="span6 well">
+			<div id="products">
+		  		<%= render @products %>
+			</div>
+		</div>
 </div>
 
 <%= will_paginate @products %>
