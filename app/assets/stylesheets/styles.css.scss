@@ -34,35 +34,62 @@
   width:100%;
 }*/
 
+#hero_mask {
+overflow: hidden;
+width: 100%;
+position: relative;
+margin-bottom: 18px;
+}
+
+#hero_image {
+width: 100%;
+height: 100%;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+
+.row-fluid {
+margin-top: -20px;
+}
+
+.pagination {
+  margin:0px;
+  padding-left:9px;
+}
+
+.carousel-inner > .active {
+left: 0;
+background-color:#323232;
+}
+
 .motto {
   text-align:right;
-  font-size:1.35em;
-  line-height: 150%;
-  font-family: istok-web, serif;
+  font-size:1.25em;
+  line-height: 75%;
+  font-family: maven-pro, serif;
   margin-top:10px;
 }
 
 #btnStart {
   background-color:#C0362C;
-  border-radius:2px;
-  font-size:.75em;
-  width:175px;
-  height:30px;
+  font-family: maven-pro, serif;
+  border-radius:3px;
+  font-size:1em;
+  width:200px;
+  height:40px;
   line-height: 265%;
-  border: 1px solid $grayLight;
-  float:right;
   color: white;
   text-align: center;
+  margin-top:10px;
+  margin-left:80px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-  margin-left:-100px;
 }
 
 div.celery-progress {
   margin-top:10px;
   width:400px;
 }
-
-
 
 div.celery-progress-tooltip {
   color: black;
@@ -86,29 +113,28 @@ color:blue;
   font-family:Verdana;
 }
 
-.foot_social {
-  text-align: right;
+.footer {
+  position:absolute;
+  clear:both;
+  width: 98.35%;
+  background-color: #323232;
+  padding:10px;
+  opacity:.8;
 }
 
-.footer {
-  width:100%;
-    padding: 10px;
-	margin-bottom: 40px;
-    width: 103%;
-    margin-left:-10px;
-    margin-top: 50px;
-	color: $grayLight;
-	a {
-		color: $gray;
+.footer ul a{
+    font-family: maven-pro, serif;
     text-decoration: none;
-	}
+    color:white;
+  }
 
+.social{
+  float:right;
 }
 
 /* Required for jQuery Masonry */
 
 .box {
-    /*margin: 5px;*/
     /*padding: 1px;*/
     font-size: 13px;
     line-height: 1.4em;
@@ -122,8 +148,8 @@ color:blue;
 
 .box img {
     width: 100%;
-    /*-webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;*/
+   /* -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;*/
 }
 
