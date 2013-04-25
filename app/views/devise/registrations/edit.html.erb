@@ -2,6 +2,7 @@
 <br>
 <br>
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h4><%= link_to "Back", :back %></h4>
 <hr>
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, class: 'form-horizontal' }) do |f| %>
   <%= f.error_notification %>
@@ -21,4 +22,4 @@
 <h4>If you want to go, we will miss you...</h4>
 <p>But we won't stop you, <%= @user.name %> .<%= button_to "Vaporize Account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
 
-<%= link_to "Back", :back %>
+
