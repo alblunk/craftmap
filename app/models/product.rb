@@ -1,8 +1,10 @@
 class Product < ActiveRecord::Base
-  attr_accessible :description, :image, :image_remote_url, :ecomm_url
+  attr_accessible :description, :image, :image_remote_url, :ecomm_url, :brandname, :productname
 
 
 
+  validates :brandname, presence: true
+  validates :productname, presence: true
   validates :description, presence: true
   validates :user_id, presence: true
   validates_attachment :image, presence: true,

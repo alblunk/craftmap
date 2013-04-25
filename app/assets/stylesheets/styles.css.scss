@@ -97,6 +97,19 @@ div.celery-progress-tooltip {
   width: 100%;
 }
 
+.span5 button{
+  background-color:#3F6826;
+  font-family: maven-pro, sans-serif;
+  border-radius:3px;
+  font-size:1.5em;
+  width:150px;
+  height:40px;
+  line-height: 100%;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
 div.span5 {
   font-size:1em;
 }
@@ -116,9 +129,9 @@ color:blue;
 .footer {
   position:absolute;
   clear:both;
-  width: 98.35%;
+  width: 99%;
   background-color: #323232;
-  padding:10px;
+  padding:5px;
   opacity:.8;
 }
 

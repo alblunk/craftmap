@@ -8,8 +8,11 @@
 
 <div class="row">
 	<div class="span9">
+		<h1>
+			<%=@product.brandname %>
+		</h1>
 		<p id="product_title">
-		  <%= @product.description %>
+		  <%= @product.productname %>
 		</p>
 		<div class="row">
 		<div class="span4">
@@ -19,13 +22,14 @@
 		</div>	
 		<div class="span5">
 				<p>
-					<button data-celery=<%=@product.ecomm_url.html_safe%>>Come get it.</button>
+					<button data-celery=<%=@product.ecomm_url.html_safe%>>BACK IT</button>
 					<p>
 						<!-- success=green, warning=yellow, important=red, info=blue -->
 					Campaign Status: <span class="label label-warning"><i>Funding<i/></span>
 					<div class="celery-progress-bar" data-celery-slug=<%=@product.ecomm_url.html_safe%> data-celery-words=" of funding accomplished" data-celery-color="#1a1a1a" data-celery-goal-text="Funded!"></div>
 					</p>
 					<hr>
+					<%= @product.description %>
 				</p>
 					<% if current_user == @product.user %>
 						<p>
