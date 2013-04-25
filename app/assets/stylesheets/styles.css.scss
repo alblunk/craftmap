@@ -5,20 +5,28 @@
 /*TRANSPARENCIES*/
 .navbar-inner{
     opacity:.8 !important;
+    font-family: maven-pro, serif;
     }
 .navbar-inner container{
     opacity:.8 !important;
+    font-family: maven-pro, serif;
     }
 .navbar{
     opacity:.8 !important;
+    font-family: maven-pro, serif;
     }
 #nav-main{
     opacity:.8 !important;
+    font-family: maven-pro, serif;
     }
 #banner{
     opacity:.8 !important;
+    font-family: maven-pro, serif;
     }​
 
+#social{
+padding-top:50px;
+}
 /*#beeline_logo {
   float:left;
   position:absolute;
@@ -26,6 +34,7 @@
   top:0px;
   height:50px;
 }*/
+
 
 /*
 #MyCarousel {
@@ -54,8 +63,7 @@ margin-top: -20px;
 }
 
 .pagination {
-  margin:0px;
-  padding-left:9px;
+  margin:0px 20px 0px 0px;
 }
 
 .carousel-inner > .active {
@@ -67,8 +75,9 @@ background-color:#323232;
   text-align:right;
   font-size:1.25em;
   line-height: 75%;
-  font-family: maven-pro, serif;
+  font-family: questrial, serif;
   margin-top:10px;
+  color: #505050;
 }
 
 #btnStart {
@@ -119,11 +128,16 @@ color:blue;
 }
 
 #product_title {
-  margin-top:10px;
+font-family:lato, serif;
+margin-left:10px;
+}
+
+#brand_name {
+  margin-top:-10px;
   color:#505050;
   font-style:italic;
-  font-size:25px;
-  font-family:Verdana;
+  font-family:questrial, serif;
+  margin-left:20px;
 }
 
 .footer {
@@ -141,9 +155,6 @@ color:blue;
     color:white;
   }
 
-.social{
-  float:right;
-}
 
 /* Required for jQuery Masonry */
 

@@ -8,12 +8,13 @@
 
 <div class="row">
 	<div class="span9">
-		<h1>
-			<%= @product.brandname %>
+		<h1 id="product_title">
+			<%= @product.productname %>
 		</h1>
-		<p id="product_title">
-		  <%= @product.productname %>
-		</p>
+		<h4 id="brand_name">
+		  <%= @product.brandname %>
+		</h4>
+
 		<div class="row">
 		<div class="span4">
 			<div class="well" id="pro_images">
@@ -21,6 +22,7 @@
 			</div>
 		</div>	
 		<div class="span5">
+			
 				<p>
 					<button data-celery=<%=@product.ecomm_url.html_safe%>>BACK IT</button>
 					<p>
@@ -32,6 +34,10 @@
 					<%= @product.description %>
 				</p>
 					<% if current_user == @product.user %>
+					<h4>
+						<%= link_to 'Edit', edit_product_path(@product) %> //
+						<%= link_to 'Back', products_path %>
+					</h4>
 						<p>
 							Uploading user: <%= @product.user.name %>
 						</p>
@@ -46,9 +52,7 @@
 						<p>
 							Celery Button Code: <%= @product.ecomm_url %>
 						</p>
-						
-						<%= link_to 'Edit', edit_product_path(@product) %> |
-						<%= link_to 'Back', products_path %>
+
 					<% end %>
 				</p>
 			</div>
