@@ -6,58 +6,76 @@
 </head>
 
 
-<div class="row">
-	<div class="span9">
-		<h1 id="product_title">
+<div class="row-fluid" class="show-products">
+	<div class="span12">
+		<h2 id="product_title">
 			<%= @product.productname %>
-		</h1>
+		</h2>
 		<h4 id="brand_name">
 		  <%= @product.brandname %>
 		</h4>
-
-		<div class="row">
-		<div class="span4">
-			<div class="well" id="pro_images">
-				<%= image_tag @product.image %>
-			</div>
-		</div>	
-		<div class="span5">
-			
-				<p>
-					<button data-celery=<%=@product.ecomm_url.html_safe%>>BACK IT</button>
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span4">
+					<div class="well">
+						<%= image_tag @product.image %>
+					</div>
+				</div>	
+				<div class="span8">
+						<button data-celery=<%=@product.ecomm_url.html_safe%>>BACK IT</button>
 					<p>
-						<!-- success=green, warning=yellow, important=red, info=blue -->
-					Campaign Status: <span class="label label-warning"><i>Funding<i/></span>
-					<div class="celery-progress-bar" data-celery-slug=<%=@product.ecomm_url.html_safe%> data-celery-words=" of funding accomplished" data-celery-color="#1a1a1a" data-celery-goal-text="Funded!"></div>
+							<!-- success=green, warning=yellow, important=red, info=blue -->
+						Campaign Status: <span class="label label-warning"><i>Funding<i/></span>
+						<div class="celery-progress-bar" data-celery-slug=<%=@product.ecomm_url.html_safe%> data-celery-words=" of funding accomplished" data-celery-color="#1a1a1a" data-celery-goal-text="Funded!"></div>
 					</p>
 					<hr>
-					<%= @product.description %>
-				</p>
-					<% if current_user == @product.user %>
-					<h4>
-						<%= link_to 'Edit', edit_product_path(@product) %> //
-						<%= link_to 'Back', products_path %>
-					</h4>
-						<p>
-							Uploading user: <%= @product.user.name %>
-						</p>
-						<p>
-							Created at: <%= @product.created_at %>
-						</p>
-							Updated at: <%= @product.updated_at %>
-						</p>
-						<p>
-							Image file name: <%= @product.image_file_name %>
-						</p>
-						<p>
-							Celery Button Code: <%= @product.ecomm_url %>
-						</p>
+					<p>
+						<%= @product.description %>
+					</p>
+						<% if current_user == @product.user %>
+							<h4>
+								<%= link_to 'Edit', edit_product_path(@product) %> //
+								<%= link_to 'Back', products_path %>
+							</h4>
+							<p>
+								Uploading user: <%= @product.user.name %>
+							</p>
+							<p>
+								Created at: <%= @product.created_at %>
+							</p>
+								Updated at: <%= @product.updated_at %>
+							</p>
+							<p>
+								Image file name: <%= @product.image_file_name %>
+							</p>
+							<p>
+								Celery Button Code: <%= @product.ecomm_url %>
+							</p>
 
-					<% end %>
-				</p>
+						<% end %>
+				</div>
 			</div>
-			</div>
+		</div>
 	</div>
 </div>
 
+<div class="container-fluid" class="show-products">
+	<div class="row-fluid">
+		<div class="span7">
+			<h3 style="font-family:questrial, serif;">Meet the Maker:<space> <%= @product.brandname.html_safe %></h3>
+			<hr>
+			<p style="font-family:questrial">
+			Topo began well before it began, in discussions, sharing ideas, and just the desire to have quality products that were in our heads rather than the ones we saw in stores. As everyone that’s made something knows, it takes a lot longer to make something than to decide to make it. So we took our time, made prototype after prototype, tested, re-tested, took vacations just as an excuse to test, and we finally had our first bag. At this point we’d gained some skills and the following bags came more quickly. </p>
 
+			<p>After some initial success in Japan we realized we’d need to step up our production a bit so we started working with a local production shop known for making quality bags. And that brings us to today, designing, sewing, prototyping, and moving forward. We strive to make products that are simple, functional, and beautiful – think canoe vs. motor boat. We’re the canoe.
+			</p>
+		</div>
+		<div class="span5">
+			<blockquote class="pull-right">
+				<p>Growing up in the mountains of the West we’ve been using gear from our earliest memories.</p>
+				<small>Someone famous <cite title="Source Title">Source Title</cite></small>
+			</blockquote>
+			<img src="http://24.media.tumblr.com/18d6cfade4db5d4e7eeaf4afd2aad5c2/tumblr_mlgshkXgkM1qi5dego1_500.jpg">
+		</div>
+	</div>
+</div>
