@@ -17,7 +17,7 @@
 		<div class="container-fluid">
 			<div class="row-fluid">
 				<div class="span4">
-					<div class="well">
+					<div class="well well-small">
 						<%= image_tag @product.image %>
 					</div>
 				</div>	
@@ -61,10 +61,39 @@
 	</div>
 </div>
 
-<div class="container-fluid" class="show-products">
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12" >
+			<div id="brand-profile">
+				<img src="https://s3.amazonaws.com/beelineco/TopoDMock.png"/>
+				<h3><span>Meet the Maker:<space> <%= @product.brandname.html_safe %></span></h3>
+				<div>
+				<p>
+				Topo began well before it began, in discussions, sharing ideas, and just the desire to have quality products that were in our heads rather than the ones we saw in stores. As everyone that’s made something knows, it takes a lot longer to make something than to decide to make it. So we took our time, made prototype after prototype, tested, re-tested, took vacations just as an excuse to test, and we finally had our first bag. At this point we’d gained some skills and the following bags came more quickly.</p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- <div class="container-fluid" class="show-products">
+	<div class="row-fluid">
+		<div class="span12" id="brand-image">
+			<img src="https://s3.amazonaws.com/beelineco/TopoDMock.png"/>
+			<div id="brand-profile">
+			<h4>Meet the Maker:<space> <%= @product.brandname.html_safe %></h4>
+			<hr>
+			Topo began well before it began, in discussions, sharing ideas, and just the desire to have quality products that were in our heads rather than the ones we saw in stores. As everyone that’s made something knows, it takes a lot longer to make something than to decide to make it. So we took our time, made prototype after prototype, tested, re-tested, took vacations just as an excuse to test, and we finally had our first bag. At this point we’d gained some skills and the following bags came more quickly. </div>
+			</span>
+		</div>
+	</div>
+</div> -->
+
+<!-- <div class="container-fluid" class="show-products">
 	<div class="row-fluid">
 		<div class="span7">
-			<h3 style="font-family:questrial, serif;">Meet the Maker:<space> <%= @product.brandname.html_safe %></h3>
+			<h4 style=>Meet the Maker:<space> <%= @product.brandname.html_safe %></h4>
 			<hr>
 			<p style="font-family:questrial">
 			Topo began well before it began, in discussions, sharing ideas, and just the desire to have quality products that were in our heads rather than the ones we saw in stores. As everyone that’s made something knows, it takes a lot longer to make something than to decide to make it. So we took our time, made prototype after prototype, tested, re-tested, took vacations just as an excuse to test, and we finally had our first bag. At this point we’d gained some skills and the following bags came more quickly. </p>
@@ -77,7 +106,9 @@
 				<p>Growing up in the mountains of the West we’ve been using gear from our earliest memories.</p>
 				<small>Someone famous <cite title="Source Title">Source Title</cite></small>
 			</blockquote>
-			<img src="http://24.media.tumblr.com/18d6cfade4db5d4e7eeaf4afd2aad5c2/tumblr_mlgshkXgkM1qi5dego1_500.jpg">
+			<div class="well">
+				<img id="brand-image" src="http://24.media.tumblr.	com/18d6cfade4db5d4e7eeaf4afd2aad5c2/tumblr_mlgshkXgkM1qi5dego1_500.jpg"/>
+			</div>
 		</div>
 	</div>
-</div>
+</div> -->

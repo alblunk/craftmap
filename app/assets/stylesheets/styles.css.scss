@@ -2,10 +2,12 @@
 @import 'bootstrap-responsive';
 
 
-/*TRANSPARENCIES*/
+/*NAVIGATION BAR HEADER*/
 .navbar-inner{
     opacity:.8 !important;
     font-family: maven-pro, serif;
+    font-size:12px;
+    letter-spacing: 1px
     }
 .navbar-inner container{
     opacity:.8 !important;
@@ -24,9 +26,6 @@
     font-family: maven-pro, serif;
     }​
 
-#social{
-padding-top:50px;
-}
 /*#beeline_logo {
   float:left;
   position:absolute;
@@ -35,45 +34,12 @@ padding-top:50px;
   height:50px;
 }*/
 
-
-/*
-#MyCarousel {
-  top:0px;
-  left:0px;
-  width:100%;
-}*/
-
-#hero_mask {
-overflow: hidden;
-width: 100%;
-position: relative;
-margin-bottom: 18px;
-}
-
-#hero_image {
-width: 100%;
-height: 100%;
-background-repeat: no-repeat;
-background-size: cover;
-}
-
-.show-products {
-font-family:questrial, serif;
-}
-
-#home-products.row-fluid {
-margin-top: -18px;
-}
-
-.pagination {
-  margin:0px 30px 0px 0px;
-}
-
+/*HOME PAGE - CAROUSEL*/
 .carousel-inner > .active {
 left: 0;
 background-color:#323232;
 }
-
+/*HOME PAGE - PRODUCT TILES LAYOUT*/
 .motto {
   text-align:center;
   font-size:1.25em;
@@ -98,69 +64,14 @@ background-color:#323232;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-div.celery-progress {
-  margin-top:10px;
-  width:400px;
+#home-products.row-fluid {
+margin-top: -18px;
 }
 
-div.celery-progress-tooltip {
-  color: black;
-  font-style: italic;
-  width: 100%;
+.pagination {
+  margin:0px 30px 0px 0px;
 }
-
-.span8 button{
-  background-color:#3F6826;
-  font-family: maven-pro, sans-serif;
-  border-radius:3px;
-  font-size:1.5em;
-  width:150px;
-  height:40px;
-  line-height: 100%;
-  color: white;
-  text-align: center;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-}
-
-div.span5 {
-  font-size:1em;
-}
-
-.celery_btn.button {
-color:blue;
-}
-
-#product_title {
-font-family:lato, serif;
-margin-left:10px;
-}
-
-#brand_name {
-  margin-top:-10px;
-  color:#505050;
-  font-style:italic;
-  font-family:questrial, serif;
-  margin-left:20px;
-}
-
-.footer {
-  position:absolute;
-  clear:both;
-  width: 99%;
-  background-color: #323232;
-  padding:5px;
-  opacity:.8;
-}
-
-.footer ul a{
-    font-family: maven-pro, serif;
-    text-decoration: none;
-    color:white;
-  }
-
-
 /* Required for jQuery Masonry */
-
 .box {
     padding: 4px;
     float: left;
@@ -177,4 +88,129 @@ margin-left:10px;
     -moz-border-radius: 3px;
     border-radius: 3px;*/
 }
+
+/*SHOW / PRODUCT DETAILS*/
+div.celery-progress {
+  margin-top:10px;
+  width:400px;
+}
+
+div.celery-progress-tooltip {
+  color: black;
+  font-style: italic;
+  width: 100%;
+}
+
+.span8 button{
+  background-color:#3F6826;
+  font-family: maven-pro, sans-serif;
+  border-radius:3px;
+  font-size:1.25em;
+  letter-spacing: 3px;
+  width:150px;
+  height:40px;
+  line-height: 100%;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+div.span5 {
+  font-size:1em;
+}
+
+#product_title {
+font-family:lato, serif;
+margin-left:10px;
+}
+
+#brand_name {
+  margin-top:-10px;
+  color:#505050;
+  font-family:questrial, serif;
+  margin-left:20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/*SHOW / BRAND PROFILE*/
+/*BRAND STORY PIC*/
+#brand-profile{
+  position: relative;
+  width:100%;
+  margin-bottom: 20px;
+}
+/*BRAND STORY TITLE*/
+#brand-profile h3 { 
+   position: absolute; 
+   font-family: questrial, serif;
+   top: 100px; 
+   letter-spacing: 2px;
+   left:15px; 
+   width: 100%; 
+   span {
+     color: white; 
+     text-transform: uppercase;
+     letter-spacing: 1;  
+     background: rgb(0, 51,102); /* fallback color */
+     background: rgba(0, 51, 102, 1);
+     padding: 8px; 
+   }
+}
+
+/*.brand-profile p { 
+   position: absolute; 
+   top: 150px; 
+   left: 25px; 
+   width: 60%; 
+   span {
+     font: 14px Helvetica, Sans-Serif;   
+     background: rgb(255, 255, 255); 
+     background: rgba(255, 255, 255, 0.7);
+     padding:1px;
+   }
+}*/
+
+#brand-profile div p{
+  position: absolute; 
+   top: 145px; 
+   left: 25px; 
+   width: 60%; 
+   border-radius: 3px;
+   background: rgba(255, 255, 255, 0.7);
+    font: 14px Helvetica, Sans-Serif;   
+     padding:12px;
+     line-height: 130%;
+}
+/*BRAND PROFILE ALT - BLOCK
+/*#brand-profile { 
+    font-family:questrial, serif;
+    top:100px;
+    position: absolute;
+    color: black;
+   width: 60%;
+   background: rgba(255, 255, 255, 0.5);
+   padding: 4px;
+   border-radius: 8px;
+   left:20px;
+  } */
+
+
+
+/*FOOTER*/
+footer {
+  position:relative;
+  clear: both;
+  padding-top:5px;
+  width: 100%;
+  background-color: #323232;
+  opacity:.8;
+  ul a{
+    font-family: maven-pro, serif;
+    text-decoration: none;
+    color:white;
+  }
+}
+
+
 

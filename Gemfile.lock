@@ -38,6 +38,8 @@ GEM
       sass (~> 3.2)
     bootstrap-will_paginate (0.0.6)
       will_paginate
+    bootstrap-wysihtml5-rails (0.3.1.19)
+      railties (>= 3.0)
     builder (3.0.4)
     climate_control (0.0.3)
       activesupport (>= 3.0)
@@ -143,6 +145,7 @@ DEPENDENCIES
   aws-sdk
   bootstrap-sass (~> 2.3.1.0)
   bootstrap-will_paginate (= 0.0.6)
+  bootstrap-wysihtml5-rails
   coffee-rails (~> 3.2.1)
   devise
   faker
