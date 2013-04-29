@@ -62,7 +62,7 @@
 				<div class="span6">
 				<!-- <div data-celery="backpack" data-celery-type="embed"></div> -->
 					<button class="big-green-button" data-celery=<%=@product.ecomm_url.html_safe%>>BACK IT</button>
-					<h2 id="price-head" style="color=#505050;">$<%=@product.price %></h2>
+					<h2 id="price-head"><small>$</small><%=@product.price %></h2>
 					<hr>
 						<!-- success=green, warning=yellow, important=red, info=blue -->
 					Campaign Status: <span class="label label-info"><i>Funding</i></span>
@@ -107,14 +107,19 @@
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="span6">
-			<h3 >Meet the Maker:<space> <%= @product.brandname.html_safe %></h3>
-			<h5 id="location"><%= @product.location%></h5>
+			<h3 id="profile-title">Meet the Maker:<space> <%= @product.brandname.html_safe %></h3>
+			<h5 id="location"><%= @product.location%></h5> 
 			<hr>
 			<p style="font-family:questrial">
 			Topo began well before it began, in discussions, sharing ideas, and just the desire to have quality products that were in our heads rather than the ones we saw in stores. As everyone that’s made something knows, it takes a lot longer to make something than to decide to make it. So we took our time, made prototype after prototype, tested, re-tested, took vacations just as an excuse to test, and we finally had our first bag. At this point we’d gained some skills and the following bags came more quickly. </p>
 
 			<p>After some initial success in Japan we realized we’d need to step up our production a bit so we started working with a local production shop known for making quality bags. And that brings us to today, designing, sewing, prototyping, and moving forward. We strive to make products that are simple, functional, and beautiful – think canoe vs. motor boat. We’re the canoe.
 			</p>
+			<a href="http://facebook.com/<%=@product.facebookbrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/facebook_brand.png"/></a>
+			<a href="http://twitter.com/<%=@product.twitterbrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/twitter_brand.png"/></a>	
+			<a href="http://instagram.com/<%=@product.instagrambrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/instagram_brand.png"/></a>
+			<a href="http://<%=@product.tumblrbrand.html_safe%>.tumblr.com/" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/tumblr_brand.png"/></a>
+			<hr>
 		</div>
 		<div class="span6">
 			<img id="brand-image" src="<%= @product.brandpic %>" width="100%"/>

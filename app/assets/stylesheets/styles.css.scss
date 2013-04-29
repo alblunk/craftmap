@@ -7,7 +7,7 @@
     opacity:.8 !important;
     font-family: maven-pro, serif;
     font-size:12px;
-    letter-spacing: 1px
+    letter-spacing: 1px;
     }
 .navbar-inner container{
     opacity:.8 !important;
@@ -159,6 +159,7 @@ transform:translate(3px, 3px)
 
 #price-head {
   margin-bottom:-20px;
+  font-family:maven-pro,serif;
 }
 
 #vendor-quote {
@@ -183,6 +184,9 @@ div.span5 {
 #product_title {
 margin-left:10px;
 color:white;
+font-family:maven-pro, serif;
+font-weight: 800;
+font-size:2em;
 }
 
 #brand_name {
@@ -191,14 +195,29 @@ color:white;
   font-family:questrial, serif;
   margin-left:20px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+
+.brandsocial {
+  width:25px;
+}
+
+#profile-title {
+  font-family:maven-pro, serif;
+  font-weight: 800;
+  font-size:2em;
 }
 
 #location {
   margin-top:-10px;
+  margin-left:20px;
   font-family:questrial, serif;
   text-transform: uppercase;
+  font-size:1.15em;
 }
+
+
 
 /*SHOW / BRAND PROFILE*/
 /*BRAND STORY PIC*/
