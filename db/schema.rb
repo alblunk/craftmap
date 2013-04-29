@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130425055622) do
+ActiveRecord::Schema.define(:version => 20130429070456) do
 
   create_table "products", :force => true do |t|
     t.string   "description"
@@ -27,6 +27,14 @@ ActiveRecord::Schema.define(:version => 20130425055622) do
     t.string   "variable"
     t.string   "brandname"
     t.string   "productname"
+    t.string   "pic1"
+    t.string   "pic2"
+    t.string   "pic3"
+    t.string   "pic4"
+    t.string   "pic5"
+    t.integer  "price"
+    t.string   "location"
+    t.string   "brandpic"
   end
 
   add_index "products", ["user_id"], :name => "index_products_on_user_id"

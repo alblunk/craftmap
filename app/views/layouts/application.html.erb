@@ -23,16 +23,8 @@
 		<script src="http://use.edgefonts.net/lato.js"></script>
 	</head>
 
-	<body>
-		<header>
-			<%= render 'layouts/header' %>
-		</header>
+	<%= render 'layouts/header' %>
+	<%= yield %>
+	<%= render 'layouts/footer' %>
 
-		<%= yield %>
-		
-		<footer>
-			<%= render 'layouts/footer' %>
-		</footer>
-	</body>
-	
 </html>

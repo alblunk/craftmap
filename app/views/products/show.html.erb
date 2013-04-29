@@ -1,5 +1,3 @@
-<br>
-<br>
 <head> 
 	<script type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script> 
 	<script type="text/javascript" src="https://www.trycelery.com/js/progress-widget.js"></script>
@@ -8,32 +6,75 @@
 
 <div class="row-fluid" class="show-products">
 	<div class="span12">
-		<h2 id="product_title">
-			<%= @product.productname %>
-		</h2>
-		<h4 id="brand_name">
-		  <%= @product.brandname %>
-		</h4>
+		<!-- <%= image_tag @product.image %> -->
+		<section id="carousel">
+              <div id="myCarousel" class="carousel slide">
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                  <li data-target="#myCarousel" data-slide-to="3"></li>
+                  <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="<%=@product.pic1.html_safe %>" alt="">
+                    <div class="carousel-caption">
+                     	<h3 id="product_title"><%= @product.productname %></h3>
+						<h5 id="brand_name"><%= @product.brandname %></h5>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="<%=@product.pic2.html_safe %>" alt="">
+                    <div class="carousel-caption">
+                      	<h3 id="product_title"><%= @product.productname %></h3>
+						<h5 id="brand_name"><%= @product.brandname %></h5>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="<%=@product.pic3.html_safe %>" alt="">
+                    <div class="carousel-caption">
+                      	<h3 id="product_title"><%= @product.productname %></h3>
+						<h5 id="brand_name"><%= @product.brandname %></h5>
+                    </div>
+                  </div>
+                   <div class="item">
+                    <img src="<%=@product.pic4.html_safe %>" alt="">
+                    <div class="carousel-caption">
+                      	<h3 id="product_title"><%= @product.productname %></h3>
+						<h5 id="brand_name"><%= @product.brandname %></h5>
+                    </div>
+                  </div>
+                   <div class="item">
+                    <img src="<%=@product.pic5.html_safe %>" alt="">
+                    <div class="carousel-caption">
+                      	<h3 id="product_title"><%= @product.productname %></h3>
+						<h5 id="brand_name"><%= @product.brandname %></h5>
+                    </div>
+                  </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+              </div>
+        </section>
 		<div class="container-fluid">
 			<div class="row-fluid">
-				<div class="span4">
-					<div class="well well-small">
-						<%= image_tag @product.image %>
-					</div>
-				</div>	
-				<div class="span8">
-						<!-- <div data-celery="backpack" data-celery-type="embed"></div> -->
-						<button data-celery=<%=@product.ecomm_url.html_safe%>>BACK IT</button>
-						<hr>
-					<p>
-							<!-- success=green, warning=yellow, important=red, info=blue -->
-						Campaign Status: <span class="label label-warning"><i>Funding<i/></span>
-						<div class="celery-progress-bar" data-celery-slug=<%=@product.ecomm_url.html_safe%> data-celery-words=" of funding accomplished" data-celery-color="#1a1a1a" data-celery-goal-text="Funded!"></div>
-					</p>
+				<div class="span6">
+				<!-- <div data-celery="backpack" data-celery-type="embed"></div> -->
+					<button class="big-green-button" data-celery=<%=@product.ecomm_url.html_safe%>>BACK IT</button>
+					<h2 id="price-head" style="color=#505050;">$<%=@product.price %></h2>
 					<hr>
-					<p>
-						<%= @product.description %>
-					</p>
+						<!-- success=green, warning=yellow, important=red, info=blue -->
+					Campaign Status: <span class="label label-info"><i>Funding</i></span>
+					<div class="celery-progress-bar" data-celery-slug=<%=@product.ecomm_url.html_safe%> data-celery-words=" of funding accomplished" data-celery-color="#1a1a1a" data-celery-goal-text="Funded!"></div>
+					<hr>
+	            </div>
+				<div class="span6">
+					<blockquote class="pull-right" id="vendor-quote">
+						<p><%= @product.description %><hr></p>
+						<small>Mark & Jedd</small>
+					</blockquote>
+					
 						<% if current_user == @product.user %>
 							<h4>
 								<%= link_to 'Edit', edit_product_path(@product) %> //
@@ -61,39 +102,13 @@
 	</div>
 </div>
 
+
+
 <div class="container-fluid">
 	<div class="row-fluid">
-		<div class="span12" >
-			<div id="brand-profile">
-				<img src="https://s3.amazonaws.com/beelineco/TopoDMock.png"/>
-				<h3><span>Meet the Maker:<space> <%= @product.brandname.html_safe %></span></h3>
-				<div>
-				<p>
-				Topo began well before it began, in discussions, sharing ideas, and just the desire to have quality products that were in our heads rather than the ones we saw in stores. As everyone that’s made something knows, it takes a lot longer to make something than to decide to make it. So we took our time, made prototype after prototype, tested, re-tested, took vacations just as an excuse to test, and we finally had our first bag. At this point we’d gained some skills and the following bags came more quickly.</p></div>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-
-<!-- <div class="container-fluid" class="show-products">
-	<div class="row-fluid">
-		<div class="span12" id="brand-image">
-			<img src="https://s3.amazonaws.com/beelineco/TopoDMock.png"/>
-			<div id="brand-profile">
-			<h4>Meet the Maker:<space> <%= @product.brandname.html_safe %></h4>
-			<hr>
-			Topo began well before it began, in discussions, sharing ideas, and just the desire to have quality products that were in our heads rather than the ones we saw in stores. As everyone that’s made something knows, it takes a lot longer to make something than to decide to make it. So we took our time, made prototype after prototype, tested, re-tested, took vacations just as an excuse to test, and we finally had our first bag. At this point we’d gained some skills and the following bags came more quickly. </div>
-			</span>
-		</div>
-	</div>
-</div> -->
-
-<!-- <div class="container-fluid" class="show-products">
-	<div class="row-fluid">
-		<div class="span7">
-			<h4 style=>Meet the Maker:<space> <%= @product.brandname.html_safe %></h4>
+		<div class="span6">
+			<h3 >Meet the Maker:<space> <%= @product.brandname.html_safe %></h3>
+			<h5 id="location"><%= @product.location%></h5>
 			<hr>
 			<p style="font-family:questrial">
 			Topo began well before it began, in discussions, sharing ideas, and just the desire to have quality products that were in our heads rather than the ones we saw in stores. As everyone that’s made something knows, it takes a lot longer to make something than to decide to make it. So we took our time, made prototype after prototype, tested, re-tested, took vacations just as an excuse to test, and we finally had our first bag. At this point we’d gained some skills and the following bags came more quickly. </p>
@@ -101,14 +116,36 @@
 			<p>After some initial success in Japan we realized we’d need to step up our production a bit so we started working with a local production shop known for making quality bags. And that brings us to today, designing, sewing, prototyping, and moving forward. We strive to make products that are simple, functional, and beautiful – think canoe vs. motor boat. We’re the canoe.
 			</p>
 		</div>
-		<div class="span5">
-			<blockquote class="pull-right">
-				<p>Growing up in the mountains of the West we’ve been using gear from our earliest memories.</p>
-				<small>Someone famous <cite title="Source Title">Source Title</cite></small>
-			</blockquote>
-			<div class="well">
-				<img id="brand-image" src="http://24.media.tumblr.	com/18d6cfade4db5d4e7eeaf4afd2aad5c2/tumblr_mlgshkXgkM1qi5dego1_500.jpg"/>
-			</div>
+		<div class="span6">
+			<img id="brand-image" src="<%= @product.brandpic %>" width="100%"/>
+			
 		</div>
 	</div>
-</div> -->
+</div>
+
+<!-- # BOX
+# <div class="container-fluid">
+# 	<div class="row-fluid">
+# 		<div class="span12" >
+# 			<div id="brand-profile">
+# 				<h3><span>Meet the Maker:<space> <%= @product.brandname.html_safe %></span></h3>
+# 				<div><p>Topo began well before it began, in discussions, sharing ideas, and just the desire to have quality products that were in our heads rather than the ones we saw in stores. As everyone that’s made something knows, it takes a lot longer to make something than to decide to make it. So we took our time, made prototype after prototype, tested, re-tested, took vacations just as an excuse to test, and we finally had our first bag. At this point we’d gained some skills and the following bags came more quickly.</p></div>
+# 				<img src="https://s3.amazonaws.com/beelineco/TopoDMock.png"/>
+# 			</div>
+# 		</div>
+# 	</div>
+# </div>
+
+# Lines
+# <div class="container-fluid" class="show-products">
+# 	<div class="row-fluid">
+# 		<div class="span12" id="brand-image">
+# 			<img src="https://s3.amazonaws.com/beelineco/TopoDMock.png"/>
+# 			<div id="brand-profile">
+# 			<h4>Meet the Maker:<space> <%= @product.brandname.html_safe %></h4>
+# 			<hr>
+# 			Topo began well before it began, in discussions, sharing ideas, and just the desire to have quality products that were in our heads rather than the ones we saw in stores. As everyone that’s made something knows, it takes a lot longer to make something than to decide to make it. So we took our time, made prototype after prototype, tested, re-tested, took vacations just as an excuse to test, and we finally had our first bag. At this point we’d gained some skills and the following bags came more quickly. </div>
+# 			</span>
+# 		</div>
+# 	</div>
+# </div> -->
