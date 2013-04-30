@@ -3,6 +3,7 @@
 	<script type="text/javascript" src="https://www.trycelery.com/js/progress-widget.js"></script>
 </head>
 
+<!-- Ideal counter:file://localhost/Users/alexblunk/Downloads/rendro-countdown-c6e6daa/examples/index.html -->
 
 <div class="row-fluid" class="show-products">
 	<div class="span12">
@@ -57,76 +58,86 @@
                 <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
               </div>
         </section>
-		<div class="container-fluid">
-			<div class="row-fluid">
-				<div class="span6">
-				<!-- <div data-celery="backpack" data-celery-type="embed"></div> -->
-					<button class="big-green-button" data-celery=<%=@product.ecomm_url.html_safe%>>BACK IT</button>
-					<h2 id="price-head"><small>$</small><%=@product.price %></h2>
-					<hr>
-						<!-- success=green, warning=yellow, important=red, info=blue -->
-					Campaign Status: <span class="label label-info"><i>Funding</i></span>
-					<div class="celery-progress-bar" data-celery-slug=<%=@product.ecomm_url.html_safe%> data-celery-words=" of funding accomplished" data-celery-color="#1a1a1a" data-celery-goal-text="Funded!"></div>
-					<hr>
-	            </div>
-				<div class="span6">
-					<blockquote class="pull-right" id="vendor-quote">
-						<p><%= @product.description %><hr></p>
-						<small>Mark & Jedd</small>
-					</blockquote>
-					
-						<% if current_user == @product.user %>
-							<h4>
-								<%= link_to 'Edit', edit_product_path(@product) %> //
-								<%= link_to 'Back', products_path %>
-							</h4>
-							<p>
-								Uploading user: <%= @product.user.name %>
-							</p>
-							<p>
-								Created at: <%= @product.created_at %>
-							</p>
-								Updated at: <%= @product.updated_at %>
-							</p>
-							<p>
-								Image file name: <%= @product.image_file_name %>
-							</p>
-							<p>
-								Celery Button Code: <%= @product.ecomm_url %>
-							</p>
-
-						<% end %>
-				</div>
-			</div>
-		</div>
-	</div>
+    </div>
 </div>
 
 
-
+<div class="row-fluid">
+  <div class="span12">
+    <div class="row-fluid">
+      <div class="span6">
+        <div class="row-fluid">
+          	<div class="span6">
+          		<div class="centerize"><button class="big-green-button" data-celery=<%=@product.ecomm_url.html_safe%>>BACK IT</button></div>
+			</div>
+			<br>
+	        <div class="span6 campaign-details">
+          		<h2 id="price"><small>$</small><%=@product.price %></h2>
+          		<div id="campaign-details">
+					<h5 class="subh-font"> 20 of 100 Backers Needed</h5>
+					<h5 class="subh-font"> Ends: 5/15/2013</h5>
+				</div>
+			</div>
+        </div>
+        <br>
+        <h3 class="h-font updates">Updates:</h3>
+        <p class="p-font updates"> <%=@product.updates%></p>
+      </div>
+      <div class="span6 leftline">
+      	<div class="centerize">
+      	<h3 class="h-font" id="campaign-status-title">Campaign Status: <span id="campaign-status" class="label label-default"><%=@product.productstatus%></span></h3>
+		<div class="celery-progress-bar" data-celery-slug=<%=@product.ecomm_url.html_safe%> data-celery-words=" funded" data-celery-color="#FFCC00" data-celery-goal-text="Funded!"></div></div>
+		<hr>
+		<blockquote id="vendor-quote" class="pull-right">
+			<p><%= @product.description %></p>
+			<small><%=@product.founders%></small>
+		</blockquote></div>
+    </div>
+  </div>
+</div>
+<hr>
 <div class="container-fluid">
 	<div class="row-fluid">
 		<div class="span6">
-			<h3 id="profile-title">Meet the Maker:<space> <%= @product.brandname.html_safe %></h3>
-			<h5 id="location"><%= @product.location%></h5> 
-			<hr>
-			<p style="font-family:questrial">
-			Topo began well before it began, in discussions, sharing ideas, and just the desire to have quality products that were in our heads rather than the ones we saw in stores. As everyone that’s made something knows, it takes a lot longer to make something than to decide to make it. So we took our time, made prototype after prototype, tested, re-tested, took vacations just as an excuse to test, and we finally had our first bag. At this point we’d gained some skills and the following bags came more quickly. </p>
-
-			<p>After some initial success in Japan we realized we’d need to step up our production a bit so we started working with a local production shop known for making quality bags. And that brings us to today, designing, sewing, prototyping, and moving forward. We strive to make products that are simple, functional, and beautiful – think canoe vs. motor boat. We’re the canoe.
+			<h3 id="profile-title" class="h-font">Meet the Maker:<space> <%= @product.brandname.html_safe %></h3>
+			<h5 id="location" class="subh-font" ><%= @product.location%></h5> 
+			<p class="p-font">
+				<%=@product.profile%>
 			</p>
-			<a href="http://facebook.com/<%=@product.facebookbrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/facebook_brand.png"/></a>
-			<a href="http://twitter.com/<%=@product.twitterbrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/twitter_brand.png"/></a>	
-			<a href="http://instagram.com/<%=@product.instagrambrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/instagram_brand.png"/></a>
-			<a href="http://<%=@product.tumblrbrand.html_safe%>.tumblr.com/" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/tumblr_brand.png"/></a>
+			<a href="http://facebook.com/<%=@product.facebookbrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/facebook_square_black.png"/></a>
+			<a href="http://twitter.com/<%=@product.twitterbrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/twitter_square_black.png"/></a>	
+			<a href="http://instagram.com/<%=@product.instagrambrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/instagram_square_black.png"/></a>
+			<a href="http://<%=@product.tumblrbrand.html_safe%>.tumblr.com/" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/tumblr_square_black.png"/></a>
 			<hr>
 		</div>
 		<div class="span6">
-			<img id="brand-image" src="<%= @product.brandpic %>" width="100%"/>
+			<img id="brand-image" src="<%= @product.brandpic %>"/>
 			
 		</div>
 	</div>
 </div>
+
+<% if current_user == @product.user %>
+	<h4>
+		<%= link_to 'Edit', edit_product_path(@product) %> //
+		<%= link_to 'Back', products_path %>
+	</h4>
+	<p>
+		Uploading user: <%= @product.user.name %>
+	</p>
+	<p>
+		Created at: <%= @product.created_at %>
+	</p>
+		Updated at: <%= @product.updated_at %>
+	</p>
+	<p>
+		Image file name: <%= @product.image_file_name %>
+	</p>
+	<p>
+		Celery Button Code: <%= @product.ecomm_url %>
+	</p>
+
+<% end %>
 
 <!-- # BOX
 # <div class="container-fluid">

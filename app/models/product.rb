@@ -2,7 +2,9 @@ class Product < ActiveRecord::Base
   attr_accessible :description, 
   :image, :image_remote_url, :ecomm_url, 
   :brandname, :productname, :pic1, :pic2, :pic3, :pic4, :pic5, 
-  :location, :price, :brandpic, :facebookbrand, :twitterbrand, :tumblrbrand, :instagrambrand
+  :location, :price, :brandpic, 
+  :facebookbrand, :twitterbrand, :tumblrbrand, :instagrambrand, :productstatus, :founders,
+  :updates, :profile
 
 
 

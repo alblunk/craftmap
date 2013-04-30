@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130429075212) do
+ActiveRecord::Schema.define(:version => 20130430075216) do
 
   create_table "products", :force => true do |t|
     t.string   "description"
@@ -39,6 +39,10 @@ ActiveRecord::Schema.define(:version => 20130429075212) do
     t.string   "instagrambrand"
     t.string   "twitterbrand"
     t.string   "tumblrbrand"
+    t.string   "productstatus"
+    t.string   "founders"
+    t.string   "updates"
+    t.string   "profile"
   end
 
   add_index "products", ["user_id"], :name => "index_products_on_user_id"

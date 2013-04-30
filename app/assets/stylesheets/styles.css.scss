@@ -34,13 +34,6 @@
     letter-spacing: 1px
     }​
 
-/*#beeline_logo {
-  float:left;
-  position:absolute;
-  left:0px;
-  top:0px;
-  height:50px;
-}*/
 
 /*HOME PAGE - CAROUSEL*/
 .carousel-inner > .active {
@@ -98,15 +91,70 @@ margin-top: -18px;
 }
 
 /*SHOW / PRODUCT DETAILS*/
+
+.h-font {
+  font-family:maven-pro, serif;
+  font-weight: 800;
+}
+
+.subh-font {
+  font-family:maven-pro, serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.p-font {
+  font-family:m-1c, serif;
+  font-weight: 300;
+}
+
+#price {
+  margin-top:-10px;
+  font-family:m-1c, serif;
+  font-weight: 200;
+  font-size:3em;
+}
+
+.leftline {
+border-left: thin silver dashed;
+padding-left: 8px;
+}
+
+hr {
+margin: 20px 0;
+border: 0;
+opacity:.5;
+border-top: 1px dashed #eeeeee;
+border-bottom: 1px dashed #bfbfbf;
+}
+
 div.celery-progress {
   margin-top:10px;
-  width:100%;
+  width:75%;
+  margin-left:75px;
 }
 
 div.celery-progress-tooltip {
   color: black;
-  font-style: italic;
+  text-transform: uppercase;
+  font-family: maven-pro, serif;
+  padding-top: 5px;
   width: 100%;
+  letter-spacing: 1px;
+}
+
+#campaign-status-title {
+  margin-top:-10px;
+}
+
+#campaign-status {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding:5px;
+}
+.centerize {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .big-green-button{
@@ -130,8 +178,9 @@ div.celery-progress-tooltip {
   border:none;
   font-size:1.50em;
   letter-spacing: 3px;
-  width:100%;
+  width:80%;
   height:50px;
+  margin-top:10px;
   line-height: 100%;
   color: white;
   text-align: center;
@@ -157,13 +206,24 @@ box-shadow:
 transform:translate(3px, 3px)
 }
 
-#price-head {
-  margin-bottom:-20px;
-  font-family:maven-pro,serif;
+#campaign-details {
+  margin-bottom:-15px;
 }
 
+.campaign-details {
+  text-align: center;
+}
+
+.updates {
+  margin-top: -15px;
+  padding-left:20px;
+}
+
+
 #vendor-quote {
-  font-family: maven-pro, serif;
+  margin-right:30px;
+  font-family:m-1c, serif;
+  font-weight: 200 !important;
   font-style:italic;
 }
 
@@ -184,15 +244,13 @@ div.span5 {
 #product_title {
 margin-left:10px;
 color:white;
-font-family:maven-pro, serif;
-font-weight: 800;
-font-size:2em;
+font-family:montserrat, serif;
 }
 
 #brand_name {
   margin-top:-15px;
   color:white;
-  font-family:questrial, serif;
+  font-family:maven-pro, serif;
   margin-left:20px;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -201,30 +259,22 @@ font-size:2em;
 
 .brandsocial {
   width:25px;
-}
-
-#profile-title {
-  font-family:maven-pro, serif;
-  font-weight: 800;
-  font-size:2em;
+  left:20px;
 }
 
 #location {
-  margin-top:-10px;
-  margin-left:20px;
-  font-family:questrial, serif;
-  text-transform: uppercase;
-  font-size:1.15em;
+  margin-top:-15px;
 }
 
 
 
 /*SHOW / BRAND PROFILE*/
 /*BRAND STORY PIC*/
-#brand-profile{
+#brand-image{
   position: relative;
   width:100%;
   margin-bottom: 20px;
+  border-radius:5px;
 }
 /*BRAND STORY TITLE*/
 #brand-profile h3 { 
@@ -301,5 +351,3 @@ footer {
     color:white;
   }*/
 }
-
-
