@@ -11,10 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130430075216) do
+ActiveRecord::Schema.define(:version => 20130430085059) do
 
   create_table "products", :force => true do |t|
-    t.string   "description"
+    t.text     "description"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
     t.integer  "user_id"
@@ -41,8 +41,8 @@ ActiveRecord::Schema.define(:version => 20130430075216) do
     t.string   "tumblrbrand"
     t.string   "productstatus"
     t.string   "founders"
-    t.string   "updates"
-    t.string   "profile"
+    t.text     "updates"
+    t.text     "profile"
   end
 
   add_index "products", ["user_id"], :name => "index_products_on_user_id"
