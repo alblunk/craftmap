@@ -65,7 +65,7 @@
 <div class="row-fluid">
   <div class="span12">
     <div class="row-fluid">
-        <div class="span6">
+        <div class="span6 rightline">
           <div class="row-fluid">
             	<div class="span6">
             		<div class="centerize"><button class="big-green-button" data-celery=<%=@product.ecomm_url.html_safe%>>BACK IT</button></div>
@@ -81,11 +81,11 @@
           </div>
           <br>
           <div class="centerize">
-          <h3 class="h-font" id="campaign-status-title">Campaign Status: <span id="campaign-status" class="label label-default"><%=@product.productstatus%></span></h3>
+          <span id="campaign-status" class="label label-default"><%=@product.productstatus%></span>
       <div class="celery-progress-bar" data-celery-slug=<%=@product.ecomm_url.html_safe%> data-celery-words=" funded" data-celery-color="#FFCC00" data-celery-goal-text="Funded!"></div></div>
           
         </div>
-        <div class="span6 leftline">
+        <div class="span6">
         	<blockquote id="vendor-quote" class="pull-right">
         <p><%= @product.description %></p>
         <small><%=@product.founders%></small>

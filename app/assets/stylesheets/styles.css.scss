@@ -116,22 +116,25 @@ margin-top: -18px;
 }
 
 .leftline {
-border-left: thin silver dashed;
+border-left: 1px solid silver;
 padding-left: 8px;
+}
+.rightline {
+border-right: 1px solid silver;
+padding-right: 8px;
 }
 
 hr {
 margin: 20px 0;
 border: 0;
 opacity:.5;
-border-top: 1px dashed #eeeeee;
-border-bottom: 1px dashed #bfbfbf;
+border-top: 1px solid silver;
 }
 
 div.celery-progress {
   margin-top:10px;
-  width:75%;
-  margin-left:75px;
+  width:90%;
+  margin-left:30px;
 }
 
 div.celery-progress-tooltip {
@@ -141,10 +144,6 @@ div.celery-progress-tooltip {
   padding-top: 5px;
   width: 100%;
   letter-spacing: 1px;
-}
-
-#campaign-status-title {
-  margin-top:-10px;
 }
 
 #campaign-status {
