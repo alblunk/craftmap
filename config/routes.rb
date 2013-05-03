@@ -7,8 +7,10 @@ Beeline::Application.routes.draw do
   get 'about' => 'pages#about'
   get 'legal' => 'pages#legal'
   get 'allproducts' => 'pages#allproducts'
+  get 'comingsoon' => 'pages#comingsoon'
 
   root :to => 'products#index'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,385 @@
+/*
+ *
+ * Template Name: Genta
+ * Template URI: http://azmind.com
+ * Description: Genta - Responsive Fullscreen Coming Soon Template
+ * Author: Anli Zaimi
+ * Author URI: http://azmind.com
+ *
+ */
+
+
+body {
+    background: #eee;
+    text-align: center;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+.page-container {
+    padding: 0 0 40px 0;
+}
+
+
+/* ----- Page title ----- */
+
+h1 {
+    margin: 80px 0 0 0;
+    font-size: 60px;
+    line-height: 66px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+
+
+/* ----- Progress bar ----- */
+
+.progress {
+    height: 36px;
+    margin: 100px 0 0 0;
+    background: transparent url(../img/slider-bg2.jpg) left bottom repeat-x;
+    border: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    filter: none;
+}
+
+.progress .bar {
+    background: transparent url(../img/slider-bg1.jpg) left bottom repeat-x;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    filter: none;
+    text-shadow: none;
+}
+
+.progress .bar div {
+    float: right;
+    width: 36px;
+    height: 28px;
+    padding: 8px 0 0 0;
+    background: url(../img/slider-bg3.jpg) right center no-repeat;
+    text-align: center;
+}
+
+
+/* ----- Timer ----- */
+
+.timer-container {
+    margin: 0;
+    padding: 40px 0;
+    background: #2d2d2d; /* browsers that don't support rgba */
+    background: rgba(45,45,45,.7);
+    font-size: 18px;
+    line-height: 30px;
+    font-style: italic;
+    color: #fff;
+    text-align: left;
+    text-shadow: 0 1px 4px rgba(0,0,0,.2);
+    -moz-box-shadow:
+        0 -15px 40px 0 rgba(0,0,0,.05) inset,
+        0 -10px 50px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 -15px 40px 0 rgba(0,0,0,.05) inset,
+        0 -10px 50px 0 rgba(0,0,0,.2);
+    box-shadow:
+        0 -15px 40px 0 rgba(0,0,0,.05) inset,
+        0 -10px 50px 0 rgba(0,0,0,.2);
+}
+
+.timer-container .timer span {
+    margin: 0 0 0 5px;
+    font-size: 60px;
+    line-height: 66px;
+}
+
+.timer-container .timer span.days { margin: 0; }
+
+.timer-container p {
+    margin: 20px 0 0 0;
+}
+
+
+/* ----- Tweets and social links ----- */
+
+.social-container {
+    padding: 5px 0;
+    background: #fff;
+    font-size: 13px;
+    line-height: 18px;
+    font-style: italic;
+    color: #5d5d5d;
+    text-align: left;
+    -moz-box-shadow: 0 15px 50px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 15px 50px 0 rgba(0,0,0,.2);
+    box-shadow: 0 15px 50px 0 rgba(0,0,0,.2);
+}
+
+.social-container a {
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+}
+
+.tweets {
+    padding: 0 0 0 37px;
+    background: url(../img/tweets.png) left center no-repeat;
+}
+
+.tweets a { color: #54a8c0; }
+.tweets a:hover { color: #5d5d5d; text-decoration: none; }
+
+.show-tweets {
+    margin: 5px 0 0 0;
+    overflow-y: hidden;
+}
+
+.tweet_list {
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    list-style: none;
+}
+	
+.tweet_list li {
+    overflow-y: auto;
+    overflow-x: hidden;
+    list-style-type: none;
+}
+		
+.tweet_list .tweet_avatar {
+    float: left;
+}
+		
+.tweet_list .tweet_avatar img {
+    vertical-align: middle;
+}
+
+.social-links {
+    text-align: right;
+}
+
+.social-links a { display: inline-block; width: 24px; height: 24px; margin: 3px 0 0 8px; vertical-align: middle; }
+
+.social-links a.twitter { background: url(../img/social-icons/twitter.png) left top no-repeat; }
+.social-links a.dribbble { background: url(../img/social-icons/dribbble.png) left top no-repeat; }
+.social-links a.rss { background: url(../img/social-icons/rss.png) left top no-repeat; }
+.social-links a.pinterest { background: url(../img/social-icons/pinterest.png) left top no-repeat; }
+.social-links a.digg { background: url(../img/social-icons/digg.png) left top no-repeat; }
+.social-links a.flickr { background: url(../img/social-icons/flickr.png) left top no-repeat; }
+.social-links a.forrst { background: url(../img/social-icons/forrst.png) left top no-repeat; }
+.social-links a.vimeo { background: url(../img/social-icons/vimeo.png) left top no-repeat; }
+.social-links a.reddit { background: url(../img/social-icons/reddit.png) left top no-repeat; }
+.social-links a.linkedin { background: url(../img/social-icons/linkedin.png) left top no-repeat; }
+.social-links a.facebook { background: url(../img/social-icons/facebook.png) left top no-repeat; }
+.social-links a.paypal { background: url(../img/social-icons/paypal.png) left top no-repeat; }
+.social-links a.stumbleupon { background: url(../img/social-icons/stumbleupon.png) left top no-repeat; }
+.social-links a.email { background: url(../img/social-icons/email.png) left top no-repeat; }
+.social-links a.deviantart { background: url(../img/social-icons/deviantart.png) left top no-repeat; }
+.social-links a.netvibes { background: url(../img/social-icons/netvibes.png) left top no-repeat; }
+.social-links a.yahoo { background: url(../img/social-icons/yahoo.png) left top no-repeat; }
+.social-links a.github { background: url(../img/social-icons/github.png) left top no-repeat; }
+.social-links a.addthis { background: url(../img/social-icons/addthis.png) left top no-repeat; }
+.social-links a.behance { background: url(../img/social-icons/behance.png) left top no-repeat; }
+.social-links a.blogger { background: url(../img/social-icons/blogger.png) left top no-repeat; }
+.social-links a.slashdot { background: url(../img/social-icons/slashdot.png) left top no-repeat; }
+.social-links a.technorati { background: url(../img/social-icons/technorati.png) left top no-repeat; }
+.social-links a.googleplus { background: url(../img/social-icons/googleplus.png) left top no-repeat; }
+.social-links a.apple { background: url(../img/social-icons/apple.png) left top no-repeat; }
+.social-links a.myspace { background: url(../img/social-icons/myspace.png) left top no-repeat; }
+.social-links a.sharethis { background: url(../img/social-icons/sharethis.png) left top no-repeat; }
+.social-links a.yelp { background: url(../img/social-icons/yelp.png) left top no-repeat; }
+.social-links a.delicious { background: url(../img/social-icons/delicious.png) left top no-repeat; }
+.social-links a.lastfm { background: url(../img/social-icons/lastfm.png) left top no-repeat; }
+.social-links a.youtube { background: url(../img/social-icons/youtube.png) left top no-repeat; }
+.social-links a.skype { background: url(../img/social-icons/skype.png) left top no-repeat; }
+.social-links a.tumblr { background: url(../img/social-icons/tumblr.png) left top no-repeat; }
+.social-links a.aim { background: url(../img/social-icons/aim.png) left top no-repeat; }
+.social-links a.google { background: url(../img/social-icons/google.png) left top no-repeat; }
+
+.social-links a:hover { background-position: left -34px; }
+
+
+/* ----- Email subscription form ----- */
+
+.subscription-form-container {
+    margin: 50px 0 0 0;
+}
+
+.subscription-form-container h2 {
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+
+.subscription-form-container form {
+    margin: 35px 0 0 0;
+}
+
+.subscription-form-container input {
+    padding: 10px 27px;
+    background: #2d2d2d; /* browsers that don't support rgba */
+    background: rgba(45,45,45,.7);
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(0,0,0,.2);
+    border: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -moz-box-shadow:
+        0 5px 5px 0 rgba(0,0,0,.1) inset,
+        0 2px 6px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 5px 5px 0 rgba(0,0,0,.1) inset,
+        0 2px 6px 0 rgba(0,0,0,.2);
+    box-shadow:
+        0 5px 5px 0 rgba(0,0,0,.1) inset,
+        0 2px 6px 0 rgba(0,0,0,.2);
+}
+
+.subscription-form-container input:-moz-placeholder { color: #fff; }
+.subscription-form-container input:-ms-input-placeholder { color: #fff; }
+.subscription-form-container input::-webkit-input-placeholder { color: #fff; }
+
+.subscription-form-container button {
+    width: 110px;
+    height: 40px;
+    padding: 0;
+    background: #54a8c0 url(../img/subscribe-button.png) center center no-repeat;
+    border: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -moz-box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,.2);
+}
+
+.subscription-form-container button:hover {
+    background: #54a8c0 url(../img/subscribe-button.png) center center no-repeat;
+    -moz-box-shadow:
+        0 2px 4px 0 rgba(0,0,0,.1) inset,
+        0 2px 6px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 2px 4px 0 rgba(0,0,0,.1) inset,
+        0 2px 6px 0 rgba(0,0,0,.2);
+    box-shadow:
+        0 2px 4px 0 rgba(0,0,0,.1) inset,
+        0 2px 6px 0 rgba(0,0,0,.2);
+}
+
+.subscription-form-container button:active {
+    background: #54a8c0 url(../img/subscribe-button.png) center center no-repeat;
+    -moz-box-shadow: 0 5px 5px 0 rgba(0,0,0,.1) inset;
+    -webkit-box-shadow: 0 5px 5px 0 rgba(0,0,0,.1) inset;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.1) inset;
+}
+
+.success-message {
+    margin: 35px 0 0 0;
+    color: #54a8c0;
+}
+
+.error-message {
+    margin: 15px 0 0 0;
+    color: #ff7f6b;
+}
+
+
+/* ----- Media queries ----- */
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+    .social-container .tweets {
+        width: 65%;
+    }
+
+    .social-container .social-links {
+        width: 78%;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    h1 {
+        font-size: 48px;
+        line-height: 54px;
+        margin: 40px 0 0 0;
+    }
+    .progress {
+        margin: 50px 0 0 0;
+    }
+    .timer-container {
+        padding: 20px 0;
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .timer-container .timer span {
+        font-size: 48px;
+        line-height: 54px;
+    }
+    .timer-container p, .timer-container .timer {
+        padding: 0 20px;
+    }
+    .tweets {
+        padding: 0 20px 0 57px;
+        background: url(../img/tweets.png) 20px center no-repeat;
+    }
+    .social-links {
+        padding: 0 20px;
+    }
+    .subscription-form-container {
+        margin: 40px 0 0 0;
+    }
+    .subscription-form-container h2 {
+        font-size: 26px;
+        line-height: 36px;
+    }
+    .subscription-form-container form, .success-message {
+        margin: 30px 0 0 0;
+    }
+    .subscription-form-container input {
+        padding: 8px 25px;
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .subscription-form-container button {
+        width: 106px;
+        height: 36px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .tweets {
+        background-position: 20px 10px;
+    }
+
+    .tweet_list {
+        height: 100px;
+    }
+
+    .tweet_list li {
+        height: 100%;
+    }
+
+}
+
+@media (max-width: 405px) {
+
+    .subscription-form-container button {
+        margin: 10px 0 0 0;
+    }
+
+}
+

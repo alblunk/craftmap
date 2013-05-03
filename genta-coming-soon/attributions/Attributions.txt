@@ -1,0 +1,112 @@
+
+GENTA RESPONSIVE FULLSCREEN COMING SOON TEMPLATE - RESOURCES' ATTRIBUTIONS
+
+Below you can find a list of all the resources (plugins, images, icons, fonts) used for creating the Genta Template.
+You'll find the author name, type of license and a link where the resource can be downloaded.
+
+
+
+****** 1. TWITTER BOOTSTRAP ******
+
+Author(s):
+@mdo (http://twitter.com/mdo), @fat (http://twitter.com/fat).
+
+License(s):
+Code licensed under Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0), documentation under CC BY 3.0 (http://creativecommons.org/licenses/by/3.0/).
+Glyphicons Free (http://glyphicons.com/) licensed under CC BY 3.0 (http://creativecommons.org/licenses/by/3.0/).
+
+Link(s):
+http://twitter.github.com/bootstrap/
+
+
+
+****** 2. SUPERSIZED JQUERY PLUGIN - FULLSCREEN BACKGROUND SLIDESHOW ******
+
+Author(s):
+Sam Dunn (http://twitter.com/samddunn), One Mighty Roar (http://onemightyroar.com/).
+
+License(s):
+MIT License / GPL License (included in this folder)
+
+Link(s):
+http://buildinternet.com/project/supersized/
+
+
+
+****** 3. COUNTDOWN JQUERY PLUGIN ******
+
+Author(s):
+Edson Hilios (http://edson.hilios.com.br/).
+
+License(s):
+MIT License
+
+Link(s):
+http://github.com/hilios/jquery.countdown
+
+
+
+****** 4. TWEET JQUERY PLUGIN - TWITTER FEED ******
+
+Author(s):
+Seaofclouds (http://seaofclouds.com/).
+
+License(s):
+MIT License (included in this folder)
+
+Link(s):
+http://tweet.seaofclouds.com/
+
+
+
+****** 5. JQUERY ******
+
+Author(s):
+jQuery Foundation (http://jquery.org/).
+
+License(s):
+MIT License (http://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt)
+
+Link(s):
+http://jquery.com/
+
+
+
+****** 6. OPEN SANS FONT ******
+
+Author(s):
+Steve Matteson (https://profiles.google.com/107777320916704234605/about).
+
+License(s):
+Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
+
+Link(s):
+http://www.google.com/webfonts/specimen/Open+Sans
+
+
+
+****** 7. PHOTOS ******
+
+Author(s):
+Paul Bica (http://www.flickr.com/photos/dexxus), Shermeee (http://www.flickr.com/photos/smanography/), naosuke ii (http://www.flickr.com/photos/ogwrnsk/).
+
+License(s):
+CC BY 2.0 (http://creativecommons.org/licenses/by/2.0/deed.en)
+
+Link(s):
+(http://www.flickr.com/photos/dexxus), (http://www.flickr.com/photos/smanography/), (http://www.flickr.com/photos/ogwrnsk/).
+
+
+
+****** 8. SOCIAL ICONS SPRITES - 35 READY TO USE ICONS IN PSD, PNG, HTML/CSS ******
+
+Author(s):
+Anli Zaimi (http://azmind.com).
+
+License(s):
+Free for Commercial Use
+
+Link(s):
+http://azmind.com/2012/11/06/social-icons-sprites-35-ready-to-use-icons-psd-png-html-css/
+
+

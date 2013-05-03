@@ -10,4 +10,7 @@ class PagesController < ApplicationController
 
   def allproducts
   end
+
+  def comingsoon
+  end
 end
