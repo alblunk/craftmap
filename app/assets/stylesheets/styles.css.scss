@@ -44,6 +44,10 @@ background-color:#323232;
 #homeimages {
   background-size:100%;
 }
+
+#showimages {
+  background-size:100%;
+}
 /*HOME PAGE - PRODUCT TILES LAYOUT*/
 .motto {
   text-align:center;
@@ -112,6 +116,12 @@ margin-top: -18px;
 .p-font {
   font-family:m-1c, serif;
   font-weight: 300;
+}
+
+.skinny-big {
+  font-family:exo, serif;
+  font-weight:100;
+  font-size:1.25em;
 }
 
 #price {
@@ -368,8 +378,8 @@ top:100px;
 width:80%;
 color:white;
   span {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding:5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding:2px;
   }
 
 }
