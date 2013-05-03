@@ -5,6 +5,8 @@ Beeline::Application.routes.draw do
   devise_for :users
 
   get 'about' => 'pages#about'
+  get 'legal' => 'pages#legal'
+  get 'allproducts' => 'pages#allproducts'
 
   root :to => 'products#index'
 

@@ -45,7 +45,9 @@ background-color:#323232;
   text-align:center;
   font-size:1.25em;
   line-height: 75%;
-  font-family: questrial, serif;
+  font-family:maven-pro, serif;
+  font-weight: 400;
+  text-transform: uppercase;
   margin-top:10px;
   color: #505050;
 }
@@ -94,8 +96,8 @@ margin-top: -18px;
 /*SHOW / PRODUCT DETAILS*/
 
 .h-font {
- font-family:m-1c, serif;
-  font-weight: 800;
+ font-family:exo, serif;
+  font-weight: 600;
 }
 
 .subh-font {
@@ -110,8 +112,9 @@ margin-top: -18px;
 
 #price {
   margin-top:-10px;
-  font-family:cabin-sketch, serif;
-  font-weight: 400;
+  font-family:share-regular, serif;
+  font-weight: 700;
+  font-style:italic;
   font-size:3.5em;
 }
 
@@ -146,10 +149,22 @@ div.celery-progress-tooltip {
   letter-spacing: 1px;
 }
 
+#FAQ:hover {
+  color:lightgray;
+}
+#FAQ{
+ font-family: exo, serif;
+ font-weight: 600;
+ font-size: 1.25em;
+ text-decoration: none;
+ color:black;
+ padding:5px;
+}
+
 #campaign-status {
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding:5px;
+  margin:3px 10px 3px 10px;
 }
 .centerize {
     display: block;
@@ -157,6 +172,7 @@ div.celery-progress-tooltip {
     text-align: center;
 }
 
+/*http://css-tricks.com/lodge/*/
 .big-green-button{
   /*dark shadow: #2d802e*/
   /*light shadow: #389e39*/
@@ -178,13 +194,11 @@ div.celery-progress-tooltip {
   border:none;
   font-size:1.50em;
   letter-spacing: 3px;
-  width:80%;
-  height:50px;
-  margin-top:10px;
   line-height: 100%;
   color: white;
   text-align: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
 }
 
 .big-green-button:hover, .big-green-button:focus{
@@ -244,7 +258,8 @@ div.span5 {
 #product_title {
 margin-left:10px;
 color:white;
-font-family:montserrat, serif;
+font-family:exo, serif;
+font-weight:100;
 }
 
 #brand_name {
@@ -266,10 +281,9 @@ font-family:montserrat, serif;
   margin-top:-15px;
 }
 
-
-
 /*SHOW / BRAND PROFILE*/
 /*BRAND STORY PIC*/
+
 #brand-image{
   position: relative;
   width:100%;

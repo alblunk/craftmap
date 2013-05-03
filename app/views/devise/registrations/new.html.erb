@@ -1,21 +1,33 @@
 <br>
 <br>
 <br>
-<h2>Sign up</h2>
+<h2 class="h-font">Why should you Join our Family?</h2>
 <%= render "devise/shared/links" %>
 <hr>
-<h4>Be in the know about new product launches</h4>
+<h4 class="p-font">Well, simply put, you will have first dibs on all of the 'bleeding-edge' new product, content, and special offers we hustle to bring you.</h4>
+<h6 class="p-font"><i>People who aren't signed up, can still purchase, but won't be 'in the know' or recieve special treatment when products launch. Plus, the emails will be the only place where <strong>our special golden tickets live.</strong></i></h6>
+
 <hr>
-<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
-  	<%= f.error_notification %>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
+			  	<%= f.error_notification %>
 
-  	<%= f.input :email %>
-	<%= f.input :password %>
-	<%= f.input :password_confirmation %>
+			  	<%= f.input :email %>
+				<%= f.input :password %>
+				<%= f.input :password_confirmation %>
 
-  <div class="form-actions">
-  	<%= f.submit "Sign up", class: "btn btn-primary"%>
-  </div>
-<% end %>
+			<p class="subh-font">Heck no we will never share or distribute your email address.</p>
+
+
+			  <div class="form-actions">
+			  	<%= f.submit "SIGN UP", class: "big-green-button", style: "width:150px; padding:10px;"%>
+			  </div>
+			  <% end %>
+	  	</div>
+  	</div>
+</div>
+
 
 

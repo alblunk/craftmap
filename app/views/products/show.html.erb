@@ -68,22 +68,31 @@
         <div class="span6 rightline">
           <div class="row-fluid">
             	<div class="span6">
-            		<div class="centerize"><button class="big-green-button" data-celery=<%=@product.ecomm_url.html_safe%>>BACK IT</button></div>
+            		<div class="centerize"><button class="big-green-button" style="width:80%; height:50px; margin-top:20px; margin-bottom:10px;" data-celery=<%=@product.ecomm_url.html_safe%>>BACK IT</button>
+                  <!-- Button to trigger modal -->
+                  <hr style="margin-bottom:5px;">
+                  <p>
+                  <a href="#FAQModal" id="FAQ" data-toggle="modal">How does this work?</a></div>
+                </p>
+                <hr style="margin-top:-10px;">
   			       </div>
   			       <br>
               <div class="span6 campaign-details">
               		<h2 id="price"><small>$</small><%=@product.price %></h2>
-              		<div id="campaign-details">
-        					<h5 class="subh-font"> 20 of 100 Backers Needed</h5>
-        					<h5 class="subh-font"> Ends: 5/15/2013</h5>
-        				</div>
+                  <div id="campaign-details">
+                    <h5 class="subh-font"> 20 of 100 Backers Needed</h5>
+                    <h5 class="subh-font"> Ends: 5/15/2013</h5>
+                  </div>
+              		
   			     </div>
           </div>
           <br>
           <div class="centerize">
+            
           <span id="campaign-status" class="label label-default"><%=@product.productstatus%></span>
       <div class="celery-progress-bar" data-celery-slug=<%=@product.ecomm_url.html_safe%> data-celery-words=" funded" data-celery-color="#FFCC00" data-celery-goal-text="Funded!"></div></div>
           
+            
         </div>
         <div class="span6">
         	<blockquote id="vendor-quote" class="pull-right">
@@ -91,10 +100,66 @@
         <small><%=@product.founders%></small>
       </blockquote>
   		<hr>
+
   		<h3 class="h-font updates">Updates:</h3>
           <p class="p-font updates"> <%=@product.updates%></p></div>
-
     </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="FAQModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel" class="h-font"><img src="https://s3.amazonaws.com/beelineco/BeelineLogo_v1.png" style="width:150px;"/> Frequently Asked Questions</h3>
+  </div>
+  <div class="modal-body">
+    <h3 class="h-font">What is going on here?</h3>
+    <hr style="margin-top:-5px;">
+    <table>
+      <tr>
+        <td style="padding-right: 20px;">
+          <img style="height:100px; padding-left: 20px;" src="https://s3.amazonaws.com/beelineco/SportingTile.png">
+          <img style="width:150px;" src="https://s3.amazonaws.com/beelineco/BL_BagTile.png">
+        </td>
+        <td>
+          <p class="p-font" style="width:80%; line-height:250%;">Brands want to test alternate colorways, prototype items, or new product lines; but generating goods before there is demand is risky business.</p>
+        </td> 
+      </tr>
+    </table>
+    <h4 class="subh-font">This is where <i>you</i> come in. You have two options to jumpstart these items into production.</h4>
+    <ol>
+      <li class="p-font"><h3 class="subh-font">Back it:</h3> A commitment to financially back the production of this item when enough people have shown interest. Your card only gets charged after a product hits the goal of a number of funders. <hr style="margin-bottom:5px;">All backers recieve <i>Free Expedited Shipping</i> after their goods are ready.<hr style="margin-top:5px;"></li>
+      <li class="p-font"><h3 class="subh-font">Share it:</h3> Broadcast out to people who you think would appreciate this brand or product. Products only get made with enough support, so spread the good word!</li>
+      <li class="p-font"><h3 class="subh-font">Preorder:</h3>After a product reaches its funding goal, you are still able to preorder it for the remainder of its time on the site. <hr style="margin-bottom:5px;">No free shipping - snooze you lose!<hr style="margin-top:5px;"></li>
+    </ol>
+
+    <h3 class="h-font">When will my product ship?</h3>
+    <hr style="margin-top:-5px;">
+    <ul>
+      <li>
+        <p class="p-font">BACKERS: Once you back a product, your item will ship after it reaches funding goal -- we do our best to estimate how long production and shipping will take, but being flexible is the name of the game to recieve access to this new of product. You will however recieve Free Expedited Shipping for sticking with us.</p>
+      </li>
+      <li>
+        <p class="p-font" style="list-style:none;">PREORDERS: If we have the item in stock, your order should ship within 10 business days.</p>
+      </li>
+
+    <h3 class="h-font">Who are the brands you feature? Why should I trust them?</h3>
+    <hr style="margin-top:-5px;">
+    <p class="p-font">We built relationships with top-notch brands from all over the globe and will never feature a campaign that we wouldn't back ourselves. Most of the brands we will feature build their product in the U.S.A., but will feature any brand that is built with integrity - regardless of its origin.</p>
+    <p class="p-font">Unlike traditional crowdfunding models, we only feature an established brand's products - which inherently takes alot of the risk out of backing a campaign. This is because established brands know their production capabilities and understand how to run a successful business.</p>
+
+    <h3 class="h-font">How can I support the products on Beeline Co.?</h3>
+    <hr style="margin-top:-5px;">
+    <h5 class="subh-font">Crowdfunded Products:</h5><p class="p-font">These are items that need to raise a minimum amount of funds before the brand can 'flip the on-switch'. By backing a campaign, you are helping its creators determine the general demand for a particular protoype or style. In exchange, you will be rewarded with one of the first production units, a special version of the product, special pricing or some other form of recognition of your contribution to its launch.</p>
+
+    <p class="p-font">Once you back an item, you have 10 days to cancel, but if the campaign doesn't reach its funding goal before the campaign ends, you won't be charged and the brand receives no funds. When you back a crowdfunding campaign, you are assuming some risk that the product may not be delivered on time, or be slightly different than described (they may be prototypes after all). Beeline Company only partners with reputable brands and will 'go to bat' for you if any quality issues arise.</p>
+
+    <h5 class="subh-font">Pre-order Products:</h5><p class="p-font"> Once a campaign ends but before a product is generally available, you can still secure your place for an early production unit by placing a pre-order. Most products available for pre-order originate from successful crowdfunding campaigns on Beeline Company. If you change your mind before your pre-order product is shipped, you may cancel it and recieve a voucher for your purchase price. Since you can cancel your pre-order, you aren’t assuming any risk regarding the delivery of the product you would like to buy.</p>
+
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-inverse">More Questions? Email us.</button>
   </div>
 </div>
 
@@ -107,15 +172,35 @@
 			<p class="p-font">
 				<%=@product.profile%>
 			</p>
+      <% if @product.facebookbrand != "" %>
 			<a href="http://facebook.com/<%=@product.facebookbrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/facebook_square_black.png"/></a>
-			<a href="http://twitter.com/<%=@product.twitterbrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/twitter_square_black.png"/></a>	
-			<a href="http://instagram.com/<%=@product.instagrambrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/instagram_square_black.png"/></a>
-			<a href="http://<%=@product.tumblrbrand.html_safe%>.tumblr.com/" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/tumblr_square_black.png"/></a>
+      <%end%>
+      <% if @product.twitterbrand != "" %>
+			<a href="http://twitter.com/<%=@product.twitterbrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/twitter_square_black.png"/></a>
+      <%end%>
+      <% if @product.instagrambrand != "" %>
+			<a href="http://instagram.com/<%=@product.instagrambrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/instagram_square_black.png"/></a><%end%>
+      <% if @product.tumblrbrand != "" %>
+			<a href="http://<%=@product.tumblrbrand.html_safe%>.tumblr.com/" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/tumblr_square_black.png"/></a><%end%>
 			<hr>
 		</div>
 		<div class="span6">
+      <table>
+        <tr>
+          <!-- <td style="padding-bottom:4px; padding-right:10px;">
+            <script src="//svpply.com/api/all.js#xsvml=1" type="text/javascript"></script>
+              <sv:product-button type="micro"></sv:product-button>
+          </td> -->
+          <td style="padding-right:10px;">
+            <fb:like send="true" layout="button_count" width="200" show_faces="false" font="arial" action="recommend"></fb:like>
+          </td>
+          <td>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="thebeeline_co" data-text="Come support the limited run <%=@product.productname%> by <%=@product.brandname.html_safe%> on Beeline Co.">Tweet</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          </td>
+        </tr>
+      </table>
 			<img id="brand-image" src="<%= @product.brandpic %>"/>
-			
 		</div>
 	</div>
 </div>
