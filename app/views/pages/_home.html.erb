@@ -16,13 +16,12 @@
         <div id="hero_image" style="background-image: url(https://s3.amazonaws.com/beelineco/TopoDMock.png);" class="left">
         </div>
       </div> -->
-
-
+      
     <!--  Carousel - consult the Twitter Bootstrap docs at
           http://twitter.github.com/bootstrap/javascript.html#carousel -->
-
-    <div id="homeImages" class="carousel slide" data-pause="remove"> <!-- class of slide for animation -->
-        <div class="carousel-inner">
+<div id="homeImages">
+    <div class="carousel slide" data-pause="remove"> <!-- class of slide for animation -->
+        <div class="carousel-inner stretch">
           <div class="item active" > <!-- class of active since it's the first item -->
             <img src="https://s3.amazonaws.com/beelineco/main+images/1_nightsky.jpg"  alt="" />
           </div>
@@ -43,10 +42,10 @@
           </div>
         </div> 
     </div>
-
-      <div class="container-fluid">
+</div>
+      <div class="container-fluid p-font" style="position:absolute; top:65px; right: 10px; font-weight:400;">
       <% flash.each do |name, msg| %>
-        <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+        <%= content_tag(:div, msg, class: "alert alert-success") %>
       <% end %>
       </div>
    </body>

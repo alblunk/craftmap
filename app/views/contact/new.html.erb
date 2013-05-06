@@ -1,0 +1,48 @@
+
+<!-- http://matharvard.ca/posts/2011/aug/22/contact-form-in-rails-3/ -->
+<div id="message-stylings">
+  <img id="message-background" src="http://science.dodlive.mil/files/2011/11/SC180791.jpg"/>
+  <div id="message-body">
+    <div class="row-fluid">
+      <div class="span6 centerize p-font">
+        <%= form_for @message, :url => contact_path do |form| %>
+        <div class="row-fluid">
+          <div class="span6">
+            <fieldset class="fields">
+              <div style="color:white; background-color:rgba(0,0,0,0.65); padding:10px; border-radius:5px; margin-left:20px;">
+              <div class="field">
+                <%= form.label :name %>
+                <%= form.text_field :name %>
+              </div>
+              
+              <div class="field">
+                <%= form.label :email %>
+                <%= form.text_field :email %>
+              </div>
+              <div class="field">
+                <%= form.label :subject %>
+                <%= form.text_field :subject %>
+              </div>
+              <hr>
+              <span class="subh-font" style="color:white;">All fields are requried.. Please?</span>
+            </div>
+            </div>
+          <div class="span6">
+            <div style="color:white; background-color:rgba(0,0,0,0.65); padding:16px; margin-bottom:5px; border-radius:5px;">
+                <div class="field">
+                  <%= form.label "How can we help you?" %>
+                  <%= form.text_area :body, :rows =>10%>
+                </div>
+              </div>
+            </fieldset>
+            
+            <fieldset class="actions">
+              <%= form.submit "Send", class: "big-green-button", style: "width:150px; padding:10px;" %>
+            </fieldset>
+          </div>
+        </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>

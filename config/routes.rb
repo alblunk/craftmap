@@ -9,6 +9,9 @@ Beeline::Application.routes.draw do
   get 'allproducts' => 'pages#allproducts'
   get 'comingsoon' => 'pages#comingsoon'
 
+  match 'contact' => 'contact#new', :as => 'contact', :via => :get
+  match 'contact' => 'contact#create', :as => 'contact', :via => :post
+  
   root :to => 'products#index'
 
 

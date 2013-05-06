@@ -10,69 +10,75 @@
       js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-</body>
+
+
+  <!-- CAROUSEL -->
+  <script type="text/javascript">
+        $(function(){
+          $('.carousel').carousel();
+        });
+      </script>
+</head>
     
-<!-- CELERY SCRIPTS -->
-  <script type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script> 
-  <script type="text/javascript" src="https://www.trycelery.com/js/progress-widget.js"></script>
 
 <body>
 
 <!-- Ideal counter:file://localhost/Users/alexblunk/Downloads/rendro-countdown-c6e6daa/examples/index.html -->
+  
 
 <div class="row-fluid" class="show-products">
-	<div class="span12">
-		<!-- <%= image_tag @product.image %> -->
-              <div id="showimages" class="carousel slide">
-                <ol class="carousel-indicators">
-                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#myCarousel" data-slide-to="1"></li>
-                  <li data-target="#myCarousel" data-slide-to="2"></li>
-                  <li data-target="#myCarousel" data-slide-to="3"></li>
-                  <li data-target="#myCarousel" data-slide-to="4"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="item active">
-                    <img src="<%=@product.pic1.html_safe %>" alt="">
-                    <div class="carousel-caption">
-                     	<h3 id="product_title"><%= @product.productname %></h3>
-						<h5 id="brand_name"><%= @product.brandname %></h5>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <img src="<%=@product.pic2.html_safe %>" alt="">
-                    <div class="carousel-caption">
-                      	<h3 id="product_title"><%= @product.productname %></h3>
-						<h5 id="brand_name"><%= @product.brandname %></h5>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <img src="<%=@product.pic3.html_safe %>" alt="">
-                    <div class="carousel-caption">
-                      	<h3 id="product_title"><%= @product.productname %></h3>
-						<h5 id="brand_name"><%= @product.brandname %></h5>
-                    </div>
-                  </div>
-                   <div class="item">
-                    <img src="<%=@product.pic4.html_safe %>" alt="">
-                    <div class="carousel-caption">
-                      	<h3 id="product_title"><%= @product.productname %></h3>
-						<h5 id="brand_name"><%= @product.brandname %></h5>
-                    </div>
-                  </div>
-                   <div class="item">
-                    <img src="<%=@product.pic5.html_safe %>" alt="">
-                    <div class="carousel-caption">
-                      	<h3 id="product_title"><%= @product.productname %></h3>
-						<h5 id="brand_name"><%= @product.brandname %></h5>
-                    </div>
-                  </div>
-                </div>
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-              </div>
+  <div class="span12">
+<section id="carousel">
+      <div id="myCarousel" class="carousel slide">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="<%=@product.pic1.html_safe %>" alt="">
+            <div class="carousel-caption">
+              <h3 id="product_title"><%= @product.productname %></h3>
+              <h5 id="brand_name"><%= @product.brandname %></h5>
+            </div>
+          </div>
+          <div class="item">
+            <img src="<%=@product.pic2.html_safe %>" alt="">
+            <div class="carousel-caption">
+                <h3 id="product_title"><%= @product.productname %></h3>
+                <h5 id="brand_name"><%= @product.brandname %></h5>
+            </div>
+          </div>
+          <div class="item">
+            <img src="<%=@product.pic3.html_safe %>" alt="">
+            <div class="carousel-caption">
+                <h3 id="product_title"><%= @product.productname %></h3>
+                <h5 id="brand_name"><%= @product.brandname %></h5>
+            </div>
+          </div>
+           <div class="item">
+            <img src="<%=@product.pic4.html_safe %>" alt="">
+            <div class="carousel-caption">
+                <h3 id="product_title"><%= @product.productname %></h3>
+                <h5 id="brand_name"><%= @product.brandname %></h5>
+            </div>
+          </div>
+           <div class="item">
+            <img src="<%=@product.pic5.html_safe %>" alt="">
+            <div class="carousel-caption">
+                <h3 id="product_title"><%= @product.productname %></h3>
+                <h5 id="brand_name"><%= @product.brandname %></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+        </section>
     </div>
 </div>
+
 
 
 <div class="row-fluid">
@@ -85,7 +91,7 @@
                   <!-- Button to trigger modal -->
                   <hr style="margin-bottom:5px;">
                   <p>
-                  <a href="#FAQModal" id="FAQ" data-toggle="modal">How does this work?</a></div>
+                  <a href="#FAQModal" id="FAQ" style="cursor:help;" data-toggle="modal">How does this work?</a></div>
                 </p>
                 <hr style="margin-top:-10px;">
   			       </div>
@@ -101,11 +107,9 @@
           </div>
           <br>
           <div class="centerize">
-            
-          <span id="campaign-status" class="label label-default"><%=@product.productstatus%></span>
-      <div class="celery-progress-bar" data-celery-slug=<%=@product.ecomm_url.html_safe%> data-celery-words=" funded" data-celery-color="#FFCC00" data-celery-goal-text="Funded!"></div></div>
-          
-            
+            <span id="campaign-status" class="label label-default"><%=@product.productstatus%></span>
+            <div class="celery-progress-bar" data-celery-slug=<%=@product.ecomm_url.html_safe%> data-celery-words=" funded" data-celery-color="#FFCC00" data-celery-goal-text="Funded!"></div>
+          </div>
         </div>
         <div class="span6">
         	<blockquote id="vendor-quote" class="pull-right">
@@ -172,7 +176,7 @@
 
   </div>
   <div class="modal-footer">
-    <button class="btn btn-inverse">More Questions? Email us.</button>
+    <a href="/contact"><button class="btn btn-inverse">More Questions? Email us.</button></a>
   </div>
 </div>
 
@@ -182,9 +186,9 @@
 		<div class="span6">
 			<h3 id="profile-title" class="h-font">Meet the Maker:<space> <%= @product.brandname.html_safe %></h3>
 			<h5 id="location" class="subh-font" ><%= @product.location%></h5> 
-			<p class="p-font">
-				<%=@product.profile%>
-			</p>
+			<div class="p-font">
+				<%=@product.profile.html_safe%>
+			</div>
       <% if @product.facebookbrand != "" %>
 			<a href="http://facebook.com/<%=@product.facebookbrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/facebook_square_black.png"/></a>
       <%end%>
@@ -267,5 +271,8 @@
 # 	</div>
 # </div> -->
 
+<!-- CELERY SCRIPTS -->
+  <script type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script> 
+  <script type="text/javascript" src="https://www.trycelery.com/js/progress.js"></script>
 
 </body>
