@@ -112,14 +112,15 @@
           </div>
         </div>
         <div class="span6">
-        	<blockquote id="vendor-quote" class="pull-right">
-        <p class="subh-font"><data:post.body/><strong>WORDS FROM <%=@product.brandname%>:</strong></p><p><%= @product.description %></p>
-        <small><%=@product.founders%></small>
-      </blockquote>
-  		<hr>
+            	<blockquote id="vendor-quote" class="pull-right">
+            <p class="subh-font"><data:post.body/><strong>WORDS FROM <%=@product.brandname%>:</strong></p><p><%= @product.description %></p>
+            <small><%=@product.founders%></small>
+          </blockquote>
+      		<hr>
 
-  		<h3 class="h-font updates">Updates:</h3>
-          <p class="p-font updates"> <%=@product.updates.html_safe%></p></div>
+  		    <h3 class="h-font updates" style="margin-bottom:-15px;">Updates:</h3>
+          <div class="p-font"><p> <%=@product.updates.html_safe%></p></div>
+        </div>
     </div>
   </div>
 </div>
