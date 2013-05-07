@@ -5,28 +5,30 @@
 <%= render 'pages/home' %>
 
 <div class="row-fluid" id="home-products">
-		<div class="span3">
+		<div class="span3 well" style="margin-bottom:0px;">
 			<table>
-					<p class="motto">THE NEWEST PRODUCTS</p>
-					<p class="motto">FROM THE BEST BRANDS</p>
-					<p class="motto">BACKED BY YOU, THE FANS</p>
-				
+					<p id="motto">THE NEWEST PRODUCTS</p>
+					<p id="motto">FROM THE BEST BRANDS</p>
+					<p id="motto">BACKED BY YOU, THE FANS</p>
 				<tr>
-					<div class="flatbtn" id="btnStart">START EXPLORING <small>►</small></div>
+					<hr style="margin:10px;">
 				</tr>
 				<tr>
-					<hr style="margin:6px; width:300px;">
+					<div class="flatbtn centerize" id="btnStart">START EXPLORING <small>►</small></div>
 				</tr>
-					<div class="pagination pagination-mini pagination-right">
+				<tr>
+					<hr style="margin:10px;">
+				</tr>
+					<div class="pagination pagination-mini pagination-right centerize">
 						<%= will_paginate @products %>
 					</div>
 				</tr>
 			</table>
 		</div>
-		<div class ="span9">
+		<div style="margin-left:5px !important;" class ="span9">
 			<div class="centerize" id="products">
 			  	<%= render @products %>
 			</div>
+			<a href="http://beelineco.tumblr.com" target="blank"><img src="https://s3.amazonaws.com/beelineco/blog_panel.jpg"/></a>
 		</div>
 </div>
-
