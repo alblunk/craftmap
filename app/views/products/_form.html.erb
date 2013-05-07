@@ -1,41 +1,45 @@
 <hr>
-<div class="container-fluid">
+<div class="container-fluid well">
   <div class="row-fluid">
-    <div class="span6">
-      <%= simple_form_for(@product, html: { class: "form-horizontal"}) do |f| %>
-        <%= f.error_notification %>
-        <%= f.full_error :image_file_size, class: "alert alert-error" %>
-        <%= f.full_error :image_content_type, class: "alert alert-error" %>
+    <%= simple_form_for(@product, html: { class: "form-horizontal"}) do |f| %>
+      <div class="span12">
+        <div class="row-fluid">
+          <div class="span6">
+            <%= f.error_notification %>
+            <%= f.full_error :image_file_size, class: "alert alert-error" %>
+            <%= f.full_error :image_content_type, class: "alert alert-error" %>
 
-      <%= f.input :productstatus, label: "Status:" %>
-      <%= f.input :image, label: "Upload a home image:" %>
-      <%= f.input :image_remote_url, label: "or/ Enter an image URL:" %>
-      <%= f.input :productname, label: "Enter Product Name:" %>
-      <%= f.input :price, label: "Price:" %>
-      <%= f.input :description, as: :text, label: "Enter Vendor Product Description:"%>
-      <%= f.input :ecomm_url, label: "Celery Product Code?" %>
-      <%= f.input :pic1, label: "Picture 1:" %>
-      <%= f.input :pic2, label: "Picture 2:" %>
-      <%= f.input :pic3, label: "Picture 3:" %>
-      <%= f.input :pic4, label: "Picture 4:" %>
-      <%= f.input :pic5, label: "Picture 5:" %>
-      <%= f.input :updates, as: :text, label: "Updates?"%>
+            <%= f.input :brandname, label: "Enter Brand Name:" %>
+            <%= f.input :founders, label: "Enter Founder F-Name/s:" %>
+            <%= f.input :location, label: "Enter Location:" %>
+            <%= f.input :brandpic, label: "Brand Picture URL" %>
+            <%= f.input :profile, as: :text, input_html: { rows: "10" }, label: "Enter Brand Profile:"%>
+            <%= f.input :facebookbrand, label: "facebook.com/:" %>
+            <%= f.input :twitterbrand, label: "twitter.com/:" %>
+            <%= f.input :instagrambrand, label: "instagram.com/:" %>
+            <%= f.input :tumblrbrand, label: "_____.tumblr.com/:" %>
+            <%= f.input :productstatus, label: "Status:" %>
+            <%= f.input :updates, as: :text, input_html: { rows: "10" }, label: "Updates?"%>
 
-    </div>
-    <div class="span6">
-      <%= f.input :brandname, label: "Enter Brand Name:" %>
-      <%= f.input :founders, label: "Enter Founder F-Name/s:" %>
-      <%= f.input :location, label: "Enter Location:" %>
-      <%= f.input :brandpic, label: "Brand Picture URL" %>
-      <%= f.input :profile, as: :text, label: "Enter Brand Profile:"%>
-      <%= f.input :facebookbrand, label: "facebook.com/:" %>
-      <%= f.input :twitterbrand, label: "twitter.com/:" %>
-      <%= f.input :instagrambrand, label: "instagram.com/:" %>
-      <%= f.input :tumblrbrand, label: "_____.tumblr.com/:" %>
-    </div>
-    <div class="form-actions">
-      <%= f.button :submit, class: "btn btn-primary" %>
-    </div>
+          </div>
+          <div class="span6">
+            <%= f.input :image, label: "Upload a home image:" %>
+            <%= f.input :image_remote_url, label: "or/ Enter an image URL:" %>
+            <%= f.input :productname, label: "Enter Product Name:" %>
+            <%= f.input :price, label: "Price:" %>
+            <%= f.input :description, as: :text, input_html: { rows: "10" }, label: "Enter Vendor Product Description:"%>
+            <%= f.input :ecomm_url, label: "Celery Product Code?" %>
+            <%= f.input :pic1, label: "Picture 1:" %>
+            <%= f.input :pic2, label: "Picture 2:" %>
+            <%= f.input :pic3, label: "Picture 3:" %>
+            <%= f.input :pic4, label: "Picture 4:" %>
+            <%= f.input :pic5, label: "Picture 5:" %>
+            <div class="form-actions">
+              <%= f.button :submit, class: "btn btn-primary" %>
+            </div>
+          </div>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>
