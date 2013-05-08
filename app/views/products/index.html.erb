@@ -19,14 +19,14 @@
 				<tr>
 					<hr style="margin:10px;">
 				</tr>
-					<div class="pagination pagination-mini pagination-right centerize">
+					<div id="homepagin"class="pagination pagination-mini pagination-right centerize">
 						<%= will_paginate @products %>
 					</div>
 				</tr>
 			</table>
 		</div>
 		<div style="margin-left:5px !important;" class ="span9">
-			<div class="centerize" id="products">
+			<div id="products">
 			  	<%= render @products %>
 			</div>
 			<a href="http://beelineco.tumblr.com" target="blank"><img src="https://s3.amazonaws.com/beelineco/blog_panel.jpg"/></a>
