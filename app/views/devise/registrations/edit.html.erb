@@ -12,7 +12,9 @@
   <%= f.input :password, label: "New Password", autocomplete: "off" %>
   <%= f.input :password_confirmation, label: "New Password Confirmation", autocomplete: "off" %>
   <%= f.input :current_password %>
-  <%= f.input :admin %>
+  <% if current_user.try(:admin?) %>
+    <%= f.input :admin %>
+  <%end%>
 
   <div class="form-actions">
     <%= f.submit "UPDATE", class: "big-green-button", style: "width:150px; padding:10px;"%>

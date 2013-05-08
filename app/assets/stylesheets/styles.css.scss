@@ -66,12 +66,8 @@ background-color:#323232;
     top: 0px; 
 }
 
-#myCarousel .carousel-indicators li {
-  cursor: crosshair;
-  -moz-box-shadow: 0 0 5px #888 !important;
-  -webkit-box-shadow: 0 0 5px#888 !important;
-  box-shadow: 0 0 5px #888 !important;
-}
+
+
 
 
 /*HOME PAGE - PRODUCT TILES LAYOUT*/
@@ -306,6 +302,13 @@ div.span5 {
 .carousel-indicators{
   margin-top:50px;
   margin-right:30px;
+}
+
+#myCarousel .carousel-indicators li {
+  cursor: crosshair;
+  -moz-box-shadow: 0 0 5px #888 !important;
+  -webkit-box-shadow: 0 0 5px#888 !important;
+  box-shadow: 0 0 5px #888 !important;
 }
 
 .carousel-caption {
