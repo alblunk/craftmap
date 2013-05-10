@@ -151,10 +151,10 @@ box-shadow: 0 0 5px #888;
   position:absolute; 
   visibility:hidden; 
   top:10px; 
-  padding:3px; 
+  padding:2px; 
   left:10px; 
   font-size:1.5em; 
-  background-color:lightgray;
+  background-color: rgba(255,255,255, 0.8);
    pointer-events: none;
 }
 
@@ -164,7 +164,7 @@ box-shadow: 0 0 5px #888;
   top:30px; 
   left:10px; 
   visibility:hidden; 
-  background-color:lightgray;
+  background-color: rgba(255,255,255, 0.8);
    pointer-events: none;
 }
 
