@@ -141,33 +141,47 @@ box-shadow: 0 0 5px #888;
 }
 .box:hover{
   opacity:.7;
-#h-product, #h-brandname {
+#h-product, #h-brandname, #h-funding {
   visibility:visible !important;
-  opacity:1 !important;
   }
 }
 
 #h-product {
   position:absolute; 
   visibility:hidden; 
-  top:10px; 
-  padding:2px; 
+  font-family:exo, serif;
+  font-weight:100;
+  font-size: 1.75em;
+  border-radius:1px;
+  top:5px; 
+  padding:5px; 
   left:10px; 
-  font-size:1.5em; 
   background-color: rgba(255,255,255, 0.8);
    pointer-events: none;
 }
 
 #h-brandname {
   position:absolute; 
-  padding:3px; 
+  border-radius:1px;
   top:30px; 
-  left:10px; 
+  left:15px; 
   visibility:hidden; 
   background-color: rgba(255,255,255, 0.8);
    pointer-events: none;
 }
 
+#h-funding {
+  position:absolute; 
+  border-radius:2px;
+  padding:2px;
+  margin:2px; 
+  top:55px; 
+  left:10px; 
+  visibility:hidden; 
+  color:white;
+  background-color: rgba(0, 51, 99, 1);
+   pointer-events: none;
+}
 
 /*SHOW / PRODUCT DETAILS*/
 
