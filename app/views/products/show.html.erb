@@ -185,6 +185,9 @@
         <div class="row-fluid">
           <div class="span12">
             <%= render @products %>
+            <div class="pagination pagination-mini centerize">
+            <%= will_paginate @products %>
+            </div>
           </div>
         </div>
       </div>
