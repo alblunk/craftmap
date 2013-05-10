@@ -103,9 +103,16 @@ background-color:#323232;
   height:40px;
   width:80%;
 }
+#products{
+  margin-top: -20px;
+}
 
-#home-products.row-fluid {
-margin-top: -18px;
+#home-products {
+margin-top: -30px;
+margin-bottom:0px;
+-moz-box-shadow: 0 0 5px #888; 
+-webkit-box-shadow: 0 0 5px#888; 
+box-shadow: 0 0 5px #888;
 }
 
 
