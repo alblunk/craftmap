@@ -5,6 +5,7 @@
 <%= render 'pages/home' %>
 
 <div class="row-fluid" id="home-products">
+	<div class ="span1" style="width:1% !important;"></div>
 		<div class="span3 well" style="margin-bottom:0px;">
 			<table>
 					<p id="motto">THE NEWEST PRODUCTS</p>
@@ -14,21 +15,25 @@
 					<hr style="margin:10px;">
 				</tr>
 				<tr>
+					
 					<div class="flatbtn centerize" id="btnStart">START EXPLORING <small>►</small></div>
+
 				</tr>
 				<tr>
 					<hr style="margin:10px;">
 				</tr>
+					<span class="subh-font centerize">SEE MORE <span style="font-size:.5em; padding-bottom:2px;">▼</span></span>
 					<div id="homepagin"class="pagination pagination-mini pagination-right centerize">
 						<%= will_paginate @products %>
 					</div>
 				</tr>
 			</table>
 		</div>
-		<div style="margin-left:5px !important;" class ="span9">
+		<div class ="span1" style="width:1% !important;"></div>
+		<div class ="span8">
 			<div id="products">
 			  	<%= render @products %>
 			</div>
-			<a href="http://beelineco.tumblr.com" target="blank"><img src="https://s3.amazonaws.com/beelineco/blog_panel.jpg"/></a>
+			<a style="margin-left:-20px; height:20px;" href="http://beelineco.tumblr.com" target="blank"><img src="https://s3.amazonaws.com/beelineco/blog_panel.jpg"/></a>
 		</div>
 </div>

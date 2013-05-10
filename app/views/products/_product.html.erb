@@ -1,5 +1,9 @@
 <div class = "box">
-		<%= link_to image_tag(product.image(:medium)), product %>
+		<p id="h-product" class="p-font"><%=product.productname%></p>
+		<p id="h-brandname" class="subh-font"><%=product.brandname%></p>
+		<div class="h-pic">
+		<%= link_to image_tag(product.image(:large)), product %>
+		</div>
 	<% if current_user == product.user %>
 		<p>
 		<%= link_to 'Edit', edit_product_path(product) %>
@@ -8,3 +12,4 @@
 		</p>
 	<% end %>
 </div>
+

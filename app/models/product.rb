@@ -17,7 +17,7 @@ class Product < ActiveRecord::Base
                             size: { less_than: 5.megabytes }
   
   belongs_to :user
-  has_attached_file :image, styles: { medium: "425x100^"}#360x270/280x210
+  has_attached_file :image, styles: { medium: "360x75^", large: "450x100^"}#, 220x100 (thumbnail) medium:"360x165^" #360x270/280x210 360x165
 
   def image_remote_url=(url_value)
   	self.image = URI.parse(url_value) unless url_value.blank?
