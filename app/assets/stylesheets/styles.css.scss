@@ -136,6 +136,7 @@ box-shadow: 0 2px 10px #888;*/
     margin-left:-20px;
     margin-right:20px !important;
     position:relative;
+    opacity:.6;
 /*    float: left;*/
     /*-webkit-border-radius: 5px;
     -moz-border-radius: 5px;*/
@@ -146,7 +147,7 @@ box-shadow: 0 2px 10px #888;*/
     text-align: center !important;*/
 }
 .box:hover{
-  opacity:.7;
+  opacity:1;
 #h-product, #h-brandname, #h-funding {
   visibility:visible !important;
   }
@@ -155,8 +156,8 @@ box-shadow: 0 2px 10px #888;*/
 #h-product {
   position:absolute; 
   visibility:hidden; 
-  font-family:exo, serif;
-  font-weight:100;
+  /*font-family:exo, serif;
+  font-weight:100;*/
   font-size: 1.75em;
   border-radius:1px;
   top:5px; 
@@ -169,8 +170,9 @@ box-shadow: 0 2px 10px #888;*/
 #h-brandname {
   position:absolute; 
   border-radius:1px;
+  padding:5px; 
   top:30px; 
-  left:15px; 
+  left:10px; 
   visibility:hidden; 
   background-color: rgba(255,255,255, 0.8);
    pointer-events: none;
@@ -375,6 +377,10 @@ div.span5 {
 .carousel-indicators{
   margin-top:50px;
   margin-right:30px;
+  background-color: rgba(0,0,0, 0.5);
+  border-radius:3px;
+  padding:7px;
+  padding-right:10px;
 }
 
 #myCarousel .carousel-indicators li {
