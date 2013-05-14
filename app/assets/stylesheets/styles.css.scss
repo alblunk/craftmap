@@ -148,7 +148,7 @@ box-shadow: 0 2px 10px #888;*/
 }
 .box:hover{
   opacity:1;
-#h-product, #h-brandname, #h-funding, #h-time{
+#h-product, #h-brandname, #h-details,{
   visibility:visible !important;
   }
 }
@@ -180,7 +180,7 @@ box-shadow: 0 2px 10px #888;*/
    pointer-events: none;
 }
 
-#h-funding {
+#h-details {
   position:absolute; 
   border-radius:1px;
   padding:2px;

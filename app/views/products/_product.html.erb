@@ -1,7 +1,11 @@
 <div class = "box">
 		<p id="h-product" class="h-font"><%=product.productname%></p>
 		<span id="h-brandname" class="subh-font"><%=product.brandname%></span>
-		<p id="h-funding" class="subh-font"><span style="font-size:.6em">$</span><%=product.price%> | <span style="padding:4px;border-radius:1px; color:rgba(56, 158, 57, 1); font-weight:600;">60% Funded</span> | <span class="icon-time"></span> 12 days left</span></p>
+		<p id="h-details" class="subh-font">
+			<!-- PRICE --><span class="icon-tag"></span> $<%=product.price%> | 
+			<!-- FUNDING --><span class="icon-signal"></span><span style="padding:4px;border-radius:1px; color:rgba(56, 158, 57, 1); font-weight:600;">60% Funded</span> | 
+			<!-- TIME --><span class="icon-time"></span> 12 days left</span>
+		</p>
 		<div class="h-pic">
 		<%= link_to image_tag(product.image(:large)), product %>
 		</div>
