@@ -289,7 +289,21 @@ div.celery-progress-tooltip {
   background-color:black;
 }
 
+#FAQbtn-close {
+  background-color:#389e39;
+  line-height: 265%;
+  height:40px;
+  width:250px;
+  border:0;
+  padding-right:20px;
+}
 
+#FAQbtn-close:hover {
+  background-color:#2d802e;
+}
+
+  /*dark shadow: #2d802e*/
+  /*light shadow: #389e39*/
 
 #campaign-status {
   text-transform: uppercase;
@@ -416,6 +430,11 @@ font-weight:100;
   width:25px;
   left:10px;
   padding-bottom:5px;
+}
+
+.brandsocial:hover {
+  border-top: 1px solid black;
+  margin-bottom:-1px;
 }
 
 #location {

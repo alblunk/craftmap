@@ -1,6 +1,6 @@
 class NotificationsMailer < ActionMailer::Base
 
-  default :from => "no-reply@thebeeline.co"
+  # default :from => :email
   default :to => "pops@thebeeline.co"
 
   def new_message(message)
