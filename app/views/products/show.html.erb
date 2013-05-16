@@ -122,7 +122,7 @@
                       </td>
                     </tr>
                   </table>
-                  <button class="big-green-button" style="width:80%; height:50px; margin-top:20px; margin-bottom:10px;" data-celery=<%=@product.ecomm_url.html_safe%>>BACK IT</button>
+                  <button class="flatbtn" id="backbtn" data-celery=<%=@product.ecomm_url.html_safe%>>BACK IT</button>
                   <!-- Button to trigger modal -->
                   <hr style="margin-bottom:5px;">
                   <p>
@@ -132,7 +132,7 @@
   			       </div>
   			       <br>
               <div class="span6 campaign-details">
-              		<h2 id="price"><small>$</small><%=@product.price %></h2>
+              		<h2 id="price"><span style="font-size:.55em;">$</span><%=@product.price %></h2>
                   <div id="campaign-details">
                     <h5 class="subh-font"> 20 of 100 Backers Needed</h5>
                     <h5 class="subh-font"> Ends: 5/15/2013</h5>
@@ -159,6 +159,7 @@
       <div class="centerize">
         <!-- <span id="campaign-status" class="label label-default"><%=@product.productstatus%></span> -->
         <div class="celery-progress-bar" data-celery-slug=<%=@product.ecomm_url.html_safe%> data-celery-words=" funded" data-celery-color="#FFCC00" data-celery-goal-text="Funded!"></div>
+        <hr>
       </div>
       <h4 class="subh-font updates" style="margin:10px 0 -5px -15px;">Campaign Updates:</h4>
           <div class="p-font"><p> <%=@product.updates.html_safe%></p></div>
@@ -243,7 +244,7 @@
     </table>
     <h4 class="subh-font">This is where <i>you</i> come in. You have a few options to help <i>beeline</i> these items into production.</h4>
     <ol>
-      <li class="p-font"><h3 class="subh-font">Back it:</h3> A commitment to financially back the production of this item when enough people have shown interest. Your card only gets charged after a product hits the goal of a number of funders. <hr style="margin-bottom:5px;">All backers recieve <i>Free Priority Shipping</i> after their goods are ready.<hr style="margin-top:5px;"></li>
+      <li class="p-font"><h3 class="subh-font">Back it:</h3> A commitment to financially back the production of this item when enough people have shown interest. Your card only gets charged after a product hits the goal of a number of backers. <hr style="margin-bottom:5px;">All backers recieve <i>Free Priority Shipping</i> after their goods are ready.<hr style="margin-top:5px;"></li>
       <li class="p-font"><h3 class="subh-font">Share it:</h3> Broadcast out to people who you think would appreciate this brand or product. Products only get made with enough support, so spread the good word!</li>
       <li class="p-font"><h3 class="subh-font">Preorder:</h3>After a product reaches its funding goal, you are still able to preorder it for the remainder of its time on the site. <hr style="margin-bottom:5px;">No free shipping - early bird gets the worm!<hr style="margin-top:5px;"></li>
     </ol>
