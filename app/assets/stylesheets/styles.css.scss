@@ -133,10 +133,11 @@ box-shadow: 0 2px 10px #888;*/
 
 .box {
     width:400px;
-    margin-left:-20px;
+    margin-left:-35px;
     margin-right:20px !important;
     position:relative;
     opacity:.6;
+    padding-right:15px;
 /*    float: left;*/
     /*-webkit-border-radius: 5px;
     -moz-border-radius: 5px;*/
@@ -148,7 +149,7 @@ box-shadow: 0 2px 10px #888;*/
 }
 .box:hover{
   opacity:1;
-#h-product, #h-brandname, #h-details,{
+#h-product, #h-brandname, #h-details {
   visibility:visible !important;
   }
 }
@@ -232,7 +233,7 @@ box-shadow: 0 2px 10px #888;*/
   text-align:right; 
   right:50px; 
   top:100px; 
-  color:white; 
+  color:#d7d7d7; 
   background-color: rgba(0, 0, 0, 0.0);
   padding:10px;
 }

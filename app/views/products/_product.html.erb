@@ -1,3 +1,5 @@
+
+
 <div class = "box">
 		<p id="h-product" class="h-font"><%=product.productname%></p>
 		<span id="h-brandname" class="subh-font"><%=product.brandname%></span>
@@ -6,15 +8,19 @@
 			<!-- FUNDING --><span class="icon-signal"></span><span style="padding:4px;border-radius:1px; color:rgba(56, 158, 57, 1); font-weight:600;">60% Funded</span> | 
 			<!-- TIME --><span class="icon-time"></span> 12 days left</span>
 		</p>
+		<span class="subh-font" style="position:absolute; right:0; padding-right:20px; text-align:right;">
+			<% if current_user == product.user %>
+				<p style="margin-bottom:-5px;">
+				<%= link_to 'Edit', edit_product_path(product) %>
+				</p>
+				<p>
+				<%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+				</p>
+			<% end %>
+		</span>
 		<div class="h-pic">
 		<%= link_to image_tag(product.image(:large)), product %>
 		</div>
-	<% if current_user == product.user %>
-		<p>
-		<%= link_to 'Edit', edit_product_path(product) %>
-		//
-		<%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-		</p>
-	<% end %>
+	
 </div>
 
