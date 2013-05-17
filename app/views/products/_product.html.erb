@@ -1,13 +1,25 @@
 
 
 <div class = "box">
-		<p id="h-product" class="h-font"><%=product.productname%></p>
-		<span id="h-brandname"><%=product.brandname%></span>
+
+
+		<!-- <p id="h-product" class="h-font"><%=product.productname%></p>
+
+		<span id="h-brandname"><%=product.brandname%></span> -->
+
 		<p id="h-details" class="subh-font">
 			<!-- PRICE --><span class="icon-tag"></span> $<%=product.price%> | 
-			<!-- FUNDING --><span class="icon-signal"></span><span style="padding:4px;border-radius:1px; color:rgba(56, 158, 57, 1); font-weight:600;">60% Funded</span> | 
-			<!-- TIME --><span class="icon-time"></span> 12 days left</span>
+
+
+			<!-- FUNDING --> <span class="icon-signal"></span>&nbsp;<span style="padding:4px; border-radius:1px; color:rgba(56, 158, 57, 1); font-weight:600;" class="<%= product.ecomm_url %> backers-needed">Loading...</span> |  
+
+
+			<!-- TIME --><span class="icon-time"></span>&nbsp;<span class="<%= product.ecomm_url %> remaining">Loading...</span>
+
+
 		</p>
+
+
 		<span class="subh-font" style="position:absolute; right:0; padding-right:20px; text-align:right;">
 			<% if current_user == product.user %>
 				<p style="margin-bottom:-5px;">
@@ -18,7 +30,10 @@
 				</p>
 			<% end %>
 		</span>
-		<div class="h-pic">
+
+
+
+		<div class="h-pic" data-img="<%= product.pic1 %>" data-product="<%= product.productname %>" data-brand="<%= product.brandname %>">
 		<%= link_to image_tag(product.image(:large)), product %>
 		</div>
 	

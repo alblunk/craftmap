@@ -122,7 +122,7 @@
                       </td>
                     </tr>
                   </table>
-                  <button class="flatbtn" id="backbtn" data-celery=<%=@product.ecomm_url.html_safe%>>BACK IT</button>
+                  <button class="flatbtn" id="backbtn" data-celery="<%=@product.ecomm_url%>">BACK IT</button>
                   <!-- Button to trigger modal -->
                   <hr style="margin-bottom:5px;">
                   <p>
@@ -134,8 +134,17 @@
               <div class="span6 campaign-details">
               		<h2 id="price"><span style="font-size:.55em;">$</span><%=@product.price %></h2>
                   <div id="campaign-details">
-                    <h5 class="subh-font"> 20 of 100 Backers Needed</h5>
-                    <h5 class="subh-font"> Ends: 5/15/2013</h5>
+
+
+                  <!-- MIN, MAX BACKERS -->
+
+                    <h5 id="backers-needed" class="subh-font">Loading...</h5>
+
+
+                    <!-- TIME -->
+
+                    <h5 id="remaining" class="subh-font">Loading...</h5>
+
                   </div>
               		
   			       </div>
@@ -158,7 +167,7 @@
 		<div class="span5">
       <div class="centerize">
         <!-- <span id="campaign-status" class="label label-default"><%=@product.productstatus%></span> -->
-        <div class="celery-progress-bar" data-celery-slug=<%=@product.ecomm_url.html_safe%> data-celery-words=" funded" data-celery-color="#FFCC00" data-celery-goal-text="Funded!"></div>
+        <div class="celery-progress-bar" data-celery-slug="<%=@product.ecomm_url%>" data-celery-words=" funded" data-celery-color="#FFCC00" data-celery-goal-text="Funded!"></div>
         <hr>
       </div>
       <h4 class="subh-font updates" style="margin:10px 0 -5px -15px;">Campaign Updates:</h4>
@@ -311,5 +320,68 @@
 <!-- CELERY SCRIPTS -->
   <script type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script> 
   <script type="text/javascript" src="https://www.trycelery.com/js/progress.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  var api_url = "https://api.trycelery.com";
+  var getProduct = function(slug, callback) {
+    $.getJSON(api_url + "/v1/products/" + slug + "?callback=?", function(data) {
+      callback(data.product);
+    })
+  }
+  var getRevenue = function(slug, callback) {
+    $.getJSON(api_url + "/v1/products/" + slug + "/revenue?callback=?", function(data) {
+      callback(data.count);
+    })
+  }
+  var getSold = function(slug, callback) {
+     $.getJSON(api_url + "/v1/orders/count/" + slug + "?callback=?", function(data) {
+      callback(data.count);
+    })
+  }
+  var remainingTime = function(remaining) {
+    var str = "";
+    if(remaining > 0) {
+      var days_until = Math.floor((remaining) / (24 * 3600));
+      var hours_until = Math.floor((remaining) / (3600));
+      var minutes_until = Math.floor((remaining) / (60));
+      var seconds_until = Math.floor((remaining));
+      if(days_until > 0) {
+        var s = days_until > 1 ? " days": " day";
+        str = days_until + s + " to go";
+      } else if(hours_until > 0) {
+        var s = hours_until > 1 ? " hours": " hour";
+        str = hours_until + s + " to go";
+      } else if(minutes_until > 0) {
+        var s = minutes_until > 1 ? " minutes": " minute";
+        str = minutes_until + s + " to go";
+      } else if(seconds_until > 0) {
+        var s = seconds_until > 1 ? " seconds": " second";
+        str = seconds_until + s + " to go";
+      }
+    }
+    return str;
+  }
+
+  var displayStuff = function(product) {
+    $("#backers-needed").html(product.sold + " of " + product.min + " needed &bull; " + Math.floor(product.sold/product.min * 100) + "% funded");
+    $("#remaining").html(remainingTime(product.time_remaining/1000));
+  }
+
+  var getAll = function() {
+    var slug = "<%= @product.ecomm_url %>";
+    getProduct(slug, function(product) {
+      getSold(slug, function(sold) {
+        getRevenue(slug, function(revenue) {
+          product.sold = sold;
+          product.revenue = revenue
+
+          displayStuff(product);
+        })
+      })
+    })
+  }
+  getAll();
+})
+</script>
 
 </body>
