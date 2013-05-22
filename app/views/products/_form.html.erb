@@ -13,13 +13,13 @@
             <%= f.input :founders, label: "Enter Founder F-Name/s:" %>
             <%= f.input :location, label: "Enter Location:" %>
             <%= f.input :brandpic, label: "Brand Picture URL" %>
-            <%= f.input :profile, as: :text, input_html: { rows: "10" }, label: "Enter Brand Profile:"%>
+            <%= f.input :profile, as: :text, input_html: { rows: "10" }, label: "Enter Brand Profile:", input_html: { class: 'wysihtml5' } %>
             <%= f.input :facebookbrand, label: "facebook.com/:" %>
             <%= f.input :twitterbrand, label: "twitter.com/:" %>
             <%= f.input :instagrambrand, label: "instagram.com/:" %>
             <%= f.input :tumblrbrand, label: "_____.tumblr.com/:" %>
             <%= f.input :productstatus, label: "Status:" %>
-            <%= f.input :updates, as: :text, input_html: { rows: "10" }, label: "Updates?"%>
+            <%= f.input :updates, as: :text, input_html: { rows: "10",  class: 'wysihtml5' }, label: "Updates?"%>
 
           </div>
           <div class="span6">
@@ -27,7 +27,7 @@
             <%= f.input :image_remote_url, label: "or/ Enter an image URL:" %>
             <%= f.input :productname, label: "Enter Product Name:" %>
             <%= f.input :price, label: "Price:" %>
-            <%= f.input :description, as: :text, input_html: { rows: "10" }, label: "Enter Vendor Product Description:"%>
+            <%= f.input :description, as: :text, input_html: { rows: "10",  class: 'wysihtml5' }, label: "Enter Vendor Product Description:"%>
             <%= f.input :ecomm_url, label: "Celery Product Code?" %>
             <%= f.input :pic1, label: "Picture 1:" %>
             <%= f.input :pic2, label: "Picture 2:" %>
@@ -43,4 +43,12 @@
     <% end %>
   </div>
 </div>
+<script type="text/javascript">
+$(function() {
+  $('.wysihtml5').each(function(i, elem) {
+    debugger
+    $(elem).wysihtml5();
+  });
+})
+</script>
 
