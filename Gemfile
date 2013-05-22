@@ -9,6 +9,7 @@ gem 'aws-sdk'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'bootstrap-wysihtml5-rails'
+gem 'thin'
 
 group :production do
 	gem "pg"

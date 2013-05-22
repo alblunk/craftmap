@@ -59,7 +59,7 @@ $(document).ready(function(){
   }
 
   var displayStuff = function(products) {
-  	debugger
+  	// debugger
   	for(var key in products) {
   		var product = products[key];
   		// BACKERS ---- product.sold + " of " + product.min + " needed &bull; " + 
@@ -85,5 +85,7 @@ $(document).ready(function(){
 	});
   }
 
-  getData(slugs.split(","));
+  if(typeof(slugs) !== "undefined") {
+    getData(slugs.split(","));
+  }
 });
