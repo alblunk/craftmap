@@ -1,24 +1,4 @@
-<html>
-    <head>
-      <!-- CAROUSEL -->
-      <script type="text/javascript">
-        $(function(){
-          $('.carousel').carousel();
-        });
-      </script>
-    </head>
-    <body>
-<!-- <div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span12">
-      <div class="centerize" style="background-size:100%; width:100%; position:relative; background-color:#505050; padding:0px;">
-        <img src="https://s3.amazonaws.com/beelineco/nightsky_1250.jpg"/>
-        <div id="hero_image" style="background-image: url(https://s3.amazonaws.com/beelineco/main+images/1_nightsky.jpg);" class="left">
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
+
       
     <!--  Carousel - consult the Twitter Bootstrap docs at
           http://twitter.github.com/bootstrap/javascript.html#carousel -->
@@ -31,7 +11,6 @@
 
             <div class="hero-product h-font" style="display:none"></div>
             <div class="hero-brand subh-font" style="display:none"></div> 
-
 
             <img src="https://s3.amazonaws.com/beelineco/main+images/1_nightsky.jpg"  alt="" />
             
@@ -63,7 +42,10 @@
         <%= content_tag(:div, msg, class: "alert alert-success") %>
       <% end %>
       </div>
-   </body>
 
-   
- </html> 	
+<script type="text/javascript">
+  $(function(){
+    $('.carousel').carousel();
+  });
+</script>
+
