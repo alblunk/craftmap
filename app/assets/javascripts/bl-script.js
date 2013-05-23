@@ -20,7 +20,7 @@ $(document).ready(function(){
   var products = {};
 
   var getProduct = function(slug, callback) {
-    $.getJSON(api_url + "/v1/products/" + slug + "?callback=?", function(data) {
+    $.getJSON(api_url + "/v1/shop/" + slug + "?callback=?", function(data) {
       callback(data.product);
     })
   }

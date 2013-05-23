@@ -75,7 +75,7 @@
     </div>
 
         <div id="show-admin" class="subh-font">
-          <% if current_user == @product.user %>
+          <% if current_user == @product.user%>
             <h4>
               <%= link_to 'Edit', edit_product_path(@product) %> //
               <%= link_to 'Back', products_path %>
@@ -339,7 +339,7 @@
 $(document).ready(function() {
   var api_url = "https://api.trycelery.com";
   var getProduct = function(slug, callback) {
-    $.getJSON(api_url + "/v1/products/" + slug + "?callback=?", function(data) {
+    $.getJSON(api_url + "/v1/shop/" + slug + "?callback=?", function(data) {
       callback(data.product);
     })
   }
