@@ -1,17 +1,6 @@
 <head>
   <!-- TUMBLR -->
   <script src="http://platform.tumblr.com/v1/share.js"></script>
-  <!-- FACEBOOK -->
-  <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-
   <!-- CAROUSEL -->
   <script type="text/javascript">
         $(function(){
@@ -119,29 +108,40 @@
           <div class="row-fluid">
             	<div class="span6">
             		<div class="centerize">
-                  <table>
-                    <tr>
-                      <a href="http://www.facebook.com/share.php?u=[<%=request.url%>]&title=[<%=@product.productname%>by<%=@product.brandname%>]" target="blank"><img src="http://www.underconsideration.com/brandnew/archives/facebook_logo_detail.gif" width="50" ></a>
-                      <!-- <td style="padding-bottom:4px; padding-right:10px;">
-                        <script src="//svpply.com/api/all.js#xsvml=1" type="text/javascript"></script>
-                          <sv:product-button type="micro"></sv:product-button>
-                      </td> -->
-                      <td style="padding-right:5px;">
-                        <fb:like send="true" layout="button_count" width="200" show_faces="false" font="arial" action="recommend"></fb:like>
-                      </td>
-                      <td>
-                        <a href="https://twitter.com/share" class="twitter-share-button" data-via="thebeeline_co" data-text="Come support the limited run <%=@product.productname%> by <%=@product.brandname.html_safe%> on Beeline Co.">Tweet</a>
-                          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                      </td>
-                    </tr>
-                  </table>
+                  
+
                   <button class="flatbtn" id="backbtn" data-celery="<%=@product.ecomm_url%>">BACK IT</button>
+
                   <!-- Button to trigger modal -->
                   <hr style="margin-bottom:5px;">
                   <p>
                   <a href="#FAQModal" id="FAQ" class="h-font" data-toggle="modal">How does this work?</a></div>
                 </p>
                 <hr style="margin-top:-10px;">
+                <table>
+                    <tr >
+                      <!-- FACEBOOK -->
+                      <td>
+                        <a href="http://www.facebook.com/share.php?u=<%=request.url%>&title=<%=@product.productname%>by<%=@product.brandname%> hosted by Beeline Co." target="blank"><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/facebook.png" width="25" ></a>
+                      </td>
+                      <!-- TWITTER -->
+                      <td>
+                        <a href="http://twitter.com/home?status=<%=@product.productname%> from <%=@product.brandname%> hosted by @thebeeline_co+<%=request.url%>" target="blank"><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/twitter.png" width="25" ></a>
+                      </td>
+                      <!-- TUMBLR -->
+                      <td>
+                        <a href="http://www.tumblr.com/share?v=3&u=[<%=request.url%>]&t=[<%=@product.productname%> from <%=@product.brandname%> hosted by Beeline Co." target="blank"><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/tumblr.png" width="25" ></a>
+                      </td>
+                      <!-- PINTEREST -->
+                       <td>
+                        <a href="http://pinterest.com/pin/create/bookmarklet/?media=<%=@product.pic1%>&url=<%=request.url%>&is_video=false&description=<%=@product.productname%> from <%=@product.brandname%> hosted by Beeline Co." target="blank"><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/pinterest.png" width="25" ></a>
+                       </td> 
+                      <!-- STUMBLEUPON -->
+                       <td>
+                        <a href="http://www.stumbleupon.com/submit?url=<%=request.url%>&title=<%=@product.productname%> from <%=@product.brandname%> hosted by Beeline Co.+<%=request.url%>" target="blank"><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/stumbleupon.png" width="25" ></a>
+                      </td>
+                    </tr>
+                  </table>
   			       </div>
   			       <br>
               <div class="span6 campaign-details">
