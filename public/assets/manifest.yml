@@ -1,10 +1,20 @@
 ---
+facebook.png: facebook-e0b5c6afb0e3da037ac119e75169cca3.png
+facebook/index.png: facebook-e0b5c6afb0e3da037ac119e75169cca3.png
 favicon.ico: favicon-91ad6eaf23ecb03d8bfd771f1756bd61.ico
 favicon/index.ico: favicon-91ad6eaf23ecb03d8bfd771f1756bd61.ico
+pinterest.png: pinterest-37575c539f5a584532d0feac1892d0bc.png
+pinterest/index.png: pinterest-37575c539f5a584532d0feac1892d0bc.png
+stumbleupon.png: stumbleupon-750bc2b6cb766f5f89b55071e214a92a.png
+stumbleupon/index.png: stumbleupon-750bc2b6cb766f5f89b55071e214a92a.png
+tumblr.png: tumblr-452f66fa0a4184d96aee84eeffe977c2.png
+tumblr/index.png: tumblr-452f66fa0a4184d96aee84eeffe977c2.png
+twitter.png: twitter-1c89064d09c9621dd6f6b861bcb16f14.png
+twitter/index.png: twitter-1c89064d09c9621dd6f6b861bcb16f14.png
 application.js: application-5b1bc6cb2465f5bbc99e66fcba463811.js
 application/index.js: application-5b1bc6cb2465f5bbc99e66fcba463811.js
-application.css: application-ae65280c9620d02eac4fe6fa7ca06aa0.css
-application/index.css: application-ae65280c9620d02eac4fe6fa7ca06aa0.css
+application.css: application-ea6b53fb00012d1a4993b5834e8f0823.css
+application/index.css: application-ea6b53fb00012d1a4993b5834e8f0823.css
 glyphicons-halflings-white.png: glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
 glyphicons-halflings-white/index.png: glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
 glyphicons-halflings.png: glyphicons-halflings-2851b489e8c39f8fad44fc10efb99c3e.png
