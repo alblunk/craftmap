@@ -122,19 +122,17 @@
                       <!-- FACEBOOK -->
                     <div class="centerize">
                       <p style="pointer-events:none; margin-bottom:3px;margin-top:-5px;" class="subh-font" >SPREAD THE GOOD WORD:</p>
-                        <a href="http://www.facebook.com/share.php?u=<%=request.url%>&title=<%=@product.productname%>by<%=@product.brandname%> hosted by Beeline Co." target="blank"><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/facebook.png" width="25" ></a>
+                        <a href="http://www.facebook.com/share.php?u=<%=request.url%>&title=<%=@product.productname%>by<%=@product.brandname%> hosted by Beeline Co." target="blank" ><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/facebook.png" width="25" ></a>
                       
                       <!-- TWITTER -->
-                      
-                        <a href="http://twitter.com/home?status=<%=@product.productname%> from <%=@product.brandname%> hosted by @thebeeline_co+<%=request.url%>" target="blank"><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/twitter.png" width="25" ></a>
-                      
-                      <!-- TUMBLR -->
-                      
-                        <a href="http://www.tumblr.com/share?v=3&u=[<%=request.url%>]&t=[<%=@product.productname%> from <%=@product.brandname%> hosted by Beeline Co." target="blank"><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/tumblr.png" width="25" ></a>
+                        <a href="http://twitter.com/home?status=<%=@product.productname%> from <%=@product.brandname%> hosted by @thebeeline_co+<%=request.url%>" target="blank" ><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/twitter.png" width="25" ></a>
+
+                      <!-- GOOGLE PLUS -->
+                      <a href="https://plus.google.com/share?url=<%=request.url%>" target="blank" class="social-show"style="text-decoration:none; color:#dd4a38; font-size:3em; vertical-align: -6px; ">+</a>
                      
                       <!-- PINTEREST -->
                       
-                        <a href="http://pinterest.com/pin/create/bookmarklet/?media=<%=@product.pic1%>&url=<%=request.url%>&is_video=false&description=<%=@product.productname%> from <%=@product.brandname%> hosted by Beeline Co." target="blank"><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/pinterest.png" width="25" ></a>
+                        <a href="http://pinterest.com/pin/create/bookmarklet/?media=<%=@product.pic1%>&url=<%=request.url%>&is_video=false&description=<%=@product.productname%> from <%=@product.brandname%> -- hosted by Beeline Co." target="blank" ><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/pinterest.png" width="25" ></a>
                        
                       <!-- STUMBLEUPON -->
                        
@@ -219,6 +217,9 @@
 			 <h3 id="profile-title" class="h-font">Meet the Maker:<space> <%= @product.brandname.html_safe %></h3>
       <h5 id="location" class="subh-font" ><%= @product.location%></h5> 
       <div class="p-font">
+
+        <img id="brand-image" src="<%= @product.brandpic %>"/>
+
           <!-- FACEBOOK -->
             <% if @product.facebookbrand != "" %>
           <a href="http://facebook.com/<%=@product.facebookbrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/facebook_square_black.png"/></a>
@@ -233,10 +234,11 @@
           <!-- TUMBLER -->
           <% if @product.tumblrbrand != "" %>
           <a href="http://<%=@product.tumblrbrand.html_safe%>.tumblr.com/" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/tumblr_square_black.png"/></a><%end%>
-        
-        <img id="brand-image" src="<%= @product.brandpic %>"/>
+
+
+
         <%=@product.profile.html_safe%>
-        
+    
       </div>
 		</div>
 	</div>
