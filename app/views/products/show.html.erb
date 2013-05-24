@@ -11,6 +11,15 @@
 
 <body>
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <!-- Ideal counter:file://localhost/Users/alexblunk/Downloads/rendro-countdown-c6e6daa/examples/index.html -->
   
 
@@ -115,30 +124,13 @@
                   <!-- Button to trigger modal -->
                   <hr style="margin-bottom:5px;">
                   <p>
-                  <a href="#FAQModal" id="FAQ" class="h-font" data-toggle="modal">How does this work?</a></div>
-                </p>
+                  <a href="#FAQModal" id="FAQ" class="h-font" data-toggle="modal">How does this work?</a>
+                </p> 
                 <hr style="margin-top:-8px;">
-              
-                      <!-- FACEBOOK -->
-                    <div class="centerize">
-                      <p style="pointer-events:none; margin-bottom:3px;margin-top:-5px;" class="subh-font" >SPREAD THE GOOD WORD:</p>
-                        <a href="http://www.facebook.com/share.php?u=<%=request.url%>&title=<%=@product.productname%>by<%=@product.brandname%> hosted by Beeline Co." target="blank" ><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/facebook.png" width="25" ></a>
-                      
-                      <!-- TWITTER -->
-                        <a href="http://twitter.com/home?status=<%=@product.productname%> from <%=@product.brandname%> hosted by @thebeeline_co+<%=request.url%>" target="blank" ><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/twitter.png" width="25" ></a>
-
-                      <!-- GOOGLE PLUS -->
-                      <a href="https://plus.google.com/share?url=<%=request.url%>" target="blank" class="social-show"style="text-decoration:none; color:#dd4a38; font-size:3em; vertical-align: -6px; ">+</a>
-                     
-                      <!-- PINTEREST -->
-                      
-                        <a href="http://pinterest.com/pin/create/bookmarklet/?media=<%=@product.pic1%>&url=<%=request.url%>&is_video=false&description=<%=@product.productname%> from <%=@product.brandname%> -- hosted by Beeline Co." target="blank" ><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/pinterest.png" width="25" ></a>
-                       
-                      <!-- STUMBLEUPON -->
-                       
-                        <a href="http://www.stumbleupon.com/submit?url=<%=request.url%>&title=<%=@product.productname%> from <%=@product.brandname%> hosted by Beeline Co.+<%=request.url%>" target="blank"><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/stumbleupon.png" width="25" ></a>
-                    </div>
-  			       </div>
+              </div>
+                
+                   
+  			     </div>
   			       <br>
               <div class="span6 campaign-details">
               		<h2 id="price"><span style="font-size:.55em;">$</span><%=@product.price %></h2>
@@ -158,8 +150,29 @@
               		
   			       </div>
             </div>
-              
         </div>
+         <!-- FACEBOOK -->
+                    <div class="centerize">
+                      
+                      <p style="pointer-events:none; margin-bottom:3px;margin-top:15px; padding-right:20px;display:inline;vertical-align: 5px;" class="h-font" >SPREAD THE GOOD WORD:</p>
+                   
+                        <a href="http://www.facebook.com/share.php?u=<%=request.url%>&title=<%=@product.productname%>by<%=@product.brandname%> hosted by Beeline Co." target="blank" ><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/facebook.png" width="25" ></a>
+                      
+                      <!-- TWITTER -->
+                        <a href="http://twitter.com/home?status=<%=@product.productname%> from <%=@product.brandname%> hosted by @thebeeline_co+<%=request.url%>" target="blank" ><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/twitter.png" width="25" ></a>
+
+                      <!-- GOOGLE PLUS -->
+                      <a href="https://plus.google.com/share?url=<%=request.url%>" target="blank" class="social-show"style="text-decoration:none; color:#dd4a38; font-size:3em; vertical-align: 3px; ">+</a>
+                     
+                      <!-- PINTEREST -->
+                      
+                        <a href="http://pinterest.com/pin/create/bookmarklet/?media=<%=@product.pic1%>&url=<%=request.url%>&is_video=false&description=<%=@product.productname%> from <%=@product.brandname%> -- hosted by Beeline Co." target="blank" ><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/pinterest.png" width="25" ></a>
+                       
+                      <!-- STUMBLEUPON -->
+                       
+                        <a href="http://www.stumbleupon.com/submit?url=<%=request.url%>&title=<%=@product.productname%> from <%=@product.brandname%> hosted by Beeline Co.+<%=request.url%>" target="blank"><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/stumbleupon.png" width="25" ></a>
+                   
+                    </div>
         <div class="span7">
             	<blockquote id="vendor-quote" class="pull-right">
             <p><%= @product.description.html_safe %></p>
@@ -199,9 +212,10 @@
             <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a> -->
           
       <div class="container-fluid">
-        <h4 class="subh-font" style="margin-left:-15px;">More <img src="https://s3.amazonaws.com/beelineco/BeelineLogo_v1.png" style="width:80px; margin:0 -10px 0 -7px;"/> Exclusives:</h4>
         <div class="row-fluid">
-          <div class="span12">
+          <div class="span12 centerize">
+            <div class="fb-comments" data-href="<%=request.url%>.html_safe" data-width="400" data-num-posts="5"></div>
+                <h4 class="subh-font" style="margin-left:-15px;">More <img src="https://s3.amazonaws.com/beelineco/BeelineLogo_v1.png" style="width:80px; margin:0 -10px 0 -7px;"/> Exclusives:</h4>
             <%= render @products %>
             <div class="pagination">
             <%= will_paginate @products %>
@@ -216,7 +230,7 @@
 		<div class="span7">
 			 <h3 id="profile-title" class="h-font">Meet the Maker:<space> <%= @product.brandname.html_safe %></h3>
       <h5 id="location" class="subh-font" ><%= @product.location%></h5> 
-      <div class="p-font">
+      <div class="p-font" style="margin-bottom:100px;">
 
         <img id="brand-image" src="<%= @product.brandpic %>"/>
 
@@ -243,6 +257,9 @@
 		</div>
 	</div>
 </div>
+
+
+
 
 
 
