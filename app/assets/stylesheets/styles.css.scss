@@ -35,6 +35,8 @@
     }​
 
 
+
+
 /*HOME PAGE - CAROUSEL*/
 .carousel-inner > .active {
 left: 0;
@@ -524,9 +526,8 @@ display:inline;
 /*BRAND STORY PIC*/
 
 .social-show{
-  margin-right:5%;
+  margin-right:10%;
   padding-bottom:20px;
-
 }
 
 .social-show:hover{
@@ -638,22 +639,4 @@ color:white;
     padding:2px;
   }
 
-}
-
-/*FOOTER*/
-footer {
-  position:relative;
- /* clear: both;
-  bottom:0;
-  padding:5px;
-  width: 100%;
-  background-color: #323232;
-  opacity:.8;
-  a {
-    font-size:12px;
-    letter-spacing: 1px;
-    font-family: maven-pro, serif;
-    text-decoration: none;
-    color:white;
-  }*/
 }

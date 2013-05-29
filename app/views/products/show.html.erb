@@ -113,7 +113,7 @@
 <div class="row-fluid">
   <div class="span12">
     <div class="row-fluid">
-        <div class="span5 well">
+        <div class="span4 well">
           <div class="row-fluid">
             	<div class="span6">
             		<div class="centerize">
@@ -151,29 +151,33 @@
   			       </div>
             </div>
         </div>
-         <!-- FACEBOOK -->
-                    <div class="centerize">
-                      
-                      <p style="pointer-events:none; margin-bottom:3px;margin-top:15px; padding-right:20px;display:inline;vertical-align: 5px;" class="h-font" >SPREAD THE GOOD WORD:</p>
-                   
-                        <a href="http://www.facebook.com/share.php?u=<%=request.url%>&title=<%=@product.productname%>by<%=@product.brandname%> hosted by Beeline Co." target="blank" ><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/facebook.png" width="25" ></a>
+        <div class="span8">
+          <div class="row-fluid">
+              <div class="span5">   
+                      <h3 style="pointer-events:none; margin-left:auto; margin-right:auto; font-size:1.55em; " class="h-font centerize" >- SPREAD THE GOOD WORD -</h3>
+              </div>
+              <div class="span7 centerize">
+                   <!-- FACEBOOK -->
+                        <a href="http://www.facebook.com/share.php?u=<%=request.url%>&title=<%=@product.productname%>by<%=@product.brandname%> hosted by Beeline Co." target="blank" ><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/facebook.png" width="30" ></a>
                       
                       <!-- TWITTER -->
-                        <a href="http://twitter.com/home?status=<%=@product.productname%> from <%=@product.brandname%> hosted by @thebeeline_co+<%=request.url%>" target="blank" ><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/twitter.png" width="25" ></a>
+                        <a href="http://twitter.com/home?status=<%=@product.productname%> from <%=@product.brandname%> hosted by @thebeeline_co+<%=request.url%>" target="blank" ><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/twitter.png" width="30" ></a>
 
                       <!-- GOOGLE PLUS -->
-                      <a href="https://plus.google.com/share?url=<%=request.url%>" target="blank" class="social-show"style="text-decoration:none; color:#dd4a38; font-size:3em; vertical-align: 3px; ">+</a>
+                      <a href="https://plus.google.com/share?url=<%=request.url%>" target="blank" class="social-show"style="text-decoration:none; color:#dd4a38; font-size:3.5em; vertical-align: 2px; ">+</a>
                      
                       <!-- PINTEREST -->
                       
-                        <a href="http://pinterest.com/pin/create/bookmarklet/?media=<%=@product.pic1%>&url=<%=request.url%>&is_video=false&description=<%=@product.productname%> from <%=@product.brandname%> -- hosted by Beeline Co." target="blank" ><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/pinterest.png" width="25" ></a>
+                        <a href="http://pinterest.com/pin/create/bookmarklet/?media=<%=@product.pic1%>&url=<%=request.url%>&is_video=false&description=<%=@product.productname%> from <%=@product.brandname%> -- hosted by Beeline Co." target="blank" ><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/pinterest.png" width="30" ></a>
                        
                       <!-- STUMBLEUPON -->
                        
-                        <a href="http://www.stumbleupon.com/submit?url=<%=request.url%>&title=<%=@product.productname%> from <%=@product.brandname%> hosted by Beeline Co.+<%=request.url%>" target="blank"><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/stumbleupon.png" width="25" ></a>
+                        <a href="http://www.stumbleupon.com/submit?url=<%=request.url%>&title=<%=@product.productname%> from <%=@product.brandname%> hosted by Beeline Co.+<%=request.url%>" target="blank"><img class="social-show" src="https://s3.amazonaws.com/beelineco/Social+Images/stumbleupon.png" width="30" ></a>
+
                    
-                    </div>
-        <div class="span7">
+                  </div>
+                </div>
+                <hr style="margin-top:0">
             	<blockquote id="vendor-quote" class="pull-right">
             <p><%= @product.description.html_safe %></p>
             <small><%=@product.founders%> of <%=@product.brandname%></small>
