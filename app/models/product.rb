@@ -4,7 +4,7 @@ class Product < ActiveRecord::Base
   :brandname, :productname, :pic1, :pic2, :pic3, :pic4, :pic5, 
   :location, :price, :brandpic, 
   :facebookbrand, :twitterbrand, :tumblrbrand, :instagrambrand, :productstatus, :founders,
-  :updates, :profile
+  :updates, :profile, :details
 
 
 
