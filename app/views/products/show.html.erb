@@ -121,21 +121,21 @@
 
                   <button class="flatbtn" id="backbtn" data-celery="<%=@product.ecomm_url%>">BACK IT</button>
 
-                  <button href="#DetailModal" id="details" class="flatbtn" data-toggle="modal">ITEM DETAILS</button>
-
 
                   <!-- Button to trigger modal -->
                   <hr style="margin-bottom:5px;">
                   <p>
-                  <a href="#FAQModal" id="FAQ" class="h-font" data-toggle="modal">How does this work?</a>
-                </p> 
+                    <a href="#FAQModal" id="FAQ" class="h-font" data-toggle="modal">How does this work?</a>
+                  </p> 
                 <hr style="margin-top:-8px;">
+                <button href="#DetailModal" id="details" class="flatbtn" data-toggle="modal">PRODUCT DETAILS</button>
               </div>
                 
                    
   			     </div>
   			       <br>
               <div class="span6 campaign-details">
+
               		<h2 id="price"><span style="font-size:.55em;">$</span><%=@product.price %></h2>
                   <div id="campaign-details">
 
@@ -221,7 +221,7 @@
       <div class="container-fluid">
         <div class="row-fluid">
           <div class="span12 centerize">
-            <div class="fb-comments" data-href="<%=request.url%>" data-width="400" data-num-posts="5"></div>
+            <div class="fb-comments" data-href="<%=request.url%>" data-width="400" data-num-posts="2"></div>
                 <h4 class="subh-font" style="margin-left:-15px;">More <img src="https://s3.amazonaws.com/beelineco/BeelineLogo_v1.png" style="width:80px; margin:0 -10px 0 -7px;"/> Exclusives:</h4>
             <%= render @products %>
             <div class="pagination">
@@ -265,20 +265,20 @@
 	</div>
 </div>
 
-
+<!-- DETAIL MODAL -->
 <div id="DetailModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
       <h5 id="myModalLabel" class="h-font"><img src="https://s3.amazonaws.com/beelineco/BeelineLogo_v1.png" style="width:100px;"/>  <%= @product.productname %> Details</h5>
   </div>
 
-    <div class="modal-body" style="height:90%;">
+    <div class="modal-body">
     <%=@product.details.html_safe%>
     
 
     </div>
     <div class="modal-footer centerize">
-    <button class="flatbtn" id="FAQbtn-close" style="text-decoration: none;" data-dismiss="modal" aria-hidden="true">CLOSE</button>
+    <button class="flatbtn" id="Detailsbtn-close" style="text-decoration: none;" data-dismiss="modal" aria-hidden="true">CLOSE</button>
         
     </table>
   </div>
@@ -286,7 +286,7 @@
 
 
 
-<!-- Modal -->
+<!-- FAQ Modal -->
 <div id="FAQModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>

@@ -376,6 +376,29 @@ div.celery-progress-tooltip {
   background-color:#2d802e;
 }
 
+#Detailsbtn-close {
+  background-color:#505050;
+  line-height: 265%;
+  height:40px;
+  width:150px;
+  border:0;
+  text-align: center;
+}
+
+#Detailsbtn-close:hover {
+  background-color: #767676;
+}
+
+#details {
+  background-color: rgba(0,0,0,0.0);
+  color:#505050;
+}
+
+#details:hover {
+  opacity:.5;
+}
+
+
   /*dark shadow: #2d802e*/
   /*light shadow: #389e39*/
 
