@@ -140,9 +140,9 @@ background-color:#323232;
 
 #backbtn {
   background-color: #389e39;
-  width:80%; 
+  width:90%; 
   height:50px; 
-  font-size:1.5em;
+  font-size:1.45em;
   letter-spacing: 4px;
   margin-top:10px; 
   margin-bottom:5px;
@@ -351,6 +351,12 @@ div.celery-progress-tooltip {
  cursor:help;
 }
 
+body .modal {
+  width: 70%; /* desired relative width */
+  left: 15%; /* (100%-width)/2 */
+  margin: auto auto auto auto; /* place center */
+}
+
 #FAQbtn {
   background-color:#505050;
   line-height: 265%;
@@ -549,7 +555,7 @@ display:inline;
 /*BRAND STORY PIC*/
 
 .social-show{
-  margin-right:10%;
+  margin-right:9%;
   padding-bottom:20px;
 }
 

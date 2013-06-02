@@ -136,7 +136,8 @@
   			       <br>
               <div class="span6 campaign-details">
 
-              		<h2 id="price"><span style="font-size:.55em;">$</span><%=@product.price %></h2>
+              		<h2 style="margin-top:-10px;"id="price"><span style="font-size:.55em;">$</span><%=@product.price %></h2>
+
                   <div id="campaign-details">
 
 
@@ -146,7 +147,9 @@
 
 
                     <!-- TIME -->
-
+                    <h5 class="subh-font">Estimated Delivery</h5>
+                       <hr style="margin-top:-8px; margin-bottom:-8px;">
+                    <h5 class="subh-font" style=" margin-bottom:-8px;"><%=@product.deliverdate %></h5>
                     <h5 id="remaining" class="subh-font">Loading...</h5>
 
                   </div>
@@ -157,7 +160,7 @@
         <div class="span8">
           <div class="row-fluid">
               <div class="span5">   
-                      <h3 style="pointer-events:none; margin-left:auto; margin-right:auto; font-size:1.55em; " class="h-font centerize" >- SPREAD THE GOOD WORD -</h3>
+                      <h3 style="pointer-events:none; margin-left:auto; margin-right:auto; font-size:1.55em; " class="h-font centerize" >SPREAD THE GOOD WORD </h3>
               </div>
               <div class="span7 centerize">
                    <!-- FACEBOOK -->
@@ -202,25 +205,10 @@
       <h4 class="subh-font updates" style="margin:10px 0 -5px -15px;">Campaign Updates:</h4>
           <div class="p-font"><p> <%=@product.updates.html_safe%></p></div>
           <hr>
-
-          <!-- <div id="disqus_thread"></div>
-            <script type="text/javascript">
-                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                var disqus_shortname = '<beelineco>'; // Required - Replace example with your forum shortname
-
-                /* * * DON'T EDIT BELOW THIS LINE * * */
-                (function() {
-                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-            <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a> -->
           
       <div class="container-fluid">
         <div class="row-fluid">
-          <div class="span12 centerize">
+          <div class="span12">
             <div class="fb-comments" data-href="<%=request.url%>" data-width="400" data-num-posts="2"></div>
                 <h4 class="subh-font" style="margin-left:-15px;">More <img src="https://s3.amazonaws.com/beelineco/BeelineLogo_v1.png" style="width:80px; margin:0 -10px 0 -7px;"/> Exclusives:</h4>
             <%= render @products %>
@@ -284,8 +272,6 @@
   </div>
 </div>
 
-
-
 <!-- FAQ Modal -->
 <div id="FAQModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
@@ -295,46 +281,56 @@
   <div class="modal-body" style="height:90%;">
     <h3 class="h-font" style="margin-top:-15px;">What is going on here?</h3>
     <hr style="margin-top:-5px;">
-    <table>
-      <tr>
-        <td style="padding-right: 20px;">
-          <img style="height:100px; padding-left: 20px;" src="https://s3.amazonaws.com/beelineco/SportingTile.png">
-          <img style="width:150px;" src="https://s3.amazonaws.com/beelineco/BL_BagTile.png">
-        </td>
-        <td>
-          <p class="p-font" style="width:80%; line-height:250%;">Brands want to test alternate colorways, prototype items, or new product lines; but generating goods before there is demand is risky business.</p>
-        </td> 
-      </tr>
-    </table>
-    <h4 class="subh-font">This is where <i>you</i> come in. You have a few options to help <i>beeline</i> these items into production.</h4>
+ 
+          <p class="p-font">In short: We partner with the best brands in the land, then create campaigns for items they want to test -- you 'back' the items you're interested in. 
+          <br><br>
+          Once the number of items backed reaches the campaign goal, the item is successfully funded and the brand starts production. 
+          <br><br>
+          We ship to you when its ready to go.</p>
+    <hr style="margin-top:-5px;">
+
+    <h4 class="subh-font">How can I support these brands/products?</h4>
     <ol>
       <li class="p-font"><h3 class="subh-font">Back it:</h3> A commitment to financially back the production of this item when enough people have shown interest. Your card only gets charged after a product hits the goal of a number of backers. <hr style="margin-bottom:5px;">All backers recieve <i>Free Priority Shipping</i> after their goods are ready.<hr style="margin-top:5px;"></li>
       <li class="p-font"><h3 class="subh-font">Share it:</h3> Broadcast out to people who you think would appreciate this brand or product. Products only get made with enough support, so spread the good word!</li>
       <li class="p-font"><h3 class="subh-font">Preorder:</h3>After a product reaches its funding goal, you are still able to preorder it for the remainder of its time on the site. <hr style="margin-bottom:5px;">No free shipping - early bird gets the worm!<hr style="margin-top:5px;"></li>
     </ol>
+    <br>
 
-    <h3 class="h-font">When will my product ship?</h3>
+        <h4 class="subh-font">When does my card get charged?</h4>
+        <hr style="margin-top:-5px;">
+        <p class="p-font">When you hit “Back It”, we will collect your shipping and billing information - but will only validate your card, not charge it. When the item reaches its funding goal, your card will be securely charged. <br>**If an item expires without being funded, you will not be charged.</p>
+    <br>
+
+        <h4 class="subh-font">Is my billing information safe?</h4>
+        <hr style="margin-top:-5px;">
+        <p class="p-font">Of course. All payments are processed using 256-bit SSL encryption and our ecommerce platform is built on the premier payments platform, <a href="https://www.stripe.com/" target="blank">Stripe</a>. Stripe is certified to <a href="http://www.visa.com/splisting/searchGrsp.do?companyNameCriteria=stripe" target="blank">PCI Service Provider Level 1</a>. This is the most stringent level of certification available.</p>
+    <br>
+        <h4 class="subh-font">Can I change my order or cancel it?</h4>
+        <hr style="margin-top:-5px;">
+        <p class="p-font">If a campaign hasn't been funded & shipped yet - you can change item options, shipping address, or cancel your order by following the "Click here to manage your order." link in your order email. If a product has been funded or shipped, you will need to get in <a href="/contact">touch with us directly.</a></p>
+    <br>
+    <h4 class="subh-font">When will my items be shipped?</h4>
     <hr style="margin-top:-5px;">
-    <ul>
-      <li>
-        <p class="p-font">BACKERS: If a item that you backed reaches its goal, it will ship by the estimated provided -- we do our best to estimate how long production and shipping will take, but being flexible is the name of the game to recieve access to this new of product.</p>
-      </li>
-      <li>
-        <p class="p-font" style="list-style:none;">PREORDERS: If we have the item in stock, your order should ship within 10 business days. Otherwise, we will provide an accurate estimate upon your order.</p>
-      </li>
-    </ul>
-    <h3 class="h-font">Who are the brands you feature? Why should I trust them?</h3>
+    <p class="p-font">The expected shipping date is listed on each item’s product page.</p>
+    <br>
+        <h4 class="subh-font">Can an item be funded more than 100%?</h4>
+        <hr style="margin-top:-5px;">
+        <p class="p-font">Yes, this is what we call a 'preorder'. You won't recieve free shipping, but is still the same exclusive item.</p>
+    <br>
+
+    <h4 class="subh-font">Can I exchange or return an item after I receive it?</h4>
+    <hr style="margin-top:-5px;">
+    <p class="p-font">Due to the nature of this type of funding model, we will only accept returns if the product is deemed defective. We will make it right regardless. </p>
+
+    <br>
+
+
+    <h4 class="subh-font">Who are the brands you feature? Why should I trust them?</h4>
     <hr style="margin-top:-5px;">
     <p class="p-font">We built relationships with top-notch brands from all over the globe and will never feature a campaign that we wouldn't back ourselves. Most of the brands we will feature build their product in the U.S.A., but will feature any brand that is built with integrity - regardless of its origin.</p>
     <p class="p-font">Unlike traditional crowdfunding models, we only feature an established brand's products - which inherently takes alot of the risk out of backing a campaign. This is because established brands know their production capabilities and understand how to run a successful business.</p>
-
-   <!--  <h3 class="h-font">How can I support the products on Beeline Co.?</h3>
-    <hr style="margin-top:-5px;">
-    <h5 class="subh-font">Crowdfunded Products:</h5><p class="p-font">These are items that need to raise a minimum amount of funds before the brand can 'flip the on-switch'. By backing a campaign, you are helping its creators determine the general demand for a particular protoype or style. In exchange, you will be rewarded with one of the first production units, a special version of the product, special pricing or some other form of recognition of your contribution to its launch.</p>
-
-    <p class="p-font">Once you back an item, you have 10 days to cancel, but if the campaign doesn't reach its funding goal before the campaign ends, you won't be charged and the brand receives no funds. When you back a crowdfunding campaign, you are assuming some risk that the product may not be delivered on time, or be slightly different than described (they may be prototypes after all). Beeline Company only partners with reputable brands and will 'go to bat' for you if any quality issues arise.</p>
-
-    <h5 class="subh-font">Pre-order Products:</h5><p class="p-font"> Once a campaign ends but before a product is generally available, you can still secure your place for an early production unit by placing a pre-order. Most products available for pre-order originate from successful crowdfunding campaigns on Beeline Company. If you change your mind before your pre-order product is shipped, you may cancel it and recieve a voucher for your purchase price. Since you can cancel your pre-order, you aren’t assuming any risk regarding the delivery of the product you would like to buy.</p> -->
+    <br>
 
   </div>
   <div class="modal-footer centerize">
