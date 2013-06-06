@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @product = Product.find(params[:id])
-    @products = Product.order("created_at desc").page(params[:page]).per_page(3)
+    @products = Product.order("created_at desc").page(params[:page]).per_page(4)
 
     respond_to do |format|
       format.html # show.html.erb

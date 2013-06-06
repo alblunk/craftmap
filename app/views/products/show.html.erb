@@ -113,7 +113,7 @@
 <div class="row-fluid">
   <div class="span12">
     <div class="row-fluid">
-        <div class="span4 well">
+        <div class="span5 well">
           <div class="row-fluid">
             	<div class="span6">
             		<div class="centerize">
@@ -147,17 +147,19 @@
 
 
                     <!-- TIME -->
-                    <h5 class="subh-font">Estimated Delivery</h5>
-                       <hr style="margin-top:-8px; margin-bottom:-8px;">
-                    <h5 class="subh-font" style=" margin-bottom:-8px;"><%=@product.deliverdate %></h5>
                     <h5 id="remaining" class="subh-font">Loading...</h5>
+                    <hr style="margin:0">
+                    <h5 class="subh-font" style="padding:5px; background-color:#505050; color:white; pointer-events:none;">Estimated Delivery: <span><%=@product.deliverdate %></span></h5>
+                       
+                    <h5 class="subh-font" ></h5>
+                    
 
                   </div>
               		
   			       </div>
             </div>
         </div>
-        <div class="span8">
+        <div class="span7">
           <div class="row-fluid">
               <div class="span5">   
                       <h3 style="pointer-events:none; margin-left:auto; margin-right:auto; font-size:1.55em; " class="h-font centerize" >SPREAD THE GOOD WORD </h3>
@@ -209,7 +211,7 @@
       <div class="container-fluid">
         <div class="row-fluid">
           <div class="span12">
-            <div class="fb-comments" data-href="<%=request.url%>" data-width="400" data-num-posts="2"></div>
+            
                 <h4 class="subh-font" style="margin-left:-15px;">More <img src="https://s3.amazonaws.com/beelineco/BeelineLogo_v1.png" style="width:80px; margin:0 -10px 0 -7px;"/> Exclusives:</h4>
             <%= render @products %>
             <div class="pagination">
@@ -251,16 +253,39 @@
       </div>
 		</div>
 	</div>
+    <div class="span12">
+            <!-- START: Livefyre Embed -->
+            <div id="livefyre-comments"></div>
+            <script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+            <script type="text/javascript">
+            (function () {
+                var articleId = fyre.conv.load.makeArticleId(null);
+                fyre.conv.load({}, [{
+                    el: 'livefyre-comments',
+                    network: "livefyre.com",
+                    siteId: "335297",
+                    articleId: articleId,
+                    signed: false,
+                    collectionMeta: {
+                        articleId: articleId,
+                        url: fyre.conv.load.makeCollectionUrl(),
+                    }
+                }], function() {});
+            }());
+            </script>
+        <!-- END: Livefyre Embed -->
+    </div>
+  </div>
 </div>
 
 <!-- DETAIL MODAL -->
 <div id="DetailModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-      <h5 id="myModalLabel" class="h-font"><img src="https://s3.amazonaws.com/beelineco/BeelineLogo_v1.png" style="width:100px;"/>  <%= @product.productname %> Details</h5>
+      <h3 id="myModalLabel" class="h-font"><img src="https://s3.amazonaws.com/beelineco/BeelineLogo_v1.png" style="width:100px;"/>  <%= @product.productname %> Details</h3>
   </div>
 
-    <div class="modal-body">
+    <div class="modal-body p-font">
     <%=@product.details.html_safe%>
     
 
@@ -340,33 +365,6 @@
   </div>
 </div>
 
-
-<!-- # BOX
-# <div class="container-fluid">
-# 	<div class="row-fluid">
-# 		<div class="span12" >
-# 			<div id="brand-profile">
-# 				<h3><span>Meet the Maker:<space> <%= @product.brandname.html_safe %></span></h3>
-# 				<div><p>Topo began well before it began, in discussions, sharing ideas, and just the desire to have quality products that were in our heads rather than the ones we saw in stores. As everyone that’s made something knows, it takes a lot longer to make something than to decide to make it. So we took our time, made prototype after prototype, tested, re-tested, took vacations just as an excuse to test, and we finally had our first bag. At this point we’d gained some skills and the following bags came more quickly.</p></div>
-# 				<img src="https://s3.amazonaws.com/beelineco/TopoDMock.png"/>
-# 			</div>
-# 		</div>
-# 	</div>
-# </div>
-
-# Lines
-# <div class="container-fluid" class="show-products">
-# 	<div class="row-fluid">
-# 		<div class="span12" id="brand-image">
-# 			<img src="https://s3.amazonaws.com/beelineco/TopoDMock.png"/>
-# 			<div id="brand-profile">
-# 			<h4>Meet the Maker:<space> <%= @product.brandname.html_safe %></h4>
-# 			<hr>
-# 			Topo began well before it began, in discussions, sharing ideas, and just the desire to have quality products that were in our heads rather than the ones we saw in stores. As everyone that’s made something knows, it takes a lot longer to make something than to decide to make it. So we took our time, made prototype after prototype, tested, re-tested, took vacations just as an excuse to test, and we finally had our first bag. At this point we’d gained some skills and the following bags came more quickly. </div>
-# 			</span>
-# 		</div>
-# 	</div>
-# </div> -->
 
 <!-- CELERY SCRIPTS -->
   <script type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script> 
