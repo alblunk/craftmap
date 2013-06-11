@@ -23,7 +23,7 @@
                             <li><%= link_to "ACCOUNT", edit_user_registration_path %></li>
                             <li><%= link_to 'LOGOUT', destroy_user_session_path, method: :delete %></li>
                         <% else %>
-                            <li style="background:#505050;"><%= link_to 'JOIN US',  new_user_registration_path %></li>
+                            <li style="background:#505050; border-radius:3px;"><%= link_to 'JOIN US',  new_user_registration_path %></li>
                             <li><%= link_to 'SIGN IN',  new_user_session_path %></li>
                         <% end %>
                     </ul>
