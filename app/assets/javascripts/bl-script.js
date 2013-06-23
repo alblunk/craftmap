@@ -24,16 +24,7 @@ $(document).ready(function(){
       callback(data.product);
     })
   }
-  var getRevenue = function(slug, callback) {
-    $.getJSON(api_url + "/v1/products/" + slug + "/revenue?callback=?", function(data) {
-      callback(data.count);
-    })
-  }
-  var getSold = function(slug, callback) {
-     $.getJSON(api_url + "/v1/orders/count/" + slug + "?callback=?", function(data) {
-      callback(data.count);
-    })
-  }
+
   var remainingTime = function(remaining) {
     var str = "";
     if(remaining > 0) {
@@ -59,12 +50,17 @@ $(document).ready(function(){
   }
 
   var displayStuff = function(products) {
+
   	// debugger
   	for(var key in products) {
+
   		var product = products[key];
-  		// BACKERS ---- product.sold + " of " + product.min + " needed &bull; " + 
-    	$("." + key + ".backers-needed").html(Math.floor(product.sold/product.min * 100) + "% funded");
-    	$("." + key + ".remaining").html(remainingTime(product.time_remaining/1000));
+      var campaign = product.campaign;
+      if(campaign) { 
+    		// BACKERS ---- product.sold + " of " + product.min + " needed &bull; " + 
+      	$("." + key + ".backers-needed").html(campaign.progress + "% funded");
+      	$("." + key + ".remaining").html(remainingTime((campaign.expires - new Date().getTime())/1000));
+      }
     }
   }
   
@@ -72,14 +68,8 @@ $(document).ready(function(){
   	$.each(slugs, function(idx, slug) {
   		if(!products[slug] && slug) {
 		    getProduct(slug, function(product) {
-		      getSold(slug, function(sold) {
-		        getRevenue(slug, function(revenue) {
-		          product.sold = sold;
-		          product.revenue = revenue
-		          products[slug] = product;
-				  displayStuff(products);
-		        })
-		      })
+		        products[slug] = product;
+				    displayStuff(products);
 		    })
 	   }
 	});

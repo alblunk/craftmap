@@ -11,15 +11,6 @@
 
 <body>
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
 <!-- Ideal counter:file://localhost/Users/alexblunk/Downloads/rendro-countdown-c6e6daa/examples/index.html -->
   
 
@@ -256,19 +247,7 @@
     <div class="span12 centerize" style="width:90%">
 
       <!-- <div class="fb-comments" data-href="<%=request.url%>" data-width="400" data-num-posts="2"></div> -->
-              <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'beelineco'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+       
     
     </div>
   </div>
@@ -373,16 +352,7 @@ $(document).ready(function() {
       callback(data.product);
     })
   }
-  var getRevenue = function(slug, callback) {
-    $.getJSON(api_url + "/v1/products/" + slug + "/revenue?callback=?", function(data) {
-      callback(data.count);
-    })
-  }
-  var getSold = function(slug, callback) {
-     $.getJSON(api_url + "/v1/orders/count/" + slug + "?callback=?", function(data) {
-      callback(data.count);
-    })
-  }
+  
   var remainingTime = function(remaining) {
     var str = "";
     if(remaining > 0) {
@@ -408,21 +378,15 @@ $(document).ready(function() {
   }
 
   var displayStuff = function(product) {
-    $("#backers-needed").html(product.sold + " of " + product.min + " needed &bull; " + Math.floor(product.sold/product.min * 100) + "% funded");
-    $("#remaining").html(remainingTime(product.time_remaining/1000));
+    var campaign = product.campaign;
+    $("#backers-needed").html(campaign.sold + " of " + campaign.sold_goal + " needed &bull; " + campaign.progress + "% funded");
+    $("#remaining").html(remainingTime((campaign.expires - new Date().getTime())/1000));
   }
 
   var getAll = function() {
     var slug = "<%= @product.ecomm_url %>";
     getProduct(slug, function(product) {
-      getSold(slug, function(sold) {
-        getRevenue(slug, function(revenue) {
-          product.sold = sold;
-          product.revenue = revenue
-
-          displayStuff(product);
-        })
-      })
+        displayStuff(product);
     })
   }
   getAll();
