@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  attr_accessible :description, :ecomm_url, :brandname, :productname
+  attr_accessible :description, :ecomm_url, :brandname, :productname,
   :location, :price, :brandpic, :facebookbrand, :twitterbrand, :tumblrbrand,
   :instagrambrand, :productstatus, :founders, :updates, :profile, :details, :deliverdate
 
@@ -9,5 +9,6 @@ class Product < ActiveRecord::Base
   validates :user_id, presence: true
 
   belongs_to :user
+  has_many :images, class_name: 'ProductImage'
 
 end
