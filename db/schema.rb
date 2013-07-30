@@ -11,27 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130602194956) do
+ActiveRecord::Schema.define(:version => 20130730014321) do
 
   create_table "products", :force => true do |t|
     t.text     "description"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
     t.integer  "user_id"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.string   "image_remote_url"
     t.string   "ecomm_url"
-    t.string   "variable"
     t.string   "brandname"
     t.string   "productname"
-    t.string   "pic1"
-    t.string   "pic2"
-    t.string   "pic3"
-    t.string   "pic4"
-    t.string   "pic5"
     t.integer  "price"
     t.string   "location"
     t.string   "brandpic"
@@ -50,8 +39,8 @@ ActiveRecord::Schema.define(:version => 20130602194956) do
   add_index "products", ["user_id"], :name => "index_products_on_user_id"
 
   create_table "users", :force => true do |t|
-    t.string   "email",                  :default => "", :null => false
-    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "email",                  :default => "",    :null => false
+    t.string   "encrypted_password",     :default => "",    :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -60,10 +49,10 @@ ActiveRecord::Schema.define(:version => 20130602194956) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
     t.string   "name"
-    t.boolean  "admin"
+    t.boolean  "admin",                  :default => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
