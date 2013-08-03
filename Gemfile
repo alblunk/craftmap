@@ -17,7 +17,6 @@ gem 'kaminari'
 gem "paperclip", "~> 3.0"
 gem 'aws-sdk'
 
-gem 'bootstrap-will_paginate'
 gem 'bootstrap-wysihtml5-rails'
 
 group :production do
