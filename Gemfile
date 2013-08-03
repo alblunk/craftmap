@@ -10,11 +10,13 @@ gem 'jquery-rails'
 
 gem 'puma'
 
-gem 'devise', '3.0.0.rc'
-gem "simple_form", "3.0.0.rc"
+gem 'devise',           '3.0.0.rc'
+gem "simple_form",      '3.0.0.rc'
+gem 'kaminari'
+
 gem "paperclip", "~> 3.0"
 gem 'aws-sdk'
-gem 'will_paginate', '3.0.3'
+
 gem 'bootstrap-will_paginate'
 gem 'bootstrap-wysihtml5-rails'
 
