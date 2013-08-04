@@ -32,8 +32,6 @@ GEM
       nokogiri (< 1.6.0)
       uuidtools (~> 2.1)
     bcrypt-ruby (3.1.1)
-    bootstrap-will_paginate (0.0.9)
-      will_paginate
     bootstrap-wysihtml5-rails (0.3.1.21)
       railties (>= 3.0)
     builder (3.1.4)
@@ -131,14 +129,12 @@ GEM
     uuidtools (2.1.4)
     warden (1.2.3)
       rack (>= 1.0)
-    will_paginate (3.0.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   aws-sdk
-  bootstrap-will_paginate
   bootstrap-wysihtml5-rails
   coffee-rails (~> 4.0.0)
   devise (= 3.0.0.rc)

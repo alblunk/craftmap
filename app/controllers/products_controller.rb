@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.order("created_at asc").page(params[:page]).per_page(6)
+    @products = Product.order("created_at asc").page(params[:page]).per(6)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @product = Product.find(params[:id])
-    @products = Product.order("created_at desc").page(params[:page]).per_page(4)
+    @products = Product.order("created_at desc").page(params[:page]).per(4)
 
     respond_to do |format|
       format.html # show.html.erb
