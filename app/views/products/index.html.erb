@@ -28,7 +28,7 @@
 		<div class ="span1" style="width:1% !important;"></div>
 		<div class ="span8">
 			<div id="products">
-			  	<%= render @products %>
+			  <%= render @products %>
 			  	<script type="text/javascript">
 			  	slugs = "<%= @products.map { |product| product.ecomm_url }.join(",").html_safe %>"
 			  	</script> 
