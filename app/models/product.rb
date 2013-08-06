@@ -6,5 +6,6 @@ class Product < ActiveRecord::Base
 
   belongs_to :user
   has_many :images, class_name: 'ProductImage'
+  accepts_nested_attributes_for :images
 
 end
