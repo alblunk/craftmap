@@ -23,8 +23,8 @@
         <% end %>
       </ol>
 
+      <div class="carousel-inner stretch">
       <% @product.images.each_with_index do |image, i| %>
-        <div class="carousel-inner stretch">
           <div class="item <%= 'active' if i == 0 %>">
             <%= image_tag(image.image(:large)) %>
             <div class="carousel-caption">
@@ -32,8 +32,8 @@
               <h5 id="brand_name"><%= @product.brandname %></h5>
             </div>
           </div>
-        </div>
       <% end %>
+      </div>
     </div>
 
       <div id="show-admin" class="subh-font">
