@@ -1,7 +1,7 @@
 <hr>
 <div class="container-fluid well">
   <div class="row-fluid">
-    <%= simple_form_for(@product, html: { class: "form-horizontal"}) do |f| %>
+    <%= simple_form_for(@product, html: { class: "form-horizontal" }) do |f| %>
       <div class="span12">
         <div class="row-fluid">
           <div class="span6">
@@ -23,19 +23,16 @@
 
           </div>
           <div class="span6">
-            <%= f.input :image, label: "Upload a home image:" %>
-            <%= f.input :image_remote_url, label: "or/ Enter an image URL:" %>
+            <%= f.simple_fields_for :images, html: { multipart: true } do |i| %>
+              <%= i.input :image, label: "Upload a photo!" %>
+            <% end %>
+            <%# f.input :image_remote_url, label: "or/ Enter an image URL:" %>
             <%= f.input :productname, label: "Enter Product Name:" %>
             <%= f.input :price, label: "Price:" %>
             <%= f.input :deliverdate, label: "Estimated Delivery Date:" %>
             <%= f.input :description, as: :text, input_html: { rows: "10",  class: 'wysihtml5 textbox' }, label: "Enter Vendor Product Description:"%>
             <%= f.input :details, as: :text, input_html: { rows: "10",  class: 'wysihtml5 textbox' }, label: "Item Description:"%>
             <%= f.input :ecomm_url, label: "Celery Product Code?" %>
-            <%= f.input :pic1, label: "Picture 1:" %>
-            <%= f.input :pic2, label: "Picture 2:" %>
-            <%= f.input :pic3, label: "Picture 3:" %>
-            <%= f.input :pic4, label: "Picture 4:" %>
-            <%= f.input :pic5, label: "Picture 5:" %>
             <div class="form-actions">
               <%= f.button :submit, class: "btn btn-primary" %>
             </div>
@@ -48,7 +45,6 @@
 <script type="text/javascript">
 $(function() {
   $('.wysihtml5').each(function(i, elem) {
-    debugger
     $(elem).wysihtml5();
   });
 })

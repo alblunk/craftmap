@@ -3,19 +3,14 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.order("created_at asc").page(params[:page]).per_page(6)
-
-    respond_to do |format|
-      format.html # index.html.erb
-      # format.json { render json: @products }
-    end
+    @products = Product.order("created_at asc").page(params[:page]).per(6)
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
     @product = Product.find(params[:id])
-    @products = Product.order("created_at desc").page(params[:page]).per_page(4)
+    @products = Product.order("created_at desc").page(params[:page]).per(4)
 
     respond_to do |format|
       format.html # show.html.erb
@@ -27,6 +22,7 @@ class ProductsController < ApplicationController
   # GET /products/new.json
   def new
     @product = current_user.products.new
+    @product.images.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,7 +38,7 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-    @product = current_user.products.new(params[:product])
+    @product = current_user.products.new(product_params)
 
     respond_to do |format|
       if @product.save
@@ -61,7 +57,7 @@ class ProductsController < ApplicationController
     @product = current_user.products.find(params[:id])
 
     respond_to do |format|
-      if @product.update_attributes(params[:product])
+      if @product.update(product_params)
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
         format.json { head :no_content }
       else
@@ -83,6 +79,12 @@ class ProductsController < ApplicationController
     end
   end
 
+  private
+
+    def product_params
+      params.require(:product).
+              permit(:brandname, :productname, :description, 
+                      images_attributes: [ :image ] )
+    end
+
 end
-
-

@@ -26,10 +26,8 @@
 			<% end %>
 		</span>
 
-
-
-		<div class="h-pic" data-img="<%= product.pic1 %>" data-product="<%= product.productname %>" data-brand="<%= product.brandname %>">
-		<%= link_to image_tag(product.image(:large)), product %>
+		<div class="h-pic" data-product="<%= product.productname %>" data-brand="<%= product.brandname %>">
+		<%= link_to image_tag(product.images.first.image(:medium)), product %>
 		</div>
 	
 </div>

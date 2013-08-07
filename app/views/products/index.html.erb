@@ -20,7 +20,7 @@
 				</tr>
 					<span class="subh-font centerize">SEE MORE <span class="icon-search"></span><!-- <span style="font-size:.5em; padding-bottom:2px;">▼</span> --></span>
 					<div id="homepagin"class="pagination pagination-mini pagination-right centerize">
-						<%= will_paginate @products %>
+						<%= paginate @products %>
 					</div>
 				</tr>
 			</table>
@@ -28,7 +28,7 @@
 		<div class ="span1" style="width:1% !important;"></div>
 		<div class ="span8">
 			<div id="products">
-			  	<%= render @products %>
+			  <%= render @products %>
 			  	<script type="text/javascript">
 			  	slugs = "<%= @products.map { |product| product.ecomm_url }.join(",").html_safe %>"
 			  	</script> 
