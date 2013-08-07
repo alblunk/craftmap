@@ -4,11 +4,6 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.order("created_at asc").page(params[:page]).per(6)
-
-    respond_to do |format|
-      format.html # index.html.erb
-      # format.json { render json: @products }
-    end
   end
 
   # GET /products/1
