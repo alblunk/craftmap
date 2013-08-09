@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130809182440) do
+ActiveRecord::Schema.define(version: 20130809184816) do
 
   create_table "brands", force: true do |t|
     t.string   "name"
@@ -35,25 +35,18 @@ ActiveRecord::Schema.define(version: 20130809182440) do
 
   create_table "products", force: true do |t|
     t.text     "description"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "user_id"
     t.string   "ecomm_url"
-    t.string   "brandname"
-    t.string   "productname"
+    t.string   "name"
     t.integer  "price"
-    t.string   "location"
-    t.string   "brandpic"
-    t.string   "facebookbrand"
-    t.string   "instagrambrand"
-    t.string   "twitterbrand"
-    t.string   "tumblrbrand"
-    t.string   "productstatus"
-    t.string   "founders"
+    t.string   "status"
     t.text     "updates"
     t.text     "profile"
     t.text     "details"
     t.string   "deliverdate"
+    t.integer  "brand_id"
   end
 
   add_index "products", ["user_id"], name: "index_products_on_user_id"
