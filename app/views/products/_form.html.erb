@@ -9,17 +9,9 @@
             <%= f.full_error :image_file_size, class: "alert alert-error" %>
             <%= f.full_error :image_content_type, class: "alert alert-error" %>
 
-            <%= f.input :brandname, label: "Enter Brand Name:" %>
-            <%= f.input :founders, label: "Enter Founder F-Name/s:" %>
-            <%= f.input :location, label: "Enter Location:" %>
-            <%= f.input :brandpic, label: "Brand Picture URL" %>
             <%= f.input :profile, as: :text, input_html: { rows: "10" }, label: "Enter Brand Profile:", input_html: { class: 'wysihtml5 textbox' } %>
-            <%= f.input :facebookbrand, label: "facebook.com/:" %>
-            <%= f.input :twitterbrand, label: "twitter.com/:" %>
-            <%= f.input :instagrambrand, label: "instagram.com/:" %>
-            <%= f.input :tumblrbrand, label: "_____.tumblr.com/:" %>
-            <%= f.input :productstatus, label: "Status:" %>
-              <%= f.input :updates, as: :text, input_html: { rows: "10",  class: 'wysihtml5 textbox' }, label: "Updates?"%>
+            <%= f.input :status, label: "Status:" %>
+            <%= f.input :updates, as: :text, input_html: { rows: "10",  class: 'wysihtml5 textbox' }, label: "Updates?"%>
 
           </div>
           <div class="span6">
@@ -27,7 +19,7 @@
               <%= i.input :image, label: "Upload a photo!" %>
             <% end %>
             <%# f.input :image_remote_url, label: "or/ Enter an image URL:" %>
-            <%= f.input :productname, label: "Enter Product Name:" %>
+            <%= f.input :name, label: "Enter Product Name:" %>
             <%= f.input :price, label: "Price:" %>
             <%= f.input :deliverdate, label: "Estimated Delivery Date:" %>
             <%= f.input :description, as: :text, input_html: { rows: "10",  class: 'wysihtml5 textbox' }, label: "Enter Vendor Product Description:"%>

@@ -1,0 +1,4 @@
+one:
+  image_file_name: <%= File.join Rails.root, "test/fixtures", 'hat.jpg' %>
+  image_content_type: 'image/jpg'
+  product: one
