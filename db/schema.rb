@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130809184816) do
+ActiveRecord::Schema.define(version: 20130810011844) do
 
   create_table "brands", force: true do |t|
     t.string   "name"
@@ -21,12 +21,13 @@ ActiveRecord::Schema.define(version: 20130809184816) do
     t.datetime "image_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "profile"
   end
 
   create_table "product_images", force: true do |t|
     t.integer  "product_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
@@ -35,15 +36,14 @@ ActiveRecord::Schema.define(version: 20130809184816) do
 
   create_table "products", force: true do |t|
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.integer  "user_id"
     t.string   "ecomm_url"
     t.string   "name"
     t.integer  "price"
     t.string   "status"
     t.text     "updates"
-    t.text     "profile"
     t.text     "details"
     t.string   "deliverdate"
     t.integer  "brand_id"
@@ -62,8 +62,8 @@ ActiveRecord::Schema.define(version: 20130809184816) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "name"
     t.boolean  "admin",                  default: false
   end

@@ -1,4 +1,5 @@
 one:
   name: 'Mission Workshop'
+  profile: We make lots of cool stuff.
   image_file_name: <%= File.join Rails.root, "test/fixtures", 'mission_workshop.jpg' %>
   image_content_type: 'image/jpg'
