@@ -23,6 +23,7 @@ class ProductsController < ApplicationController
   def new
     @product = current_user.products.new
     @product.images.build
+    @product.build_brand
 
     respond_to do |format|
       format.html # new.html.erb
@@ -83,7 +84,8 @@ class ProductsController < ApplicationController
 
     def product_params
       params.require(:product).
-              permit(:name, :name, :description, 
+              permit(:name, :name, :description,
+                      brand_attributes: [ :name, :profile ],
                       images_attributes: [ :image ] )
     end
 

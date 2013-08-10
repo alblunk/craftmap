@@ -9,7 +9,11 @@
             <%= f.full_error :image_file_size, class: "alert alert-error" %>
             <%= f.full_error :image_content_type, class: "alert alert-error" %>
 
-            <%= f.input :profile, as: :text, input_html: { rows: "10" }, label: "Enter Brand Profile:", input_html: { class: 'wysihtml5 textbox' } %>
+            <%= f.simple_fields_for :brand do |brand| %>
+              <%= brand.input :name, label: "Enter name of the brand:" %>
+              <%= brand.input :profile, label: "Enter a description of the brand:" %>
+            <% end %>
+
             <%= f.input :status, label: "Status:" %>
             <%= f.input :updates, as: :text, input_html: { rows: "10",  class: 'wysihtml5 textbox' }, label: "Updates?"%>
 
@@ -19,6 +23,7 @@
               <%= i.input :image, label: "Upload a photo!" %>
             <% end %>
             <%# f.input :image_remote_url, label: "or/ Enter an image URL:" %>
+
             <%= f.input :name, label: "Enter Product Name:" %>
             <%= f.input :price, label: "Price:" %>
             <%= f.input :deliverdate, label: "Estimated Delivery Date:" %>
