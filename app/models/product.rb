@@ -3,7 +3,6 @@ class Product < ActiveRecord::Base
   validates :description, presence: true
   validates :user_id, presence: true
 
-  belongs_to :user
   belongs_to :brand
   has_many :images, class_name: 'ProductImage'
   
