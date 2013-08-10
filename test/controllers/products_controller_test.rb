@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ProductsControllerTest < ActionController::TestCase
+describe ProductsController do
   setup do
     @product = products(:one)
     sign_in users(:alex)
