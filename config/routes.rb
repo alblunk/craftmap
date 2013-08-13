@@ -1,7 +1,12 @@
 Beeline::Application.routes.draw do
-  resources :products
-
+  
   devise_for :users
+
+  resources :brands do
+    resources :products, only: [ :new, :create, :update, :edit, :destroy ]
+  end
+
+  resources :products, only: [ :index, :show ]
 
   get 'about' => 'pages#about'
   get 'legal' => 'pages#legal'
