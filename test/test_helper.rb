@@ -5,7 +5,6 @@ require "minitest/rails"
 require "minitest/pride"
 
 class ActiveSupport::TestCase
-  include Devise::TestHelpers 
   
   fixtures :all
 end
