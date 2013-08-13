@@ -5,29 +5,38 @@
           <span class="icon-plus icon-white"></span>
       </button>
       <ul class="nav pull-left" >
-        <li><a href="/"><img src="https://s3.amazonaws.com/beelineco/beeliner_outline_logo.png" width="80"></a> </li>
-
-        <li><a href="http://facebook.com/beelineco" target="_blank"><img src="https://s3.amazonaws.com/beelineco/facebook.png" width="17px"></a> </li>
-
-         <li><a href="http://twitter.com/thebeeline_co" target="_blank"><img src="https://s3.amazonaws.com/beelineco/twitter.png"width="17px"></a> </li>
-
-         <li><a href="http://instagram.com/beelineco" target="_blank"><img src="https://s3.amazonaws.com/beelineco/Instagram.png"width="15px"></a> </li>
+        <li>
+          <a href="/">
+            <img src="https://s3.amazonaws.com/beelineco/beeliner_outline_logo.png" width="80">
+          </a>
+        </li>
+        <li>
+          <a href="http://facebook.com/beelineco" target="_blank">
+            <img src="https://s3.amazonaws.com/beelineco/facebook.png" width="17px">
+          </a>
+        </li>
+        <li>
+          <a href="http://twitter.com/thebeeline_co" target="_blank">
+            <img src="https://s3.amazonaws.com/beelineco/twitter.png"width="17px">
+          </a>
+        </li>
+        <li>
+          <a href="http://instagram.com/beelineco" target="_blank">
+            <img src="https://s3.amazonaws.com/beelineco/Instagram.png"width="15px">
+          </a>
+        </li>
       </ul>
-      <div id="nav-collapse" class="nav-collapse">
-          <ul class="nav pull-left" >
-          <% if current_user.try(:admin?) %>
-                  <li><%= link_to "ADD PRODUCT +", new_product_path %></li>
-              <% end %>
-          </ul>
-          <ul class="nav pull-right">
-              <% if user_signed_in? %>
-                  <li><%= link_to "ACCOUNT", edit_user_registration_path %></li>
-                  <li><%= link_to 'LOGOUT', destroy_user_session_path, method: :delete %></li>
-              <% else %>
-                  <li style="background:#505050; border-radius:3px;"><%= link_to 'JOIN US',  new_user_registration_path %></li>
-                  <li><%= link_to 'SIGN IN',  new_user_session_path %></li>
-              <% end %>
-          </ul>
+      <div class="nav-collapse">
+        <ul class="nav pull-right">
+          <% if user_signed_in? %>
+            <li><%= link_to "ACCOUNT", edit_user_registration_path %></li>
+            <li><%= link_to 'LOGOUT', destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li style="background:#505050; border-radius:3px;"><%= link_to 'JOIN US',  new_user_registration_path %></li>
+            <li><%= link_to 'SIGN IN',  new_user_session_path %></li>
+          <% end %>
+        </ul>
       </div>
+    </div> 
   </div>
 </div>

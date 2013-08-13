@@ -14,12 +14,26 @@ class BrandsController < ApplicationController
   end
 
   def create
-    brand = Brand.new(brand_params)
+    @brand = Brand.new(brand_params)
 
-    if brand.save
-      redirect_to brand
+    if @brand.save
+      redirect_to @brand
     else
-      render action: "new"
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  def edit
+    @brand = Brand.find(params[:id])
+  end
+
+  def update
+    @brand = Brand.find(params[:id])
+
+    if @brand.update(brand_params)
+      redirect_to @brand
+    else
+      render :edit, status: :unprocessable_entity
     end
   end
 
