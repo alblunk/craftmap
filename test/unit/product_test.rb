@@ -3,7 +3,7 @@ require 'test_helper'
 describe Product do
 
   let(:brand) { brands(:one) }
-  let(:product) { Product.new(name: 'A Scarf', description: 'Also warm.')}
+  let(:product) { Product.new(name: 'A Scarf', description: 'Also warm.') }
 
   it "creates a product" do
     assert_difference('Product.count') do

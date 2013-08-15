@@ -3,7 +3,7 @@ Beeline::Application.routes.draw do
   devise_for :users
 
   resources :brands do
-    resources :products, only: [ :new, :create, :update, :edit, :destroy ]
+    resources :products
   end
 
   resources :products, only: [ :index, :show ]

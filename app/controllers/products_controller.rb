@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
-  before_filter :authenticate_user!, except: [:index, :show]
+  
+  before_action :authenticate_user!, except: [ :index, :show ]
+
   # GET /products
   # GET /products.json
   def index
@@ -21,9 +23,8 @@ class ProductsController < ApplicationController
   # GET /products/new
   # GET /products/new.json
   def new
-    @product = current_user.products.new
+    @product = current_brand.products.new
     @product.images.build
-    @product.build_brand
 
     respond_to do |format|
       format.html # new.html.erb
@@ -33,13 +34,14 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
-    @product = current_user.products.find(params[:id])
+    @product = current_brand.products.find(params[:id])
   end
 
   # POST /products
   # POST /products.json
   def create
-    @product = current_user.products.new(product_params)
+    @product = current_brand.products.new(product_params)
+    @product.images.build if @product.images.empty?
 
     respond_to do |format|
       if @product.save
@@ -55,7 +57,7 @@ class ProductsController < ApplicationController
   # PUT /products/1
   # PUT /products/1.json
   def update
-    @product = current_user.products.find(params[:id])
+    @product = current_brand.products.find(params[:id])
 
     respond_to do |format|
       if @product.update(product_params)
@@ -71,7 +73,7 @@ class ProductsController < ApplicationController
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
-    @product = current_user.products.find(params[:id])
+    @product = current_brand.products.find(params[:id])
     @product.destroy
 
     respond_to do |format|
@@ -81,6 +83,10 @@ class ProductsController < ApplicationController
   end
 
   private
+
+    def current_brand
+      @brand ||= Brand.find(params[:brand_id])
+    end
 
     def product_params
       params.require(:product).

@@ -1,35 +1,29 @@
-<hr>
 <div class="container-fluid well">
   <div class="row-fluid">
-    <%= simple_form_for(@product, html: { class: "form-horizontal" }) do |f| %>
+    <%= simple_form_for([:brand, @product], html: { class: "form-horizontal" }) do |f| %>
       <div class="span12">
         <div class="row-fluid">
           <div class="span6">
             <%= f.error_notification %>
-            <%= f.full_error :image_file_size, class: "alert alert-error" %>
-            <%= f.full_error :image_content_type, class: "alert alert-error" %>
-
-            <%= f.simple_fields_for :brand do |brand| %>
-              <%= brand.input :name, label: "Enter name of the brand:" %>
-              <%= brand.input :profile, label: "Enter a description of the brand:" %>
-            <% end %>
-
-            <%= f.input :status, label: "Status:" %>
-            <%= f.input :updates, as: :text, input_html: { rows: "10",  class: 'wysihtml5 textbox' }, label: "Updates?"%>
-
-          </div>
-          <div class="span6">
-            <%= f.simple_fields_for :images, html: { multipart: true } do |i| %>
-              <%= i.input :image, label: "Upload a photo!" %>
-            <% end %>
-            <%# f.input :image_remote_url, label: "or/ Enter an image URL:" %>
 
             <%= f.input :name, label: "Enter Product Name:" %>
             <%= f.input :price, label: "Price:" %>
             <%= f.input :deliverdate, label: "Estimated Delivery Date:" %>
-            <%= f.input :description, as: :text, input_html: { rows: "10",  class: 'wysihtml5 textbox' }, label: "Enter Vendor Product Description:"%>
-            <%= f.input :details, as: :text, input_html: { rows: "10",  class: 'wysihtml5 textbox' }, label: "Item Description:"%>
+            <%= f.input :description, as: :text, input_html: { rows: "10", class: 'textbox' }, 
+                                      label: "Enter Product Description:"%>
+
             <%= f.input :ecomm_url, label: "Celery Product Code?" %>
+
+          </div>
+          <div class="span6">
+            <%= f.full_error :image_file_size, class: "alert alert-error" %>
+            <%= f.full_error :image_content_type, class: "alert alert-error" %>
+            <div class="row">
+              <%= f.label "Upload some images!" %>
+            </div>
+            <%= f.simple_fields_for :images, html: { multipart: true } do |i| %>
+              <%= i.input :image, label: "Upload a photo!" %>
+            <% end %>
             <div class="form-actions">
               <%= f.button :submit, class: "btn btn-primary" %>
             </div>
@@ -39,11 +33,3 @@
     <% end %>
   </div>
 </div>
-<script type="text/javascript">
-$(function() {
-  $('.wysihtml5').each(function(i, elem) {
-    $(elem).wysihtml5();
-  });
-})
-</script>
-
