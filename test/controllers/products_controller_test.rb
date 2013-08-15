@@ -1,49 +1,71 @@
-# require 'test_helper'
+require 'test_helper'
 
-# describe ProductsController do
-#   setup do
-#     @product = products(:one)
-#   end
+describe ProductsController do
+  include Devise::TestHelpers
 
-#   test "should get index" do
-#     get :index
-#     assert_response :success
-#     assert_not_nil assigns(:products)
-#   end
+  before { sign_in users(:alex) }
 
-#   test "should get new" do
-#     get :new
-#     assert_response :success
-#   end
+  let(:brand) { brands(:one) }
+  let(:product) { products(:one) }
+  
+  describe "#index" do
 
-#   test "should create product" do
-#     assert_difference('Product.count') do
-#       post :create, product: { name: 'Pants', description: @product.description }
-#     end
+    it "succeeds" do
+      get :index, brand_id: brand.id
+      assert_response :success
+      assert_not_nil assigns(:products)
+    end
 
-#     assert_redirected_to product_path(assigns(:product))
-#   end
+  end
 
-#   test "should show product" do
-#     get :show, id: @product
-#     assert_response :success
-#   end
+  describe "#new" do
 
-#   test "should get edit" do
-#     get :edit, id: @product
-#     assert_response :success
-#   end
+    it "succeeds" do
+      get :new, brand_id: brand.id
+      assert_response :success
+    end
 
-#   test "should update product" do
-#     put :update, id: @product, product: { description: @product.description }
-#     assert_redirected_to product_path(assigns(:product))
-#   end
+  end
 
-#   test "should destroy product" do
-#     assert_difference('Product.count', -1) do
-#       delete :destroy, id: @product
-#     end
+  describe "#create" do
 
-#     assert_redirected_to products_path
-#   end
-# end
+    it "succeeds" do
+      assert_difference('Product.count') do
+        post :create, brand_id: brand.id, product: { name: 'Pants', description: "They're blue!" }
+      end
+
+      assert_redirected_to product_path(assigns(:product))
+    end
+
+  end
+
+  describe "#show" do
+
+    it "succeeds" do
+      get :show, brand_id: brand.id, id: product
+      assert_response :success
+    end
+
+  end
+
+  describe "#update" do
+    
+    it "succeeds" do
+      put :update, brand_id: brand.id, id: product.id, product: { description: "Actually they're pink!" }
+      assert_redirected_to product_path(assigns(:product))
+    end
+
+  end
+
+  describe "#destroy" do
+
+    it "succeeds" do
+      assert_difference('Product.count', -1) do
+        delete :destroy, brand_id: brand.id, id: product
+      end
+
+      assert_redirected_to products_path
+    end
+
+  end
+end

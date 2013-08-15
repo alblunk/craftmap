@@ -41,13 +41,14 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = current_brand.products.new(product_params)
-    @product.images.build if @product.images.empty?
 
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render json: @product, status: :created, location: @product }
       else
+        @product.images.build if @product.images.empty?
+
         format.html { render action: "new" }
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end

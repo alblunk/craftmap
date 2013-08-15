@@ -38,12 +38,9 @@
       <div id="show-admin" class="subh-font">
         <% if current_user.admin? %>
           <h4>
-            <%= link_to 'Edit', edit_product_path(@product) %> //
+            <%= link_to 'Edit', edit_brand_product_path(@product.brand, @product) %> //
             <%= link_to 'Back', products_path %>
           </h4>
-          <p>
-            Uploading user: <%= @product.user.name %>
-          </p>
           <p>
             Created at: <%= @product.created_at %>
           </p>
