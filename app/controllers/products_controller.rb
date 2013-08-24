@@ -34,7 +34,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
-    @product = current_brand.products.find(params[:id])
+    @product = Product.find(params[:id])
   end
 
   # POST /products
@@ -58,11 +58,11 @@ class ProductsController < ApplicationController
   # PUT /products/1
   # PUT /products/1.json
   def update
-    @product = current_brand.products.find(params[:id])
+    @product = Product.find(params[:id])
 
     respond_to do |format|
       if @product.update(product_params)
-        format.html { redirect_to @product, notice: 'Product was successfully updated.' }
+        format.html { redirect_to [current_brand, @product], notice: 'Product was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -91,7 +91,7 @@ class ProductsController < ApplicationController
 
     def product_params
       params.require(:product).
-              permit(:name, :name, :description,
+              permit( :name, :description, :details, :price, :deliverdate,
                       brand_attributes: [ :name, :profile ],
                       images_attributes: [ :image ] )
     end

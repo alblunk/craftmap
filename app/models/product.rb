@@ -6,6 +6,6 @@ class Product < ActiveRecord::Base
   belongs_to :brand
   has_many :images, class_name: 'ProductImage'
   
-  accepts_nested_attributes_for :images
+  accepts_nested_attributes_for :images, reject_if: :all_blank
 
 end
