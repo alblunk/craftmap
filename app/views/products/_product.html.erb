@@ -16,7 +16,7 @@
 
 
 		<span class="subh-font" style="position:absolute; right:0; padding-right:20px; text-align:right;">
-			<% if current_user.admin? %>
+			<% if current_user.try(:admin?) %>
 				<p style="margin-bottom:-5px;">
 					<%= link_to 'Edit', edit_brand_product_path(product.brand, product) %>
 				</p>

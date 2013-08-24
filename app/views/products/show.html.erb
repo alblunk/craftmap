@@ -36,7 +36,7 @@
     </div>
 
       <div id="show-admin" class="subh-font">
-        <% if current_user.admin? %>
+        <% if current_user.try(:admin?) %>
           <h4>
             <%= link_to 'Edit', edit_brand_product_path(@product.brand, @product) %> //
             <%= link_to 'Back', products_path %>
