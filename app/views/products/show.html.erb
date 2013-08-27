@@ -185,6 +185,7 @@
 
 		<div class="span7">
 			<h3 id="profile-title" class="h-font">Meet the Maker:<space> <%= @product.brand.name.html_safe %></h3>
+      <h5 id="location" class="subh-font"><%= @product.brand.location %></h5>
       <div class="p-font" style="margin-bottom:100px;">
 
         <img id="brand-image" src="<%= @product.brand.image(:medium) %>"/>

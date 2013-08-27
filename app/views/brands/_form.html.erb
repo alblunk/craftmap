@@ -5,8 +5,10 @@
         <%= brand.error_notification %>
 
         <%= brand.input :name, label: "Name:" %>
+        <%= brand.input :location, label: "Location:" %>
         <%= brand.input :profile, as: :text, input_html: { rows: "10",  class: 'textbox' }, label: "Tell us about your brand:"%>
-
+      </div>
+      <div class="span6">
         <%= brand.file_field :image %>
 
         <div class="form-actions">
