@@ -1,5 +1,5 @@
 class BrandsController < ApplicationController
-  before_action :authenticate_user!, except: [ :index, :show ]
+  before_action :require_admin, except: [ :index, :show ]
 
   def index
     @brands = Brand.all
