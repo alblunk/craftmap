@@ -34,7 +34,7 @@ describe ProductsController do
         post :create, brand_id: brand.id, product: { name: 'Pants', description: "They're blue!" }
       end
 
-      assert_redirected_to product_path(assigns(:product))
+      assert_redirected_to brand_product_path(brand, assigns(:product))
     end
 
   end
@@ -52,7 +52,7 @@ describe ProductsController do
     
     it "succeeds" do
       put :update, brand_id: brand.id, id: product.id, product: { description: "Actually they're pink!" }
-      assert_redirected_to product_path(assigns(:product))
+      assert_redirected_to brand_product_path(brand, assigns(:product))
     end
 
   end
