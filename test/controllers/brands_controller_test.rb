@@ -3,7 +3,7 @@ require "test_helper"
 describe BrandsController do
   include Devise::TestHelpers
 
-  before { sign_in users(:alex) }
+  before { sign_in users(:admin) }
 
   describe "#create" do
 

@@ -3,7 +3,7 @@ require 'test_helper'
 describe ProductsController do
   include Devise::TestHelpers
 
-  before { sign_in users(:alex) }
+  before { sign_in users(:admin) }
 
   let(:brand) { brands(:one) }
   let(:product) { products(:one) }

@@ -2,16 +2,20 @@ require "test_helper"
 
 describe User do
 
-  let(:user) { User.new(email: "me@foo.com") }
+  describe "scopes" do
 
-  it "will save a new user with a valid password" do
-    user.password = "Ea3!-HSF14csag$adfjdjdhh3XX"
-    assert user.save
+    it "finds only the admins" do
+      User.admins.each do |user|
+        assert user.admin?
+      end
+    end
+
+    it "finds only the non admins" do
+      User.non_admins.each do |user|
+        refute user.admin?
+      end
+    end
+
   end
 
-  it "will not save a new user with an invalid password" do
-    user.password = "short"
-    refute user.save
-    assert user.errors.messages[:password]
-  end
 end
