@@ -8,6 +8,10 @@ Beeline::Application.routes.draw do
 
   resources :products, only: [ :index, :show ]
 
+  namespace :admin do
+    resources :users, only: [ :index, :update ]
+  end
+
   get 'about' => 'pages#about'
   get 'legal' => 'pages#legal'
   get 'allproducts' => 'pages#allproducts'

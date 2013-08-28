@@ -1,0 +1,24 @@
+<tr>
+  <td>
+    <%= user.id %>
+  </td>
+  <td>
+    <%= user.name %>
+  </td>
+  <td>
+    <%= user.email %>
+  </td>
+  <td>
+    <%= user.current_sign_in_at %>
+  </td>
+  <%= simple_form_for([:admin, user]) do |f| %>
+    <td>
+      <%= f.check_box :admin %>
+    </td>
+    <td>
+      <% unless current_user.id == user.id %>
+        <%= f.button :submit, class: "btn btn-mini btn-primary" %>  
+      <% end %>
+    </td>
+  <% end %>
+</tr>
