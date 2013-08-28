@@ -1,7 +1,8 @@
 class Admin::UsersController < Admin::BaseController
 
   def index
-    @users = User.order(:id).page(params[:page])
+    @admins = User.admins.order(:id)
+    @users = User.non_admins.order(:id).page(params[:page])
   end
 
   def update
