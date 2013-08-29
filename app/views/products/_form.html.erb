@@ -20,6 +20,16 @@
           <div class="span6">
             <%= f.full_error :image_file_size, class: "alert alert-error" %>
             <%= f.full_error :image_content_type, class: "alert alert-error" %>
+
+            <h5>Current Photos</h5>
+            <% if @product.images.empty? %>
+              <p>No photos uploaded yet!</p>
+            <% else %>
+              <% @product.images.each do |image| %>
+                <%= image_tag(image.image(:small), size: "75x75") if image.persisted? %>
+              <% end %>
+            <% end %>
+
             <div class="row">
               <%= f.label "Upload some images!" %>
             </div>

@@ -13,28 +13,19 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @products = Product.order("created_at desc").page(params[:page]).per(4)
-
-    respond_to do |format|
-      format.html # show.html.erb
-      # format.json { render json: @product }
-    end
   end
 
   # GET /products/new
   # GET /products/new.json
   def new
     @product = current_brand.products.new
-    @product.images.build
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @product }
-    end
+    8.times { @product.images.build }
   end
 
   # GET /products/1/edit
   def edit
     @product = Product.find(params[:id])
+    @product.images.build if @product.images.empty?
   end
 
   # POST /products
@@ -47,7 +38,7 @@ class ProductsController < ApplicationController
         format.html { redirect_to [current_brand, @product], notice: 'Product was successfully created.' }
         format.json { render json: @product, status: :created, location: @product }
       else
-        @product.images.build if @product.images.empty?
+        (8 - @product.images.size).times { @product.images.build }
 
         format.html { render action: "new" }
         format.json { render json: @product.errors, status: :unprocessable_entity }
@@ -65,6 +56,8 @@ class ProductsController < ApplicationController
         format.html { redirect_to [current_brand, @product], notice: 'Product was successfully updated.' }
         format.json { head :no_content }
       else
+        @product.images.build if @product.images.empty?
+
         format.html { render action: "edit" }
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
