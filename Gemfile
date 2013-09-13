@@ -17,7 +17,7 @@ gem 'kaminari'
 gem "paperclip", "~> 3.0"
 gem 'aws-sdk'
 
-gem 'anjlab-bootstrap-rails', '>= 2.3', :require => 'bootstrap-rails'
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
 gem 'bootstrap-wysihtml5-rails'
 
 group :production do
