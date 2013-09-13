@@ -1,38 +1,89 @@
-<%= render 'pages/home' %>
-
-<div class="row-fluid">
-	<div class ="span1" style="width:1% !important;"></div>
-		<div class="span3 well" id="home-products" >
-			<table>
-					<p id="motto" class="subh-font">THE NEWEST PRODUCTS</p>
-					<p id="motto" class="subh-font">FROM THE BEST BRANDS</p>
-					<p id="motto" class="subh-font">BACKED BY YOU, THE FANS</p>
-				<tr>
-					<hr style="margin:10px;">
-				</tr>
-				<tr>
-					
-					<a href="/products/12" <div class="flatbtn centerize" id="btnStart">START EXPLORING <span class="icon-chevron-right icon-white"></span> <!-- <small>►</small> --></div></a>
-
-				</tr>
-				<tr>
-					<hr style="margin:10px;">
-				</tr>
-					<span class="subh-font centerize">SEE MORE <span class="icon-search"></span><!-- <span style="font-size:.5em; padding-bottom:2px;">▼</span> --></span>
-					<div id="homepagin"class="pagination pagination-mini pagination-right centerize">
-						<%= paginate @products %>
+<!-- MIDDLE PANE STARTS -->
+			<div class="col-md-5">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="p-hover">
+							<div id="p-hover-details">
+								<h3>Mission Workshop</h3>
+								<h5>Sanction Backpack AP</h5>
+								<hr style="margin-top:5px">
+								<p id="p-hover-status" class="centerize"><span class="glyphicon glyphicon-signal">&nbsp;</span>90% Funded&nbsp;&nbsp; | &nbsp;&nbsp;<span class="glyphicon glyphicon-time">&nbsp;</span>4 Weeks left</p>
+							</div>
+							<%= image_tag("product2.jpg", id: "p-hover-image") %>
+						</div>
+						<div id="motto">
+							<hr>
+								<h3 style="font-size:2.5em;">
+								TOP TIER BRANDS<br>
+								FAN-BACKED PRODUCT<br>
+								JOIN THE COMPANY
+								</h3>
+							<hr>
+						</div>
 					</div>
-				</tr>
-			</table>
-		</div>
-		<div class ="span1" style="width:1% !important;"></div>
-		<div class ="span8">
-			<div id="products">
-			  <%= render @products %>
-			  	<script type="text/javascript">
-			  	slugs = "<%= @products.map { |product| product.ecomm_url }.join(",").html_safe %>"
-			  	</script> 
+				</div>
 			</div>
-			<!-- <a style="margin-left:-20px; height:20px;" href="http://beelineco.tumblr.com" target="blank"><img src="https://s3.amazonaws.com/beelineco/blog_panel.jpg"/></a> -->
-		</div>
-</div>
+<!-- MIDDLE PANE ENDS -->
+
+<!-- RIGHT GRID STARTS -->
+			<div class="col-md-5 product-grid">
+				<div class="row">
+					<div class="col-md-12">
+						<h5 id="links"class="centerize" ><a href="#">PRODUCTS</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">BRANDS</a></h5>
+					</div>
+				</div>
+				<hr style="margin:0;padding-bottom:10px; opacity:.7;">
+				<div class="row">
+					<div class="col-md-6 col-xs-6">
+						<a href="#" class="thumbnail">
+  							<%= image_tag("product_thumb1.jpg") %>
+						</a>
+					</div>
+					<div class="col-md-6 col-xs-6">
+						<a href="#" class="thumbnail">
+							<%= image_tag("product_thumb3.jpg") %>
+						</a>
+					</div>
+					<div class="col-md-6 col-xs-6">
+						<a href="#" class="thumbnail">
+  							<%= image_tag("product_thumb2.jpg") %>
+						</a>
+					</div>
+					<div class="col-md-6 col-xs-6">
+						<a href="#" class="thumbnail">
+  							<%= image_tag("product_thumb1.jpg") %>
+						</a>
+					</div>
+					<div class="col-md-6 col-xs-6">
+						<a href="#" class="thumbnail">
+  							<%= image_tag("product_thumb4.jpg") %>
+						</a>
+					</div>
+					<div class="col-md-6 col-xs-6">
+						<a href="#" class="thumbnail">
+  							<%= image_tag("product_thumb5.jpg") %>
+						</a>
+					</div>
+					<div class="col-md-6 col-xs-6">
+						<a href="#" class="thumbnail">
+  							<%= image_tag("product_thumb1.jpg") %>
+						</a>
+					</div>
+					<div class="col-md-6 col-xs-6">
+						<a href="#" class="thumbnail">
+  							<%= image_tag("product_thumb6.jpg") %>
+						</a>
+					</div>
+					<div class="col-md-6 col-xs-6">
+						<a href="#" class="thumbnail">
+  							<%= image_tag("product_thumb5.jpg") %>
+						</a>
+					</div>
+					<div class="col-md-6 col-xs-6">
+						<a href="#" class="thumbnail">
+  							<%= image_tag("product_thumb1.jpg") %>
+						</a>
+					</div>
+				</div>
+			</div>
+<!-- RIGHT GRID ENDS -->

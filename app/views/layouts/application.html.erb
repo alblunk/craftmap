@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		  <title>Beeline Co.</title>
-		  <%= stylesheet_link_tag    "application", :media => "all" %>
-		  <%= javascript_include_tag "application" %>
-		  <%= csrf_meta_tags %>
+  <head>
+    <title>Farallon Co.</title>
+      <%= stylesheet_link_tag    "application", :media => "all" %>
+      <%= javascript_include_tag "application" %>
+      <%= csrf_meta_tags %>
 
-		 <!-- FAVICON -->
-		<link rel="shortcut icon" href="https://s3.amazonaws.com/beelineco/BeelinelogoSmall_v1.png" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+    
+      <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
 
-		<!-- RESPONSIVE -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="assets/css/bootstrap-responsive.css" rel="stylesheets">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://s3.amazonaws.com/beelineco/FarallonCo-ShortForm.jpg">
 
-		<!-- FONTS http://html.adobe.com/edge/webfonts/-->
-		<script src="http://use.edgefonts.net/maven-pro:n4,n5,n7,n9.js"></script>
-		<script src="http://use.edgefonts.net/m-1c:n2,n3,n4,n5,n7,n8,n9.js"></script>
-		<script src="http://use.edgefonts.net/exo:n1,i1,n2,i2,n3,i3,n4,i4,n5,i5,n6,i6,n7,i7,n8,i8,n9,i9.js"></script>
-		<script src="http://use.edgefonts.net/share-regular:n4,i4,n7,i7.js"></script>
+    <!-- FONTS http://html.adobe.com/edge/webfonts/-->
+    <script src="http://use.edgefonts.net/maven-pro:n4,n5,n7,n9.js"></script>
+    <script src="http://use.edgefonts.net/share-regular:n4,i4,n7,i7.js"></script>
+    <script src="http://use.edgefonts.net/m-1c:n2,n3,n4,n5,n7,n8,n9.js"></script>
 
-		<!-- Google Analytics -->
-		<script type="text/javascript">
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-40688752-1']);
-		  _gaq.push(['_trackPageview']);
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-40688752-1']);
+      _gaq.push(['_trackPageview']);
 
-		  (function() {
-		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
-		</script>
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
 
-	</head>
-	<body>
+  </head>
+  <body>
+    <div class="row">
+      
+      <%= render 'layouts/header' %>
+      
+      <%= yield %>
+    </div>
 
-		<%= render 'layouts/header' %>
-		
-		<%= yield %>
-
-		<%= render 'layouts/footer' %>
-
-	</body>
-
+    <%= render 'layouts/footer' %>
+      
+  </body>
 </html>

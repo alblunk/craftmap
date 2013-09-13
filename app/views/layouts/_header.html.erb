@@ -1,50 +1,44 @@
-<div class="navbar navbar-inverse navbar-static-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-plus icon-white"></span>
-      </button>
-      <ul class="nav pull-left">
-        <li>
-          <a href="/">
-            <img src="https://s3.amazonaws.com/beelineco/beeliner_outline_logo.png" width="80">
-          </a>
-        </li>
-        <li>
-          <a href="http://facebook.com/beelineco" target="_blank">
-            <img src="https://s3.amazonaws.com/beelineco/facebook.png" width="17px">
-          </a>
-        </li>
-        <li>
-          <a href="http://twitter.com/thebeeline_co" target="_blank">
-            <img src="https://s3.amazonaws.com/beelineco/twitter.png"width="17px">
-          </a>
-        </li>
-        <li>
-          <a href="http://instagram.com/beelineco" target="_blank">
-            <img src="https://s3.amazonaws.com/beelineco/Instagram.png"width="15px">
-          </a>
-        </li>
-      </ul>
-      <div class="nav-collapse collapse">
-        <ul class="nav pull-right">
-          <% if user_signed_in? %>
-            <li>
-              <%= link_to "ACCOUNT", edit_user_registration_path %>
-            </li>
-            <li>
-              <%= link_to 'LOGOUT', destroy_user_session_path, method: :delete %>
-            </li>
-          <% else %>
-            <li style="background:#505050; border-radius:3px;">
-              <%= link_to 'JOIN US',  new_user_registration_path %>
-            </li>
-            <li>
-              <%= link_to 'SIGN IN',  new_user_session_path %>
-            </li>
-          <% end %>
-        </ul>
+<!-- HEADER STARTS -->
+      <div class="col-md-2" >
+        <div class="row">
+          <div class="col-md-12">
+            <div id="header">
+              <div class="logo centerize">
+                <a href="#"><%= image_tag("FarallonCo-LongForm-T.png", width: "150") %></a>
+              </div>
+              <hr style="margin:0 0 -10px 0;">
+              <ul class="social centerize">
+                <li><a style="margin-right:18px" href="http://facebook.com/farallonco"><%= image_tag("facebook-w.png", width: "20") %></a>
+                <a style="margin-right:18px" href="http://twitter.com/farallonco"><%= image_tag("twitter-w.png", width: "20") %></a><a style="margin-right:18px" href="http://instagram.com/farallonco"><%= image_tag("instagram.png", width: "18") %></a></li>
+              </ul>
+              <hr style="margin:-5px 0 0 0;">
+              <div class="signup centerize">
+                <a data-toggle="modal" href="#joinus-modal">&nbsp;&nbsp;&nbsp;JOIN US</a>
+                <span id="line"></span>
+                <a data-toggle="modal" href="#signin-modal">&nbsp;SIGN IN</a>
+
+                <!-- <a data-toggle="modal" href="#joinus-modal">&nbsp;&nbsp;&nbsp;ACCOUNT</a>
+                <span id="line"></span>
+                <a data-toggle="modal" href="#signin-modal">&nbsp;LOG OUT</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-xs-5">
+            <button type="button" id="emailus">
+              <a href="mailto:support@farallon.co"><span class="glyphicon glyphicon-send"></span>&nbsp;Email us.</a>
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-xs-5">
+            <a data-toggle="modal" href="#submit-modal" >
+              <div id="submit">
+                <h5>Have an idea?</h5>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
-    </div> 
-  </div>
-</div>
+<!-- HEADER ENDS -->
