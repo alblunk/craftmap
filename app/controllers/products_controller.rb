@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    @product = Product.find(params[:id])
+    @product = Product.new
     @products = Product.order("created_at desc").page(params[:page]).per(4)
   end
 
