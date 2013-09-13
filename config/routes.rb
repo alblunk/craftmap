@@ -12,15 +12,14 @@ Beeline::Application.routes.draw do
     resources :users, only: [ :index, :update ]
   end
 
+  get 'home' => 'pages#home'
   get 'about' => 'pages#about'
   get 'legal' => 'pages#legal'
-  get 'allproducts' => 'pages#allproducts'
-  get 'comingsoon' => 'pages#comingsoon'
 
   get 'contact' => 'contact#new'
   post 'contact' => 'contact#create'
   
-  root :to => 'products#index'
+  root :to => 'pages#home'
 
 
   # The priority is based upon order of creation:

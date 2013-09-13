@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    render layout: false
   end
 
   def about
@@ -8,9 +9,4 @@ class PagesController < ApplicationController
   def legal
   end
 
-  def allproducts
-  end
-
-  def comingsoon
-  end
 end
