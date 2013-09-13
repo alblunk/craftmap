@@ -4,12 +4,13 @@
           <div class="col-md-12">
             <div id="header">
               <div class="logo centerize">
-                <a href="#"><%= image_tag("FarallonCo-LongForm-T.png", width: "150") %></a>
+                <a href="/products"><%= image_tag("FarallonCo-LongForm-T.png", width: "150") %></a>
               </div>
               <hr style="margin:0 0 -10px 0;">
               <ul class="social centerize">
-                <li><a style="margin-right:18px" href="http://facebook.com/farallonco"><%= image_tag("facebook-w.png", width: "20") %></a>
-                <a style="margin-right:18px" href="http://twitter.com/farallonco"><%= image_tag("twitter-w.png", width: "20") %></a><a style="margin-right:18px" href="http://instagram.com/farallonco"><%= image_tag("instagram.png", width: "18") %></a></li>
+                <li><a style="margin-right:18px" href="http://facebook.com/farallonco" target="blank"><%= image_tag("facebook-w.png", width: "20") %></a>
+                <a style="margin-right:18px" href="http://twitter.com/farallonco" target="blank"><%= image_tag("twitter-w.png", width: "20") %></a>
+                <a style="margin-right:18px" href="http://instagram.com/farallonco" target="blank"><%= image_tag("instagram.png", width: "18") %></a></li>
               </ul>
               <hr style="margin:-5px 0 0 0;">
               <div class="signup centerize">
@@ -42,3 +43,92 @@
         </div>
       </div>
 <!-- HEADER ENDS -->
+
+<!-- JoinUs Modal -->
+  <div class="modal fade" id="joinus-modal" tabindex="-1" role="dialog" aria-labelledby="Join Us." aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="input-group">
+            <span class="input-group-addon">Email</span>
+            <input type="text" class="form-control">
+        </div>
+        <br>
+           <div class="input-group">
+            <span class="input-group-addon">Password</span>
+            <input type="text" class="form-control">
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+<!-- SignIn Modal -->
+  <div class="modal fade" id="signin-modal" tabindex="-1" role="dialog" aria-labelledby="Sign In." aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body" style="margin-bottom:-20px">
+          <div class="input-group">
+            <span class="input-group-addon">Email</span>
+            <input type="text" class="form-control">
+        </div>
+        <br>
+           <div class="input-group">
+            <span class="input-group-addon">Password</span>
+            <input type="text" class="form-control">
+        </div>
+        <br>
+        <div class="checkbox">
+          <label>
+              <input type="checkbox"> Remember me?
+          </label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Sign In</button>
+        </div>
+      
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+<!-- Submit Modal -->
+  <div class="modal fade" id="submit-modal" tabindex="-1" role="dialog" aria-labelledby="Submit" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3 class="modal-title">Help us, help you.</h3>
+      </div>
+      <div class="modal-body">
+        <p>This is an open forum for you to submit product ideas, brand tips, & advice. We will hustle to make it happen -- if it does -- we'll take care of you (read: worthwhile credit incentive)</p>
+        <p style="font-size:.5em">(We won't publish anything without your consent)</p>
+        <br>
+        <div class="input-group">
+          <span class="input-group-addon">Lets talk...</span>
+          <input type="text" class="form-control" placeholder="Your email. (Optional)">
+      </div>
+      <hr>
+      
+         <div class="input-group">
+          <span class="input-group-addon">What brand or topic?</span>
+          <input type="text" class="form-control">
+      </div>
+      <br>
+      <p>What's on your mind? No bad ideas... Promise. </p>
+      <textarea class="form-control" rows="2" width="300px"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Submit</button>
+      </div>
+    </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+
