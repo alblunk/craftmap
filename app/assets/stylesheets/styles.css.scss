@@ -45,6 +45,15 @@
     text-decoration: none;
   }
 
+
+  h2{
+    font-family:maven-pro, serif;
+    font-weight: 600;
+    text-transform:uppercase;
+    font-size:2.5em;
+    text-decoration: none;
+  }
+
   h3{
     font-family:maven-pro, serif;
     font-weight: 600;
@@ -525,6 +534,14 @@
   .product-grid #links a:hover{
     opacity:.7;
     text-decoration: none;
+  }
+
+
+  /*FAQ*/
+    #faq-box{
+    background-color:rgba(0, 0, 0, 0.25);
+    padding:10px;
+    border-radius: 5px;
   }
 
 /*PRODUCT*/
