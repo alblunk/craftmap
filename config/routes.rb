@@ -14,7 +14,9 @@ Beeline::Application.routes.draw do
 
   get 'home' => 'pages#home'
   get 'about' => 'pages#about'
-  get 'legal' => 'pages#legal'
+  get 'faq' => 'pages#faq'
+  get 'terms' => 'pages#terms'
+  get 'privacy' => 'pages#privacy'
 
   get 'contact' => 'contact#new'
   post 'contact' => 'contact#create'

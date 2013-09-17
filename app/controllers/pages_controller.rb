@@ -4,10 +4,14 @@ class PagesController < ApplicationController
   end
 
   def about
-    
-  end
-  
-  def legal
   end
 
+  def faq
+  end
+  
+  def terms
+  end
+
+  def privacy
+  end
 end
