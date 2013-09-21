@@ -10,8 +10,8 @@ gem 'jquery-rails'
 
 gem 'puma'
 
-gem 'devise',           '3.0.0.rc'
-gem "simple_form",      '3.0.0.rc'
+gem 'devise',           '~> 3.1'
+gem "simple_form",      '~> 3.0'
 gem 'kaminari'
 
 gem "paperclip", "~> 3.0"

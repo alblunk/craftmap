@@ -71,35 +71,43 @@
 <!-- Landing Join Us Modal -->
   <div class="modal fade" id="landing-joinus-modal" tabindex="-1" role="dialog" aria-labelledby="Join Us." aria-hidden="false">
     <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-content">
+        <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h3 class="modal-title">Be there when we launch...</h3>
-      </div>
-      <div class="modal-body">
-        <p>We've been developing this site for the better part of 2013 & can't wait to show you what we've been working on.</p>
-        <hr>
-        <p>But as a preface: Farallon Co. is a community of brands, craftsman, and makers who will be using our platform as proving grounds for their newest endeavors -- and thanks to their fans & backers, many of these 'back of napkin' creations will be produced.</p>
-        <br>
-        <p>You will also be given ample opportunity to have your voice heard & possibly influence the product direction of your favorite brands.</p>
-        <hr>
-        <h5 style="text-align:center;">Join the company.</h5>
-        <hr>
-        <div class="input-group">
-            <span class="input-group-addon">Email</span>
-            <input type="text" class="form-control">
         </div>
-        <br>
-           <!-- <div class="input-group">
-            <span class="input-group-addon">Password</span>
-            <input type="text" class="form-control">
-        </div> -->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Submit</button>
-      </div>
-    </div><!-- /.modal-content -->
+        <div class="modal-body">
+          <p>We've been developing this site for the better part of 2013 & can't wait to show you what we've been working on.</p>
+          <hr>
+          <p>But as a preface: Farallon Co. is a community of brands, craftsman, and makers who will be using our platform as proving grounds for their newest endeavors -- and thanks to their fans & backers, many of these 'back of napkin' creations will be produced.</p>
+          <br>
+          <p>You will also be given ample opportunity to have your voice heard & possibly influence the product direction of your favorite brands.</p>
+          <hr>
+          <h5 style="text-align:center;">Join the company.</h5>
+          <hr>
+          <%= simple_form_for @user,  :as => :user,
+                                      :url => api_registrations_path,
+                                      :format => :json,
+                                      :remote => true,
+                                      :defaults => { :input_html => { :class => "form-control" } } do |f| %>
+
+            <%= f.input :email, label: "Email", placeholder: "user@domain.com" %>
+
+            <div class="has-success">
+              <label class="control-label"></label>
+            </div>
+
+            <div class="has-error">
+              <label class="control-label"></label>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <%= f.button :submit, "Submit", class: "btn btn-primary" %>
+          </div>
+          <% end %>
+      </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
 
