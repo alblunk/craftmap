@@ -1,0 +1,49 @@
+<div class="modal fade" id="landing-joinus-modal" tabindex="-1" role="dialog" aria-labelledby="Join Us." aria-hidden="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h3 class="modal-title">Be there when we launch...</h3>
+      </div>
+      <div class="modal-body">
+        <p>We've been developing this site for the better part of 2013 & can't wait to show you what we've been working on.</p>
+        <hr>
+        <p>But as a preface: Farallon Co. is a community of brands, craftsman, and makers who will be using our platform as proving grounds for their newest endeavors -- and thanks to their fans & backers, many of these 'back of napkin' creations will be produced.</p>
+        <br>
+        <p>You will also be given ample opportunity to have your voice heard & possibly influence the product direction of your favorite brands.</p>
+        <hr>
+        <h5 style="text-align:center;">Join the company.</h5>
+        <hr>
+
+        <%= form_for @user, :as => :user,
+                            :url => api_registrations_path,
+                            :format => :json,
+                            :remote => true,
+                            :html => { :class => "form-horizontal", role: "form" } do |f| %>
+
+          <div class="form-group">
+            <div class="row col-sm-offset-2 col-sm-10">
+              <label class="control-label" for="inputSuccess"></label>
+              <label class="control-label" for="inputError"></label>
+            </div>
+          </div>
+
+          <div class="form-group" id="new-user-email">
+            <%= f.label :email, class: "col-lg-2 control-label" %>
+            <div class="col-lg-9">
+              <%= f.email_field :email, placeholder: "Enter your email address", class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-lg-11">
+              <%= f.submit "Submit", class: "btn btn-primary pull-right" %>
+            </div>
+          </div>
+
+        <% end %>
+
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

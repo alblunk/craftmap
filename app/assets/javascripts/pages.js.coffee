@@ -4,8 +4,17 @@
 
 $ ->
   $("form#new_user")
+    .on "ajax:send", (e) ->
+      $(".form-group").removeClass("has-error")
+      $("label[for='inputError']").empty()
+      $(".form-group").removeClass("has-success")
+      $("label[for='inputSuccess']").empty()
+
     .on "ajax:success", (e, data, status, xhr) ->
-      console.log(xhr)
-      $(".has-success label").append xhr.responseJSON.message
+      $(".form-group").addClass("has-success")
+      $("label[for='inputSuccess']").text xhr.responseJSON.message
+
     .on "ajax:error", (e, xhr, status, error) ->
-      $(".has-error label").append xhr.responseJSON.email[0]
+      $(".form-group").addClass("has-error")
+      $.each xhr.responseJSON.errors, (key, value) ->
+        $("label[for='inputError']").text key + " " + value  

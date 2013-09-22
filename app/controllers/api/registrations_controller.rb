@@ -6,7 +6,7 @@ class Api::RegistrationsController < Api::BaseController
     if user.save
       render :json => { message: "Success! We'll notify you when we're ready to launch!" }, status: 201
     else
-      render :json => user.errors, status: 422
+      render :json => { errors: user.errors }, status: 422
     end
   end
 
