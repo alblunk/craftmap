@@ -13,6 +13,9 @@ $ ->
     .on "ajax:success", (e, data, status, xhr) ->
       $(".form-group").addClass("has-success")
       $("label[for='inputSuccess']").text xhr.responseJSON.message
+      setTimeout ->
+        $("#landing-joinus-modal").modal('hide')
+      , 2000
 
     .on "ajax:error", (e, xhr, status, error) ->
       $(".form-group").addClass("has-error")
