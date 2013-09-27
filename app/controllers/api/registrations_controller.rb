@@ -1,5 +1,7 @@
 class Api::RegistrationsController < Api::BaseController
 
+  skip_before_filter :stealth_mode
+
   def create
     user = User.new(user_params)
 
