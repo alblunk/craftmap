@@ -1,32 +1,32 @@
-<br>
-<br>
-<br>
-<h2 class="h-font">Why should you Join our Family?</h2>
-<%= render "devise/shared/links" %>
-<hr>
-<h4 class="p-font">Simply put, you will have <u>first cut/u> at all of the 'bleeding-edge' new product, content, and special offers we hustle to bring you.</h4>
-<h6 class="p-font"><i>People who aren't signed up, can still purchase, but won't be first to know about our product. Plus, the emails will be the only place where <a href="http://blog.salvationarmyusa.org/wp-content/uploads/golden-ticket-lrg.png" target="blank"><strong>our special golden tickets live.</strong></a></i></h6>
 
-<hr>
-<div class="container-fluid">
-	<div class="row-fluid">
-		<div class="span12">
-			<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
-			  	<%= f.error_notification %>
+<div class="col-md-10 white-background" style="padding-bottom:20%">
+	<h2 class="h-font">Why should you Join the Company?</h2>
+	<%= render "devise/shared/links" %>
+	<hr>
+	<h4 class="p-font">Simply put, you will have <u>first cut</u> at all of the 'bleeding-edge' new product, content, and special offers we hustle to bring you.</h4>
+	<h6 class="p-font"><i>People who aren't signed up, can still purchase, but won't be first to know about our product. Plus, the emails will be the only place where <a href="http://blog.salvationarmyusa.org/wp-content/uploads/golden-ticket-lrg.png" target="blank"><strong>our special golden tickets live.</strong></a></i></h6>
 
-			  	<%= f.input :email %>
-				<%= f.input :password %>
-				<%= f.input :password_confirmation %>
+	<hr>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+				<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
+				  	<%= f.error_notification %>
 
-			<p class="subh-font">Heck no we will never share or distribute your email address.</p>
+				  	<%= f.input :email %>
+					<%= f.input :password %>
+					<%= f.input :password_confirmation %>
+
+				<p class="subh-font">Heck no we will never share or distribute your email address.</p>
 
 
-			  <div class="form-actions">
-			  	<%= f.submit "SIGN UP", class: "flatbtn user-btn"%>
-			  </div>
-			  <% end %>
+				  <div class="form-actions">
+				  	<%= f.submit "SIGN UP", class: "flatbtn user-btn"%>
+				  </div>
+				  <% end %>
+		  	</div>
 	  	</div>
-  	</div>
+	</div>
 </div>
 
 

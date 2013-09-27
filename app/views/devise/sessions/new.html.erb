@@ -1,21 +1,21 @@
-<br>
-<br>
-<br>
-<h2 class="h-font">Sign in</h2>
-<%= render "devise/shared/links" %>
-<hr>
 
-<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
-<%= f.error_notification %>
+<div class="col-md-10 white-background" style="padding-bottom:20%">
+	<h2 class="h-font">Sign in</h2>
+	<%= render "devise/shared/links" %>
+	<hr>
 
-<%= f.input :email %>
-<%= f.input :password %>
-<%= f.input :remember_me, as: :boolean%>
+	<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
+	<%= f.error_notification %>
 
-  <div class="form-actions">
-  	<%= f.submit "Sign in", class: "flatbtn user-btn" %>
-  </div>
+	<%= f.input :email %>
+	<%= f.input :password %>
+	<%= f.input :remember_me, as: :boolean%>
 
-<% end %>
+	  <div class="form-actions">
+	  	<%= f.submit "Sign in", class: "flatbtn user-btn" %>
+	  </div>
+
+	<% end %>
+</div>
 
 

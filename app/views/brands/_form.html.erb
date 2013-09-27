@@ -1,20 +1,20 @@
 <%= simple_form_for(@brand, html: { class: "form-horizontal" }) do |brand| %>
-  <div class="span12">
-    <div class="row-fluid">
-      <div class="span6">
-        <%= brand.error_notification %>
+<div class="col-md-10 white-background" style="padding-bottom:20%">
+  <div class="row">
+    <div class="col-md-6">
+      <%= brand.error_notification %>
 
-        <%= brand.input :name, label: "Name:" %>
-        <%= brand.input :location, label: "Location:" %>
-        <%= brand.input :profile, as: :text, input_html: { rows: "10",  class: 'textbox' }, label: "Tell us about your brand:"%>
-      </div>
-      <div class="span6">
-        <%= brand.file_field :image %>
+      <%= brand.input :name, label: "Name:" %>
+      <%= brand.input :location, label: "Location:" %>
+      <%= brand.input :profile, as: :text, input_html: { rows: "10",  class: 'textbox' }, label: "Tell us about your brand:"%>
+    </div>
+    <div class="col-md-6">
+      <%= brand.file_field :image %>
 
-        <div class="form-actions">
-          <%= brand.button :submit, class: "btn btn-primary" %>
-        </div>
+      <div class="form-actions">
+        <%= brand.button :submit, class: "btn btn-primary" %>
       </div>
     </div>
   </div>
+</div>
 <% end %>
