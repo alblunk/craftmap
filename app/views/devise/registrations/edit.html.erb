@@ -1,26 +1,36 @@
 
 
 <div class="col-md-10 white-background" style="padding-bottom:20%">
-  <h2 class="h-font">Edit <%= resource_name.to_s.humanize %></h2>
-  <h4 class="subh-font"><%= link_to "Back", :back %></h4>
-  <hr>
-  <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, class: 'form-horizontal' }) do |f| %>
-    <%= f.error_notification %>
+  <h2 class="h-font">My Account</h2>
+      <h5 style="color:#505050"><%= link_to "Back to Home", :back %></h4>
+      <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, class: 'form-horizontal' }) do |f| %>
+        <%= f.error_notification %>
 
-    <%= f.input :name %>
-    <%= f.input :email %>
-    <%= f.input :password, label: "New Password", autocomplete: "off" %>
-    <%= f.input :password_confirmation, label: "New Password Confirmation", autocomplete: "off" %>
-    <%= f.input :current_password %>
-    <% if current_user.try(:admin?) %>
-      <%= f.input :admin %>
-    <%end%>
 
-    <div class="form-actions">
-      <%= f.submit "UPDATE", class: "flatbtn user-btn"%>
+        <p>Please input your current password if you want to change your email or password.</p>
+        <%= f.input :current_password %>
+        <% if current_user.try(:admin?) %>
+          <%= f.input :admin %>
+        <%end%>
+        <hr>
+        <%= f.input :email %>
+        <%= f.input :password, label: "New Password", autocomplete: "off" %>
+        <%= f.input :password_confirmation, label: "New Password Confirmation", autocomplete: "off" %>
+
+        <hr>
+        <div class="form-actions">
+          <%= f.submit "Update", class: "btn btn-primary"%>
+        </div>
+      <% end %>
+      <hr>
+      <h4 class="h-font">If you want to go, we will miss you...</h4>
+      <p>But we won't stop you.<%= button_to "Vaporize Account", registration_path(resource_name), class:'btn btn-danger btn-xs', :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
     </div>
-  <% end %>
-
-  <h4 class="h-font">If you want to go, we will miss you...</h4>
-  <p>But we won't stop you, <%= @user.name %> .<%= button_to "Vaporize Account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
+    <div class="col-md-6">
+      <h5>Order History</h5>
+    </div>
+  </div>
 </div>

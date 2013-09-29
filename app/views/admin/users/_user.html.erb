@@ -15,9 +15,9 @@
     <td>
       <%= f.check_box :admin %>
     </td>
-    <td>
+    <td style="font-size:.5em">
       <% unless current_user.id == user.id %>
-        <%= f.button :submit, class: "btn btn-mini btn-primary" %>  
+        <%= f.button :submit, class: "btn btn-primary btn-xs" %>  
       <% end %>
     </td>
   <% end %>
