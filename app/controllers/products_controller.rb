@@ -1,35 +1,26 @@
 class ProductsController < ApplicationController
-  
+
   before_action :require_admin, except: [ :index, :show ]
 
-  # GET /products
-  # GET /products.json
   def index
     @products = Product.order("created_at asc").page(params[:page]).per(6)
   end
 
-  # GET /products/1
-  # GET /products/1.json
   def show
     @product = Product.find(params[:id])
     @products = Product.order("created_at desc").page(params[:page]).per(4)
   end
 
-  # GET /products/new
-  # GET /products/new.json
   def new
     @product = current_brand.products.new
     8.times { @product.images.build }
   end
 
-  # GET /products/1/edit
   def edit
     @product = Product.find(params[:id])
     @product.images.build if @product.images.empty?
   end
 
-  # POST /products
-  # POST /products.json
   def create
     @product = current_brand.products.new(product_params)
 
@@ -46,8 +37,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  # PUT /products/1
-  # PUT /products/1.json
   def update
     @product = Product.find(params[:id])
 
@@ -64,8 +53,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  # DELETE /products/1
-  # DELETE /products/1.json
   def destroy
     @product = current_brand.products.find(params[:id])
     @product.destroy
