@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130929204648) do
+ActiveRecord::Schema.define(version: 20130929204836) do
 
   create_table "brands", force: true do |t|
     t.string   "name"
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 20130929204648) do
     t.string   "deliver_date"
     t.integer  "brand_id"
   end
+
+  add_index "products", ["brand_id"], name: "index_products_on_brand_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",    null: false
