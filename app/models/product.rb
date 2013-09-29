@@ -4,8 +4,8 @@ class Product < ActiveRecord::Base
   validates :brand, presence: true
 
   belongs_to :brand
-  has_many :images, class_name: 'ProductImage'
-  
-  accepts_nested_attributes_for :images, reject_if: :all_blank
+  # other side of polymorphic images
+  has_many :images, as: :imagable
+
 
 end
