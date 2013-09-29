@@ -5,7 +5,7 @@ class Product < ActiveRecord::Base
 
   belongs_to :brand
   # other side of polymorphic images
-  has_many :images, as: :imagable
+  has_many :images, as: :imagable, dependent: :destroy
 
 
 end
