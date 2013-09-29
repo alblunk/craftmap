@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130929203749) do
+ActiveRecord::Schema.define(version: 20130929204648) do
 
   create_table "brands", force: true do |t|
     t.string   "name"
@@ -29,8 +29,7 @@ ActiveRecord::Schema.define(version: 20130929203749) do
     t.datetime "updated_at"
   end
 
-#ecomm_url needs to be in own table
-
+  add_index "images", ["imageable_id", "imageable_type"], name: "index_images_on_imageable_id_and_imageable_type"
 
   create_table "products", force: true do |t|
     t.text     "description"
