@@ -9,7 +9,7 @@
     <%= user.email %>
   </td>
   <td>
-    <%= user.current_sign_in_at %>
+    <%= time_ago_in_words(user.current_sign_in_at) %>
   </td>
   <%= simple_form_for([:admin, user]) do |f| %>
     <td>
