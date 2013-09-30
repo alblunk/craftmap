@@ -29,3 +29,6 @@ group :development, :test do
 	gem 'sqlite3'
   gem 'minitest-rails'
 end
+
+
+gem 'debugger'
