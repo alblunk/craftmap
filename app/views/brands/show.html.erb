@@ -7,6 +7,7 @@
 				</div>
 
 			<div class="row">
+				<%#= link_to 'Destroy', brand, method: :delete, data: { confirm: 'Are you sure?' } %>
   				<div class="col-md-12 centerize">
   					      <!-- FACEBOOK -->
                         <a href ="#" target="blank">
@@ -58,7 +59,7 @@
 <!-- PROFILE -->
 			<div class="row">
 				<div class="col-md-12">
-				<h3 id="profile-title" >MEET THE MAKER:<space> Mission Workshop<!-- <%# @product.brandname.html_safe %>--> </h3>
+				<h3 id="profile-title" >MEET THE MAKER:<space> <% @brand.name.html_safe %></h3>
 					<h5 id="location" class="subh-font" >San Francisco, CA<!--<%# @product.location%>--></h5> 
 				</div>
 			</div>

@@ -6,7 +6,7 @@
 
       <%= brand.input :name, label: "Name:" %>
       <%= brand.input :location, label: "Location:" %>
-      <%= brand.input :profile, as: :text, input_html: { rows: "10",  class: 'textbox' }, label: "Tell us about your brand:"%>
+      <%= brand.input :profile, as: :text, input_html: { rows: "10",  class: 'textbox' }, label: "Brand Profile:"%>
     </div>
     <div class="col-md-6">
       <%= brand.file_field :image %>
@@ -14,6 +14,7 @@
       <div class="form-actions">
         <%= brand.button :submit, class: "btn btn-primary" %>
       </div>
+      
     </div>
   </div>
 </div>

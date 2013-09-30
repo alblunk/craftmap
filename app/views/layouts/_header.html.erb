@@ -25,13 +25,26 @@
                 <% end %>
                 
               </div>
+               
+               
+                <% if current_user.try(:admin?) %>
+                  <hr style="margin:0 0 -10px 0;">
+                  <div style="margin-left:10px; color:white;">
+                    <a href="/brands">Brands</a>/
+                    <%= link_to "ADD+", new_brand_path %>
+                    <hr style="margin:-5px 0 -5px 0;">
+                    <a href="/products">Products</a>/
+                    <%= link_to "ADD+" %>
+                  </div>
+                <% end %>
+              
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-6 col-xs-5">
             <button type="button" id="emailus">
-              <a href="mailto:support@farallon.co?Subject=Contact%20Form" target="_top""><span class="glyphicon glyphicon-send"></span>&nbsp;Email us.</a>
+              <a href="mailto:support@farallon.co?Subject=Contact%20Form" target="_top"><span class="glyphicon glyphicon-send"></span>&nbsp;Email us.</a>
             </button>
           </div>
         </div>

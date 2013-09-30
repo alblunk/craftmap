@@ -6,7 +6,7 @@ class BrandsController < ApplicationController
   end
 
   def show
-    @brand = Brand.new
+    @brand = Brand.find(params[:id])
   end
 
   def new
@@ -14,7 +14,7 @@ class BrandsController < ApplicationController
   end
 
   def create
-    @brand = Brand.new(brand_params)
+    @brand = Brand.new
 
     if @brand.save
       redirect_to @brand
