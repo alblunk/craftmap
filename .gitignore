@@ -25,3 +25,5 @@ doc/
 
 # Ignore sampleimages
 /sample_images
+
+config/amazon_s3_local.yml
