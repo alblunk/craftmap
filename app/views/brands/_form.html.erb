@@ -1,20 +1,28 @@
-<%= simple_form_for(@brand, html: { class: "form-horizontal" }) do |brand| %>
+<%= form_for(@brand, url: brands_path , html: { :multipart => true, class: "form-horizontal" }) do |brand| %>
 <div class="col-md-10 white-background" style="padding-bottom:20%">
   <div class="row">
     <div class="col-md-6">
-      <%= brand.error_notification %>
+      <%#= brand.error_notification %>
 
-      <%= brand.input :name, label: "Name:" %>
-      <%= brand.input :location, label: "Location:" %>
-      <%= brand.input :profile, as: :text, input_html: { rows: "10",  class: 'textbox' }, label: "Brand Profile:"%>
+      <%= brand.label :name, "Name:" %>
+      <%= brand.text_field :name %>
+
+      <%= brand.label :location, "Location:" %>
+      <%= brand.text_field :location %>
+
+      <%= brand.label :profile, "Brand Profile:" %>
+      <%= brand.text_area :profile, input_html: { rows: "10",  class: 'textbox' } %>
+
     </div>
     <div class="col-md-6">
-      <%= brand.file_field :image %>
+      <%= fields_for @image do |image_field| %>
+        <%= image_field.file_field :images %>
+      <% end %>
 
       <div class="form-actions">
-        <%= brand.button :submit, class: "btn btn-primary" %>
+        <%= brand.submit class: "btn btn-primary" %>
       </div>
-      
+
     </div>
   </div>
 </div>

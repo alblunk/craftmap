@@ -4,7 +4,7 @@ class Brand < ActiveRecord::Base
 
   has_many :products
   # other side of polymorphic images
-  has_many :images, as: :imagable, dependent: :destroy
-
+  has_many :images, as: :imagable#, dependent: :destroy
+  accepts_nested_attributes_for :images
 
 end
