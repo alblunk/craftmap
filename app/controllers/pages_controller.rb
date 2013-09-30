@@ -4,15 +4,11 @@ class PagesController < ApplicationController
     render layout: false
   end
 
-  def about
-  end
+  def about; end
 
-  def faq
-  end
-  
-  def terms
-  end
+  def faq; end
 
-  def privacy
-  end
+  def terms; end
+
+  def privacy; end
 end
