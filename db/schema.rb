@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131001055827) do
+ActiveRecord::Schema.define(version: 20131001062034) do
 
   create_table "brands", force: true do |t|
     t.string   "name"
@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 20131001055827) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "ecomm_url"
     t.string   "name"
     t.integer  "price"
     t.string   "status"
