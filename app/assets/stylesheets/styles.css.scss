@@ -291,7 +291,35 @@
     background-color:#3276b1;
   }
 
+  .forms{
+    font-family:m-1c, serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 1em !important;
+    background-color:transparent;
+    letter-spacing: 2px;
+  }
 
+  .forms input{
+    border:none;
+    border-bottom:1px solid rgba(0, 0, 0, 0.4);
+    padding:5px;
+   font-family:m-1c, serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1em !important;
+    background-color:transparent;
+    letter-spacing: 2px;
+    width:100%;
+  }
+#forms-error{
+  background-color:rgba(163, 38, 56,.85);
+  color:white;
+  padding:5px;
+  pointer-events:none;
+  font-size:.8em;
+
+}
 
 /*LANDING PAGE*/
 

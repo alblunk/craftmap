@@ -1,37 +1,27 @@
 
-<div class="col-md-4 white-background" style="padding-bottom:10%" >
+<div class="col-md-4 white-background" style="padding-bottom:5%" >
 	<div style="padding-top:15px;"><%= render "devise/shared/links" %></div>
 	<hr>
 	<h2 class="centerize">Sign in</h2>
 
-	<hr>
+	<hr class="black-hr" style="padding-bottom:10%">
 
 	<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
 	<%= f.error_notification %>
 
-	<h5>
-	  	<input class="form-control input-lg" type="text" placeholder="Email">
-	  	<br>
-	  	<input class="form-control input-lg" type="text" placeholder="Password">
-	  	<br>
-	  	<div class="checkbox">
-  			<label>
-    		<input type="checkbox" value="">
-    			Remember me?
-  			</label>
-		</div>
-	</h5>
-
-	<%= f.input :email %>
-	<%= f.input :password %>
-	<%= f.input :remember_me, as: :boolean%>
-
+	<div class="forms">
+		<%= f.input :email, placeholder: 'EMAIL',label:false, error_html: { id: 'forms-error'} %>
+		<br>
+		<%= f.input :password, placeholder: 'PASSWORD',label:false, error_html: { id: 'forms-error'}%>
+		<br>
+		<%= f.input :remember_me, label: 'Remember me?',:style => "margin:0", as: :boolean, error_html: { id: 'forms-error'}%>
+	</div>
 
 	
 	<hr>
 
 	  <div class="form-actions">
-	  	<h5><%= f.submit "SIGN IN", class: "btn btn-primary btn-lg" %></h5>
+	  	<h5><%= f.submit "SIGN IN", class: "btn btn-primary btn-lg centerize" %></h5>
 	  </div>
 
 	<% end %>

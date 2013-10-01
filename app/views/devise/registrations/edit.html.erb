@@ -9,27 +9,35 @@
       <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, class: 'form-horizontal' }) do |f| %>
         <%= f.error_notification %>
 
-
-        <p>Please input your current password if you want to change your email or password.</p>
-        <h5>
-          <%= f.input :current_password %>
-          <% if current_user.try(:admin?) %>
-            <%= f.input :admin %>
-          <%end%>
+        <p><strong>To change your email or password:</strong><br>Please input your current password below.</p>
+        
+        <div class="forms" >
+          <br>
+          <%= f.input :current_password, label:'CURRENT PASSWORD:', error_html: { id: 'forms-error'}%>
+          <br>
           <hr>
         
-          <%= f.input :email %>
-          <%= f.input :password, label: "New Password", autocomplete: "off" %>
-          <%= f.input :password_confirmation, label: "New Password Confirmation", autocomplete: "off" %>
-        </h5>
-        <hr>
-        <div class="form-actions">
-          <%= f.submit "Update", class: "btn btn-primary"%>
+          <%= f.input :email,label:'CURRENT EMAIL:', error_html: { id: 'forms-error'} %>
+          <br>
+          <%= f.input :password, label: 'NEW PASSWORD?', autocomplete: "off", placeholder: 'PASSWORD', error_html: { id: 'forms-error'}%>
+          <%= f.input :password_confirmation, placeholder:'PASSWORD (AGAIN?)', label:false, error_html: { id: 'forms-error'}, autocomplete: "off" %>
         </div>
+        <hr>
+        <% if current_user.try(:admin?) %>
+          <%= f.input :admin, inline_label:'Admin?', label:false %>
+          <br>
+        <%end%>
+
+        <div class="form-actions">
+          <h5><%= f.submit "UPDATE ACCOUNT", class: "btn btn-primary centerize"%></h5>
+        </div>
+
       <% end %>
       <hr>
       <h4 class="h-font">If you want to go, we will miss you...</h4>
       <p>But we won't stop you.<%= button_to "Vaporize Account", registration_path(resource_name), class:'btn btn-danger btn-xs', :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
+
+
     </div>
     <div class="col-md-8">
       <h5>Order History</h5>

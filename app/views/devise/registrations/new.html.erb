@@ -1,36 +1,34 @@
 
-<div class="col-md-5 white-background" >
-	<div style="padding-top:15px;"><%= render "devise/shared/links" %></div>
-		<hr>
-	<h3 class="centerize">Why should you Join US?</h3>
-		<hr>
-	<p style="font-weight:600; font-size:1.05em;">Simply put, you will have first cut at all of the 'bleeding-edge' new product, content, and special offers we hustle to bring you.</p>
-	<p><i>People who aren't signed up, can still contribute to campaigns, but won't be first to know about launches or have special offers from our brand partners. Plus, the emails will be the only place where <a href="http://blog.salvationarmyusa.org/wp-content/uploads/golden-ticket-lrg.png" target="blank"><strong>our special golden tickets live.</strong></a></i></p>
-	<div class="row">
-		<div class="col-md-6">
-			<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-group'}) do |f| %>
+<div class="col-md-4 white-background" >
+  <div style="padding-top:15px;"><%= render "devise/shared/links" %></div>
+    <hr>
+  <h3 class="centerize">Why should you Join us?</h3>
+    <hr class="black-hr" style="padding-bottom:8%">
+  <p style="font-weight:300; font-size:1em;">Simply put, you will be supporting the highest quality brands & be the first to know about product launches. <br><br>We probably will give away product a lot too...</p>
+  <br>
+  <p><i>We won't crowd your inbox, nobody likes that friend...</i></p>
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-group'}) do |f| %>
 
-			  	<%= f.error_notification %>
-			  	<h5>
-			  	<input class="form-control input-lg" type="text" placeholder="Email">
-			  	<br>
-			  	<input class="form-control input-lg" type="text" placeholder="Password">
-			  	<input class="form-control input-lg" type="text" placeholder="Password (Again)">
-			  	</h5>
-				
-				<%= f.input :email %>
-				<%= f.input :password %>
-				<%= f.input :password_confirmation %>
+          <%= f.error_notification %>
 
-			<p style="font-size:.75em;padding-top:5px;padding-bottom:5px;">We will never share or distribute your email address. Promise.</p>
+      <br>
+      <div class="forms" >
+        <%= f.input :email, placeholder: 'EMAIL',label:false, error_html: { id: 'forms-error'} %>
+        <br>
+        <%= f.input :password, placeholder: 'PASSWORD',label:false, error_html: { id: 'forms-error'}%>
+        <br>
+        <%= f.input :password_confirmation, placeholder:'PASSWORD (AGAIN?)', label:false, error_html: { id: 'forms-error'}%>
+      </div>
+
+      <p style="font-size:.75em;padding-top:5px;padding-bottom:5px;">We will never share or distribute your email address. Promise.</p>
 
 
-			  <div class="form-actions">
-			  	<h5><%= f.submit "JOIN US", class: "btn btn-success btn-lg"%></h5>
-			  </div>
-			  <% end %>
-		  </div>
-	  </div>
+        <div class="form-actions">
+          <h5><%= f.submit "JOIN US", class: "btn btn-success btn-lg centerize"%></h5>
+        </div>
+        <% end %>
+      </div>
+    </div>
 
 </div>
 
