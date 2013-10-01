@@ -16,6 +16,7 @@ class BrandsController < ApplicationController
 
   def create
     @brand = Brand.new(brand_params)
+    @brand.owner = current_user
     @image = Image.new(imageable_type: 'brand')
 
     if @brand.save
@@ -46,8 +47,9 @@ class BrandsController < ApplicationController
 
   private
 
+    # TODO may be missing something here to set owner_id
     def brand_params
-      params.require(:brand).permit(:name, :profile, :location, images_attributes: [:imageable_type, :imageable_id, :file])
+      params.require(:brand).permit(:name, :profile, :location, :owner,  images_attributes: [:imageable_type, :imageable_id, :file])
     end
 
 end
