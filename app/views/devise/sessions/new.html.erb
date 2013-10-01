@@ -1,20 +1,37 @@
 
-<div class="col-md-10 white-background" style="padding-bottom:20%">
-	<h2 class="h-font">Sign in</h2>
-	<%= render "devise/shared/links" %>
+<div class="col-md-4 white-background" style="padding-bottom:10%" >
+	<div style="padding-top:15px;"><%= render "devise/shared/links" %></div>
+	<hr>
+	<h2 class="centerize">Sign in</h2>
+
 	<hr>
 
 	<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
 	<%= f.error_notification %>
 
+	<h5>
+	  	<input class="form-control input-lg" type="text" placeholder="Email">
+	  	<br>
+	  	<input class="form-control input-lg" type="text" placeholder="Password">
+	  	<br>
+	  	<div class="checkbox">
+  			<label>
+    		<input type="checkbox" value="">
+    			Remember me?
+  			</label>
+		</div>
+	</h5>
+
 	<%= f.input :email %>
 	<%= f.input :password %>
 	<%= f.input :remember_me, as: :boolean%>
+
+
 	
 	<hr>
 
 	  <div class="form-actions">
-	  	<%= f.submit "Sign in", class: "btn btn-primary" %>
+	  	<h5><%= f.submit "SIGN IN", class: "btn btn-primary btn-lg" %></h5>
 	  </div>
 
 	<% end %>

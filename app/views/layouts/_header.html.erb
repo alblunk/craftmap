@@ -15,13 +15,17 @@
               <hr style="margin:-5px 0 0 0;">
               <div class="signup centerize">
                 <% if user_signed_in? %>
-                  <a data-toggle="modal" href="/users/edit">&nbsp;&nbsp;&nbsp;ACCOUNT</a>
+                  <a href="/users/edit">&nbsp;&nbsp;&nbsp;ACCOUNT</a>
                   <span id="line"></span>
-                  <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete %></li>
+                  <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete %>
                 <% else %>
-                  <a data-toggle="modal" href="#joinus-modal">&nbsp;&nbsp;&nbsp;JOIN US</a>
+                  <%= link_to 'JOIN US',  new_user_registration_path %>
                   <span id="line"></span>
-                  <a data-toggle="modal" href="#signin-modal">&nbsp;SIGN IN</a>
+                  <%= link_to 'SIGN IN',  new_user_session_path %>
+
+                  <!-- <a data-toggle="modal" href="#joinus-modal">&nbsp;&nbsp;&nbsp;JOIN US</a>
+                  <span id="line"></span>
+                  <a data-toggle="modal" href="#signin-modal">&nbsp;SIGN IN</a> -->
                 <% end %>
                 
               </div>
