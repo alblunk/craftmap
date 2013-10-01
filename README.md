@@ -1,5 +1,2 @@
-This is the application for Beeline Co.
+Welcome to Farallon Co.
 
-URL here: http://code-beeline-909.herokuapp.com
-
-by Alex Blunk
