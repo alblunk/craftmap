@@ -4,6 +4,7 @@ class Product < ActiveRecord::Base
   validates :brand, presence: true
 
   belongs_to :brand
+  belongs_to :owner, class_name: "User"
   # other side of polymorphic images
   has_many :images, as: :imagable#, dependent: :destroy
   has_many :remote_datas

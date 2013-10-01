@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131001062034) do
+ActiveRecord::Schema.define(version: 20131001070303) do
 
   create_table "brands", force: true do |t|
     t.string   "name"
@@ -19,12 +19,15 @@ ActiveRecord::Schema.define(version: 20131001062034) do
     t.datetime "updated_at"
     t.text     "profile"
     t.string   "location"
+    t.integer  "owner_id"
   end
+
+  add_index "brands", ["owner_id"], name: "index_brands_on_owner_id"
 
   create_table "images", force: true do |t|
     t.integer  "imageable_id"
     t.string   "imageable_type"
-    t.string   "file"
+    t.string   "filename"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -42,9 +45,11 @@ ActiveRecord::Schema.define(version: 20131001062034) do
     t.text     "details"
     t.string   "deliver_date"
     t.integer  "brand_id"
+    t.integer  "owner_id"
   end
 
   add_index "products", ["brand_id"], name: "index_products_on_brand_id"
+  add_index "products", ["owner_id"], name: "index_products_on_owner_id"
 
   create_table "remote_data", force: true do |t|
     t.integer  "product_id"

@@ -23,6 +23,7 @@ class ProductsController < ApplicationController
 
   def create
     @product = current_brand.products.new(product_params)
+    @product.owner = current_user
 
     respond_to do |format|
       if @product.save
@@ -71,7 +72,7 @@ class ProductsController < ApplicationController
 
     def product_params
       params.require(:product).
-              permit( :name, :description, :details, :price, :deliver_date,
+              permit( :name, :description, :details, :price, :deliver_date, :owner,
                       brand_attributes: [ :name, :profile ],
                       images_attributes: [ :image ] )
     end
