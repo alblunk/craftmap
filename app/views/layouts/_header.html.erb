@@ -13,13 +13,13 @@
                 <a style="margin-right:18px" href="http://instagram.com/farallonco" target="blank"><%= image_tag("instagram.png", width: "18") %></a></li>
               </ul>
               <hr style="margin:-5px 0 0 0;">
-              <div class="signup centerize">
+              <div class="centerize">
                 <% if user_signed_in? %>
                   <a href="/users/edit">&nbsp;&nbsp;&nbsp;ACCOUNT</a>
                   <span id="line"></span>
-                  <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete %>
+                  &nbsp;<%= link_to 'LOG OUT', destroy_user_session_path, method: :delete %>
                 <% else %>
-                  <%= link_to 'JOIN US',  new_user_registration_path %>
+                  &nbsp;&nbsp;&nbsp;<%= link_to 'JOIN US',  new_user_registration_path %>
                   <span id="line"></span>
                   &nbsp;<%= link_to 'SIGN IN',  new_user_session_path %>
 
