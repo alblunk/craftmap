@@ -6,12 +6,12 @@
 
       <%= brand.input :name, label: "Name:" %>
       <%= brand.input :location, label: "Location:" %>
-      <%= brand.input :profile, as: :text, input_html: { rows: "10",  class: 'textbox' }, label: "Brand Profile:"%>
+      <%= brand.input :profile, as: :text, input_html: { rows: "10",  class: 'wysihtml5 textbox' }, label: "Brand Profile:"%>
     </div>
     <div class="col-md-6">
       <%= brand.file_field :image %>
 
-      <div class="form-actions">
+      <div class="form-actions" style="padding:10px">
         <%= brand.button :submit, class: "btn btn-primary" %>
       </div>
       
@@ -19,3 +19,13 @@
   </div>
 </div>
 <% end %>
+
+
+<!-- wysihtml5 -->
+<script type="text/javascript">
+$(function() {
+  $('.wysihtml5').each(function(i, elem) {
+    $(elem).wysihtml5();
+  });
+})
+</script>
