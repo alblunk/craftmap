@@ -27,3 +27,15 @@ doc/
 /sample_images
 
 config/amazon_s3_local.yml
+
+
+#Ignore ctags info
+tags
+.tags
+.tags_sorted_by_file
+/tags
+
+#To prevent precompile issues
+public/assets
+public/uploads
+public/local_uploads
