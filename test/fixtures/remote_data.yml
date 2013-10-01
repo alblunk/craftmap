@@ -1,0 +1,10 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  brand_id: 1
+  slug: MyString
+
+two:
+  brand_id: 1
+  slug: MyString
