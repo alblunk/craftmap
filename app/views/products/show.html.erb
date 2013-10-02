@@ -87,8 +87,8 @@
 <!-- DESCRIPTION -->
       <div class="row">
         <div class="col-md-12">
-          <h3 style="margin-top:-10px;">Sanction Backpack AP</h3>
-          <h5>Mission Workshop</h5>
+          <h3 style="margin-top:-10px;"><%=@product.name.html_safe%></h3>
+          <h5><%=@product.brand.name.html_safe%></h5>
           <hr class="black-hr">
           <div class="row">
             <div class="col-md-6">
@@ -115,8 +115,8 @@
 <!-- PROFILE -->
         <div class="row">
           <div class="col-md-12">
-          <h3 id="profile-title" >MEET THE MAKER:<space> Mission Workshop </h3>
-            <h5 id="location" class="subh-font" >San Francisco, CA</h5> 
+          <h3 id="profile-title" >MEET THE MAKER:<space> <%=@product.brand.name.html_safe%> </h3>
+            <h5 id="location" class="subh-font" ><%=@product.brand.location.html_safe%></h5> 
           </div>
         </div>
         <div class="row">
@@ -138,7 +138,7 @@
                 <!-- TUMBLER -->
                   <a href="http://<%#@product.tumblrbrand.html_safe%>.tumblr.com/" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/tumblr_square_black.png"/></a>
 
-                <p>The Mission is where we design, develop, and work in San Francisco. Our workshop was created out of the need for gear that out-performs, while maintaining a clean aesthetic appropriate for cycling, travel, and the daily routine. Pulling from years of experience, Mission Workshop creates bags that can handle a lifetime of abuse and apparel that can withstand the worst weather.</p>
+                <p><%=@product.brand.profile.html_safe%></p>
 
                 <!--<%#@product.profile.html_safe%>-->
           </div>

@@ -37,6 +37,16 @@ class BrandsController < ApplicationController
     end
   end
 
+  def destroy
+    @brand = Brand.find(params[:id])
+    @brand.destroy
+
+    respond_to do |format|
+      format.html { redirect_to brands_url }
+      format.json { head :no_content }
+    end
+  end
+
   private
 
     def brand_params

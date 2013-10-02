@@ -6,6 +6,7 @@
       <div>
         <h5 style="display: inline"><%= link_to brand.name, brand %></h5>
         [<span style="font-size:.75em;"><%= link_to "EDIT", edit_brand_path(brand)%></span>]
+        [<span style="font-size:.75em;"><%= link_to "X", brand, method: :delete, data: { confirm: 'Are you sure?' } %></span>]
       </div>
       <ul class="list-inline">
       	<% brand.products.each do |product| %>

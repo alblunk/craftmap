@@ -11,6 +11,16 @@ class Admin::UsersController < Admin::BaseController
     redirect_to :back
   end
 
+  def destroy
+    @brand = User.find(params[:id])
+    @brand.destroy
+
+    respond_to do |format|
+      format.html { redirect_to admin_users_path }
+      format.json { head :no_content }
+    end
+  end
+
   private
 
     def user_params
