@@ -1,3 +1,4 @@
+
 class ProductsController < ApplicationController
   
   before_action :require_admin, except: [ :index, :show ]

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Farallon Co.</title>
+      <%= stylesheet_link_tag    "application", :media => "all" %>
+        <%= javascript_include_tag "application" %>
+        <%= csrf_meta_tags %>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+      
+        <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
+
+      <!-- Favicon -->
+      <link rel="shortcut icon" href="https://s3.amazonaws.com/beelineco/FarallonCo-ShortForm.jpg">
+
+      <!-- FONTS http://html.adobe.com/edge/webfonts/-->
+      <script src="http://use.edgefonts.net/maven-pro:n4,n5,n7,n9.js"></script>
+      <script src="http://use.edgefonts.net/share-regular:n4,i4,n7,i7.js"></script>
+      <script src="http://use.edgefonts.net/m-1c:n2,n3,n4,n5,n7,n8,n9.js"></script>
+  </head>
+  
+  <body>
+    
+
+    <div class="row" style="padding-bottom:5%;">
+      <div class="col-md-12">
+        <button type="button" class="contact">
+          <a href="mailto:support@farallon.co"><span class="glyphicon glyphicon-send"></span>&nbsp;Contact</a>
+        </button>
+        <h5 style="position:absolute;top:0;right:20px;color:white;font-size:.65em;padding-bottom:10px;padding-left:2px;opacity:.7"><a style="color:white;"href="http://jaredchambers.com"target="blank">Background by Jared Chambers</a></h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-10">
+        <%= image_tag("FarallonCo-LongForm-T.png", class: "img-responsive", id: "biglogo") %>
+        <h3 class="centerize" id="launch-header">LAUNCHING SOON</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <!-- id="join-bar" -->
+        <a data-toggle="modal" href="#landing-joinus-modal">
+          <div class="big-green-button centerize" id="join-bar">
+            <!-- <hr style="margin:-1px;opacity:.2;"> -->
+            <h5 id="join-text">JOIN US</h5>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row" id="feature-box">
+      <div class="col-md-4 col-sm-4" style="padding-top:1%">
+        <hr style="width:60%;margin-bottom:5px;">
+        <h5 class="centerize" id="feature-header">TOP BRANDS & PRODUCTS</h5>
+        <hr style="width:50%;margin-top:5px;">
+        <%= image_tag "landing-1.png", class: "img-responsive centerize", style: "margin-left:10%", width: "90%" %>
+      </div>
+      <div class="col-md-4 col-sm-4" style="padding-top:1%">
+        <hr style="width:55%;margin-bottom:5px;">
+        <h5 class="centerize" id="feature-header">FAN-BACKED CAMPAIGNS</h5>
+        <hr style="width:45%;margin-top:5px;">
+        <%= image_tag "landing-2.png", class: "img-responsive centerize", width: "45%" %>
+      </div>
+      <div class="col-md-4 col-sm-4" style="padding-top:1%">
+        <hr style="width:45%;margin-bottom:5px;">
+        <h5 class="centerize" id="feature-header">SHARE YOUR IDEAS</h5>
+        <hr style="width:35%;margin-top:5px;margin-bottom:5px;">
+        <!-- <img class="img-responsive centerize" style="" src="img/landing-3.png" width="50%"/> -->
+        <span id="bullhorn" class="glyphicon glyphicon-bullhorn centerize" style="font-size:12em;color:white;"></span>
+      </div>
+    </div>
+
+    <%= render "devise/registrations/modals/new" %>
+
+  </body> 
+
+
+</html>

@@ -1,7 +1,12 @@
 class PagesController < ApplicationController
-  def home
+  def landing
     @user = User.new
     render layout: false
+  end
+
+  def home
+    @products = Product.all
+    @brands = Brand.all
   end
 
   def about

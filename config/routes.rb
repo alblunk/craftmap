@@ -3,6 +3,7 @@ Beeline::Application.routes.draw do
   devise_for :users
 
   get 'home' => 'pages#home'
+  get 'landing' => 'pages#landing'
   get 'about' => 'pages#about'
   get 'faq' => 'pages#faq'
   get 'terms' => 'pages#terms'
@@ -25,7 +26,7 @@ Beeline::Application.routes.draw do
     resources :registrations, only: [ :create ]
   end
   
-  root :to => 'pages#home'
+  root :to => 'pages#landing'
 
 
   # The priority is based upon order of creation:

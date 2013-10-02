@@ -1,3 +1,16 @@
 <div class="col-md-10 white-background" style="padding-bottom:20%;">
-  <%= render @brands %>
+<h1>Brand List</h1>
+  <% @brands.each do |brand| %>
+    <div>
+      <h5 style="display: inline"><%= link_to brand.name, brand %></h5>
+      (<span><%= link_to "edit", edit_brand_path(brand)%></span>)
+    </div>
+    <ul class="list-inline">
+    	<% brand.products.each do |product| %>
+    		<li><%= link_to product.name, edit_brand_product_path(brand, product)%></li>
+    		<li>/</li>
+    	<% end %>
+    	<li><%= link_to "ADD", new_brand_product_path(brand)%></li>
+    </ul>
+  <% end %>
 </div>
