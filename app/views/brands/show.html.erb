@@ -1,7 +1,7 @@
 		<div id="b-midpane" class="col-md-5">
 <!-- SOCIAL HEADER-->
 			<div class="row">
-				<div class="col-md-12">   
+				<div class="col-md-12">
       				<h5 id="social-title" class="centerize" >SPREAD THE GOOD WORD</h5>
 					</div>
 				</div>
@@ -13,7 +13,7 @@
                         <a href ="#" target="blank">
                           <%= image_tag("facebook.png", class: "social-show", width: "20") %>
                         </a>
-                      
+
                       <!-- TWITTER -->
                         <a href="#" target="blank">
                           <%= image_tag("twitter.png", class: "social-show", width: "20") %>
@@ -23,34 +23,34 @@
                       <a href="#" target="blank">
                         <%= image_tag("googleplus.png", class: "social-show", width: "20") %>
                       </a>
-                     
+
                       <!-- PINTEREST -->
                       <a href="#" target="blank">
                         <%= image_tag("pinterest.png", class: "social-show", width: "20") %>
                       </a>
-                       
+
                       <!-- STUMBLEUPON -->
                       <a href="#" target="blank">
                         <%= image_tag("stumbleupon.png", class: "social-show", width: "20") %>
                       </a>
 
 
-  					
+
                		<!-- FACEBOOK -->
                     <!-- <a href="http://www.facebook.com/share.php?u=<%#request.url%>&title=<%#@product.productname%>by<%#@product.brandname%> hosted by Beeline Co." target="blank" ><img class="social-show" src="img/facebook.png" width="20" ></a> -->
-                  
+
                   <!-- TWITTER -->
                    <!--  <a href="http://twitter.com/home?status=<%#@product.productname%> from <%#@product.brandname%> hosted by @thebeeline_co+<%#request.url%>" target="blank" ><img class="social-show" src="img/twitter.png" width="20"></a> -->
 
                   <!-- GOOGLE PLUS -->
                  <!--  <a href="https://plus.google.com/share?url=<%#request.url%>" target="blank"><img class="social-show"src="img/googleplus.png" width="20"></a> -->
-                 
+
                   <!-- PINTEREST -->
-                  
+
                    <!--  <a href="http://pinterest.com/pin/create/bookmarklet/?media=<%#@product.pic1%>&url=<%#request.url%>&is_video=false&description=<%#@product.productname%> from <%#@product.brandname%> -- hosted by Beeline Co." target="blank" ><img class="social-show" src="img/pinterest.png" width="20" ></a> -->
-                   
+
                   <!-- STUMBLEUPON -->
-                   
+
                     <!-- <a href="http://www.stumbleupon.com/submit?url=<%#request.url%>&title=<%#@product.productname%> from <%#@product.brandname%> hosted by Beeline Co.+<%#request.url%>" target="blank"><img class="social-show" src="img/stumbleupon.png" width="20" ></a> -->
         		</div>
 			</div>
@@ -59,8 +59,8 @@
 <!-- PROFILE -->
 			<div class="row">
 				<div class="col-md-12">
-				<h3 id="profile-title" >MEET THE MAKER:<space> <% @brand.name.html_safe %></h3>
-					<h5 id="location" class="subh-font" >San Francisco, CA<!--<%# @product.location%>--></h5> 
+				<h3 id="profile-title" >MEET THE MAKER:<space> <%= @brand.name.html_safe %></h3>
+					<h5 id="location" class="subh-font" >San Francisco, CA<!--<%# @product.location%>--></h5>
 				</div>
 			</div>
 			<div class="row">

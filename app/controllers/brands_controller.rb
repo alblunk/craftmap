@@ -11,12 +11,19 @@ class BrandsController < ApplicationController
 
   def new
     @brand = Brand.new
+    @image = Image.new
   end
 
   def create
-    @brand = Brand.new
+    @brand = Brand.new(brand_params)
+    @image = Image.new(imageable_type: 'brand')
 
     if @brand.save
+      @image.imageable_id = @brand.id
+      debugger
+
+      # @image.file =
+      @image.save(params[:image])
       redirect_to @brand
     else
       render :new, status: :unprocessable_entity
@@ -40,7 +47,7 @@ class BrandsController < ApplicationController
   private
 
     def brand_params
-      params.require(:brand).permit(:name, :profile, :image, :location)
+      params.require(:brand).permit(:name, :profile, :location, images_attributes: [:imageable_type, :imageable_id, :file])
     end
 
 end
