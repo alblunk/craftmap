@@ -11,14 +11,8 @@
       <%= brand.text_field :location %>
 
       <%= brand.label :profile, "Brand Profile:" %>
-      <%= brand.text_area :profile, input_html: { rows: "10",  class: 'textbox' } %>
+      <%= brand.text_area :profile, input_html: { rows: "10",  class: 'textbox wysihtml5' } %>
 
-<<<<<<< HEAD
-      <%= brand.input :name, label: "Name:" %>
-      <%= brand.input :location, label: "Location:" %>
-      <%= brand.input :profile, as: :text, input_html: { rows: "10",  class: 'wysihtml5 textbox' }, label: "Brand Profile:"%>
-=======
->>>>>>> Main polymorphic changes
     </div>
     <div class="col-md-6">
       <%= brand.fields_for :image do |image_field| %>
