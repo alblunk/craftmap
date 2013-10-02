@@ -5,6 +5,7 @@
 <ul class="list-inline">
 	<% brand.products.each do |product| %>
 		<li><%= link_to product.name, edit_brand_product_path(brand, product)%></li>
+
 		<li>/</li>
 	<% end %>
 	<li><%= link_to "ADD", new_brand_product_path(brand)%></li>
