@@ -1,7 +1,9 @@
 <div class="col-md-10 white-background" style="padding-bottom:20%;">
   <ul class="list-inline">
-    <% @products.each do |product| %>
-      <li><%= link_to image_tag(product.images.first.image(:small), size: "75x75"), edit_brand_product_path(product.brand, product)%></li>
+  	<% if product.has_images? %>
+	    <% @products.each do |product| %>
+	      <li><%= link_to image_tag(product.images.first.image(:small), size: "75x75"), edit_brand_product_path(product.brand, product)%></li>
+	    <% end %>
     <% end %>
   </ul>
 </div>
