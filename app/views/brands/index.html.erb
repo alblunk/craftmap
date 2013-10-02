@@ -5,7 +5,7 @@
     <li>
       <div>
         <h5 style="display: inline"><%= link_to brand.name, brand %></h5>
-        (<span style="font-size:.75em;"><%= link_to "EDIT", edit_brand_path(brand)%></span>)
+        [<span style="font-size:.75em;"><%= link_to "EDIT", edit_brand_path(brand)%></span>]
       </div>
       <ul class="list-inline">
       	<% brand.products.each do |product| %>
@@ -13,7 +13,7 @@
           <li><%= link_to image_tag(product.images.first.image(:small), size: "50x50"), edit_brand_product_path(brand, product)%></li>
       		<!-- <li>/</li> -->
       	<% end %>
-      	<li><div style="border:2px solid rgba(0,0,0,.1);font-size:2em;font-weight:600;height:40px;width:40px;opacity:.8;text-align:center;"><%= link_to "+", new_brand_product_path(brand)%></div></li>
+      	<li><div style="border:1px solid rgba(0,0,0,.1);font-size:1.75em;font-weight:400;height:35px;width:35px;opacity:.8;text-align:center;"><%= link_to "+", new_brand_product_path(brand)%></div></li>
       </ul>
       <br>
     </li>
