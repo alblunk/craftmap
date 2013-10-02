@@ -4,11 +4,15 @@ require 'RMagick'
 class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::RMagick
 
-  # https://github.com/carrierwaveuploader/carrierwave/wiki
+  before :cache, :save_original_filename
 
-  # random filenames
-  # https://github.com/carrierwaveuploader/carrierwave/wiki/How-to%3A-Create-random-and-unique-filenames-for-all-versioned-files
+  def save_original_filename(file)
+    model.original_filename ||= file.original_filename if file.respond_to?(:original_filename)
+  end
 
+  def filename
+     "#{secure_token}.#{file.extension}" if original_filename.present?
+  end
 
   # Process files as they are uploaded:
   # process :scale => [200, 300]
@@ -27,12 +31,19 @@ class ImageUploader < CarrierWave::Uploader::Base
     %w(jpg jpeg gif png)
   end
 
+  protected
+  def secure_token
+    var = :"@#{mounted_as}_secure_token"
+    model.instance_variable_get(var) or model.instance_variable_set(var, SecureRandom.uuid)
+  end
+
 end
+
+  # https://github.com/carrierwaveuploader/carrierwave/wiki
 
   # these are set in image_uploader initilizer
   # storage :fog
   # storage :file
-
 
   # if we want to save the content type to the db, need to add column, and include mime types
   # process :set_content_type
@@ -72,3 +83,6 @@ end
   # def filename
   #   "something.jpg" if original_filename
   # end
+
+  # random filenames
+  # https://github.com/carrierwaveuploader/carrierwave/wiki/How-to%3A-Create-random-and-unique-filenames-for-all-versioned-files
