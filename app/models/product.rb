@@ -8,4 +8,7 @@ class Product < ActiveRecord::Base
   
   accepts_nested_attributes_for :images, reject_if: :all_blank
 
+  def has_images?
+    images.count > 0
+  end
 end
