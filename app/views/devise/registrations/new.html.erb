@@ -1,12 +1,13 @@
 
-<div class="col-md-4 white-background" >
+<div class="col-md-4 white-background" style="padding-bottom:10%">
   <div style="padding-top:15px;"><%= render "devise/shared/links" %></div>
     <hr>
-  <h3 class="centerize">Why should you Join us?</h3>
-    <hr class="black-hr" style="padding-bottom:8%">
-  <p style="font-weight:300; font-size:1em;">Simply put, you will be supporting the highest quality brands & be the first to know about product launches. <br><br>We probably will give away product a lot too...</p>
+  <h2 class="centerize">JOIN US</h2>
+    <hr class="black-hr" >
+    <!-- <p style="font-weight:300; font-size:1em;">Simply put, you will be supporting the highest quality brands & be the first to know about product launches. <br><br>We probably will give away a lot of product & store credit too...</p>
   <br>
-  <p><i>We won't crowd your inbox, nobody likes that friend...</i></p>
+  <p><i>We won't crowd your inbox, nobody likes that friend...</i></p> -->
+  
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-group'}) do |f| %>
 
           <%= f.error_notification %>
