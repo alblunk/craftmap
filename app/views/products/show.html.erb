@@ -65,7 +65,11 @@
             </div>
             <div class="col-md-6 centerize">
               <h5>$<span id="price"><%= @product.price %></span></h5>
-              <p class="flatbtn" id="delivery">Estimated Delivery: <%= @product.deliver_date.html_safe %></p>
+              <div id="delivery">
+                <h5 style="font-size:.9em">Estimated Delivery:</h5> 
+                  <hr class="black-hr" style="margin-top:-8px; margin-bottom:5px"> 
+                <p style="font-size:.9em"><%= @product.deliver_date.html_safe %></p>
+              </div>
             </div>
           </div>
 

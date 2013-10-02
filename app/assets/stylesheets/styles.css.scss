@@ -662,7 +662,7 @@
     font-weight: 500;
     padding-top:12px;
     margin-top:20px;
-    margin-bottom:40px;
+    margin-bottom:20px;
   }
 
   #backbtn:hover {
@@ -716,10 +716,11 @@
   }
 
   #delivery {
-    background-color: rgba(80,80,80,0.9);
-    color:white;
+    /*background-color: rgba(80,80,80,0.7);*/
+    color:black;
+    padding-top:0px !important;
     pointer-events:none;
-    padding:5px;
+    padding-bottom:3px;
     letter-spacing: 1px;
   }
 
