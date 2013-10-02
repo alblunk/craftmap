@@ -11,20 +11,16 @@ class BrandsController < ApplicationController
 
   def new
     @brand = Brand.new
-    @image = Image.new
+    # @image = @brand.images.build
   end
 
   def create
     @brand = Brand.new(brand_params)
+    @image = @brand.images.build
     @brand.owner = current_user
-    @image = Image.new(imageable_type: 'brand')
+    @image.image = params[:brand][:image][:image]
 
     if @brand.save
-      @image.imageable_id = @brand.id
-      debugger
-
-      # @image.file =
-      @image.save(params[:image])
       redirect_to @brand
     else
       render :new, status: :unprocessable_entity
@@ -49,7 +45,7 @@ class BrandsController < ApplicationController
 
     # TODO may be missing something here to set owner_id
     def brand_params
-      params.require(:brand).permit(:name, :profile, :location, :owner,  images_attributes: [:imageable_type, :imageable_id, :file])
+      params.require(:brand).permit(:name, :profile, :location, :owner, image_attributes: [:id, :image, :imageable_id, :imageable_type, :_destroy])
     end
 
 end
