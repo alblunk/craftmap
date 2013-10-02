@@ -1,4 +1,4 @@
-<%= form_for(@brand, url: brands_path , html: { :multipart => true, class: "form-horizontal" }) do |brand| %>
+<%= form_for(@brand, url: brands_path , html: { multipart: true, class: "form-horizontal" }) do |brand| %>
 <div class="col-md-10 white-background" style="padding-bottom:20%">
   <div class="row">
     <div class="col-md-6">
@@ -15,8 +15,8 @@
 
     </div>
     <div class="col-md-6">
-      <%= fields_for @image do |image_field| %>
-        <%= image_field.file_field :images %>
+      <%= brand.fields_for :image do |image_field| %>
+        <%= image_field.file_field :image %>
       <% end %>
 
       <div class="form-actions">
