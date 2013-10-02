@@ -326,6 +326,18 @@
   opacity:.7;
 }
 
+
+.user-x-btn{
+  background-color:rgba(163, 38, 56,.85);
+  padding:5px 8px;
+  font-weight:300;
+  text-decoration: none;
+  color:white;
+}
+
+.user-x-btn.hover{
+  color:rgba(255,255,255, 0.5);
+}
 /*LANDING PAGE*/
 
   .contact a{
@@ -829,7 +841,7 @@
       }
       #header {
         position:relative;
-        width:50% !important;
+        width:60% !important;
       }
       .p-hover{
         display:none;
@@ -885,7 +897,7 @@
       
       #header {
         position:relative;
-        width:40%;
+        width:50%;
       }
       .p-hover{
         display:none;

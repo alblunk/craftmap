@@ -1,4 +1,4 @@
-<!-- PRODUCT PICTURE PANE -->
+<!--PRODUCT PICTURE PANE -->
     <div class="col-md-5">
       <div class="img-responsive" id="product-images" style="background-image:url(<%= image_path('product2.jpg') %>)">
         
@@ -91,7 +91,10 @@
           <h5><%=@product.brand.name.html_safe%></h5>
           <hr class="black-hr">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
+              <%=@product.details.html_safe%>
+            </div>
+            <!-- <div class="col-md-6">
               <h5>Materials:</h5>
               <ul>
                 <li>1000 denier VX Cordura ripstop shell</li> 
@@ -105,7 +108,7 @@
               <ul>
                 <li>Arkiv&reg; closure system</li>
               </ul>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -180,4 +183,4 @@
         </div>
       </div>
     </div>
-  <!-- END OF DETAILS -->
+  <!-- END OF DETAILS
