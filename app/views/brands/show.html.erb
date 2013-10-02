@@ -37,7 +37,9 @@
 
   					
                		<!-- FACEBOOK -->
-                    <a href="http://www.facebook.com/share.php?u=<%request.original_url%>&title=<% @brand.name %> on Farallon Co." target="blank" ><%= image_tag("facebook.png", class: "social-show", width: "20") %></a>
+                    <a href="http://www.facebook.com/sharer/sharer.php?u=<%=request.original_url%>&title=<%= @brand.name %> on Farallon Co." target="blank"><%= image_tag("facebook.png", class: "social-show", width: "20") %></a>
+
+                    <!-- &title=<% @brand.name %> on Farallon Co."  -->
                   
                   <!-- TWITTER -->
                    <!--  <a href="http://twitter.com/home?status=<%#@product.productname%> from <%#@product.brandname%> hosted by @thebeeline_co+<%#request.url%>" target="blank" ><img class="social-show" src="img/twitter.png" width="20"></a> -->
