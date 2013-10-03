@@ -14,6 +14,24 @@ class ImageUploader < CarrierWave::Uploader::Base
      "#{secure_token}.#{file.extension}" if original_filename.present?
   end
 
+  ## IMAGES
+
+    # product images
+
+    # product-grid-pic: (one of these)
+    # med-square: 600x600px
+
+    # product pictures: (many of these, 10?)
+    # thumb: 100x100px
+    # large: 1000x whatever
+
+
+    # brand images
+    # 700w x whatever
+    # brand, logo or map 600x600
+
+
+
   # Process files as they are uploaded:
   # process :scale => [200, 300]
   #
