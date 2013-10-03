@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131002023905) do
+ActiveRecord::Schema.define(version: 20131003225742) do
 
   create_table "brands", force: true do |t|
     t.string   "name"
@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(version: 20131002023905) do
     t.text     "profile"
     t.string   "location"
     t.integer  "owner_id"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "instagram"
+    t.string   "tumblr"
+    t.string   "home_page"
+    t.boolean  "active"
   end
 
   add_index "brands", ["owner_id"], name: "index_brands_on_owner_id"
@@ -47,6 +53,9 @@ ActiveRecord::Schema.define(version: 20131002023905) do
     t.string   "deliver_date"
     t.integer  "brand_id"
     t.integer  "owner_id"
+    t.boolean  "active"
+    t.boolean  "archived"
+    t.text     "materials"
   end
 
   add_index "products", ["brand_id"], name: "index_products_on_brand_id"
