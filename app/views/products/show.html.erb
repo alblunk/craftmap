@@ -57,12 +57,12 @@
                 </a>
             </div>
           </div>
-          <hr class="black-hr">
+          <hr class="black-hr" style="padding-bottom:20px;">
 <!-- PRICING & CAMPAIGN DETAILS -->
           <div class="row">
               <div class="col-md-6">
                 
-                <a href="#"><div id="backbtn" class="flatbtn centerize">BACK IT</div></a>
+                <a href="#" data-celery="backpack"><div id="backbtn" class="flatbtn centerize">BACK IT</div></a>
 
 
                 <hr class="black-hr" style="margin-bottom:5px">
@@ -85,8 +85,7 @@
 <!-- CELERY DETAILS -->
           <div class="row">
             <div class="col-md-12">
-              <!-- <img src="img/bar.jpg" id="bar"width="100%"/> -->
-              <div data-celery="backpack" data-celery-type="bar" style="background-color:transparent;"></div>
+              <div data-celery="backpack" data-celery-type="bar" style="background-color:transparent; margin-top:0;"></div>
             </div>
           </div>
         </div>
@@ -132,22 +131,22 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-          <img id="brand-image" src="http://missionworkshop.com/images/home-slides/_single/san-francisco-store.jpg" width="100%"/>
 
-          <%# @product.brandpic %>
+          <%= image_tag("profile-pic.jpg", id: "brand-image") %>
+            <%#=@product.brand.pic%>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
-          <!-- FACEBOOK -->
-                  <a href="http://facebook.com/<%#@product.facebookbrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/facebook_square_black.png"/></a>
+              <!-- FACEBOOK -->
+                  <a href="http://facebook.com/<%#@product.brand.facebook.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/facebook_square_black.png"/></a>
               <!-- TWITTER -->
-                  <a href="http://twitter.com/<%#@product.twitterbrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/twitter_square_black.png"/></a>
+                  <a href="http://twitter.com/<%#@product.brand.twitter.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/twitter_square_black.png"/></a>
 
                 <!-- INSTAGRAM -->
-                  <a href="http://instagram.com/<%#@product.instagrambrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/instagram_square_black.png"/></a>
+                  <a href="http://instagram.com/<%#@product.brand.instagram.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/instagram_square_black.png"/></a>
                 <!-- TUMBLER -->
-                  <a href="http://<%#@product.tumblrbrand.html_safe%>.tumblr.com/" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/tumblr_square_black.png"/></a>
+                  <a href="http://<%#@product.brand.tumblr.html_safe%>.tumblr.com/" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/tumblr_square_black.png"/></a>
 
                 <p><%=@product.brand.profile.html_safe%></p>
 
