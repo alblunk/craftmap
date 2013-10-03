@@ -552,8 +552,10 @@
     color:white;
     font-family: maven-pro, serif;
     text-transform:uppercase;
-    bottom:70px;
     position:fixed;
+    float:bottom;
+    bottom:20%;
+    margin-left:5%;
     width:450px;
     margin-top:20px;
     pointer-events:none;
@@ -576,15 +578,9 @@
 
   .p-hover{
     opacity:0;
+    height:80%;
   }
 
-  .p-hover #p-hover-image{
-    height:575px;
-    position:fixed;
-    width:475px;
-    margin-top:20px;
-    
-  }
 
   .p-hover #p-hover-details {
     background-color: rgba(80,80,80,0.6);
@@ -592,10 +588,9 @@
     height:140px;
     width:300px;
     z-index: 100;
-    right:44%;
-    margin-top:400px;
+    float:bottom;
     padding-left:10px;
-    position:fixed;
+    position:absolute;
   }
 
   #p-hover-status{
@@ -621,37 +616,37 @@
 
 /*PRODUCT*/
 
-  #product-images{
-    height:600px;
-    position:fixed;
-    width:475px;
-    margin-top:20px;
+  .mid-pic-frame{
+       position:fixed;
+        overflow:hidden;
+        margin-top:20px;
+        margin-left:20px;
+        margin-right:20px;
   }
 
-  #product-images .p-thumbnails {
+  #p-thumbnails-box{
+    position:absolute;
+    right:0;
+  }
+
+  #p-thumbnails-box .p-thumbnails {
     position:relative;
-    /*z-index: 100;*/
     width:50px;
     float:right;
     margin:0px;
-    border-bottom:3px solid white;
-    /*box-shadow: 2px 3px 5px 1px #000000;*/
   }
 
-  #product-images .p-thumbnails:hover {
+  #p-thumbnails-box .p-thumbnails:hover {
     opacity:.7;
   }
 
-  #product-images .p-thumbnails-selected {
-    position:relative;
-    /*z-index: 100;*/
-    width:50px;
-    float:right;
-    border-bottom:3px solid #505050;
+  #p-selected{
+    border-bottom:4px solid white;
   }
 
-  #product-images .p-thumbnails-selected:hover {
-    opacity:1;
+
+  #p-selected:hover {
+    opacity:1 !important;
   }
 
   #backbtn {
@@ -935,19 +930,62 @@
         margin-top:10%;
         margin-bottom:-10%;
       }
-      /*#b-midpane{
-        position:relative;
-      }*/
+
       #product-images{
         position:relative;
       }
       footer{
         text-align:center;
       }
+      .mid-pic-frame{
+        position:relative;
+      }
 
     }
 
 
+
+@media (min-width: 992px){
+    .mid-pic-frame{
+        width:375px;
+      }
+}
+
+@media (min-width: 1100px){
+    .mid-pic-frame{
+       width:400px;
+      }
+}
+
+@media (min-width: 1200px){
+    .mid-pic-frame{
+        width:450px;
+      }
+}
+
+@media (min-width: 1300px){
+    .mid-pic-frame{
+        width:500px;
+      }
+}
+
+@media (min-width: 1500px){
+    .mid-pic-frame{
+        width:550px;
+      }
+}
+
+@media (min-width: 1600px){
+    .mid-pic-frame{
+        width:600px;
+      }
+}
+
+@media (min-width: 1750px){
+    .mid-pic-frame{
+        width:700px;
+      }
+}
 
 
 /* PC 

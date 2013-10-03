@@ -1,17 +1,26 @@
 <!--PRODUCT PICTURE PANE -->
-    <div class="col-md-5">
-      <div class="img-responsive" id="product-images" style="background-image:url(<%= image_path('product2.jpg') %>)">
+    <div class="col-md-5" >
+      <div class="mid-pic-frame" id="product-images">
+        <div id="p-thumbnails-box">
+          <%= image_tag("product_thumb1.jpg", class: "p-thumbnails") %>
+            
+            <%= image_tag("product2.jpg", class: "p-thumbnails", id:"p-selected") %>
+            
+            <%= image_tag("product_thumb1.jpg", class: "p-thumbnails") %>
+
+            <%= image_tag("product2.jpg", class: "p-thumbnails") %>
+        </div>
         
-          <%= image_tag("product_thumb1.jpg", class: "p-thumbnails") %>
-          
-          <%= image_tag("product2.jpg", class: "p-thumbnails-selected") %>
-          
-          <%= image_tag("product_thumb1.jpg", class: "p-thumbnails") %>
+        <img  class="img-responsive" src="<%= image_path('background-road.jpg') %>"/>
 
-          <%= image_tag("product2.jpg", class: "p-thumbnails") %>
-
+        
       </div>
+          
+
     </div>
+
+            
+
 
     <div class="col-md-5" id="details">
 
@@ -181,4 +190,4 @@
         </div>
       </div>
     </div>
-  <!-- END OF DETAILS
+  <!-- END OF DETAILS -->
