@@ -1,4 +1,4 @@
-<!--PRODUCT PICTURE PANE -->
+<!-- PRODUCT PICTURE PANE -->
     <div class="col-md-5" >
       <div class="mid-pic-frame" id="product-images">
         <div id="p-thumbnails-box">
@@ -155,35 +155,14 @@
         <hr class="black-hr" style="margin-bottom:5px">
         <div class="row">
 <!-- MORE PRODUCTS GRID -->
+
           <h3 class="centerize" style="padding-bottom:10px;">Keep  exploring</h3>
-          <div class="col-md-4 col-xs-6">
-            <a href="#" class="thumbnail" id="mini-grid">
-              <%= image_tag("product_thumb1.jpg") %>
-            </a>
-          </div>
-          <div class="col-md-4 col-xs-6">
-            <a href="#" class="thumbnail" id="mini-grid">
-              <%= image_tag("product_thumb3.jpg") %>
-            </a>
-          </div>
-          <div class="col-md-4 col-xs-6">
-            <a href="#" class="thumbnail" id="mini-grid">
-              <%= image_tag("product_thumb2.jpg") %>
-            </a>
-          </div>
-          <div class="col-md-4 col-xs-6">
-            <a href="#" class="thumbnail" id="mini-grid">
-              <%= image_tag("product_thumb1.jpg") %>
-            </a>
-          </div>
-          <div class="col-md-4 col-xs-6">
-            <a href="#" class="thumbnail" id="mini-grid">
-              <%= image_tag("product_thumb4.jpg") %>
-            </a>
-          </div>
-          <div class="col-md-4 col-xs-6">
-            <a href="#" class="thumbnail" id="mini-grid">
-              <%= image_tag("product_thumb5.jpg") %>
+
+          <%= render :partial=>'products/product', :collection => @products, :locals => {:size => 'col-md-4 col-xs-6'}  %>
+
+
+            <!-- id=mini-grid -->
+            
             </a>
           </div>
         </div>
