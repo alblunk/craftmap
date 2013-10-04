@@ -3,9 +3,23 @@
   <div class="row">
     <div class="col-md-4 forms-admin">
       <%= brand.error_notification %>
+      <br>
+      <%= brand.input :name, label:false, placeholder: "Name" %>
+      <%= brand.input :location, placeholder: "Location (City, State)",label:false %>
+      <br>
+      <h6>Social:</h6>
+      <%#= brand.input :home_page, placeholder: "Brand URL (http://brand.com)" %>
+      <%#= brand.input :facebook, placeholder: "facebook.com/_____" %>
+      <%#= brand.input :twitter, placeholder: "twitter.com/_____" %>
+      <%#= brand.input :instagram, placeholder: "instagram.com/_____" %>
+      <%#= brand.input :tumblr, placeholder: "_____.tumblr.com/" %>
+      <br>
+      <h6>Home Image:</h6><p style="margin-top:-10px;">(Logo on White Background or Map of Business >600x600)<p>
 
-      <%= brand.input :name, label: "Name:" %>
-      <%= brand.input :location, label: "Location:" %>
+      <%= brand.file_field :image %>
+
+      <br>
+      <h6>Profile Image:</h6><p style="margin-top:-10px;">(Shop, Product Detail, or Founders)<p>
       <%= brand.file_field :image %>
 
       

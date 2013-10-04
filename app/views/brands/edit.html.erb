@@ -1,4 +1,9 @@
 <div class="col-md-10 white-background">
-	<h1>Editing <% @brand.name.html_safe %></h1>
+	<h1>Edit Brand</h1>
+	<h6>
+		<%= link_to 'Show', @brand %> //
+		<%= link_to 'Back', brands_path %>
+	</h6>
+
     <%= render 'form' %>
 </div>

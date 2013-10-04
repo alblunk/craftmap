@@ -60,18 +60,21 @@
     text-transform:uppercase;
   }
 
-  h4 {
-    font-family:maven-pro, serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    font-size: 2em;
-  }
+ 
 
   h5 {
     font-family:maven-pro, serif;
     font-weight: 400;
     text-transform: uppercase;
     font-size: 1.2em;
+  }
+
+   h6 {
+    font-family:m-1c, serif;
+    font-weight: 300;
+    font-size: 1em !important;
+    letter-spacing: 2px;
+    text-transform: uppercase;
   }
 
   p{
@@ -642,9 +645,10 @@
 /*PRODUCT*/
 
   .mid-pic-frame{
-       position:fixed;
-        overflow:hidden;
-        margin:20px;
+   position:fixed;
+    overflow:hidden;
+    margin:20px;
+    height:85%;
   }
 
   #p-thumbnails-box{
