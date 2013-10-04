@@ -1,7 +1,7 @@
 
 class ProductsController < ApplicationController
   
-  before_action :require_admin, except: [ :index, :show ]
+  before_action :require_admin, except: [ :show ]
 
   # GET /products
   # GET /products.json
