@@ -818,20 +818,29 @@
   }
 
 /*FOOTER*/
-
+  #background-credit{
+    position:absolute;
+    color:white;
+    font-size:.6em;
+    opacity:.7;
+    right:10px;
+    bottom:10px;
+    padding-top:15px;
+  }
   footer {
     background:#505050;
     color:white;
     opacity:.7;
     font-family: maven-pro, serif;
-      font-size:14px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding-top:10px;
-      padding-bottom:10px;
-      width: 100%;
-      margin-top:20px;
-      margin-bottom:20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-top:10px;
+    padding-bottom:10px;
+    width: 100%;
+    margin-top:10%;
+    margin-bottom:20px;
+    bottom:0;
+    position:fixed;
   }
 
   footer  a{
@@ -843,10 +852,8 @@
     color:#eee;
   }
 
-  footer .copy{
-    margin-top:10px;
-    margin-bottom:5px;
-    font-size:12px;
+  #footer-container{
+    padding-top:10%;
   }
 
 /* RESPONSIVE CSS */
@@ -905,7 +912,14 @@
       /*#b-midpane{
         position:relative;
       }*/
-
+      footer{
+        text-align:center;
+        position:relative;
+        padding-bottom:0px;
+      }
+      #background-credit{
+        position:relative;
+      }
       #product-images{
         position:relative;
 
@@ -961,8 +975,13 @@
       #product-images{
         position:relative;
       }
+      #background-credit{
+        position:relative;
+      }
       footer{
         text-align:center;
+        position:relative;
+        padding-bottom:0px;
       }
       .mid-pic-frame{
         position:relative;
