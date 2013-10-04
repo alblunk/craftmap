@@ -641,7 +641,9 @@
     padding:10px;
     border-radius: 5px;
   }
-
+  #faq-hr hr{
+    border-color:rgba(0, 0, 0, 0.25) !important;
+  }
 /*PRODUCT*/
 
   .mid-pic-frame{
@@ -781,13 +783,12 @@
     opacity:.5;
   }
 
- /* #mini-grid {
-    background-color:rgba(80,80,80,0.2);
+  #updates div{
+    font-family:m-1c, serif;
+    font-weight: 300;
+    margin:0;
+    padding:0;
   }
-
-  #mini-grid:hover{
-    background-color:rgba(80,80,80,.7);
-  }*/
 
 /*BRAND*/
   #b-midpane{

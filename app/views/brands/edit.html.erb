@@ -1,8 +1,9 @@
-<div class="col-md-10 white-background">
+<div class="col-md-offset-1 col-md-9 white-background">
 	<h1>Edit Brand</h1>
 	<h6>
+		<%= link_to 'Back', :back %> //
 		<%= link_to 'Show', @brand %> //
-		<%= link_to 'Back', brands_path %>
+		<%= link_to 'All', brands_path %>
 	</h6>
 
     <%= render 'form' %>

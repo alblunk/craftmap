@@ -15,7 +15,7 @@
               <hr style="margin:-5px 0 0 0;">
               <div class="centerize">
                 <% if user_signed_in? %>
-                  <a href="/users/edit">&nbsp;&nbsp;&nbsp;ACCOUNT</a>
+                  <a href="/users/edit" style="font-size:.75em;">&nbsp;&nbsp;&nbsp;MY ACCOUNT</a>
                   <span id="line"></span>
                   &nbsp;<%= link_to 'LOG OUT', destroy_user_session_path, method: :delete %>
                 <% else %>
