@@ -7,11 +7,11 @@ class Admin::UsersController < Admin::BaseController
 
   def update
     @user = User.find(params[:id]).update(user_params)
-    
+
     redirect_to :back
   end
 
-  def delete
+  def destroy
     @user = User.find(params[:id])
     @user.destroy
 
