@@ -35,9 +35,6 @@ ActiveRecord::Schema.define(version: 20130827220953) do
     t.datetime "image_updated_at"
   end
 
-#ecomm_url needs to be in own table
-
-
   create_table "products", force: true do |t|
     t.text     "description"
     t.datetime "created_at"
