@@ -1,5 +1,5 @@
 class BrandsController < ApplicationController
-  before_action :require_admin, except: [ :index, :show ]
+  before_action :require_admin, except: [ :show ]
 
   def index
     @brands = Brand.all
@@ -14,7 +14,7 @@ class BrandsController < ApplicationController
   end
 
   def create
-    @brand = Brand.new
+    @brand = Brand.new(brand_params)
 
     if @brand.save
       redirect_to @brand
@@ -34,6 +34,16 @@ class BrandsController < ApplicationController
       redirect_to @brand
     else
       render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @brand = Brand.find(params[:id])
+    @brand.destroy
+
+    respond_to do |format|
+      format.html { redirect_to brands_url }
+      format.json { head :no_content }
     end
   end
 

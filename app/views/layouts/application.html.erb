@@ -14,21 +14,13 @@
 
     <!-- FONTS http://html.adobe.com/edge/webfonts/-->
     <script src="http://use.edgefonts.net/maven-pro:n4,n5,n7,n9.js"></script>
-    <script src="http://use.edgefonts.net/share-regular:n4,i4,n7,i7.js"></script>
     <script src="http://use.edgefonts.net/m-1c:n2,n3,n4,n5,n7,n8,n9.js"></script>
+    <script src="//use.edgefonts.net/m-1m:n1,n2,n4,n5,n7.js"></script>
+    <script src="//use.edgefonts.net/muli:n3,n4.js"></script> 
 
-    <!-- Google Analytics -->
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-40688752-1']);
-      _gaq.push(['_trackPageview']);
+    
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
+    
 
   </head>
   <body>
@@ -38,9 +30,111 @@
     
       <%= yield %>
     </div>
+    <div id="footer-container"></div>
 
-<h5 style="position:absolute;color:white;font-size:.5em;padding-bottom:10px;padding-left:2px;opacity:.7"><a style="color:white;"href="http://jaredchambers.com"target="blank">Background by Jared Chambers</a></h5>
     <%= render 'layouts/footer' %>
       
+
+<!-- JoinUs Modal -->
+ <!--  <div class="modal fade" id="joinus-modal" tabindex="-1" role="dialog" aria-labelledby="Join Us." aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="input-group">
+            <span class="input-group-addon">Email</span>
+            <input type="text" class="form-control">
+        </div>
+        <br>
+           <div class="input-group">
+            <span class="input-group-addon">Password</span>
+            <input type="text" class="form-control">
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+<!-- SignIn Modal -->
+  <!--   <div class="modal fade" id="signin-modal" tabindex="-1" role="dialog" aria-labelledby="Sign In." aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body" style="margin-bottom:-20px">
+            <div class="input-group">
+              <span class="input-group-addon">Email</span>
+              <input type="text" class="form-control">
+          </div>
+          <br>
+             <div class="input-group">
+              <span class="input-group-addon">Password</span>
+              <input type="text" class="form-control">
+          </div>
+          <br>
+          <div class="checkbox">
+            <label>
+                <input type="checkbox"> Remember me?
+            </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Sign In</button>
+          </div>
+        
+        </div>
+      </div>
+    </div> -->
+
+<!-- Submit Modal -->
+  <div class="modal fade" id="submit-modal" tabindex="-1" role="dialog" aria-labelledby="Submit" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3 class="modal-title">Help us, help you.</h3>
+      </div>
+      <div class="modal-body">
+        <p>This is an open forum for you to submit product ideas, brand tips, & advice. We will hustle to make it happen -- if it does -- we'll take care of you (read: worthwhile credit incentive)</p>
+        <p style="font-size:.5em">(We won't publish anything without your consent)</p>
+        <br>
+        <div class="input-group">
+          <span class="input-group-addon">Lets talk...</span>
+          <input type="text" class="form-control" placeholder="Your email. (Optional)">
+      </div>
+      <hr>
+      
+         <div class="input-group">
+          <span class="input-group-addon">What brand or topic?</span>
+          <input type="text" class="form-control">
+      </div>
+      <br>
+      <p>What's on your mind? No bad ideas... Promise. </p>
+      <textarea class="form-control" rows="2" width="300px"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Submit</button>
+      </div>
+    </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
   </body>
+
+  <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44486699-1', 'farallon.co');
+      ga('send', 'pageview');
+
+    </script>
+
+
 </html>

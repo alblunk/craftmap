@@ -1,21 +1,52 @@
-<%= simple_form_for(@brand, html: { class: "form-horizontal" }) do |brand| %>
-<div class="col-md-10 white-background" style="padding-bottom:20%">
+
+<div class="col-md-12 white-background" >
   <div class="row">
-    <div class="col-md-6">
-      <%= brand.error_notification %>
+    <div class="col-md-4">
+      <%= simple_form_for(@brand, html: { class: "form-horizontal" }) do |brand| %>
+        <div class="form-actions" style="padding:20px">
+          <%= brand.button :submit, class: "btn btn-primary" %>
+        </div>
+        <div class="forms-admin">
+          <%= brand.error_notification %>
+          
+          <%= brand.input :name, label:false, placeholder: "Name" %>
+          <%= brand.input :location, placeholder: "Location (City, State)",label:false %>
+          <br>
+          <h6>Social:</h6>
+          <%#= brand.input :home_page, placeholder: "Brand URL (http://brand.com)" %>
+          <%#= brand.input :facebook, placeholder: "facebook.com/_____" %>
+          <%#= brand.input :twitter, placeholder: "twitter.com/_____" %>
+          <%#= brand.input :instagram, placeholder: "instagram.com/_____" %>
+          <%#= brand.input :tumblr, placeholder: "_____.tumblr.com/" %>
+          <br>
+          <h6>Home Image:</h6><p style="margin-top:-10px;">(Logo on White Background or Map of Business >600x600)<p>
 
-      <%= brand.input :name, label: "Name:" %>
-      <%= brand.input :location, label: "Location:" %>
-      <%= brand.input :profile, as: :text, input_html: { rows: "10",  class: 'textbox' }, label: "Brand Profile:"%>
-    </div>
-    <div class="col-md-6">
-      <%= brand.file_field :image %>
+          <%= brand.file_field :image %>
 
-      <div class="form-actions">
-        <%= brand.button :submit, class: "btn btn-primary" %>
+          <br>
+          <h6>Profile Image:</h6><p style="margin-top:-10px;">(Shop, Product Detail, or Founders)<p>
+          <%= brand.file_field :image %>
       </div>
+      
+    </div>
+    <div class="col-md-8">
+       
+      <%#= brand.input :active, as: :checkbox, label: "Active?"%>
+      <h6>Brand Profile:</h6>
+      <%= brand.input :profile, as: :text, input_html: { rows: "10",  class: 'wysihtml5 textbox' }, label: false%>
+     
       
     </div>
   </div>
 </div>
 <% end %>
+
+
+<!-- wysihtml5 -->
+<script type="text/javascript">
+$(function() {
+  $('.wysihtml5').each(function(i, elem) {
+    $(elem).wysihtml5();
+  });
+})
+</script>

@@ -1,36 +1,84 @@
 
 
-<div class="col-md-10 white-background" style="padding-bottom:20%">
+<div class="col-md-offset-1 col-md-8 white-background" >
   <h2 class="h-font">My Account</h2>
-      <h5 style="color:#505050"><%= link_to "Back to Home", :back %></h4>
+      <h6 style="color:#505050"><%= link_to "Back to Home", :back %></h6>
       <hr>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4">
       <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, class: 'form-horizontal' }) do |f| %>
         <%= f.error_notification %>
 
-
-        <p>Please input your current password if you want to change your email or password.</p>
-        <%= f.input :current_password %>
-        <% if current_user.try(:admin?) %>
-          <%= f.input :admin %>
-        <%end%>
-        <hr>
-        <%= f.input :email %>
-        <%= f.input :password, label: "New Password", autocomplete: "off" %>
-        <%= f.input :password_confirmation, label: "New Password Confirmation", autocomplete: "off" %>
-
-        <hr>
-        <div class="form-actions">
-          <%= f.submit "Update", class: "btn btn-primary"%>
+        <p><strong>To change your email or password:</strong><br>Please input your current password below.</p>
+        
+        <div class="forms" >
+          <br>
+          <h6>Current Password:</h6>
+          <%= f.input :current_password, label:false, error_html: { id: 'forms-error'}%>
+          <br>
+          <br>
+          <h6>Current Email: </h6>
+          <%= f.input :email,label:false, error_html: { id: 'forms-error'} %>
+          <br>
+          <h6>New Password?</h6>
+          <%= f.input :password, label:false, autocomplete: "off", placeholder: 'PASSWORD', error_html: { id: 'forms-error'}%>
+          <%= f.input :password_confirmation, placeholder:'PASSWORD (AGAIN?)', label:false, error_html: { id: 'forms-error'}, autocomplete: "off" %>
         </div>
+        <hr>
+        <% if current_user.try(:admin?) %>
+          <%= f.input :admin, inline_label:'Admin?', label:false %>
+          <br>
+        <%end%>
+
+        <div class="form-actions">
+          <h5><%= f.submit "UPDATE ACCOUNT", class: "btn btn-primary centerize"%></h5>
+        </div>
+
       <% end %>
       <hr>
       <h4 class="h-font">If you want to go, we will miss you...</h4>
       <p>But we won't stop you.<%= button_to "Vaporize Account", registration_path(resource_name), class:'btn btn-danger btn-xs', :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
+
+
     </div>
-    <div class="col-md-6">
-      <h5>Order History</h5>
+    <div class="col-md-8">
+      <h6>Order History</h6>
+      <div class="table-responsive">
+        <table class="table table-striped" style="font-size:.75em">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Brand</th>
+              <th>Product</th>
+              <th>Status</th>
+              <th>Tracking Number</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>9/15/2013</td>
+              <td>Mission Workshop</td>
+              <td>Sanction Backpack</td>
+              <td>Funded/Shipped</td>
+              <td>1Z3920093493042F09</td>
+            <tr>
+              <tr>
+              <td>10/31/2013</td>
+              <td>Taylor Stitch</td>
+              <td>Hat</td>
+              <td>Funded, Shipping Soon</td>
+              <td>N/A</td>
+            <tr>
+              <tr>
+              <td>11/31/2013</td>
+              <td>Mission Workshop</td>
+              <td>Vandal</td>
+              <td>Funding In Progress</td>
+              <td>N/A</td>
+            <tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>

@@ -1,32 +1,36 @@
 
-<div class="col-md-10 white-background" style="padding-bottom:20%">
-	<h2 class="h-font">Why should you Join the Company?</h2>
-	<%= render "devise/shared/links" %>
-	<hr>
-	<h4 class="p-font">Simply put, you will have <u>first cut</u> at all of the 'bleeding-edge' new product, content, and special offers we hustle to bring you.</h4>
-	<h6 class="p-font"><i>People who aren't signed up, can still purchase, but won't be first to know about our product. Plus, the emails will be the only place where <a href="http://blog.salvationarmyusa.org/wp-content/uploads/golden-ticket-lrg.png" target="blank"><strong>our special golden tickets live.</strong></a></i></h6>
+<div class="col-md-4 white-background" style="padding-bottom:10%">
+  <div style="padding-top:15px;"><%= render "devise/shared/links" %></div>
+    <hr>
+  <h2 class="centerize">JOIN US</h2>
+    <hr class="black-hr" >
+    <!-- <p style="font-weight:300; font-size:1em;">Simply put, you will be supporting the highest quality brands & be the first to know about product launches. <br><br>We probably will give away a lot of product & store credit too...</p>
+  <br>
+  <p><i>We won't crowd your inbox, nobody likes that friend...</i></p> -->
+  
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
 
-	<hr>
-	<div class="container-fluid">
-		<div class="row-fluid">
-			<div class="span12">
-				<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
-				  	<%= f.error_notification %>
+          <%= f.error_notification %>
 
-				  	<%= f.input :email %>
-					<%= f.input :password %>
-					<%= f.input :password_confirmation %>
+      <br>
+      <div class="forms" >
+        <%= f.input :email, placeholder: 'EMAIL',label:false, error_html: { id: 'forms-error'} %>
+        <br>
+        <%= f.input :password, placeholder: 'PASSWORD',label:false, error_html: { id: 'forms-error'}%>
+        <br>
+        <%= f.input :password_confirmation, placeholder:'PASSWORD (AGAIN?)', label:false, error_html: { id: 'forms-error'}%>
+      </div>
 
-				<p class="subh-font">Heck no we will never share or distribute your email address.</p>
+      <p style="font-size:.75em;padding-top:5px;padding-bottom:5px;">We will never share or distribute your email address. Promise.</p>
 
 
-				  <div class="form-actions">
-				  	<%= f.submit "SIGN UP", class: "flatbtn user-btn"%>
-				  </div>
-				  <% end %>
-		  	</div>
-	  	</div>
-	</div>
+        <div class="form-actions">
+          <h5><%= f.submit "JOIN US", class: "btn btn-success btn-lg centerize"%></h5>
+        </div>
+        <% end %>
+      </div>
+    </div>
+
 </div>
 
 

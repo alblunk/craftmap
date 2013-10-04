@@ -3,6 +3,7 @@ Beeline::Application.routes.draw do
   devise_for :users
 
   get 'home' => 'pages#home'
+  get 'landing' => 'pages#landing'
   get 'about' => 'pages#about'
   get 'faq' => 'pages#faq'
   get 'terms' => 'pages#terms'
@@ -18,13 +19,13 @@ Beeline::Application.routes.draw do
   resources :products, only: [ :index, :show ]
 
   namespace :admin do
-    resources :users, only: [ :index, :update ]
+    resources :users, only: [ :index, :update, :destroy ]
   end
 
   namespace :api do
     resources :registrations, only: [ :create ]
   end
 
-  root :to => 'pages#home'
+  root :to => 'pages#landing'
 
 end

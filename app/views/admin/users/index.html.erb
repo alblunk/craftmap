@@ -1,42 +1,46 @@
 
-<div class="col-md-10 white-background" style="padding-bottom:25%">
+<div class="col-md-10 white-background" >
   <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-6">
       <h3>Admins</h3>
-      <table class="table table-striped" style="font-size:.75em">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Last Sign-in</th>
-            <th>Admin?</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <%= render @admins, partial: 'user' %>
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="table table-striped" style="font-size:.75em">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Last Sign-in</th>
+              <th>Admin?</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render @admins, partial: 'user' %>
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div class="col-md-5">
+    <div class="col-md-6">
       <h3>Users</h3>
-      <table class="table table-striped" style="font-size:.75em">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Last Sign-in</th>
-            <th>Admin?</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <%= render @users %>
-        </tbody>
-      </table>
-      <%= paginate @users %>
+      <div class="table-responsive">
+        <table class="table table-striped" style="font-size:.75em">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Last Sign-in</th>
+              <th>Admin?</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render @users %>
+          </tbody>
+        </table>
+      </div>
+        <%= paginate @users %>
     </div>
   </div>
 </div>

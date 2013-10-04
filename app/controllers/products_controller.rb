@@ -1,13 +1,14 @@
+
 class ProductsController < ApplicationController
 
-  before_action :require_admin, except: [ :index, :show ]
+  before_action :require_admin, except: [ :show ]
 
   def index
     @products = Product.order("created_at asc").page(params[:page]).per(6)
   end
 
   def show
-    @product = Product.new
+    @product = Product.find(params[:id])
     @products = Product.order("created_at desc").page(params[:page]).per(4)
   end
 
@@ -71,7 +72,7 @@ class ProductsController < ApplicationController
 
     def product_params
       params.require(:product).
-              permit( :name, :description, :details, :price, :deliver_date,
+              permit( :name, :description, :details, :price, :deliver_date, :updates, :status,
                       brand_attributes: [ :name, :profile ],
                       images_attributes: [ :image ] )
     end

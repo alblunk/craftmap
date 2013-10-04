@@ -1,10 +1,10 @@
-<div class="subh-font">
+<h5 class="centerize">
 <%- if controller_name != 'sessions' %>
-  <%= link_to "Already part of the family? Sign in.", new_session_path(resource_name) %><br />
+  <%= link_to "Already part of the family? SIGN IN.", new_session_path(resource_name), class: "btn btn-primary" %><br />
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to "Not part of the family yet? Sign up.", new_registration_path(resource_name) %><br />
+  <%= link_to "Not part of the family yet? JOIN US.", new_registration_path(resource_name), class: "btn btn-success" %><br />
 <% end -%>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' %>
@@ -24,4 +24,4 @@
     <%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider) %><br />
   <% end -%>
 <% end -%>
-</div>
+</h5>

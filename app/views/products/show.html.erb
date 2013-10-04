@@ -1,18 +1,19 @@
 <!-- PRODUCT PICTURE PANE -->
-    <div class="col-md-5">
-      <div class="img-responsive" id="product-images" style="background-image:url(<%= image_path('product2.jpg') %>)">
+    <div class="col-md-5" >
+      <div class="mid-pic-frame" id="product-images">
+        <div id="p-thumbnails-box">
+          <%= image_tag("product_thumb1.jpg", class: "p-thumbnails") %>
+            
+            <%= image_tag("product2.jpg", class: "p-thumbnails", id:"p-selected") %>
+            
+            <%= image_tag("product_thumb1.jpg", class: "p-thumbnails") %>
+
+            <%= image_tag("product2.jpg", class: "p-thumbnails") %>
+        </div>
         
-          <%= image_tag("product_thumb1.jpg", class: "p-thumbnails") %>
-          
-          <%= image_tag("product2.jpg", class: "p-thumbnails-selected") %>
-          
-          <%= image_tag("product_thumb1.jpg", class: "p-thumbnails") %>
-
-          <%= image_tag("product2.jpg", class: "p-thumbnails") %>
-
+        <img  class="img-responsive" src="<%= image_path('background-road.jpg') %>"/>
       </div>
     </div>
-
     <div class="col-md-5" id="details">
 
 <!-- DETAILS START -->        
@@ -27,38 +28,33 @@
 
           <div class="row">
               <div class="col-md-12 centerize">
-                      <!-- FACEBOOK -->
-                        <a href ="#" target="blank">
-                          <%= image_tag("facebook.png", class: "social-show", width: "20") %>
-                        </a>
-                      
-                      <!-- TWITTER -->
-                        <a href="#" target="blank">
-                          <%= image_tag("twitter.png", class: "social-show", width: "20") %>
-                        </a>
+                <!-- FACEBOOK -->
+              <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=<%=request.original_url%>&amp;p[title]=<%= @product.name %>+by+<%#= @product.brand.name.html_safe %>+on+Farallon+Co.&amp;p[images][0]=https://s3.amazonaws.com/beelineco/FarallonCo-ShortForm.jpg&amp;p[summary]=Farallon+Co+-+Top+Tier+Brands,+Fan+Backed+Product,+Join+the+Company." target="blank"><%= image_tag("facebook.png", class: "social-show", width: "20") %>
+              </a>
+                
+              <!--   <a href="http://www.facebook.com/sharer/sharer.php?u=<%#=request.original_url%>&[title]=<%#= @brand.name %> on Farallon Co." target="blank"><%#= image_tag("facebook.png", class: "social-show", width: "20") %></a> -->
 
-                      <!-- GOOGLE PLUS -->
-                      <a href="#" target="blank">
-                        <%= image_tag("googleplus.png", class: "social-show", width: "20") %>
-                      </a>
-                     
-                      <!-- PINTEREST -->
-                      <a href="#" target="blank">
-                        <%= image_tag("pinterest.png", class: "social-show", width: "20") %>
-                      </a>
-                       
-                      <!-- STUMBLEUPON -->
-                      <a href="#" target="blank">
-                        <%= image_tag("stumbleupon.png", class: "social-show", width: "20") %>
-                      </a>
-                </div>
+            <!-- TWITTER -->
+              <a href="http://twitter.com/home?status=Check+out+<%= @product.name %>+by+<%= @product.brand.name %>+on+@farallonco+(<%=request.original_url.html_safe%>)" target="blank" ><%= image_tag("twitter.png", class: "social-show", width: "20") %>
+              </a>
+
+            <!-- GOOGLE PLUS -->
+              <a href="https://plus.google.com/share?url=<%=request.original_url.html_safe%>" target="blank"><%= image_tag("googleplus.png", class: "social-show", width: "20") %></a>
+           
+            <!-- PINTEREST -->
+              <a href="http://pinterest.com/pin/create/bookmarklet/?media=<%#@product.pic1%>&url=<%=request.original_url%>&is_video=false&description=<%= @product.name %> by <%#=@brand.name%> on Farallon Co." target="blank" ><%= image_tag("pinterest.png", class: "social-show", width: "20") %></a>
+           
+            <!-- STUMBLEUPON -->
+              <a href="http://www.stumbleupon.com/submit?url=<%=request.original_url%>&title=<%= @product.brand.name %> by <%#=@brand.name%> on Farallon Co.+<%=request.original_url%>" target="blank"><%= image_tag("stumbleupon.png", class: "social-show", width: "20") %>
+                </a>
+            </div>
           </div>
-          <hr class="black-hr">
+          <hr class="black-hr" style="padding-bottom:20px;">
 <!-- PRICING & CAMPAIGN DETAILS -->
           <div class="row">
               <div class="col-md-6">
                 
-                <a href="#"><div id="backbtn" class="flatbtn centerize">BACK IT</div></a>
+                <a href="#" data-celery="backpack"><div id="backbtn" class="flatbtn centerize">BACK IT</div></a>
 
 
                 <hr class="black-hr" style="margin-bottom:5px">
@@ -69,16 +65,24 @@
 
             </div>
             <div class="col-md-6 centerize">
-              <h5>$<span id="price">125</span></h5>
-              <p class="flatbtn" id="delivery">Estimated Delivery: 4/7/2013</p>
+              <h5>$<span id="price"><%= @product.price %></span></h5>
+              <div id="delivery">
+                <h5 style="font-size:.9em">Estimated Delivery:</h5> 
+                  <hr class="black-hr" style="margin-top:-8px; margin-bottom:5px"> 
+                <p style="font-size:.9em"><%= @product.deliver_date.html_safe %></p>
+              </div>
             </div>
           </div>
 
 <!-- CELERY DETAILS -->
           <div class="row">
             <div class="col-md-12">
-              <!-- <img src="img/bar.jpg" id="bar"width="100%"/> -->
-              <div data-celery="backpack" data-celery-type="bar" style="background-color:transparent;"></div>
+              <div data-celery="backpack" data-celery-type="bar" style="background-color:transparent; margin-top:0;"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12" id="updates">
+              <%=@product.updates.html_safe%>
             </div>
           </div>
         </div>
@@ -87,24 +91,15 @@
 <!-- DESCRIPTION -->
       <div class="row">
         <div class="col-md-12">
-          <h3 style="margin-top:-10px;">Sanction Backpack AP</h3>
-          <h5>Mission Workshop</h5>
+          <h3 style="margin-top:-10px;"><%=@product.name.html_safe%></h3>
+          <h5><%=@product.brand.name.html_safe%></h5>
           <hr class="black-hr">
           <div class="row">
             <div class="col-md-6">
-              <h5>Materials:</h5>
-              <ul>
-                <li>1000 denier VX Cordura ripstop shell</li> 
-                <li>Backed with a PET waterproof membrane</li> 
-                <li>Lightweight VX70 ripstop liner</li> 
-              </ul>
-
+              <%=@product.details.html_safe%>
             </div>
             <div class="col-md-6">
-              <h5>Features:</h5>
-              <ul>
-                <li>Arkiv&reg; closure system</li>
-              </ul>
+              <%=@product.details.html_safe%>
             </div>
           </div>
         </div>
@@ -115,69 +110,121 @@
 <!-- PROFILE -->
         <div class="row">
           <div class="col-md-12">
-          <h3 id="profile-title" >MEET THE MAKER:<space> Mission Workshop </h3>
-            <h5 id="location" class="subh-font" >San Francisco, CA</h5> 
+          <h3 id="profile-title" >MEET THE MAKER:<space> <%=@product.brand.name.html_safe%> </h3>
+            <h5 id="location" class="subh-font" ><%=@product.brand.location.html_safe%></h5> 
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
-          <img id="brand-image" src="http://missionworkshop.com/images/home-slides/_single/san-francisco-store.jpg" width="100%"/>
 
-          <%# @product.brandpic %>
+          <%= image_tag("profile-pic.jpg", id: "brand-image") %>
+            <%#=@product.brand.pic%>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
-          <!-- FACEBOOK -->
-                  <a href="http://facebook.com/<%#@product.facebookbrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/facebook_square_black.png"/></a>
+              <!-- FACEBOOK -->
+                  <a href="http://facebook.com/<%#@product.brand.facebook.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/facebook_square_black.png"/></a>
               <!-- TWITTER -->
-                  <a href="http://twitter.com/<%#@product.twitterbrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/twitter_square_black.png"/></a>
+                  <a href="http://twitter.com/<%#@product.brand.twitter.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/twitter_square_black.png"/></a>
 
                 <!-- INSTAGRAM -->
-                  <a href="http://instagram.com/<%#@product.instagrambrand.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/instagram_square_black.png"/></a>
+                  <a href="http://instagram.com/<%#@product.brand.instagram.html_safe%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/instagram_square_black.png"/></a>
                 <!-- TUMBLER -->
-                  <a href="http://<%#@product.tumblrbrand.html_safe%>.tumblr.com/" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/tumblr_square_black.png"/></a>
+                  <a href="http://<%#@product.brand.tumblr.html_safe%>.tumblr.com/" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/tumblr_square_black.png"/></a>
 
-                <p>The Mission is where we design, develop, and work in San Francisco. Our workshop was created out of the need for gear that out-performs, while maintaining a clean aesthetic appropriate for cycling, travel, and the daily routine. Pulling from years of experience, Mission Workshop creates bags that can handle a lifetime of abuse and apparel that can withstand the worst weather.</p>
+                <p><%=@product.brand.profile.html_safe%></p>
 
-                <!--<%#@product.profile.html_safe%>-->
           </div>
         </div>
-        <hr class="black-hr" style="margin-bottom:5px">
-        <div class="row">
+        <div class="row" style="color:white;background-color: rgba(80,80,80,0.5);">
 <!-- MORE PRODUCTS GRID -->
-          <h3 class="centerize" style="padding-bottom:10px;">Keep  exploring</h3>
-          <div class="col-md-4 col-xs-6">
-            <a href="#" class="thumbnail" id="mini-grid">
-              <%= image_tag("product_thumb1.jpg") %>
-            </a>
-          </div>
-          <div class="col-md-4 col-xs-6">
-            <a href="#" class="thumbnail" id="mini-grid">
-              <%= image_tag("product_thumb3.jpg") %>
-            </a>
-          </div>
-          <div class="col-md-4 col-xs-6">
-            <a href="#" class="thumbnail" id="mini-grid">
-              <%= image_tag("product_thumb2.jpg") %>
-            </a>
-          </div>
-          <div class="col-md-4 col-xs-6">
-            <a href="#" class="thumbnail" id="mini-grid">
-              <%= image_tag("product_thumb1.jpg") %>
-            </a>
-          </div>
-          <div class="col-md-4 col-xs-6">
-            <a href="#" class="thumbnail" id="mini-grid">
-              <%= image_tag("product_thumb4.jpg") %>
-            </a>
-          </div>
-          <div class="col-md-4 col-xs-6">
-            <a href="#" class="thumbnail" id="mini-grid">
-              <%= image_tag("product_thumb5.jpg") %>
+
+          <h3 class="centerize" style="padding-top:10px;">Keep  exploring</h3>
+          <hr class="white-hr">
+
+          <%= render :partial=>'products/product', :collection => @products, :locals => {:size => 'col-md-4 col-xs-6'}  %>
+
+
+            <!-- id=mini-grid -->
+            
             </a>
           </div>
         </div>
       </div>
     </div>
   <!-- END OF DETAILS -->
+
+<!-- CELERY SCRIPTS -->
+  <script type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script>
+
+
+<!-- FAQ Modal -->
+    <div  class="modal fade" id="FAQModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color: #12162a">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:white;">&times;</button>
+            <%= image_tag("FarallonCo-LongForm-T.png", width: "200") %> 
+  <h5 class="modal-title" style="color:white;">Frequently Asked Questions</h5>
+          </div>
+          <div class="modal-body">
+  <h3 style="margin-top:-15px;">What is going on here?</h3>
+            <hr style="margin-top:-5px;">
+         
+                  <p>In short: We partner with the best brands in the land, then create campaigns for items they want to test -- you 'back' the items you're interested in. 
+                  <br><br>
+                  Once the number of items backed reaches the campaign goal, the item is successfully funded and the brand starts production. 
+                  <br><br>
+                  We ship to you when the products are ready to go.</p>
+            <hr style="margin-top:-5px;">
+
+  <h5>How can I support these brands/products?</h5>
+            <ol>
+              <li><h3>Back it:</h3> A commitment to financially back the production of this item when enough people have shown interest. Your card only gets charged after a product hits the goal of a number of backers. <hr style="margin-bottom:5px;">All backers recieve <i>Free Priority Shipping</i> after their goods are ready.<hr style="margin-top:5px;"></li>
+              <li><h3>Share it:</h3> Broadcast out to people who you think would appreciate this brand or product. Products only get made with enough support, so spread the good word!</li>
+              <li><h3>Preorder:</h3>After a product reaches its funding goal, you are still able to preorder it for the remainder of its time on the site. <hr style="margin-bottom:5px;">No free shipping - early bird gets the worm!<hr style="margin-top:5px;"></li>
+            </ol>
+            <br>
+
+  <h5>When does my card get charged?</h5>
+                <hr style="margin-top:-5px;">
+                <p>When you hit “Back It”, we will collect your shipping and billing information - but will only authorize the charge, not actually charge you. When the item reaches its funding goal, your card will be securely charged. <br>**If an item expires without being funded, you will not be charged and your (payment & shipping) information will be cleared from our system.</p>
+            <br>
+
+  <h5>Is my billing information safe?</h5>
+                <hr style="margin-top:-5px;">
+                <p>Of course. All payments are processed using 256-bit SSL encryption and our ecommerce platform is built on the premier payments platform, <a href="https://www.stripe.com/" target="blank">Stripe</a>. Stripe is certified to <a href="http://www.visa.com/splisting/searchGrsp.do?companyNameCriteria=stripe" target="blank">PCI Service Provider Level 1</a>. This is the most stringent level of certification available.</p>
+            <br>
+  <h5 class="subh-font">Can I change my order or cancel it?</h5>
+                <hr style="margin-top:-5px;">
+                <p>If a campaign hasn't been funded & shipped yet - you can change item options, shipping address, or cancel your order by following the "Click here to manage your order." link in your order email. If a product has been funded or shipped, you will need to <a href="mailto:support@farallon.co">get in touch</a> with us directly.</p>
+              <br>
+  <h5>When will my items be shipped?</h5>
+              <hr style="margin-top:-5px;">
+            <p>The expected shipping date is listed on each item’s product page. We strive to beat that date, but hiccups may occur -- rest assured, if we (or our partner brands) get the hiccups, youll be notified.</p>
+              <br>
+  <h5>Can an item be funded more than 100%?</h4>
+                <hr style="margin-top:-5px;">
+            <p>Yes, this is what we call a 'preorder'. You won't recieve free shipping, but is still the same exclusive item.</p>
+            <br>
+
+  <h5>Can I exchange or return an item after I receive it?</h5>
+            <hr style="margin-top:-5px;">
+            <p>Due to the nature of this type of funding model, we will only accept returns if the product is deemed defective. We will make it right regardless. </p>
+
+            <br>
+<h5>Who are the brands you feature? Why should I trust them?</h5>
+            <hr style="margin-top:-5px;">
+            <p>We built relationships with top-notch brands from all over the globe and will never feature a campaign that we wouldn't back ourselves. Most of the brands we will feature build their product in the U.S.A., but will feature any brand that is built with integrity - regardless of its origin.</p>
+            <p>Unlike traditional crowdfunding models, we only feature an established brand's products - which inherently takes alot of the risk out of backing a campaign. This is because established brands know their production capabilities and understand how to run a successful business.</p>
+            <br>
+
+          </div>
+          <div class="modal-footer centerize">
+            <button class="flatbtn" id="FAQbtn-close" style="text-decoration: none;" data-dismiss="modal" aria-hidden="true">All good?</button>
+                <a href="mailto:support@farallon.co" style="text-decoration: none;"><button class="flatbtn" id="FAQbtn" >More Questions? Email us.</button></a>
+          </div>
+          </div>
+        </div>
+    </div>

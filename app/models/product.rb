@@ -8,4 +8,7 @@ class Product < ActiveRecord::Base
   has_many :images, as: :imagable, dependent: :destroy
 
 
+  def has_images?
+    images.count > 0
+  end
 end

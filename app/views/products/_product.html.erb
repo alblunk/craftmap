@@ -1,34 +1,5 @@
-
-
-<div class = "box">
-		<!-- <p id="h-product" class="h-font"><%=product.name%></p>
-		<span id="h-brandname"><%=product.brand.name%></span> -->
-
-		<p id="h-details" class="subh-font">
-			<!-- PRICE --><span class="icon-tag"></span> $<%=product.price%> | 
-
-
-			<!-- FUNDING --> <span class="icon-signal"></span>&nbsp;<span style="padding:4px; border-radius:1px; color:rgba(56, 158, 57, 1); font-weight:600;" class="<%= product.ecomm_url %> backers-needed">Loading...</span> |  
-
-
-			<!-- TIME --><span class="icon-time"></span>&nbsp;<span class="<%= product.ecomm_url %> remaining">Loading...</span>
-		</p>
-
-
-		<span class="subh-font" style="position:absolute; right:0; padding-right:20px; text-align:right;">
-			<% if current_user.try(:admin?) %>
-				<p style="margin-bottom:-5px;">
-					<%= link_to 'Edit', edit_brand_product_path(product.brand, product) %>
-				</p>
-				<p>
-					<%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-				</p>
-			<% end %>
-		</span>
-
-		<div class="h-pic" data-product="<%= product.name %>" data-brand="<%= product.brand.name %>">
-			<%= link_to image_tag(product.images.first.image(:medium)), product %>
-		</div>
-	
-</div>
-
+<% if product.has_images? %>
+    <div class="<%= size %>">
+        <%= link_to image_tag(product.images.first.image(:medium)), product_path(product),class: 'thumbnail' %>
+    </div>
+<% end %>
