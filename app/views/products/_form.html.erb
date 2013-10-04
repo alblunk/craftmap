@@ -1,4 +1,4 @@
-<div class="col-md-12 white-background" style="padding-bottom:20%">
+<div class="col-md-12 white-background" >
   <div class="row">
     <div class="col-md-4 forms-admin">
       <%= simple_form_for([@product.brand, @product], html: { class: "form-horizontal" }) do |f| %>
@@ -7,42 +7,67 @@
         <br>
         <%= f.input :name, placeholder: "Enter Product Name",label:false %>
         <%= f.input :price, placeholder: "Price ($)",label:false %>
+        
+        <br>
         <%= f.input :deliver_date, placeholder: "Estimated Delivery Date",label:false %>
-        <br>
-        <br>
-        <%= f.full_error :image_file_size, class: "alert alert-error" %>
-        <%= f.full_error :image_content_type, class: "alert alert-error" %>
-
-        <h5>Current Photos</h5>
-        <% if @product.images.empty? %>
-          <p>No photos uploaded yet!</p>
-        <% else %>
-          <% @product.images.each do |image| %>
-            <%= image_tag(image.image(:small), size: "75x75") if image.persisted? %>
-          <% end %>
-        <% end %>
-
-        <div class="row">
-          <%= f.label "Upload some images!" %>
-        </div>
-        <%= f.simple_fields_for :images, html: { multipart: true } do |i| %>
-          <%= i.input :image, label: "Upload a photo!" %>
-        <% end %>
-
         
+        <%= f.input :status, placeholder: "Status?",label:false %>
+        <br>
+        <h6>Campaign Updates?</h6>
+        <%= f.input :updates, as: :text, input_html: { rows: "10",cols: "50", class: 'textbox wysihtml5'  }, label:false%>
+        <br>
+        <br>
+        
+
+        <!-- BRAND DESCRIPTION -->
+        <h6>Brand Description of Product:</h6>
+      <%= f.input :description, as: :text, input_html: { rows: "5", class: 'textbox wysihtml5' }, placeholder: "Why is the brand making this product, what makes it special, what inspired the idea?", label:false%>
+    </div>
+
+
+    <div class="col-md-8">
+      <div class="form-actions" style="padding:20px">
+        <%= f.button :submit, class: "btn btn-primary" %>
       </div>
-      <div class="col-md-8">
-        <div class="form-actions" style="padding:20px">
-          <%= f.button :submit, class: "btn btn-primary" %>
-        </div>
-        <%= f.input :description, as: :text, input_html: { rows: "10", class: 'textbox wysihtml5' }, 
-                                  label: "Enter Product Description:"%>
-        <%= f.input :details, as: :text, input_html: { rows: "10",cols: "50", class: 'textbox wysihtml5'  },
-                                  label: "Enter Product Details:"%>
 
-        <%= f.input :ecomm_url, label: "Celery Product Code?" %>
-        
+      <!-- IMAGES -->
+      <%= f.full_error :image_file_size, class: "alert alert-error" %>
+      
+      <%= f.full_error :image_content_type, class: "alert alert-error" %>
+      <h6>Current Photos</h6>
+      <% if @product.images.empty? %>
+        <p>No photos uploaded yet!</p>
+      <% else %>
+        <% @product.images.each do |image| %>
+          <%= image_tag(image.image(:small), size: "75x75") if image.persisted? %>
         <% end %>
+      <% end %>
+
+      <div class="row">
+        <%= f.label "Upload some images!" %>
+      </div>
+        <%= f.simple_fields_for :images, html: { multipart: true } do |i| %>
+        <%= i.input :image, label: "Upload a photo!" %>
+      <% end %>
+
+
+      <%#= brand.input :active, as: :checkbox, label: "Active?"%>
+      <%#= brand.input :archived, as: :checkbox, label: "Archive?"%>
+      
+
+
+<!-- FEATURES & MATERIALS -->      
+      <div class="row">
+        <hr style="border-color:black;">
+        <div class="col-md-6">
+          <%= f.input :details, as: :text, input_html: { rows: "10",cols: "50", class: 'textbox wysihtml5'  }, label: "FEATURES:"%>
+        </div>
+        <div class="col-md-6">
+          <%= f.input :details, as: :text, input_html: { rows: "10",cols: "50", class: 'textbox wysihtml5'  }, label: "MATERIALS:"%>
+        </div>
+      </div>
+
+      <% end %>
     </div>
   </div>
 </div>

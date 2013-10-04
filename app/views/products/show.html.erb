@@ -80,6 +80,11 @@
               <div data-celery="backpack" data-celery-type="bar" style="background-color:transparent; margin-top:0;"></div>
             </div>
           </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p style="padding-top:10px"><%=@product.updates.html_safe%><p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -90,24 +95,12 @@
           <h5><%=@product.brand.name.html_safe%></h5>
           <hr class="black-hr">
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
               <%=@product.details.html_safe%>
             </div>
-            <!-- <div class="col-md-6">
-              <h5>Materials:</h5>
-              <ul>
-                <li>1000 denier VX Cordura ripstop shell</li> 
-                <li>Backed with a PET waterproof membrane</li> 
-                <li>Lightweight VX70 ripstop liner</li> 
-              </ul>
-
-            </div>
             <div class="col-md-6">
-              <h5>Features:</h5>
-              <ul>
-                <li>Arkiv&reg; closure system</li>
-              </ul>
-            </div> -->
+              <%=@product.details.html_safe%>
+            </div>
           </div>
         </div>
       </div>
