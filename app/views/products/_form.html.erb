@@ -1,43 +1,70 @@
-<%= simple_form_for([@product.brand, @product], html: { class: "form-horizontal" }) do |f| %>
+<%= form_for([@product.brand, @product], html: { class: "form-horizontal" }) do |f| %>
 <div class="col-md-10 white-background" style="padding-bottom:20%">
   <div class="row">
     <div class="col-md-6">
-      <%= f.error_notification %>
+      <%#= f.error_notification %>
 
-      <%= f.input :name, label: "Enter Product Name:" %>
-      <%= f.input :price, label: "Price:" %>
-      <%= f.input :deliver_date, label: "Estimated Delivery Date:" %>
-      <%= f.input :description, as: :text, input_html: { rows: "10", class: 'textbox' }, 
-                                label: "Enter Product Description:"%>
-      <%= f.input :details, as: :text, input_html: { rows: "10", class: 'textbox' },
-                                label: "Enter Product Details:"%>
+      <%= f.label :name, "Enter Product Name:" %>
+      <%= f.text_field :name %>
 
-      <%= f.input :ecomm_url, label: "Celery Product Code?" %>
+      <%= f.label :price, "Price:" %>
+      <%= f.text_field :price %>
+
+      <%= f.label :deliver_date, "Estimated Delivery Date:" %>
+      <%= f.text_field :deliver_date %>
+
+      <%= f.label :description, "Enter Product Description:" %>
+      <%= f.text_area :description, input_html: { rows: "10",  class: 'textbox wysihtml5' } %>
+
+      <%= f.label :details, "Enter Product Details:" %>
+      <%= f.text_area :details, input_html: { rows: "10",  class: 'textbox wysihtml5' } %>
+
+
+      <%#= f.input :ecomm_url, label: "Celery Product Code?" %>
     </div>
     <div class="col-md-6">
-      <%= f.full_error :image_file_size, class: "alert alert-error" %>
-      <%= f.full_error :image_content_type, class: "alert alert-error" %>
+      <%#= f.full_error :image_file_size, class: "alert alert-error" %>
+      <%#= f.full_error :image_content_type, class: "alert alert-error" %>
 
-      <h5>Current Photos</h5>
-      <% if @product.images.empty? %>
-        <p>No photos uploaded yet!</p>
-      <% else %>
-        <% @product.images.each do |image| %>
-          <%= image_tag(image.image(:small), size: "75x75") if image.persisted? %>
+      <% unless @product.new_record? %>
+        <h5>Current Photos</h5>
+        <% if @product.images.empty? %>
+          <p>No photos uploaded yet!</p>
+        <% else %>
+          <% @product.images.each do |image| %>
+
+
+            <!-- TODO: this needs to get fixed -->
+            <%#= image_tag(image.image(:small), size: "75x75") if image.persisted? %>
+
+
+          <% end %>
         <% end %>
       <% end %>
+
 
       <div class="row">
         <%= f.label "Upload some images!" %>
       </div>
-      <%= f.simple_fields_for :images, html: { multipart: true } do |i| %>
-        <%= i.input :image, label: "Upload a photo!" %>
+
+      <%= f.fields_for :image, html: {multipart: true} do |image_field| %>
+        <%= image_field.file_field :image %>
       <% end %>
-      <div class="form-actions">
-        <%= f.button :submit, class: "btn btn-primary" %>
+
+
+      <div class="form-actions" style="padding:10px;">
+        <%= f.submit class: "btn btn-primary" %>
       </div>
     </div>
   </div>
 </div>
 <% end %>
 
+<!-- wysihtml5 -->
+<script type="text/javascript">
+  $(function() {
+    $('.wysihtml5').each(function(i, elem) {
+      $(elem).wysihtml5();
+    });
+  })
+</script>

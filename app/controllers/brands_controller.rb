@@ -11,7 +11,6 @@ class BrandsController < ApplicationController
 
   def new
     @brand = Brand.new
-    # @image = @brand.images.build
   end
 
   def create
