@@ -32,7 +32,8 @@
     <div class="col-md-8">
        
       <%#= brand.input :active, as: :checkbox, label: "Active?"%>
-      <%= brand.input :profile, as: :text, input_html: { rows: "10",  class: 'wysihtml5 textbox' }, label: "Brand Profile:"%>
+      <h6>Brand Profile:</h6>
+      <%= brand.input :profile, as: :text, input_html: { rows: "10",  class: 'wysihtml5 textbox' }, label: false%>
      
       
     </div>
