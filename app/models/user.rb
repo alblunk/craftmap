@@ -5,6 +5,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, #:recoverable
          :rememberable, :trackable, :validatable
 
+  has_many :brands, foreign_key: 'owner_id'
+  has_many :products, foreign_key: 'owner_id'
+
   def self.admins
     where(admin: true)
   end

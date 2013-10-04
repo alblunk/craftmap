@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
 
   def new
     @product = current_brand.products.new
-    8.times { @product.images.build }
+    # 8.times { @product.images.build }
   end
 
   def edit
@@ -24,17 +24,15 @@ class ProductsController < ApplicationController
 
   def create
     @product = current_brand.products.new(product_params)
+    @product.owner = current_user
+    @image = @product.images.build
+    @image.image = params[:product][:image][:image]
 
-    respond_to do |format|
-      if @product.save
-        format.html { redirect_to [current_brand, @product], notice: 'Product was successfully created.' }
-        format.json { render json: @product, status: :created, location: @product }
-      else
-        (8 - @product.images.size).times { @product.images.build }
-
-        format.html { render action: "new" }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
-      end
+    if @product.save
+      redirect_to [current_brand, @product]
+    else
+      # (8 - @product.images.size).times { @product.images.build }
+      format.html { render action: "new" }
     end
   end
 
@@ -44,12 +42,9 @@ class ProductsController < ApplicationController
     respond_to do |format|
       if @product.update(product_params)
         format.html { redirect_to [current_brand, @product], notice: 'Product was successfully updated.' }
-        format.json { head :no_content }
       else
         @product.images.build if @product.images.empty?
-
         format.html { render action: "edit" }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -60,7 +55,6 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to products_url }
-      format.json { head :no_content }
     end
   end
 
@@ -72,9 +66,9 @@ class ProductsController < ApplicationController
 
     def product_params
       params.require(:product).
-              permit( :name, :description, :details, :price, :deliver_date, :updates, :status,
+              permit( :name, :description, :details, :price, :deliver_date, :updates, :status, :owner,
                       brand_attributes: [ :name, :profile ],
-                      images_attributes: [ :image ] )
+                      images_attributes: [:id, :image, :imageable_id, :imageable_type, :_destroy] )
     end
 
 end

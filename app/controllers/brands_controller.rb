@@ -15,6 +15,9 @@ class BrandsController < ApplicationController
 
   def create
     @brand = Brand.new(brand_params)
+    @image = @brand.images.build
+    @brand.owner = current_user
+    @image.image = params[:brand][:image][:image]
 
     if @brand.save
       redirect_to @brand
@@ -49,8 +52,9 @@ class BrandsController < ApplicationController
 
   private
 
+    # TODO may be missing something here to set owner_id
     def brand_params
-      params.require(:brand).permit(:name, :profile, :image, :location)
+      params.require(:brand).permit(:name, :profile, :location, :owner, image_attributes: [:id, :image, :imageable_id, :imageable_type, :_destroy])
     end
 
 end
