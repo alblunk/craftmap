@@ -1,31 +1,29 @@
-
 <div class="col-md-4 white-background" style="padding-bottom:5%" >
-	<div style="padding-top:15px;"><%= render "devise/shared/links" %></div>
-	<hr>
-	<h2 class="centerize">Sign in</h2>
+  <div style="padding-top:15px;"><%= render "devise/shared/links" %></div>
+  <hr>
+  <h2 class="centerize">Sign in</h2>
 
-	<hr class="black-hr" style="padding-bottom:10%">
+  <hr class="black-hr" style="padding-bottom:10%">
 
-	<%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
-	
-	<%= f.error_notification %>
+  <%= render partial: "shared/flash_messages" %>
 
-	<div class="forms">
-		<%= f.input :email, placeholder: 'EMAIL',label:false, error_html: { id: 'forms-error'} %>
-		<br>
-		<%= f.input :password, placeholder: 'PASSWORD',label:false, error_html: { id: 'forms-error'}%>
-		<br>
-		<%= f.input :remember_me, label: 'Remember me?',:style => "margin:0", as: :boolean, error_html: { id: 'forms-error'}%>
-	</div>
+  <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
 
-	
-	<hr>
+    <%= f.error_notification %>
 
-	  <div class="form-actions">
-	  	<h5><%= f.submit "SIGN IN", class: "btn btn-primary btn-lg centerize" %></h5>
-	  </div>
+    <div class="forms">
+      <%= f.input :email, placeholder: 'EMAIL',label:false, error_html: { id: 'forms-error'} %>
+      <br>
+      <%= f.input :password, placeholder: 'PASSWORD',label:false, error_html: { id: 'forms-error'}%>
+      <br>
+      <%= f.input :remember_me, label: 'Remember me?',:style => "margin:0", as: :boolean, error_html: { id: 'forms-error'}%>
+    </div>
 
-	<% end %>
+    <hr>
+
+    <div class="form-actions">
+      <h5><%= f.submit "SIGN IN", class: "btn btn-primary btn-lg centerize" %></h5>
+    </div>
+
+  <% end %>
 </div>
-
-
