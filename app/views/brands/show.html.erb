@@ -71,6 +71,7 @@
       <p style="margin-top:5px;"><p><%=@brand.profile.html_safe%></p></p>
 
       <% if current_user.try(:admin?) %>
+        <span style="font-size:.65em;"><%= link_to "X", @brand, class: 'x-btn', method: :delete, data: { confirm: 'Are you sure?' } %></span>
         <span style="font-size:.55em;"><%= link_to "[EDIT]", edit_brand_path%></span>
       <%end%>
     </div>

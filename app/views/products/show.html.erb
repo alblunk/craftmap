@@ -28,7 +28,7 @@
           <div class="row">
               <div class="col-md-12 centerize">
                 <!-- FACEBOOK -->
-              <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=<%=request.original_url%>&amp;p[title]=<%= @product.name %>+by+<%= @product.brand.name.html_safe %>+on+Farallon+Co.&amp;p[images][0]=https://s3.amazonaws.com/beelineco/FarallonCo-ShortForm.jpg&amp;p[summary]=Farallon+Co+-+Top+Tier+Brands,+Fan+Backed+Product,+Join+the+Company." target="blank"><%= image_tag("facebook.png", class: "social-show", width: "20") %>
+              <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=<%=request.original_url%>&amp;p[title]=<%= @product.name %>+by+<%#= @product.brand.name.html_safe %>+on+Farallon+Co.&amp;p[images][0]=https://s3.amazonaws.com/beelineco/FarallonCo-ShortForm.jpg&amp;p[summary]=Farallon+Co+-+Top+Tier+Brands,+Fan+Backed+Product,+Join+the+Company." target="blank"><%= image_tag("facebook.png", class: "social-show", width: "20") %>
               </a>
                 
               <!--   <a href="http://www.facebook.com/sharer/sharer.php?u=<%#=request.original_url%>&[title]=<%#= @brand.name %> on Farallon Co." target="blank"><%#= image_tag("facebook.png", class: "social-show", width: "20") %></a> -->
@@ -41,7 +41,7 @@
               <a href="https://plus.google.com/share?url=<%=request.original_url.html_safe%>" target="blank"><%= image_tag("googleplus.png", class: "social-show", width: "20") %></a>
            
             <!-- PINTEREST -->
-              <a href="http://pinterest.com/pin/create/bookmarklet/?media=<%@product.pic1%>&url=<%=request.original_url%>&is_video=false&description=<%= @product.name %> by <%#=@brand.name%> on Farallon Co." target="blank" ><%= image_tag("pinterest.png", class: "social-show", width: "20") %></a>
+              <a href="http://pinterest.com/pin/create/bookmarklet/?media=<%#@product.pic1%>&url=<%=request.original_url%>&is_video=false&description=<%= @product.name %> by <%#=@brand.name%> on Farallon Co." target="blank" ><%= image_tag("pinterest.png", class: "social-show", width: "20") %></a>
            
             <!-- STUMBLEUPON -->
               <a href="http://www.stumbleupon.com/submit?url=<%=request.original_url%>&title=<%= @product.brand.name %> by <%#=@brand.name%> on Farallon Co.+<%=request.original_url%>" target="blank"><%= image_tag("stumbleupon.png", class: "social-show", width: "20") %>
@@ -119,8 +119,8 @@
 <!-- PROFILE -->
         <div class="row">
           <div class="col-md-12">
-          <h3 id="profile-title" >MEET THE MAKER:<space>
-          <%= link_to @product.brand.name, brand_path %></h3>
+          <h3>MEET THE MAKER:
+          <%= link_to @product.brand.name, brand_path, class:'brand-title' %></h3>
 
           <% if current_user.try(:admin?) %>
               <p style="font-size:.55em;margin-top:-10px;margin-bottom:-10px;"><%= link_to "[EDIT BRAND]", edit_brand_path([@brand])%></p>
