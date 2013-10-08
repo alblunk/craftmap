@@ -11,7 +11,9 @@
       <ul class="list-inline">
       	<% brand.products.each do |product| %>
       		<!-- <li><%#= link_to product.name, edit_brand_product_path(brand, product)%></li> -->
-          <li><%= link_to image_tag(product.images.first.image(:small), size: "50x50"), edit_brand_product_path(brand, product)%></li>
+          <% if product.images.any? %>
+            <li><%= link_to image_tag(product.images.first.image(:small), size: "50x50"), edit_brand_product_path(brand, product)%></li>
+          <% end %>
       		<!-- <li>/</li> -->
       	<% end %>
       	<li><div style="border:1px solid rgba(0,0,0,.1);font-size:1.75em;font-weight:400;height:35px;width:35px;opacity:.8;text-align:center;"><%= link_to "+", new_brand_product_path(brand)%></div></li>
