@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @products = Product.order("created_at desc").page(params[:page]).per(4)
+    @brand = @product.brand
   end
 
   def new

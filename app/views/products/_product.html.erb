@@ -1,5 +1,5 @@
 <% if product.has_images? %>
     <div class="<%= size %>">
-        <%= link_to image_tag(product.images.first.image(:medium)), product_path(product),class: 'thumbnail' %>
+        <%= link_to image_tag(product.images.first.image), product_path(product),class: 'thumbnail' %>
     </div>
 <% end %>
