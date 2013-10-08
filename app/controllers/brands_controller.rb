@@ -3,6 +3,7 @@ class BrandsController < ApplicationController
 
   def index
     @brands = Brand.all
+    @brands = Brand.order("created_at asc")
   end
 
   def show

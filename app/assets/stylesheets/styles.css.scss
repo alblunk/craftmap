@@ -512,7 +512,7 @@
   }
 
   #h-account{
-    padding-left:15px;
+    padding-left:5% !important;
   }
 
   #emailus{
@@ -960,9 +960,6 @@
         padding-top:13%;
         margin-bottom:-10%;
       }
-      /*#b-midpane{
-        position:relative;
-      }*/
       footer{
         text-align:center;
         position:relative;
@@ -974,6 +971,10 @@
       #product-images{
         position:relative;
 
+      }
+      #h-account{
+        padding-left:0 !important;
+        font-size:.65em !important;
       }
     }
 
