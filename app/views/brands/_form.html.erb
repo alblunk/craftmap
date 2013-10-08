@@ -1,31 +1,55 @@
-<%= form_for(@brand, url: brands_path , html: { multipart: true, class: "form-horizontal" }) do |f| %>
-<div class="col-md-10 white-background" style="padding-bottom:20%">
+<%= form_for(@brand, html: { multipart: true, class: "form-horizontal" }) do |f| %>
+<div class="col-md-12 white-background" >
   <div class="row">
-    <div class="col-md-6">
-      <%#= brand.error_notification %>
-
-      <%= f.label :name, "Name:" %>
-      <%= f.text_field :name %>
-
-      <%= f.label :location, "Location:" %>
-      <%= f.text_field :location %>
-
-      <%= f.label :profile, "Brand Profile:" %>
-      <%= f.text_area :profile, input_html: { rows: "10",  class: 'textbox wysihtml5' } %>
-    </div>
-    <div class="col-md-6">
-      <%= f.fields_for :image do |image_field| %>
-        <%= image_field.file_field :image %>
-      <% end %>
-      <div class="form-actions" style="padding:10px;">
+    <div class="form-actions" style="padding:10px;">
         <%= f.submit class: "btn btn-primary" %>
       </div>
-    </div>
-    <div class="col-md-8">
+    <div class="col-md-3 forms-admin">
+      <%#= brand.error_notification %>
+      <br>
       <%= f.label :active, "Active?" %>
       <%= f.check_box :active %>
+      <br>
+      <br>
+
+      <%= f.text_field :name, placeholder: "Brand Name", label:false;  %>
+      <br>
+      <%= f.text_field :location, placeholder: "Location (City, State)", label:false; %>
+
+      <br>
+      <br>
+      <h6>Social:</h6>
+
+      <%= f.text_field :home_page, placeholder: "Brand URL (http://brand.com)" %>
+      <%= f.text_field :facebook, placeholder: "facebook.com/_____" %>
+      <%= f.text_field :twitter, placeholder: "twitter.com/_____" %>
+      <%= f.text_field :instagram, placeholder: "instagram.com/_____" %>
+      <%= f.text_field :tumblr, placeholder: "_____.tumblr.com/" %>
+
+
+      
+    </div>
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-md-6">
+          <br>
+          <h6>Home Image:</h6><p style="margin-top:-10px;">(Logo on White Background or Map of Business >600x600)<p>
+          <%= f.fields_for :image do |image_field| %>
+            <%= image_field.file_field :image %>
+          <% end %>
+        </div>
+        <div class="col-md-6">
+          <br>
+          <h6>Profile Image:</h6><p style="margin-top:-10px;">(Shop, Product Detail, or Founders)<p>
+          <%= f.fields_for :image do |image_field| %>
+            <%= image_field.file_field :image %>
+          <% end %>
+        </div>
+      </div>
+      <hr>
       <h6>Brand Profile:</h6>
-      <%= f.text_area :profile, as: :text, input_html: { rows: "10",  class: 'wysihtml5 textbox' }, label: false%>
+      <%= f.text_area :profile, as: :text, :rows => "10", :cols => "50", class: 'wysihtml5 textbox', label: false;%>
+
     </div>
   </div>
 </div>
