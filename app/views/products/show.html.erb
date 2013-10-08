@@ -93,16 +93,16 @@
         <div class="col-md-12">
           <h3 style="margin-top:-10px;"><%=@product.name.html_safe%></h3>
               <% if current_user.try(:admin?) %>
-                <p style="font-size:.55em;margin-top:-10px;margin-b ottom:-10px;"><%= link_to "[EDIT PRODUCT]",  edit_brand_product_path(@brand, @product)%></p>
+                <p style="font-size:.55em;margin-top:-10px;margin-bottom:-10px;"><%= link_to "[EDIT PRODUCT]",  edit_brand_product_path(@brand, @product)%></p>
               <%end%>
           <h5><%=@product.brand.name.html_safe%></h5>
           <hr class="black-hr">
           <div class="row">
             <div class="col-md-6">
-              <%=@product.details.html_safe%>
+              <%= @product.details.html_safe%>
             </div>
             <div class="col-md-6">
-              <%=@product.details.html_safe%>
+              <%= @product.materials.html_safe%>
             </div>
           </div>
         </div>
@@ -115,7 +115,7 @@
           <div class="col-md-12">
           <h3 id="profile-title" >MEET THE MAKER:<space> <%=@product.brand.name.html_safe%> </h3>
           <% if current_user.try(:admin?) %>
-              <p style="font-size:.55em;margin-top:-10px;"><%= link_to "[EDIT BRAND]", edit_brand_path([@brand, @product])%></p>
+              <p style="font-size:.55em;margin-top:-10px;margin-bottom:-10px;"><%= link_to "[EDIT BRAND]", edit_brand_path([@brand, @product])%></p>
           <%end%>
             <h5 id="location" class="subh-font" ><%=@product.brand.location.html_safe%></h5> 
           </div>
@@ -139,15 +139,15 @@
             <% end %>
           <!-- TWITTER -->
           <% if @product.brand.twitter != "" %>
-            <a href="http://twitter.com/<%= @brand.twitter%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/twitter_square_black.png"/></a>
+            <a href="http://twitter.com/<%= @product.brand.twitter%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/twitter_square_black.png"/></a>
           <% end %>
           <!-- INSTAGRAM -->
           <% if @product.brand.instagram != "" %>
-            <a href="http://instagram.com/<%= @brand.instagram%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/instagram_square_black.png"/></a>
+            <a href="http://instagram.com/<%= @product.brand.instagram%>" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/instagram_square_black.png"/></a>
           <% end %>
           <!-- TUMBLR -->
           <% if @product.brand.tumblr != "" %>
-            <a href="http://<%= @brand.tumblr%>.tumblr.com/" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/tumblr_square_black.png"/></a>
+            <a href="http://<%= @product.brand.tumblr%>.tumblr.com/" target="blank"><img class="brandsocial" src="https://s3.amazonaws.com/beelineco/brand+social+links/tumblr_square_black.png"/></a>
           <% end %>
 
 
