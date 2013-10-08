@@ -12,6 +12,11 @@
         </div>
         
         <img  class="img-responsive" src="<%= image_path('background-road.jpg') %>"/>
+        
+        <blockquote>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+        </blockquote>
       </div>
     </div>
     <div class="col-md-5" id="details">
@@ -95,9 +100,9 @@
               <% if current_user.try(:admin?) %>
                 <p style="font-size:.55em;margin-top:-10px;margin-bottom:-10px;"><%= link_to "[EDIT PRODUCT]",  edit_brand_product_path(@brand, @product)%></p>
               <%end%>
-          <h5><%=@product.brand.name.html_safe%></h5>
+          <!-- <h4><%#=@product.brand.name.html_safe%></h4> -->
           <hr class="black-hr">
-          <div class="row">
+          <div class="row" id="product-details">
             <div class="col-md-6">
               <%= @product.details.html_safe%>
             </div>
