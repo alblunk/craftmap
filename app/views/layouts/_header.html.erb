@@ -32,16 +32,16 @@
                
                 <% if current_user.try(:admin?) %>
                   <div style="background-color:rgba(255, 204, 0,.4);; color:white;text-align:center;margin-top:-10px">
-                    <h5 style="padding-top:5px"> Admin Controls</h5>
+                    <h6 style="padding-top:5px;font-size:.75em !important;">Admin Panel</h6>
                     <hr style="margin-top:-10px;margin-bottom: -10px;">
                     <div style="margin-left:10px;">
-                      <a href="/brands">Brands</a>
+                      <a href="/brands">BRANDS</a>
                       <%= link_to "ADD+", new_brand_path %>
                       <hr style="margin-top:-12px;margin-bottom:-12px;">
-                      <a href="/products">Products</a>
+                      <a href="/products">PRODUCTS</a>
                       <%#= link_to "ADD+" %>
                       <hr style="margin-top:-12px;margin-bottom:-12px;">
-                      <a href="/admin/users">Users</a>
+                      <a href="/admin/users">USERS</a>
                     </div>
                   </div>
                 <% end %>

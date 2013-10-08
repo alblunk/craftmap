@@ -805,6 +805,23 @@
     width:100%;
   }
 
+  .brand-home{
+    display:inline;
+    background-color:black;
+    padding-top:2px;
+    padding-bottom:5px;
+    margin-right:5px;
+    width:25px;
+  }
+
+  .brand-home a {
+    text-decoration: none;
+    color:white;
+  }
+
+  .brand-home a span {
+    margin-left:-2px;
+  }
 /*ABOUTUS*/
 
   .frame{
