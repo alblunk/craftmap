@@ -28,20 +28,6 @@
     </div>
 
     <div class="col-md-9">
-      <!-- IMAGES -->
-      <%#= f.full_error :image_file_size, class: "alert alert-error" %>
-      <%#= f.full_error :image_content_type, class: "alert alert-error" %>
-      <h6>Current Photos</h6>
-        <br>
-        <h6>Images (min dimensions _x_):</h6
-     
-
-
-        <%= f.label "Upload some images!" %>
-
-        <%= f.simple_fields_for :images, html: { multipart: true } do |i| %>
-        <%= i.input :image, label: "Upload a photo!" %>
-      <% end %>
 
       <%#= f.full_error :image_file_size, class: "alert alert-error" %>
       <%#= f.full_error :image_content_type, class: "alert alert-error" %>
@@ -51,7 +37,7 @@
         <% if @product.images.empty? %>
           <p>No photos uploaded yet!</p>
         <% else %>
-        <h5>Current Photos</h5>
+        <h6>Current Photos:</h6>
           <% @product.images.each do |image| %>
 
             <!-- TODO: this needs to get fixed -->
