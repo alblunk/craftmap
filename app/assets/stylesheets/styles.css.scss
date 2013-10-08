@@ -106,8 +106,8 @@
 
   #footer a{
   font-family: maven-pro, serif;
-      font-size:13px;
-      letter-spacing: 1px;
+    font-size:13px;
+    letter-spacing: 1px;
     color:rgba(255,255,255, 1);
     text-decoration:none;
     line-height:50px;
@@ -115,8 +115,8 @@
   }
   #header a{
     font-family: maven-pro, serif;
-      font-size:13px;
-      letter-spacing: 1px;
+    font-size:13px;
+    letter-spacing: 1px;
     color:rgba(255,255,255, 1);
     text-decoration:none;
     line-height:50px;
@@ -239,7 +239,7 @@
     background-color: rgba(80,80,80,0.4);
     border-radius:3px;
     margin-top:20px;
-    padding:5px;
+    padding:10px;
   }
 
   .thumbnail {
@@ -502,6 +502,7 @@
     margin-left:-20px;
   }
 
+
   .social li a{
     opacity:1;
   }
@@ -510,7 +511,9 @@
     opacity:.7;
   }
 
-
+  #h-account{
+    padding-left:15px;
+  }
 
   #emailus{
     background-color:#428bca;
@@ -821,6 +824,8 @@
     margin-top:20px;
     background-color:rgba(255,255,255, .9);
     border-radius:3px;
+    margin-right:30px;
+    left:30px;
     /*position:fixed;*/
   }
 
@@ -875,9 +880,8 @@
     padding-top:15px;
   }
   footer {
-    background:#505050;
+    background-color:rgba(80,80,80,.4);
     color:white;
-    opacity:.7;
     font-family: maven-pro, serif;
     letter-spacing: 1px;
     text-transform: uppercase;
