@@ -67,7 +67,7 @@ class ProductsController < ApplicationController
 
     def product_params
       params.require(:product).
-              permit( :name, :description, :materials, :details, :price, :deliver_date, :updates, :status, :owner,
+              permit( :name, :description, :materials, :details, :price, :deliver_date, :updates, :status, :active, :archived, :owner,
                       brand_attributes: [ :name, :profile ],
                       images_attributes: [:id, :image, :imageable_id, :imageable_type, :_destroy] )
     end

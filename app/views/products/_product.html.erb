@@ -1,4 +1,4 @@
-<% if product.has_images? %>
+<% if product.has_images? and product.active=true and product.brand.active=true %>
     <div class="<%= size %>">
         <%= link_to image_tag(product.images.first.image), product_path(product),class: 'thumbnail' %>
     </div>

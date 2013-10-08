@@ -10,13 +10,7 @@
 
             <%= image_tag("product2.jpg", class: "p-thumbnails") %>
         </div>
-        
         <img  class="img-responsive" src="<%= image_path('background-road.jpg') %>"/>
-        
-        <blockquote>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-            <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-        </blockquote>
       </div>
     </div>
     <div class="col-md-5" id="details">
@@ -104,12 +98,19 @@
           <hr class="black-hr">
           <div class="row" id="product-details">
             <div class="col-md-6">
+              <h6>Features:</h6>
               <%= @product.details.html_safe%>
             </div>
             <div class="col-md-6">
+              <h6>Materials:</h6>
               <%= @product.materials.html_safe%>
             </div>
           </div>
+
+          <blockquote class="pull-right" >
+            <p style="font-size:1.2em;font-style:italic;"><%=@product.description.html_safe%></p>
+              <h6 style="font-size:.6em"><small><%#= @product.brand.founders%> Bart of <%=@product.brand.name.html_safe%></small></h6>
+          </blockquote>
         </div>
       </div>
 
