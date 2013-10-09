@@ -388,6 +388,16 @@
   margin-bottom:20px
 }
 
+.flash-alert{
+  width:65%;
+  font-family:m-1c, serif;
+  font-weight: 500;
+  z-index: 100;
+  pointer-events:none;
+  padding-bottom:20px;
+  margin-bottom:20px
+}
+
 #signup-alert{
   width:50%;
   border-radius:0px;
