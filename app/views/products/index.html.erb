@@ -1,10 +1,30 @@
 <div class="col-md-offset-1 col-md-8 white-background" style="padding-bottom:20%;">
-  <ul class="list-inline">
-  	<% @products.each do |product| %>
-  		<% if product.has_images? %>
-	      <li><%= link_to image_tag(product.images.first.image, size: "75x75"), edit_brand_product_path(product.brand, product)%></li>
-	    <% end %>
-    <% end %>
-  </ul>
+  <h1>Products List</h1>
+  <div class="table-responsive">
+    <table class="table table-striped" style="font-size:.75em">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Brand</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Status</th>
+          <th>Active?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @products.each do |product, brand| %>
+          <tr>
+            <td><%= product.id %></td>
+            <td>Brand<%#= @product.brand.name %></td>
+            <td><%= link_to product.name, product %></td>
+            <td>$<%= product.price %></td>
+            <td><%= product.status %></td>
+            <td><%= product.active %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
 
