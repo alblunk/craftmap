@@ -829,6 +829,7 @@
     padding-bottom:5px;
     padding-top:5px;
     text-decoration: none;
+    margin-bottom:2px;
   }
 
   .brandsocial:hover{
@@ -866,23 +867,6 @@
     width:100%;
   }
 
-  .brand-home{
-    display:inline;
-    background-color:black;
-    padding-top:2px;
-    padding-bottom:5px;
-    margin-right:5px;
-    width:25px;
-  }
-
-  .brand-home a {
-    text-decoration: none;
-    color:white;
-  }
-
-  .brand-home a span {
-    margin-left:-2px;
-  }
 
   /*INDEX*/
 
@@ -1150,28 +1134,3 @@
           width:700px;
         }
   }
-
-
-/* PC 
-@media (min-width: 768px) and (max-width: 979px){
-  header{
-    height:auto;
-  }
-  
-  header .logo{
-    text-align:center;
-  }
-  
-  header .navigation{
-    float:none !important;
-    text-align:center;
-  }
-  
-  .hero .intro{
-    text-align:center;
-    max-width:500px;
-    margin:0px auto;
-  }
-}
-  
-*/
