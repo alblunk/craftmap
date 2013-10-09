@@ -16,7 +16,7 @@ Beeline::Application.routes.draw do
     resources :products
   end
 
-  resources :products, only: [ :index, :show ]
+  resources :products, only: [ :index, :show, :destroy ]
 
   namespace :admin do
     resources :users, only: [ :index, :update, :destroy ]
