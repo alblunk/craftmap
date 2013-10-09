@@ -10,12 +10,9 @@
   
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
 
-      <div class="flash-alert centerize" id="signup-alert">
-        <%= f.error_notification %>
-        <hr class="black-hr" style="margin-top:-35px; ">
-      </div>
-
-      <br>
+      
+        <%= f.error_notification id:'signup-alert', class:'centerize'  %>
+      
       <div class="forms" >
         <%= f.input :email, placeholder: 'EMAIL',label:false, error_html: { id: 'forms-error'} %>
         <br>
