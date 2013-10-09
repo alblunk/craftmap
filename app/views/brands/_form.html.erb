@@ -33,14 +33,14 @@
       <div class="row">
         <div class="col-md-6">
           <br>
-          <h6>Home Image:</h6><p style="margin-top:-10px;">(Logo on White Background or Map of Business >600x600)<p>
+          <h6>Home Image:</h6><p style="margin-top:-10px;font-size:.85em">(Logo on White Background or Map of Business >600x600)<p>
           <%= f.fields_for :image do |image_field| %>
             <%= image_field.file_field :image %>
           <% end %>
         </div>
         <div class="col-md-6">
           <br>
-          <h6>Profile Image:</h6><p style="margin-top:-10px;">(Shop, Product Detail, or Founders)<p>
+          <h6>Profile Image:</h6><p style="margin-top:-10px;font-size:.85em">(Shop, Product Detail, or Founders)<p>
           <%= f.fields_for :image do |image_field| %>
             <%= image_field.file_field :image %>
           <% end %>

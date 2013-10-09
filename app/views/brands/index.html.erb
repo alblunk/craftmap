@@ -1,29 +1,32 @@
-<div class="col-md-offset-1 col-md-8 white-background" style="padding-bottom:20%;">
+<div class="col-md-offset-1 col-md-7 white-background" style="padding-bottom:20%;">
 <h1>Brand List</h1>
-  <ul class="list-inline" >
+<hr style="border-color: rgba(0,0,0,.3);margin-top:2px">
+  <ul class="list-unstyled">
     <% @brands.each do |brand| %>
     <li>
       <div>
         <h6 style="display: inline"><%= link_to brand.name, brand %></h6>
-        <span style="font-size:.55em;"><%= link_to "[EDIT]", edit_brand_path(brand)%></span>
+        <span style="font-size:.75em;"><%= link_to "[EDIT]", edit_brand_path(brand)%></span>
       </div>
       <ul class="list-inline">
       	<% brand.products.each do |product| %>
       		<!-- <li><%#= link_to product.name, edit_brand_product_path(brand, product)%></li> -->
           <% if product.images.any? %>
-            <li><%= link_to image_tag(product.images.first.image, size: "50x50"), edit_brand_product_path(brand, product)%></li>
+            <li><%= link_to image_tag(product.images.first.image, size: "45x45"), edit_brand_product_path(brand, product)%></li>
           <% else %>
             <li style="font-size:.75em;"><%= link_to product.name, edit_brand_product_path(brand, product) %></li>
+            <li>|</li>
           <% end %>
-      		<!-- <li>/</li> -->
       	<% end %>
-      	<li><div style="border:1px solid rgba(0,0,0,.1);font-size:1.75em;font-weight:400;height:35px;width:35px;opacity:.8;text-align:center;"><%= link_to "+", new_brand_product_path(brand)%></div></li>
+      	<li><div id="add-product"><%= link_to "+", new_brand_product_path(brand)%></div></li>
 
       </ul>
       <br>
     </li>
     <li>
     </li>
+    <hr style="margin:-10px;border-color:#505050;opacity:.2;">
+    <br>
     <% end %>
   </ul>
   <%= paginate @brands %>
