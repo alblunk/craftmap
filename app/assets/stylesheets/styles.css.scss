@@ -388,7 +388,7 @@
   margin-bottom:20px
 }
 
-.flash-alert{
+.flash-alert-signup{
   width:65%;
   font-family:m-1c, serif;
   font-weight: 500;
@@ -763,7 +763,6 @@
   #FAQLink:hover {
     opacity:.7;
     text-decoration: none;
-    cursor:help;
   }
 
   #FAQbtn {
@@ -861,7 +860,18 @@
 /*BRAND*/
 
 .brand-title{
-  color:#505050;
+  color:black;
+}
+
+.brand-title:hover{
+  color:black;
+  border-bottom:1px solid #505050;
+  border-spacing:0px;
+}
+
+#location{
+  margin-top:-5px;
+  margin-bottom:20px
 }
 
   #b-midpane{

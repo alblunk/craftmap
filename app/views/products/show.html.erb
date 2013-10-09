@@ -111,9 +111,9 @@
   <!-- PROFILE -->
     <div class="row">
       <div class="col-md-12">
-        <h5 style="margin-bottom:-15px">MEET THE MAKER:</h5>
+        <h6 style="margin-bottom:-15px">MEET THE MAKER:</h6>
         <h3><%= link_to @product.brand.name, brand_path(@brand), class:'brand-title' %></h3>
-        <h5 id="location" style="font-size:.85em;margin-top:-10px;margin-bottom:20px" ><%=@product.brand.location.html_safe%></h5>
+        <h5 class="location" style="font-size:.85em" ><%=@product.brand.location.html_safe%></h5>
         <% if current_user.try(:admin?) %>
             <p style="font-size:.55em;margin-bottom:10px;margin-top:-17px"><%= link_to "[EDIT BRAND]", edit_brand_path([@brand])%></p>
         <%end%>
