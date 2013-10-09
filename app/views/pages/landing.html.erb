@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html style="background: url(http://31.media.tumblr.com/53609fcca35a388abb47f5eead2e7633/tumblr_mqohdxnbNk1qzdab7o3_1280.jpg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;">
+
+      
   <head>
     <title>Farallon Co.</title>
       <%= stylesheet_link_tag    "application", :media => "all" %>
         <%= javascript_include_tag "application" %>
         <%= csrf_meta_tags %>
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
-      
-        <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic' rel='stylesheet' type='text/css'>
 
       <!-- Favicon -->
       <link rel="shortcut icon" href="https://s3.amazonaws.com/beelineco/FarallonCo-ShortForm.jpg">
@@ -19,6 +19,7 @@
       <script src="http://use.edgefonts.net/maven-pro:n4,n5,n7,n9.js"></script>
       <script src="http://use.edgefonts.net/share-regular:n4,i4,n7,i7.js"></script>
       <script src="http://use.edgefonts.net/m-1c:n2,n3,n4,n5,n7,n8,n9.js"></script>
+      <script src="//use.edgefonts.net/damion.js"></script>
   </head>
   
   <body>
@@ -29,13 +30,13 @@
         <button type="button" class="contact">
           <a href="mailto:support@farallon.co"><span class="glyphicon glyphicon-send"></span>&nbsp;Contact</a>
         </button>
-        <h5 style="position:absolute;top:0;right:20px;color:white;font-size:.65em;padding-bottom:10px;padding-left:2px;opacity:.7"><a style="color:white;"href="http://jaredchambers.com"target="blank">Background by Jared Chambers</a></h5>
+        <h5 style="position:absolute;top:0;right:20px;font-size:.65em;padding-bottom:10px;padding-left:2px;opacity:.6"><a style="color:#505050;"href="http://jayzombie.com"target="blank">Background by jayzombie</a></h5>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12 col-sm-10">
-        <%= image_tag("FarallonCo-LongForm-T.png", class: "img-responsive", id: "biglogo") %>
-        <h3 class="centerize" id="launch-header">LAUNCHING SOON</h3>
+        <%= image_tag("FarallonCo-Grey.png", class: "img-responsive", id: "biglogo") %>
+        <h5 class="centerize" id="launch-header">LAUNCHING SOON</h5>
       </div>
     </div>
     <div class="row">
@@ -68,6 +69,13 @@
         <hr style="width:35%;margin-top:5px;margin-bottom:5px;">
         <!-- <img class="img-responsive centerize" style="" src="img/landing-3.png" width="50%"/> -->
         <span id="bullhorn" class="glyphicon glyphicon-bullhorn centerize" style="font-size:12em;color:white;"></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="centerize" style="padding-top:50px;padding-bottom:50px;">
+          <span class="creds"> Proudly <%= image_tag "CA.png", style: "width:35px;"%>&nbsp;made</span> 
+        </div>
       </div>
     </div>
 
