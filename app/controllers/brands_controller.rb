@@ -2,8 +2,7 @@ class BrandsController < ApplicationController
   before_action :require_admin, except: [ :show ]
 
   def index
-    @brands = Brand.all
-    @brands = Brand.order("created_at asc")
+    @brands = Brand.order("created_at desc").page(params[:page]).per(25)
   end
 
   def show

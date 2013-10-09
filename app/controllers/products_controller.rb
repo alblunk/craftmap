@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   before_action :require_admin, except: [ :show ]
 
   def index
-    @products = Product.order("created_at desc").page(params[:page]).per(18)
+    @products = Product.order("created_at desc").page(params[:page]).per(25)
   end
 
   def show

@@ -2,7 +2,7 @@ class Admin::UsersController < Admin::BaseController
 
   def index
     @admins = User.admins.order(:id)
-    @users = User.non_admins.order(:id).page(params[:page])
+    @users = User.non_admins.order("created_at desc").page(params[:page]).per(25)
   end
 
   def update
