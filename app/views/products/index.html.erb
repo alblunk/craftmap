@@ -30,7 +30,7 @@
             <td><%= link_to product.name, product %></td>
 
             <% if product.images.any? %>
-              <td><%= link_to image_tag(product.images.first.image, size: "25x25"), product %></td>
+              <td><%= link_to image_tag(product.images.first.image, size: "15x15"), product %></td>
               <%else%>
               <td>-</td>
             <% end %>
