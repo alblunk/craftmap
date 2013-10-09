@@ -380,7 +380,10 @@
   width:70%;
   font-family:m-1c, serif;
   font-weight: 500;
-  
+  position:absolute !important;
+  z-index: 100;
+  opacity:.8;
+  pointer-events:none;
 }
 
 
