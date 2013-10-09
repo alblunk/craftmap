@@ -1,170 +1,153 @@
 <!-- PRODUCT PICTURE PANE -->
-    <div class="col-md-5" >
-      <div class="mid-pic-frame" id="product-images">
-        <div id="p-thumbnails-box">
-          <%= image_tag("product_thumb1.jpg", class: "p-thumbnails") %>
-            
-            <%= image_tag("product2.jpg", class: "p-thumbnails", id:"p-selected") %>
-            
-            <%= image_tag("product_thumb1.jpg", class: "p-thumbnails") %>
+<div class="col-md-5" >
+  <div class="mid-pic-frame" id="product-images">
+    <div id="p-thumbnails-box">
+      <%= link_to image_tag("product_thumb1.jpg", class: "p-thumbnails") %>
+        
+        <%= link_to image_tag("product2.jpg", class: "p-thumbnails", id:"p-selected") %>
+        
+        <%= link_to image_tag("product_thumb1.jpg", class: "p-thumbnails") %>
 
-            <%= image_tag("product2.jpg", class: "p-thumbnails") %>
-        </div>
-        <img  class="img-responsive" src="<%= image_path('background-road.jpg') %>"/>
-      </div>
+        <%= link_to image_tag("product2.jpg", class: "p-thumbnails") %>
     </div>
-    <div class="col-md-5" id="details">
-
-<!-- DETAILS START -->        
-      <div class="row">
-        <div class="col-md-12 well">
+    <img  class="img-responsive" src="<%= image_path('background-road.jpg') %>"/>
+  </div>
+</div>
+    
+<div class="col-md-5" >  
+  <div class="row" id="details">
+    <div class="col-md-12 well">
 <!-- SOCIAL HEADER-->
-          <div class="row">
-            <div class="col-md-12">   
-                  <h5 id="social-title" style="margin-top:-5px;" class="centerize" >SPREAD THE GOOD WORD</h5>
-              </div>
-            </div>
+      <div class="row">
+        <div class="col-md-12">   
+          <h5 id="social-title" style="margin-top:-5px;" class="centerize" >SPREAD THE GOOD WORD</h5>
+        </div>
+      </div>
 
-          <div class="row">
-              <div class="col-md-12 centerize">
-                <!-- FACEBOOK -->
-              <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=<%=request.original_url%>&amp;p[title]=<%= @product.name %>+by+<%#= @product.brand.name.html_safe %>+on+Farallon+Co.&amp;p[images][0]=https://s3.amazonaws.com/beelineco/FarallonCo-ShortForm.jpg&amp;p[summary]=Farallon+Co+-+Top+Tier+Brands,+Fan+Backed+Product,+Join+the+Company." target="blank"><%= image_tag("facebook.png", class: "social-show", width: "20") %>
-              </a>
-                
-              <!--   <a href="http://www.facebook.com/sharer/sharer.php?u=<%#=request.original_url%>&[title]=<%#= @brand.name %> on Farallon Co." target="blank"><%#= image_tag("facebook.png", class: "social-show", width: "20") %></a> -->
-
-            <!-- TWITTER -->
-              <a href="http://twitter.com/home?status=Check+out+<%= @product.name %>+by+<%= @product.brand.name %>+on+@farallonco+(<%=request.original_url.html_safe%>)" target="blank" ><%= image_tag("twitter.png", class: "social-show", width: "20") %>
-              </a>
-
-            <!-- GOOGLE PLUS -->
-              <a href="https://plus.google.com/share?url=<%=request.original_url.html_safe%>" target="blank"><%= image_tag("googleplus.png", class: "social-show", width: "20") %></a>
+      <div class="row">
+        <div class="col-md-12 centerize">
+          <!-- FACEBOOK -->
+          <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=<%=request.original_url%>&amp;p[title]=<%= @product.name %>+by+<%#= @product.brand.name.html_safe %>+on+Farallon+Co.&amp;p[images][0]=https://s3.amazonaws.com/beelineco/FarallonCo-ShortForm.jpg&amp;p[summary]=Farallon+Co+-+Top+Tier+Brands,+Fan+Backed+Product,+Join+the+Company." target="blank"><%= image_tag("facebook.png", class: "social-show", width: "20") %></a>
+          <!-- TWITTER -->
+          <a href="http://twitter.com/home?status=Check+out+<%= @product.name %>+by+<%= @product.brand.name %>+on+@farallonco+(<%=request.original_url.html_safe%>)" target="blank" ><%= image_tag("twitter.png", class: "social-show", width: "20") %>
+          </a>
+          <!-- GOOGLE PLUS -->
+          <a href="https://plus.google.com/share?url=<%=request.original_url.html_safe%>" target="blank"><%= image_tag("googleplus.png", class: "social-show", width: "20") %></a>
+          <!-- PINTEREST -->
+          <a href="http://pinterest.com/pin/create/bookmarklet/?media=<%#@product.pic1%>&url=<%=request.original_url%>&is_video=false&description=<%= @product.name %> by <%#=@brand.name%> on Farallon Co." target="blank" ><%= image_tag("pinterest.png", class: "social-show", width: "20") %></a>
            
-            <!-- PINTEREST -->
-              <a href="http://pinterest.com/pin/create/bookmarklet/?media=<%#@product.pic1%>&url=<%=request.original_url%>&is_video=false&description=<%= @product.name %> by <%#=@brand.name%> on Farallon Co." target="blank" ><%= image_tag("pinterest.png", class: "social-show", width: "20") %></a>
-           
-            <!-- STUMBLEUPON -->
-              <a href="http://www.stumbleupon.com/submit?url=<%=request.original_url%>&title=<%= @product.brand.name %> by <%#=@brand.name%> on Farallon Co.+<%=request.original_url%>" target="blank"><%= image_tag("stumbleupon.png", class: "social-show", width: "20") %>
-                </a>
-            </div>
-          </div>
-          <hr class="black-hr" style="padding-bottom:20px;">
+          <!-- STUMBLEUPON -->
+          <a href="http://www.stumbleupon.com/submit?url=<%=request.original_url%>&title=<%= @product.brand.name %> by <%#=@brand.name%> on Farallon Co.+<%=request.original_url%>" target="blank"><%= image_tag("stumbleupon.png", class: "social-show", width: "20") %></a>
+        </div>
+      </div>
+      <hr class="black-hr" style="padding-bottom:20px;">
 <!-- PRICING & CAMPAIGN DETAILS -->
-          <div class="row">
-              <div class="col-md-6">
-                
-                <a href="#" data-celery="backpack"><div id="backbtn" class="flatbtn centerize">BACK IT</div></a>
+      <div class="row">
+        <div class="col-md-6">
 
+          <a href="#" data-celery="backpack"><div id="backbtn" class="flatbtn centerize">BACK IT</div></a>
+            <hr class="black-hr" style="margin-bottom:5px">
 
-                <hr class="black-hr" style="margin-bottom:5px">
-
-                <a href="#FAQModal" data-toggle="modal"><h3 id="FAQLink" class="centerize">HOW DOES THIS WORK?</h3></a>
-
-                <hr class="black-hr" style="margin-top:5px">
-
-            </div>
-            <div class="col-md-6 centerize">
-              <h5>$<span id="price"><%= @product.price %></span></h5>
-              <div id="delivery">
-                <h5 style="font-size:.9em">Estimated Delivery:</h5> 
-                  <hr class="black-hr" style="margin-top:-8px; margin-bottom:5px"> 
-                <p style="font-size:.9em"><%= @product.deliver_date.html_safe %></p>
-              </div>
-            </div>
+          <a href="#FAQModal" data-toggle="modal"><h3 id="FAQLink" class="centerize">HOW DOES THIS WORK?</h3></a>
+            <hr class="black-hr" style="margin-top:5px">
+        </div>
+        <div class="col-md-6 centerize" style="border-left:1px solid rgba(0,0,0,.1);">
+          <h5>$<span id="price"><%= @product.price %></span></h5>
+          <div id="delivery">
+            <h5 style="font-size:.9em">Estimated Delivery:</h5> 
+              <hr class="black-hr" style="margin-top:-8px; margin-bottom:5px"> 
+            <p style="font-size:.9em"><%= @product.deliver_date.html_safe %></p>
           </div>
+        </div>
+      </div>
 
 <!-- CELERY DETAILS -->
-          <div class="row">
-            <div class="col-md-12">
-              <div data-celery="backpack" data-celery-type="bar" style="background-color:transparent; margin-top:0;"></div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12" id="updates">
-              <%=@product.updates.html_safe%>
-            </div>
-          </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div data-celery="backpack" data-celery-type="bar" style="background-color:transparent; margin-top:0;"></div>
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-12" id="updates">
+          <%=@product.updates.html_safe%>
+        </div>
+      </div>
+    </div>
+  
+<!-- END OF PRODUCT DETAILS WELL -->
 
 <!-- DESCRIPTION -->
       <div class="row">
+      <div class="col-md-12">
+        <h3 style="margin-top:-10px;"><%=@product.name.html_safe%></h3>
+          <% if current_user.try(:admin?) %>
+            <p style="font-size:.55em;margin-top:-10px;margin-bottom:-10px;"><%= link_to "[EDIT PRODUCT]",  edit_brand_product_path(@brand, @product)%></p>
+          <%end%>
+          <br>
+      </div>
+      <div class="row">
         <div class="col-md-12">
-          <h3 style="margin-top:-10px;"><%=@product.name.html_safe%></h3>
-              <% if current_user.try(:admin?) %>
-                <p style="font-size:.55em;margin-top:-10px;margin-bottom:-10px;"><%= link_to "[EDIT PRODUCT]",  edit_brand_product_path(@brand, @product)%></p>
-              <%end%>
-              <br>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <blockquote class="pull-right" >
-              <p style="font-size:1.2em;font-style:italic;"><%=@product.description.html_safe%></p>
-              <h6 style="font-size:.6em"><small><%#= @product.brand.founders%> Bart of <%=@product.brand.name.html_safe%></small></h6>
-            </blockquote>
-          </div>
-        </div>
-        <div class="row" id="product-details">
-          <div class="col-md-6">
-            <h6 class="centerize">Features</h6>
-            <hr class="black-hr">
-            <%= @product.details.html_safe%>
-          </div>
-          <div class="col-md-6">
-            <h6 class="centerize">Materials</h6>
-            <hr class="black-hr">
-            <%= @product.materials.html_safe%>
-          </div>
+          <blockquote class="pull-right" style="margin-top:-20px;margin-bottom:0px">
+            <p style="font-size:1.2em;font-style:italic;"><%=@product.description.html_safe%></p>
+            <h6 style="font-size:.6em"><small><%#= @product.brand.founders%> Bart of <%=@product.brand.name.html_safe%></small></h6>
+          </blockquote>
         </div>
       </div>
-
-        <hr class="black-hr">
-
-<!-- PROFILE -->
-        <div class="row">
-          <div class="col-md-12">
-          <h3>MEET THE MAKER:
-          <%= link_to @product.brand.name, brand_path(@brand), class:'brand-title' %></h3>
-
-          <% if current_user.try(:admin?) %>
-              <p style="font-size:.55em;margin-top:-10px;margin-bottom:-10px;"><%= link_to "[EDIT BRAND]", edit_brand_path([@brand])%></p>
-          <%end%>
-            <h5 id="location" class="subh-font" ><%=@product.brand.location.html_safe%></h5> 
-          </div>
+      <div class="row" id="product-details">
+        <div class="col-md-6">
+          <h6 class="centerize">Features</h6>
+          <hr class="black-hr">
+          <%= @product.details.html_safe%>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-
-          <%= image_tag("profile-pic.jpg", id: "brand-image") %>
-            <%#=@product.brand.pic%>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <p><%=@product.brand.profile.html_safe%></p>
-          </div>
-        </div>
-        <div class="row" style="margin-top:20px;color:rgba(255,255,255,.9);background-color: rgba(80,80,80,0.5);">
-<!-- MORE PRODUCTS GRID -->
-
-          <h3 class="centerize" style="padding-top:10px;">Keep  exploring</h3>
-          <hr class="white-hr">
-
-          <%= render :partial=>'products/product', :collection => @products, :locals => {:size => 'col-md-4 col-xs-6'}  %>
-
-
-            <!-- id=mini-grid -->
-            
-            </a>
-          </div>
+        <div class="col-md-6">
+          <h6 class="centerize">Materials</h6>
+          <hr class="black-hr">
+          <%= @product.materials.html_safe%>
         </div>
       </div>
     </div>
+    <hr class="black-hr">
+
+  <!-- PROFILE -->
+    <div class="row">
+      <div class="col-md-12">
+        <h5 style="margin-bottom:-15px">MEET THE MAKER:</h5>
+        <h3><%= link_to @product.brand.name, brand_path(@brand), class:'brand-title' %></h3>
+        <h5 id="location" style="font-size:.85em;margin-top:-10px;margin-bottom:20px" ><%=@product.brand.location.html_safe%></h5>
+        <% if current_user.try(:admin?) %>
+            <p style="font-size:.55em;margin-bottom:10px;margin-top:-17px"><%= link_to "[EDIT BRAND]", edit_brand_path([@brand])%></p>
+        <%end%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <%= image_tag("profile-pic.jpg", id: "brand-image") %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p><%=@product.brand.profile.html_safe%></p>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="margin-top:20px;color:rgba(255,255,255,.9);background-color: rgba(0,0,0,0.3); border-radius:3px;">
+      <div class="col-md-12">
+        <h3 class="centerize" style="padding-top:10px;">Keep  exploring</h3>
+          <hr class="white-hr" style="opacity:.3;margin-top:-1px">
+            <%= render :partial=>'products/product', :collection => @products, :locals => {:size => 'col-md-4 col-xs-6'}  %>
+      </div>
+    </div>
+
+</div>
+
+
+
+
+
   <!-- END OF DETAILS -->
 
 <!-- CELERY SCRIPTS -->
-  <script type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script>
-
+<script type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script>
 
 <!-- FAQ Modal -->
   <div  class="modal fade" id="FAQModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

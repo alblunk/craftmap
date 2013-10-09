@@ -378,12 +378,11 @@
 }
 
 .flash-alert{
-  width:70%;
+  width:65%;
   font-family:m-1c, serif;
   font-weight: 500;
   position:absolute !important;
   z-index: 100;
-  opacity:.8;
   pointer-events:none;
   padding-bottom:20px;
   margin-bottom:20px
@@ -803,25 +802,26 @@
     background-color:  rgba(255,255,255,0.9);
     border-radius:5px;
     margin-top:20px;
+    padding:15px;
   }
 
-  #details .well {
-    background-color: white;
+    #details .well {
+      background-color: white;
 
-  }
+    }
 
-  #details #bar {
-    margin-top:10px;
-  }
+    #details #bar {
+      margin-top:10px;
+    }
 
-  #details hr{
-    color:black;
-    opacity:.8;
-  }
+    #details hr{
+      color:black;
+      opacity:.8;
+    }
 
-  #details ul{
-    list-style-type:square;
-  }
+    #details ul{
+      list-style-type:square;
+    }
 
   .brandsocial {
     width:25px;
