@@ -49,9 +49,11 @@
     <div class="col-md-12">
 
       <!-- HOME -->
-      <div class="brand-home">
-        <a  href="http://www.<%= @brand.home_page.html_safe%>" target="blank"><span class="glyphicon glyphicon-home brandsocial" style="font-size:.75em; "></span></a>
-      </div>
+      <% if @brand.home_page != "" %>
+        <div class="brand-home">
+          <a  href="http://www.<%= @brand.home_page.html_safe%>" target="blank"><span class="glyphicon glyphicon-home brandsocial" style="font-size:.75em; "></span></a>
+        </div>
+      <% end %>
       <!-- FACEBOOK -->
       <% if @brand.facebook != "" %>
         <a href="http://facebook.com/<%= @brand.facebook%>" target="blank"><%= image_tag("facebook_square_black.png", class: "brandsocial") %></a>
