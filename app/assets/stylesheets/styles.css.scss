@@ -14,7 +14,6 @@
 
   body{
     background-color:transparent;
-    font-family:Courier;
 
 
     /*MOUNTAIN*/
@@ -386,6 +385,8 @@
   z-index: 100;
   opacity:.8;
   pointer-events:none;
+  padding-bottom:20px;
+  margin-bottom:20px
 }
 
 #signup-alert{

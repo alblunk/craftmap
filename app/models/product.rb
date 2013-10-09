@@ -1,6 +1,5 @@
 class Product < ActiveRecord::Base
   validates :name, presence: true
-  validates :description, presence: true
   validates :brand, presence: true
 
   belongs_to :brand

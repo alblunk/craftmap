@@ -22,7 +22,9 @@
         </tr>
       </thead>
       <tbody>
+
         <% @products.each do |product| %>
+
           <tr>
             <td><%= product.id %></td>
             <td><%= product.owner_id %></td>
@@ -30,7 +32,7 @@
             <td><%= link_to product.name, product %></td>
 
             <% if product.images.any? %>
-              <td><%= link_to image_tag(product.images.first.image, size: "15x15"), product %></td>
+              <td><%= link_to image_tag(product.images.first.image, size: "30x30"), product %></td>
               <%else%>
               <td>-</td>
             <% end %>
@@ -38,7 +40,7 @@
             <td>$<%= product.price %></td>
             <td><%= product.deliver_date %></td>
             <td><%= product.status %></td>
-            <td><%= time_ago_in_words(product.created_at) %></td>
+            <td><%= product.created_at %></td>
             <td><%= time_ago_in_words(product.updated_at) %></td>
             <td><%= product.active %></td>
 
