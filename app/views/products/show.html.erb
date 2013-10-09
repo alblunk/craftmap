@@ -141,31 +141,7 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-              <!-- HOME -->
-          <% if @product.brand.home_page != "" %>
-            <div class="brand-home">
-              <a href="http://www.<%= @product.brand.home_page%>" target="blank"><span class="glyphicon glyphicon-home brandsocial" style="font-size:.75em; "></span></a>
-            </div>
-          <% end %>
-          <!-- FACEBOOK -->
-            <% if @product.brand.facebook != "" %>
-              <a href="http://facebook.com/<%= @product.brand.facebook%>" target="blank"><%= image_tag("facebook_square_black.png", class: "brandsocial") %></a>
-            <% end %>
-          <!-- TWITTER -->
-          <% if @product.brand.twitter != "" %>
-            <a href="http://twitter.com/<%= @product.brand.twitter%>" target="blank"><%= image_tag("twitter_square_black.png", class: "brandsocial") %></a>
-          <% end %>
-          <!-- INSTAGRAM -->
-          <% if @product.brand.instagram != "" %>
-            <a href="http://instagram.com/<%= @product.brand.instagram%>" target="blank"><%= image_tag("instagram_square_black.png", class: "brandsocial") %></a>
-          <% end %>
-          <!-- TUMBLR -->
-          <% if @product.brand.tumblr != "" %>
-            <a href="http://<%= @product.brand.tumblr%>.tumblr.com/" target="blank"><%= image_tag("tumblr_square_black.png", class: "brandsocial") %></a>
-          <% end %>
-
-
-                <p><%=@product.brand.profile.html_safe%></p>
+            <p><%=@product.brand.profile.html_safe%></p>
           </div>
         </div>
         <div class="row" style="margin-top:20px;color:rgba(255,255,255,.9);background-color: rgba(80,80,80,0.5);">
