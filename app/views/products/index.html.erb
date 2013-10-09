@@ -8,13 +8,16 @@
           <th>ID</th>
           <th>Owner</th>
           <th>Brand</th>
+          
           <th>Name</th>
-          <th>Price</th>
+          <th>Pic</th>
+          <th>$</th>
           <th>Delivery Date</th>
           <th>Status</th>
           <th>Created</th>
           <th>Updated</th>
           <th>Active?</th>
+          <!-- <th>Update?</th> -->
           <th>Delete?</th>
         </tr>
       </thead>
@@ -25,12 +28,29 @@
             <td><%= product.owner_id %></td>
             <td><%= product.brand_id %></td>
             <td><%= link_to product.name, product %></td>
+
+            <% if product.images.any? %>
+              <td><%= link_to image_tag(product.images.first.image, size: "25x25"), product %></td>
+              <%else%>
+              <td>-</td>
+            <% end %>
+
             <td>$<%= product.price %></td>
             <td><%= product.deliver_date %></td>
             <td><%= product.status %></td>
             <td><%= time_ago_in_words(product.created_at) %></td>
             <td><%= time_ago_in_words(product.updated_at) %></td>
             <td><%= product.active %></td>
+
+            <!-- <%#= form_for([:active, product]) do |f| %>
+              <td>
+                <%#= f.check_box :active %>
+              </td>
+              <td style="font-size:.5em">
+                <%#= f.submit%>
+              </td>
+            <%# end %> -->
+
             <td>
               <span><%= link_to "X", product, method: :delete, class:"x-btn", data: { confirm: 'Are you sure?' } %></span>
             </td>
