@@ -10,7 +10,9 @@
 
         <%= link_to image_tag("product2.jpg", class: "p-thumbnails") %>
     </div>
-    <img  class="img-responsive" src="<%= image_path('background-road.jpg') %>"/>
+    <img  class="img-responsive" src="<%= image_path(@product.images.first.image, size: "1500x1000") %>"/>
+
+    <!-- <img  class="img-responsive" src="<%#= image_path('background-road.jpg') %>"/> -->
   </div>
 </div>
     

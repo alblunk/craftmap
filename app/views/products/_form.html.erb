@@ -19,6 +19,12 @@
           <%= f.text_field :name, placeholder: "Enter Product Name",label:false %>
           <%= f.text_field :price, placeholder: "Price ($)",label:false %>
           
+          <%= fields_for @product.remote_data do |slug| %>
+            <%= slug.text_field :slug, placeholder: "Celery Slug",label:false %>
+          <% end %>
+
+          
+
           <br>
           <%= f.text_field :deliver_date, placeholder: "Estimated Delivery Date",label:false %>
           <br>
@@ -53,7 +59,7 @@
                 <% @product.images.each do |image| %>
 
                   <!-- TODO: this needs to get fixed -->
-                  <%#= image_tag(image.image(:small), size: "75x75") if image.persisted? %>
+                  <%= image_tag(image, size: "75x75") if image.persisted? %>
 
               <% end %>
             <% end %>

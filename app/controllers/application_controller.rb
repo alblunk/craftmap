@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
- before_filter :stealth_mode
+  before_filter :stealth_mode
+
  # Turned off to speed development up while no traffic exists
 
   def admin?
