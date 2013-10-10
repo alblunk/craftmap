@@ -79,7 +79,7 @@
 <!-- END OF PRODUCT DETAILS WELL -->
 
 <!-- DESCRIPTION -->
-      <div class="row">
+    <div class="row">
       <div class="col-md-12">
         <h3 style="margin-top:-10px;"><%=@product.name.html_safe%></h3>
           <% if current_user.try(:admin?) %>
@@ -107,7 +107,13 @@
           <%= @product.materials.html_safe%>
         </div>
       </div>
+      <%# if @product.usa = true %>
+      <div class="centerize" style="pointer-events:none;">
+        <span style="font-family:maven-pro, serif;font-weight: 400;text-transform: uppercase;font-size:.85em">Made in USA&nbsp;</span><%= image_tag("usa-flag.jpg", id: "usa") %>
+      </div>
+      <%# end %>
     </div>
+
     <hr class="black-hr">
 
   <!-- PROFILE -->
