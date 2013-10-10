@@ -13,4 +13,8 @@ class Product < ActiveRecord::Base
   def has_images?
     images.count > 0
   end
+
+  def to_param
+    "#{id}-#{name.try(:parameterize) }"
+  end
 end

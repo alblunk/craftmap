@@ -87,7 +87,7 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <blockquote class="pull-right" style="margin-top:-20px;margin-bottom:0px">
+          <blockquote class="pull-right" style="margin-top:-10px;margin-bottom:0px">
             <p style="font-size:1.2em;font-style:italic;"><%=@product.description.html_safe%></p>
             <h6 style="font-size:.6em"><small><%#= @product.brand.founders%> Bart of <%=@product.brand.name.html_safe%></small></h6>
           </blockquote>
@@ -114,7 +114,7 @@
         <h6 style="margin-bottom:-15px">MEET THE MAKER:</h6>
         <h3><%= link_to @product.brand.name, brand_path(@brand), class:'brand-title' %></h3>
         <% if current_user.try(:admin?) %>
-            <p style="font-size:.55em;margin-bottom:10px;margin-top:-10px"><%= link_to "[EDIT BRAND]", edit_brand_path([@brand])%></p>
+            <p style="font-size:.55em;margin-bottom:10px;margin-top:-5px"><%= link_to "[EDIT BRAND]", edit_brand_path([@brand])%></p>
         <%end%>
         <h5 class="location" style="font-size:.85em" ><%=@product.brand.location.html_safe%></h5>
         

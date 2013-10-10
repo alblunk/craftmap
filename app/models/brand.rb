@@ -9,5 +9,7 @@ class Brand < ActiveRecord::Base
   has_many :images, as: :imageable
   accepts_nested_attributes_for :images, allow_destroy: true, :reject_if => lambda {|a| a['image'].blank?}
 
-
+  def to_param
+  	"#{id}-#{name.try(:parameterize)}"
+  end
 end
