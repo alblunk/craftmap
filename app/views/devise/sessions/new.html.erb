@@ -7,9 +7,6 @@
   <h2 class="centerize">Sign in</h2>
 
   <hr class="black-hr" style="padding-bottom:10%">
-    <div class="flash-alert-signup centerize" style="margin-top:-8%;">
-      <%= render partial: "shared/flash_messages"%>
-    </div>
 
   <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-horizontal'}) do |f| %>
 
@@ -20,10 +17,11 @@
       <br>
       <%= f.input :password, placeholder: 'PASSWORD',label:false, error_html: { id: 'forms-error'}%>
       <br>
-      <%= f.input :remember_me, label: 'Remember me?',:style => "margin:0", as: :boolean, error_html: { id: 'forms-error'}%>
+      <span class="label label-default" style="opacity:.7;">Remember me?</span>
+      <%= f.input :remember_me, as: :boolean, label: false, error_html: { id: 'forms-error'}%>
     </div>
 
-    <hr>
+    <hr class="black-hr">
 
     <div class="form-actions">
       <h5><%= f.submit "SIGN IN", class: "btn btn-primary btn-lg centerize" %></h5>

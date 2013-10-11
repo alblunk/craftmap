@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-md-4">
       <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, class: 'form-horizontal' }) do |f| %>
-        <%= f.error_notification %>
+        <%= f.error_notification id:'edit-alert', class:'centerize'  %>
 
         <p><strong>To change your email or password:</strong><br>Please input your current password below.</p>
         
