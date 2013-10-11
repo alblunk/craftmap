@@ -30,99 +30,25 @@
       <%= render 'layouts/header' %>
       
       <%= yield %>
+
     </div>
     
-    <div id="footer-container"></div>
-
+      <div id="footer-container"></div>
     <%= render 'layouts/footer' %>
-      
 
-<!-- JoinUs Modal -->
- <!--  <div class="modal fade" id="joinus-modal" tabindex="-1" role="dialog" aria-labelledby="Join Us." aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-body">
-          <div class="input-group">
-            <span class="input-group-addon">Email</span>
-            <input type="text" class="form-control">
-        </div>
-        <br>
-           <div class="input-group">
-            <span class="input-group-addon">Password</span>
-            <input type="text" class="form-control">
-        </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Submit</button>
-        </div>
-      </div>
-    </div>
-  </div> -->
 
-<!-- SignIn Modal -->
-  <!--   <div class="modal fade" id="signin-modal" tabindex="-1" role="dialog" aria-labelledby="Sign In." aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body" style="margin-bottom:-20px">
-            <div class="input-group">
-              <span class="input-group-addon">Email</span>
-              <input type="text" class="form-control">
-          </div>
-          <br>
-             <div class="input-group">
-              <span class="input-group-addon">Password</span>
-              <input type="text" class="form-control">
-          </div>
-          <br>
-          <div class="checkbox">
-            <label>
-                <input type="checkbox"> Remember me?
-            </label>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Sign In</button>
-          </div>
-        
-        </div>
-      </div>
-    </div> -->
+    <script id="IntercomSettingsScriptTag">
+  window.intercomSettings = {
+    // TODO: The current logged in user's email address.
+    email: <%#= current_user.email %>,
+    // TODO: The current logged in user's sign-up date as a Unix timestamp.
+    created_at: <%#= current_user.created_at.to_i %>,
+    app_id: "2488cea808824efb1bcc3b5a9725fa09f3bf0077"
+  };
+</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://static.intercomcdn.com/intercom.v1.js';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}};})()</script>
 
-<!-- Submit Modal -->
-  <div class="modal fade" id="submit-modal" tabindex="-1" role="dialog" aria-labelledby="Submit" aria-hidden="true">
-    <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h3 class="modal-title">Help us, help you.</h3>
-      </div>
-      <div class="modal-body">
-        <p>This is an open forum for you to submit product ideas, brand tips, & advice. We will hustle to make it happen -- if it does -- we'll take care of you (read: worthwhile credit incentive)</p>
-        <p style="font-size:.5em">(We won't publish anything without your consent)</p>
-        <br>
-        <div class="input-group">
-          <span class="input-group-addon">Lets talk...</span>
-          <input type="text" class="form-control" placeholder="Your email. (Optional)">
-      </div>
-      <hr>
-      
-         <div class="input-group">
-          <span class="input-group-addon">What brand or topic?</span>
-          <input type="text" class="form-control">
-      </div>
-      <br>
-      <p>What's on your mind? No bad ideas... Promise. </p>
-      <textarea class="form-control" rows="2" width="300px"></textarea>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Submit</button>
-      </div>
-    </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
+
 
   </body>
 

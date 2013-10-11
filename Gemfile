@@ -13,6 +13,7 @@ gem 'jquery-rails'
 gem 'devise',           '~> 3.1'
 gem "simple_form",      '~> 3.0'
 gem 'kaminari'
+gem 'intercom-rails', '~> 0.2.21'
 
 
 # all image related
