@@ -15,8 +15,7 @@ class User < ActiveRecord::Base
   def self.non_admins
     where(admin: false)
   end
-
-  private
+private
 
   # Override Devise method to allow new Users to be created without a password.
   def password_required?
