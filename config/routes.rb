@@ -8,6 +8,7 @@ Beeline::Application.routes.draw do
   get 'faq' => 'pages#faq'
   get 'terms' => 'pages#terms'
   get 'privacy' => 'pages#privacy'
+  get 'jobs' => 'pages#jobs'
 
   get 'contact' => 'contact#new'
   post 'contact' => 'contact#create'

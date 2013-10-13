@@ -40,7 +40,7 @@
             <td>$<%= product.price %></td>
             <td><%= product.deliver_date %></td>
             <td><%= product.status %></td>
-            <td><%= product.created_at %></td>
+            <td><%= product.created_at.strftime("%D") %></td>
             <td><%= time_ago_in_words(product.updated_at) %></td>
             <td><%= product.active %></td>
 
