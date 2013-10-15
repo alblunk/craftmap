@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131011002356) do
+ActiveRecord::Schema.define(version: 20131015002934) do
 
   create_table "brands", force: true do |t|
     t.string   "name"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20131011002356) do
     t.string   "tumblr"
     t.string   "home_page"
     t.boolean  "active"
+    t.string   "founders"
   end
 
   add_index "brands", ["owner_id"], name: "index_brands_on_owner_id"
