@@ -3,7 +3,7 @@ class BrandsController < ApplicationController
 
   def index
     @brands = Brand.order("name asc").page(params[:page]).per(25)
-    @products = Product.order("created_at desc").page(params[:page])
+    @products = Product.order("created_at desc")
 
   end
 
