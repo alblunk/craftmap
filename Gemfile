@@ -15,12 +15,9 @@ gem "simple_form",      '~> 3.0'
 gem 'kaminari'
 gem 'intercom-rails', '~> 0.2.21'
 
-
-# all image related
-gem "rmagick", "~>2.13.2", :require => 'RMagick'
 gem 'carrierwave'
+gem 'mini_magick'
 gem 'fog', '~> 1.3.1'
-
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
 gem 'bootstrap-wysihtml5-rails'
