@@ -176,6 +176,8 @@
 
   .flatbtn:hover {
     text-decoration: none;
+    color:white;
+    opacity:.8;
   }
 
   .big-green-button{
@@ -626,7 +628,15 @@
     text-decoration: none;
     color:white;
   }
-
+  #submit-2{
+    background-color:#389e39;
+    width:50%;
+    height:50px;
+    font-size:1.25em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 275%;
+  }
 
   #submit{
     background-color: #389e39;
@@ -1080,12 +1090,12 @@
   }
 
   footer  a{
-    color:#aaa;
+    color:rgba(255,255,255,.7);
   }
 
   footer a:hover{
     text-decoration:none;
-    color:#eee;
+    color:#aaa;
   }
 
   #footer-container{
