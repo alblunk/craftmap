@@ -1,8 +1,6 @@
 # encoding: utf-8
-require 'RMagick'
-
 class ImageUploader < CarrierWave::Uploader::Base
-  include CarrierWave::RMagick
+  include CarrierWave::MiniMagick
 
   before :cache, :save_original_filename
 
