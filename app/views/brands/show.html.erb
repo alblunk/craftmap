@@ -49,36 +49,38 @@
   <div class="row" style="padding-bottom:20px;">
     <div class="col-md-12">
       <p><%=@brand.profile.html_safe%></p>
-
-      <span style="font-family:m-1c, serif;font-weight: 300;font-size: 1em !important;letter-spacing: 2px;text-transform: uppercase;display:inline;">PLACES TO VISIT:</span>
-        <!-- HOME -->
-        <% if @brand.home_page != "" %>
-          <a  href="http://www.<%= @brand.home_page.html_safe%>" target="blank"><%= image_tag("home-square.png", class: "brandsocial") %></a>
-        <% end %>
-        <!-- FACEBOOK -->
-        <% if @brand.facebook != "" %>
-          <a href="http://facebook.com/<%= @brand.facebook%>" target="blank"><%= image_tag("facebook_square_black.png", class: "brandsocial") %></a>
-        <% end %>
-        <!-- TWITTER -->
-        <% if @brand.twitter != "" %>
-          <a href="http://twitter.com/<%= @brand.twitter%>" target="blank"><%= image_tag("twitter_square_black.png", class: "brandsocial") %></a>
-        <% end %>
-        <!-- INSTAGRAM -->
-        <% if @brand.instagram != "" %>
-          <a href="http://instagram.com/<%= @brand.instagram%>" target="blank"><%= image_tag("instagram_square_black.png", class: "brandsocial") %></a>
-        <% end %>
-        <!-- TUMBLR -->
-        <% if @brand.tumblr != "" %>
-          <a href="http://<%= @brand.tumblr%>.tumblr.com/" target="blank"><%= image_tag("tumblr_square_black.png", class: "brandsocial") %></a>
-        <% end %>
-
-      
-
-      <% if current_user.try(:admin?) %>
       <hr class="black-hr">
-        <span style="font-size:.65em;"><%= link_to "X", @brand, class: 'x-btn', method: :delete, data: { confirm: 'Are you sure?' } %></span>&nbsp;/
-        <span><%= link_to "EDIT", edit_brand_path%></span>
-      <%end%>
+        <div class="centerize">
+        <span style="font-family:m-1c, serif;font-weight: 300;font-size: 1em !important;letter-spacing: 2px;text-transform: uppercase;display:inline;">PLACES TO VISIT:</span>
+          <!-- HOME -->
+          <% if @brand.home_page != "" %>
+            <a  href="http://www.<%= @brand.home_page.html_safe%>" target="blank"><%= image_tag("home-square.png", class: "brandsocial") %></a>
+          <% end %>
+          <!-- FACEBOOK -->
+          <% if @brand.facebook != "" %>
+            <a href="http://facebook.com/<%= @brand.facebook%>" target="blank"><%= image_tag("facebook_square_black.png", class: "brandsocial") %></a>
+          <% end %>
+          <!-- TWITTER -->
+          <% if @brand.twitter != "" %>
+            <a href="http://twitter.com/<%= @brand.twitter%>" target="blank"><%= image_tag("twitter_square_black.png", class: "brandsocial") %></a>
+          <% end %>
+          <!-- INSTAGRAM -->
+          <% if @brand.instagram != "" %>
+            <a href="http://instagram.com/<%= @brand.instagram%>" target="blank"><%= image_tag("instagram_square_black.png", class: "brandsocial") %></a>
+          <% end %>
+          <!-- TUMBLR -->
+          <% if @brand.tumblr != "" %>
+            <a href="http://<%= @brand.tumblr%>.tumblr.com/" target="blank"><%= image_tag("tumblr_square_black.png", class: "brandsocial") %></a>
+          <% end %>
+
+        
+
+        <% if current_user.try(:admin?) %>
+        <hr class="black-hr">
+          <span style="font-size:.65em;"><%= link_to "X", @brand, class: 'x-btn', method: :delete, data: { confirm: 'Are you sure?' } %></span>&nbsp;/
+          <span><%= link_to "EDIT", edit_brand_path%></span>
+        <%end%>
+      </div>
     </div>
   </div>
 </div>
