@@ -18,4 +18,6 @@ class PagesController < ApplicationController
   def privacy; end
 
   def jobs; end
+
+  def upload; end
 end
