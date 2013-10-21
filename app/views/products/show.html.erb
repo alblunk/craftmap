@@ -91,6 +91,25 @@
             <br>
           </div>
         </div>
+     <!-- B&B Modal -->
+          <div class="modal fade" id="existing-modal" tabindex="-1" role="dialog" aria-labelledby="Submit" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 class="modal-title">About the 'Bread & Butter Series'</h3>
+              </div>
+              <div class="modal-body" >
+
+                <p style="text-align:center;">This product is part of our 'Bread & Butter' series, which highlights the products that made this brand what it is today or simply new products we think you should be aware of. <br><br>Keep in mind that these are not campaigns. We merely are striving to become a one-stop-shop for product discovery.<br><br><i>The link below will redirect you to our partner brand site if you would like to support them.</i></p>
+                <br>
+                <a href="<%= @product.existingurl.html_safe unless @product.existingurl.blank?%>" target="blank">
+                  <div class="flatbtn-deux centerize" id="existing-product-btn">Go There</div>
+                </a>
+              </div>
+            </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
       <% end %>
     </div>
   
@@ -176,32 +195,6 @@
 
 <!-- CELERY SCRIPTS -->
 <script type="text/javascript" src="https://www.trycelery.com/js/celery.js"></script>
-
-
-
-
-
-<!-- B&B Modal -->
-  <div class="modal fade" id="existing-modal" tabindex="-1" role="dialog" aria-labelledby="Submit" aria-hidden="true">
-    <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h3 class="modal-title">About the 'Bread & Butter Series'</h3>
-      </div>
-      <div class="modal-body" >
-
-        <p style="text-align:center;">This product is part of our 'Bread & Butter' series, which highlights the products that made this brand what it is today or simply new products we think you should be aware of. <br><br>Keep in mind that these are not campaigns. We merely are striving to become a one-stop-shop for product discovery.<br><br><i>The link below will redirect you to our partner brand site if you would like to support them.</i></p>
-        <br>
-        <a href="<%= @product.existingurl.html_safe %>" target="blank">
-          <div class="flatbtn-deux centerize" id="existing-product-btn">Go There</div>
-        </a>
-      </div>
-    </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-
-
 
 
 <!-- FAQ Modal -->
