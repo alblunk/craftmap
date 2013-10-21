@@ -82,7 +82,7 @@
       <% else %>
         <div class="row">
           <div class="col-md-12">
-            <a href="<%= @product.existingurl.html_safe %>" target="blank">
+            <a href="<%= @product.existingurl.html_safe unless @product.existingurl.blank? %>" target="blank">
               <div class="flatbtn-deux centerize" id="existing-product-btn" style="margin-top:-15px">Go There</div>
             </a>
             <hr class="black-hr" style="width:45%;margin-bottom:3px;margin-top:10px">
