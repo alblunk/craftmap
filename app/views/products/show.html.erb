@@ -68,11 +68,11 @@
 <!-- CELERY DETAILS -->
         <div class="row">
           <div class="col-md-12">
-            <div data-celery="backpack" data-celery-type="bar" style="background-color:transparent; margin-top:0;"></div>
+            <div class="centerize"data-celery="backpack" data-celery-type="bar" style="background-color:transparent; margin-top:0;width:80%"></div>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12" id="updates">
+          <div class="col-md-12 centerize" id="updates">
           <%=@product.updates.html_safe%>
           <% if @product.limited == true %>
             <h6><strong>NOTE:</strong> <i><%=@product.limitednumber%></i></h6>
@@ -83,7 +83,7 @@
         <div class="row">
           <div class="col-md-12">
             <a href="<%= @product.existingurl.html_safe unless @product.existingurl.blank? %>" target="blank">
-              <div class="flatbtn-deux centerize" id="existing-product-btn" style="margin-top:-15px">Go There</div>
+              <div class="flatbtn-deux centerize" id="existing-product-btn" style="margin-top:-5px">Purchase</div>
             </a>
             <hr class="black-hr" style="width:45%;margin-bottom:3px;margin-top:10px">
               <a href="#existing-modal" style="color:black;" data-toggle="modal"><p  class="centerize">About the 'Bread & Butter' Series</p></a>

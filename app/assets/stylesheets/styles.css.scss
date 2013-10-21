@@ -486,6 +486,7 @@
     padding-right:5px;
     padding-bottom:5px;
     padding-left:15px;
+    
 
     margin-bottom:2px;
 
@@ -620,6 +621,7 @@
     font-size:.9em;
     color:white; 
     font-size: .75em;
+    letter-spacing: 1px;
 
     margin-top:30%;
     margin-bottom:10%;
@@ -627,7 +629,7 @@
     padding-left:10px;
     padding-top:3px;
 
-    width:100px;
+    width:110px;
     z-index: 2;
     border:none;
   }
@@ -671,8 +673,8 @@
     padding-left:25px;
 
     border:none;
-
-    width:125px;
+    letter-spacing: 1px;
+    width:140px;
   }
 
   #submit:hover {
@@ -811,21 +813,16 @@
   #backbtn {
     background-color: #389e39;
     width:70%; 
-    height:50px; 
-    font-size:1.25em;
+    
+    font-size:1.15em;
     font-weight: 500;
-    padding-top:12px;
-    letter-spacing: 2px;
+    padding:10px;
+    letter-spacing: 3px;
     margin-bottom:20px;
   }
 
-  #backbtn:hover {
-    background-color:#2d802e;
-    text-decoration: none;
-  }
-
   #FAQLink {
-    font-size: 1.25em;
+    font-size: .9em;
     text-decoration: none !important;
     color:black;
     
@@ -903,9 +900,12 @@
     }
 
   #existing-product-btn{
-    padding:5px;
-    background-color:#505050;
-    width:30%;
+    padding:8px;
+    background-color:#053872;
+    width:35%;
+    font-family:maven-pro, serif;
+    font-weight: 500;
+    text-transform:uppercase;
   }
 
 
