@@ -403,9 +403,9 @@
   font-size:.85em;
   pointer-events:none;
   margin-top:200px;
-  width:90%;
+  width:175px;
   text-align:center;
-  position:relative;
+  position:fixed;
   left:-10px !important;
 }
 
@@ -770,24 +770,43 @@
     border-color:rgba(0, 0, 0, 0.25) !important;
   }
 /*PRODUCT*/
+  #mid-container{
+    position:fixed;
+    margin:20px;
+  } 
 
   .mid-pic-frame{
-   position:fixed;
+    position:relative;
     overflow:hidden;
-    margin:20px;
-    height:85%;
   }
 
-  #product-images #brand-quote{
-    bottom:0;
-    background-color:rgba(0, 0, 0, 0.25);
-    color:white;
-    z-index: 100;
+  #existing-image-box{
+
+  }
+
+  #product-images{
+    width: 100%;
+    z-index: 1;
+  }
+
+  .detail-well{
+    top:0;
+    float:bottom;
+    z-index:80;
+    border:none;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    -moz-box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.4);
   }
 
   #p-thumbnails-box{
     position:absolute;
     right:0;
+    z-index:100;
   }
 
   #p-thumbnails-box .p-thumbnails {
@@ -795,30 +814,28 @@
     width:50px;
     float:right;
     margin:0px;
+    opacity:.6;
   }
 
   #p-thumbnails-box .p-thumbnails:hover {
-    opacity:.7;
+    opacity:1;
   }
 
   #p-selected{
-    border-bottom:4px solid white;
-  }
-
-
-  #p-selected:hover {
+    border-top:3px solid white;
     opacity:1 !important;
   }
 
   #backbtn {
     background-color: #389e39;
-    width:70%; 
+    width:90%; 
     
     font-size:1.15em;
     font-weight: 500;
     padding:10px;
     letter-spacing: 3px;
-    margin-bottom:20px;
+    margin-bottom:10px;
+    margin-top:10px;
   }
 
   #FAQLink {
@@ -859,7 +876,7 @@
 
   #price {
     font-family: m-1c, sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size:2em ;
     margin-top:10%;
     margin-bottom:10%;
@@ -872,10 +889,11 @@
     pointer-events:none;
     padding-bottom:3px;
     letter-spacing: 1px;
+    font-size:.8em;
   }
 
   #details {
-    background-color:  rgba(255,255,255,0.9);
+    background-color: rgba(255,255,255,0.9);
     border-radius:3px;
     margin-top:20px;
     padding:15px;
@@ -884,10 +902,6 @@
     #details .well {
       background-color: white;
 
-    }
-
-    #details #bar {
-      margin-top:10px;
     }
 
     #details hr{
@@ -1146,6 +1160,7 @@
       .flash-alert-header{
         width:50% !important;
         margin-top:10px;
+        position:relative;
       }
       #admin-flash{
         margin-top:75px !important;
@@ -1163,7 +1178,9 @@
         left:-10px; 
         margin-top:5%;
       }
-
+      #price-line{
+        border:none !important;
+      }
       #bullhorn{
         font-size:11em !important;
       }
@@ -1192,6 +1209,10 @@
       #footer-credit{
         position:relative;
       }
+      #mid-container{
+        position:relative;
+        height:100%;
+      }
       #product-images{
         position:relative;
 
@@ -1199,6 +1220,10 @@
       #h-account{
         margin-left:5px !important;
         font-size:.65em !important;
+      }
+      .mid-pic-frame{
+        position:relative;
+        height:100% !important;
       }
     }
 
@@ -1215,6 +1240,7 @@
       .flash-alert-header{
         width:30%;
         margin-top:20px;
+        position:relative;
       }
       #admin-flash{
         margin-top:75px !important;
@@ -1253,7 +1279,10 @@
         margin-top:2%;
         margin-bottom:0%;
       }
-
+      #mid-container{
+        position:relative;
+        height:100%;
+      }
       #product-images{
         position:relative;
       }
@@ -1267,6 +1296,7 @@
       }
       .mid-pic-frame{
         position:relative;
+        height:100%;
       }
 
     }
