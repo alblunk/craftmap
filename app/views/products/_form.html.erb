@@ -30,6 +30,9 @@
           
           <h6>Campaign Updates?</h6>
           <%= f.text_area :updates, as: :text, :rows => "5", :cols => "50", class: 'wysihtml5 textbox', label: false;%>
+          <hr>
+          <h6>Dimensions? (i.e. 10"Wx12"H)</h6>
+              <%= f.text_field :dimensions ,label:false %>
         </div>
     </div>
 
@@ -79,6 +82,7 @@
             <h6>Existing Product Information:</h6>
               <%= f.check_box :existingline %> Enable?
               <%= f.text_field :existingurl, placeholder: "Product URL",label:false,class:'textbox' %>
+              <hr style="border-color:black;">
             <h6>Limited Edition Information:</h6>
             <%= f.check_box :limited %> Enable?
             

@@ -101,7 +101,7 @@
               </div>
               <div class="modal-body" >
 
-                <p style="text-align:center;">This product is part of our 'Bread & Butter' series, which highlights the products that made this brand what it is today or simply new products we think you should be aware of. <br><br>Keep in mind that these are not campaigns. We merely are striving to become a one-stop-shop for product discovery.<br><br><i style="font-size:.7em;">The link below will redirect you to the <%= @product.name %> on our brand partner's site, if you would like to purchase. Think of it as a friendly tip.</i></p>
+                <p style="text-align:center;">This product is part of our 'Bread & Butter' series, which highlights the products that made this brand what it is today or simply new products we think you should be aware of. <br><br>Keep in mind that these are not campaigns. We merely are striving to become your one-stop-shop for product discovery.<br><br><i style="font-size:.7em;">The link below will redirect you to the <%= @product.name %> on our brand partner's site. <br>If you end up purchasing, let us know... We always appreciate a good hat tip.</i></p>
                 <br>
                 <a href="<%= @product.existingurl.html_safe unless @product.existingurl.blank? %>" target="blank">
                   <div class="flatbtn-deux centerize" id="existing-product-btn">Go There</div>
@@ -143,6 +143,12 @@
           <h6 class="centerize">Materials</h6>
           <hr class="black-hr">
           <%= @product.materials.html_safe%>
+          <br>
+          <div style="text-align:center">
+            <h6 class="centerize">Dimensions</h6>
+            <hr class="black-hr">
+            <%= @product.dimensions.html_safe%>
+          </div>
         </div>
       </div>
       <% if @product.usa == true %>
