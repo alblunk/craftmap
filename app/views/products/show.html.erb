@@ -101,9 +101,9 @@
               </div>
               <div class="modal-body" >
 
-                <p style="text-align:center;">This product is part of our 'Bread & Butter' series, which highlights the products that made this brand what it is today or simply new products we think you should be aware of. <br><br>Keep in mind that these are not campaigns. We merely are striving to become a one-stop-shop for product discovery.<br><br><i>The link below will redirect you to our partner brand site if you would like to support them.</i></p>
+                <p style="text-align:center;">This product is part of our 'Bread & Butter' series, which highlights the products that made this brand what it is today or simply new products we think you should be aware of. <br><br>Keep in mind that these are not campaigns. We merely are striving to become a one-stop-shop for product discovery.<br><br><i style="font-size:.7em;">The link below will redirect you to the <%= @product.name %> on our brand partner's site, if you would like to purchase. Think of it as a friendly tip.</i></p>
                 <br>
-                <a href="<%= @product.existingurl.html_safe unless @product.existingurl.blank?%>" target="blank">
+                <a href="<%= @product.existingurl.html_safe unless @product.existingurl.blank? %>" target="blank">
                   <div class="flatbtn-deux centerize" id="existing-product-btn">Go There</div>
                 </a>
               </div>

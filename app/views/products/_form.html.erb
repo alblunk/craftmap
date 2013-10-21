@@ -77,11 +77,11 @@
             <h6>Brand Description of Product:</h6>
             <%= f.text_area :description, as: :text, :rows => "5", :cols => "50", class: 'wysihtml5 textbox', placeholder: "Why is the brand making this product, what makes it special, what inspired the idea?", label:false;%>
             <h6>Existing Product Information:</h6>
-              Existing Product?<%= f.check_box :existingline %>
+              <%= f.check_box :existingline %> Enable?
               <%= f.text_field :existingurl, placeholder: "Product URL",label:false,class:'textbox' %>
             <h6>Limited Edition Information:</h6>
-            Limited Edition?
-            <%= f.check_box :limited %>
+            <%= f.check_box :limited %> Enable?
+            
             <br>
               <%= f.text_field :limitednumber, placeholder: "i.e. Limited Edition 500 Units", class: 'textbox', label:false %>
 
