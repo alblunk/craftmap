@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131015002934) do
+ActiveRecord::Schema.define(version: 20131021001932) do
 
   create_table "brands", force: true do |t|
     t.string   "name"
@@ -58,6 +58,10 @@ ActiveRecord::Schema.define(version: 20131015002934) do
     t.boolean  "archived"
     t.text     "materials"
     t.boolean  "usa"
+    t.boolean  "limited"
+    t.string   "limitednumber"
+    t.boolean  "existingline"
+    t.string   "existingurl"
   end
 
   add_index "products", ["brand_id"], name: "index_products_on_brand_id"

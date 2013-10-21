@@ -180,6 +180,24 @@
     opacity:.8;
   }
 
+  .flatbtn-deux {
+    font-family:m-1c, serif;
+    font-weight: 300;
+    font-size: 1em !important;
+    letter-spacing: 2px;
+    border-radius:3px;
+    border:none;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .flatbtn-deux:hover {
+    text-decoration: none;
+    color:white;
+    opacity:.8;
+  }
+
   .big-green-button{
     /*dark shadow: #2d802e*/
     /*light shadow: #389e39*/
@@ -883,6 +901,13 @@
     #details ul{
       list-style-type:square;
     }
+
+  #existing-product-btn{
+    padding:5px;
+    background-color:#505050;
+    width:30%;
+  }
+
 
   #usa-text{
     font-family:maven-pro, serif;
