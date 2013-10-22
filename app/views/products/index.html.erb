@@ -36,7 +36,12 @@
             <td><%= product.status %></td>
             <td><%= product.created_at.strftime("%D") %></td>
             <td><%= time_ago_in_words(product.updated_at) %></td>
-            <td><%= product.active %></td>
+            <td><% if product.active == true %>
+              <span class="glyphicon glyphicon-ok" style="color:#389e39"></span>
+                <% else %>
+              <span class="glyphicon glyphicon-remove" style="color:#A32638"></span>
+              <% end %>
+            </td>
 
             <!-- <%#= form_for([:active, product]) do |f| %>
               <td>
