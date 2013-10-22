@@ -1,77 +1,67 @@
 <!-- PRODUCT PICTURE PANE -->
 <div class="col-md-5" >
   <div id="mid-container" >
-    
 
     <% if @product.existingline != true %>
-    <div class="mid-pic-frame" >
-      <div id="p-thumbnails-box">
-        <%= link_to image_tag("product_thumb1.jpg", class: "p-thumbnails") %>
-          
+      <div class="mid-pic-frame" >
+        <div id="p-thumbnails-box">
+          <% @product.secondary_images.map(&:image).each do |image| %>
+            <%= image_tag(image, class: "p-thumbnails") %>
+          <% end %>
+        </div>
+        <img  class="img-responsive" id="product-images"src="<%= image_path(@product.primary_image) %>"/>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="well well-sm detail-well" style="padding-top:10px;padding-bottom:10px;">
+            <div class="col-md-7 col-sm-7" style="z-index:50;">
+              <a href="#" data-celery="backpack"><div id="backbtn" class="flatbtn centerize">BACK IT</div></a>
+                <hr class="black-hr" style="margin-bottom:5px">
+              <a href="#FAQModal" data-toggle="modal"><h3 id="FAQLink" class="centerize">HOW DOES THIS WORK?</h3></a>
+                <hr class="black-hr" style="margin-top:5px">
+            </div>
+            <div class="col-md-5 col-sm-5 centerize" id="price-line" style="border-left:1px solid rgba(0,0,0,.1);">
+              <h6>$<span id="price"><%= @product.price %></span></h6>
+              <div id="delivery">
+                <h5 style="font-size:.9em">Estimated Delivery:</h5> 
+                  <hr class="black-hr" style="margin-top:-8px; margin-bottom:5px"> 
+                <p style="font-size:.9em"><%= @product.deliver_date.html_safe %></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 centerize" id="updates">
+                <%=@product.updates.html_safe%>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+    <% else %>
+      <div class="mid-pic-frame" id="existing-image-box" >
+        <div id="p-thumbnails-box">
+          <%= link_to image_tag("product_thumb1.jpg", class: "p-thumbnails") %>
+            
           <%= link_to image_tag("product2.jpg", class: "p-thumbnails", id:"p-selected") %>
-          
+            
           <%= link_to image_tag("product_thumb1.jpg", class: "p-thumbnails") %>
 
           <%= link_to image_tag("product2.jpg", class: "p-thumbnails") %>
+        </div>
+        <img  class="img-responsive" id="product-images"src="<%= image_path(@product.images.first.image) %>"/>
       </div>
-      <img  class="img-responsive" id="product-images"src="<%= image_path(@product.images.first.image) %>"/>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="well well-sm detail-well" style="padding-top:10px;padding-bottom:10px;">
-          <div class="col-md-7 col-sm-7" style="z-index:50;">
-            <a href="#" data-celery="backpack"><div id="backbtn" class="flatbtn centerize">BACK IT</div></a>
-              <hr class="black-hr" style="margin-bottom:5px">
-            <a href="#FAQModal" data-toggle="modal"><h3 id="FAQLink" class="centerize">HOW DOES THIS WORK?</h3></a>
-              <hr class="black-hr" style="margin-top:5px">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="well well-sm detail-well">
+            <a href="<%= @product.existingurl.html_safe unless @product.existingurl.blank? %>" target="blank">
+              <div class="flatbtn-deux centerize" id="existing-product-btn">Purchase</div>
+            </a>
+              <hr class="black-hr" style="width:45%;margin-bottom:3px;margin-top:10px">
+            <a href="#existing-modal" style="color:black;" data-toggle="modal"><p  class="centerize">About the 'Bread & Butter' Series</p></a>
+              <hr class="black-hr" style="width:45%;margin-top:2px;margin-bottom:-10px">
+            <br>
           </div>
-          <div class="col-md-5 col-sm-5 centerize" id="price-line" style="border-left:1px solid rgba(0,0,0,.1);">
-            <h6>$<span id="price"><%= @product.price %></span></h6>
-            <div id="delivery">
-              <h5 style="font-size:.9em">Estimated Delivery:</h5> 
-                <hr class="black-hr" style="margin-top:-8px; margin-bottom:5px"> 
-              <p style="font-size:.9em"><%= @product.deliver_date.html_safe %></p>
-            </div>
-          </div>
-          <!-- <div class="row">
-            <div class="col-md-12">
-              <div class="centerize"data-celery="backpack" data-celery-type="bar" style="z-index:5;margin-top:0;width:80%;"></div>
-            </div>
-          </div> -->
-          <div class="row">
-            <div class="col-md-12 centerize" id="updates">
-              <%=@product.updates.html_safe%>
-            </div>
-          </div> 
         </div>
       </div>
-    </div>
-    <% else %>
-    <div class="mid-pic-frame" id="existing-image-box" >
-      <div id="p-thumbnails-box">
-        <%= link_to image_tag("product_thumb1.jpg", class: "p-thumbnails") %>
-          
-        <%= link_to image_tag("product2.jpg", class: "p-thumbnails", id:"p-selected") %>
-          
-        <%= link_to image_tag("product_thumb1.jpg", class: "p-thumbnails") %>
-
-        <%= link_to image_tag("product2.jpg", class: "p-thumbnails") %>
-      </div>
-      <img  class="img-responsive" id="product-images"src="<%= image_path(@product.images.first.image) %>"/>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="well well-sm detail-well">
-          <a href="<%= @product.existingurl.html_safe unless @product.existingurl.blank? %>" target="blank">
-            <div class="flatbtn-deux centerize" id="existing-product-btn">Purchase</div>
-          </a>
-            <hr class="black-hr" style="width:45%;margin-bottom:3px;margin-top:10px">
-          <a href="#existing-modal" style="color:black;" data-toggle="modal"><p  class="centerize">About the 'Bread & Butter' Series</p></a>
-            <hr class="black-hr" style="width:45%;margin-top:2px;margin-bottom:-10px">
-          <br>
-        </div>
-      </div>
-    </div>
     <% end %>
   </div>
 </div>
@@ -170,7 +160,7 @@
 
     <div class="row">
       <div class="col-md-12">
-        <%= image_tag("profile-pic.jpg", id: "brand-image") %>
+        <%= image_tag(@product.brand.secondary_images.first.image, id: "brand-image") %>
       </div>
     </div>
     <div class="row">

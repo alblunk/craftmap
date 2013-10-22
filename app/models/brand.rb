@@ -5,9 +5,10 @@ class Brand < ActiveRecord::Base
   belongs_to :owner, class_name: "User", foreign_key: :owner_id
   has_many :products
 
-  # other side of polymorphic images
-  has_many :images, as: :imageable
-  accepts_nested_attributes_for :images, allow_destroy: true, :reject_if => lambda {|a| a['image'].blank?}
+  has_many :secondary_images, as: :imageable
+  accepts_nested_attributes_for :secondary_images, allow_destroy: true, :reject_if => lambda {|a| a['image'].blank?}
+
+  mount_uploader :primary_image, ImageUploader
 
   def to_param
   	"#{id}-#{name.try(:parameterize)}"
