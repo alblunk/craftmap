@@ -42,37 +42,17 @@
       <%#= f.full_error :image_content_type, class: "alert alert-error" %>
       <div class="row">
         <div class="col-md-6">
-          <h6>Home Image:</h6><p style="margin-top:-10px; font-size:.85em">(Main Picture of Product >600x600)<p>
-          <%= f.fields_for :image do |image_field| %>
-            <%= image_field.file_field :image %>
-          <% end %>
+          <h6>Primary Image:</h6><p style="margin-top:-10px; font-size:.85em">(Main Picture of Product >600x600)<p>
+          <%= f.file_field :primary_image %>
         </div>
         <div class="col-md-6">
-          <% unless @product.new_record? %>
-            <% if @product.images.empty? %>
-              <p>No photos uploaded yet!</p>
-              <% else %>
-              <h6>Current Photos:</h6>
-              <p style="margin-top:-10px; font-size:.85em">(1-10 Pictures >1000x1500px)<p>
-                <% @product.images.each do |image| %>
-
-                  <!-- TODO: this needs to get fixed -->
-                  <%= image_tag(image, size: "75x75") if image.persisted? %>
-
-              <% end %>
-            <% end %>
-          <% end %>
-
-          <%= f.fields_for :image, html: {multipart: true} do |image_field| %>
+          <h6>Secondary Images:</h6><p style="margin-top:-10px; font-size:.85em">(Alternate Product Photos >600x600)<p>
+          <%= f.fields_for :secondary_images do |image_field| %>
             <%= image_field.file_field :image %>
           <% end %>
         </div>
       </div>
 
-       
-
-          
-        
         <hr style="border-color:black;">
         <div class="row">
           <div class="col-md-12">

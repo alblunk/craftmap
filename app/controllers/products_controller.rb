@@ -1,4 +1,3 @@
-
 class ProductsController < ApplicationController
 
   before_action :require_admin, except: [ :show ]
@@ -14,20 +13,18 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @product = current_brand.products.new
-    # 8.times { @product.images.build }
+    @product = current_brand.products.build
+    6.times { @product.secondary_images.build }
   end
 
   def edit
     @product = Product.find(params[:id])
-    @product.images.build if @product.images.empty?
+    @product.secondary_images.build unless @product.has_secondary_images?
   end
 
   def create
     @product = current_brand.products.new(product_params)
     @product.owner = current_user
-    @image = @product.images.build
-    @image.image = params[:product][:image][:image]
 
     if @product.save
       redirect_to [current_brand, @product]
@@ -67,9 +64,10 @@ class ProductsController < ApplicationController
 
     def product_params
       params.require(:product).
-              permit( :name, :description, :materials, :details, :price, :deliver_date, :updates, :status, :active, :archived, :usa, :limited, :limitednumber, :existingline, :existingurl, :dimensions, :owner,
-                      brand_attributes: [ :name, :profile ],
-                      images_attributes: [:id, :image, :imageable_id, :imageable_type, :_destroy] )
+              permit( :name, :description, :materials, :details, :price, :deliver_date,
+                      :updates, :status, :active, :archived, :usa, :limited,
+                      :limitednumber, :existingline, :existingurl, :dimensions, :owner,
+                      :primary_image, secondary_images_attributes: [ :image ],
+                      brand_attributes: [ :name, :profile ] )
     end
-
 end

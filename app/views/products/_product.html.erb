@@ -1,7 +1,7 @@
-<% if product.has_images?  %>
-    <div class="<%= size %>">
-        <%= link_to image_tag(product.images.first.image), product_path(product),class: 'thumbnail' %>
-    </div>
+<% if product.primary_image %>
+  <div class="<%= size %>">
+    <%= link_to image_tag(product.primary_image), product_path(product),class: 'thumbnail' %>
+  </div>
 <% end %>
 
 

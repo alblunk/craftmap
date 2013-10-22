@@ -11,8 +11,8 @@ class Product < ActiveRecord::Base
 
   mount_uploader :primary_image, ImageUploader
 
-  def has_images?
-    images.count > 0
+  def has_secondary_images?
+    secondary_images.count > 0
   end
 
   def to_param
