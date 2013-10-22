@@ -94,37 +94,10 @@
     </div>
   </div>
   <div class="row">
-
-    <%# @brand.products.each do |brand, product| %>
-      <!-- <li><%#= link_to product.name, edit_brand_product_path(brand, product)%></li> -->
-      <%# if @brand.products.images.any? %>
-        <%#= link_to image_tag(product.images.first.image, size: "200x200"), brand_product_path(brand, product)%>
-      <%#else %>
-        <%#= link_to brand.product.name, brand_product_path(brand, product) %>
-      <%# end %>
-      <!-- <li>/</li> -->
-    <%# end %>
-
-
-    <div class="col-md-6 col-xs-6">
-      <a href="#" class="thumbnail">
-        <%= image_tag("product_thumb1.jpg") %>
-      </a>
-    </div>
-    <div class="col-md-6 col-xs-6">
-      <a href="#" class="thumbnail">
-        <%= image_tag("product_thumb1.jpg") %>
-      </a>
-    </div>
-    <div class="col-md-6 col-xs-6">
-      <a href="#" class="thumbnail">
-        <%= image_tag("product_thumb1.jpg") %>
-      </a>
-    </div>
-    <div class="col-md-6 col-xs-6">
-      <a href="#" class="thumbnail">
-        <%= image_tag("product_thumb1.jpg") %>
-      </a>
-    </div>
+    <% @brand.products.each do |product| %>
+      <div class="col-md-6 col-xs-6">
+        <%= link_to image_tag(product.primary_image), product_path(product), class: "thumbnail" %>
+      </div>
+    <% end %>
   </div>
 </div>
