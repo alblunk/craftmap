@@ -26,21 +26,19 @@
     </div>
   </div>
 </div>
-<!-- MIDDLE PANE ENDS -->
 
-<!-- RIGHT GRID STARTS -->
-      <div class="col-md-5 product-grid">
-        <!-- FEATURE TO SORT BY PRODUCT OR BRANDS
-          <div class="col-md-12">
-            <h5 id="links"class="centerize" ><a href="#">PRODUCTS</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">BRANDS</a></h5>
-          </div>
-        </div>
-        <hr style="margin:0;padding-bottom:10px; opacity:.7;">
-        <div class="row">
-         
-        </div> -->
-        <div class="row">
-          <%= render :partial=>'products/product', :collection => @products, :locals => {:size => 'col-md-6 col-xs-6'}  %>
-          <!-- Should sort by updated at -->
-        </div>
-      </div>
+<div class="col-md-5 product-grid">
+    <div class="col-md-12">
+      <div id="links" class="centerize" >
+        <h6 id="product-sort">PRODUCTS</h6>&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;<h6 id="brand-sort">BRANDS</h6>
+    </div>
+
+  <div class="row">
+    <div id="home-products">
+      <%= render :partial=>'products/product', :collection => @products, :locals => {:size => 'col-md-6 col-xs-6'}  %>
+    </div>
+    <div id="home-brands" style="display:none;">
+      <%= render :partial=>'brands/brand', :collection => @brands, :locals => {:size => 'col-md-6 col-xs-6'}  %>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,16 @@
 $(document).ready(function(){
+
+    $('#brand-sort').click(function() {
+        $('#home-brands').show();
+        $('#home-products').hide()
+    });  
+    $('#product-sort').click(function(){
+        $('#home-brands').hide();
+        $('#home-products').show();
+    });
+
+
+
     if ($(window).width() > 991) {
          $('.product-grid').mouseenter(function() {
             $('.p-hover').fadeTo('fast', 1);

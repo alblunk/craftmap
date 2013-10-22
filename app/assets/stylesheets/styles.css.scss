@@ -719,14 +719,18 @@
 
 
   #links {
-    padding:10px 0 10px 0;
+    padding:0 0 5px 0;
     margin-left:-20px;
     color:white;
+    cursor: pointer;
   }
 
-  #links a{
-    text-decoration: none;
-    color:white;
+  #links h6{
+    display:inline-block;
+  }
+
+  #links h6:hover{
+    border-bottom: 1px solid white;
   }
 
   .p-hover{

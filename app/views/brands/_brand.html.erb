@@ -1,16 +1,5 @@
-<div>
-	<h6 style="display: inline"><%= link_to brand.name, brand %></h6>
-	(<span><%= link_to "edit", edit_brand_path(brand)%></span>)
-</div>
-<ul class="list-inline">
-	<% brand.products.each do |product| %>
-		<li><%= link_to product.name, edit_brand_product_path(brand, product)%></li>
-
-		<li>/</li>
-	<% end %>
-	<li><%= link_to "ADD", new_brand_product_path(brand)%></li>
-</ul>
-
-<br>
-
-<%#= image_tag brand.image.url(:medium) %>
+<% if brand.primary_image and brand.active == true %>
+  <div class="<%= size %>">
+    <%= link_to image_tag(brand.primary_image), brand_path(brand),class: 'thumbnail' %>
+  </div>
+<% end %>
