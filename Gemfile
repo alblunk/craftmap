@@ -16,7 +16,7 @@ gem 'kaminari'
 gem 'intercom-rails', '~> 0.2.21'
 
 gem 'carrierwave'
-gem 'mini_magick'
+gem 'rmagick'
 gem 'fog', '~> 1.3.1'
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'

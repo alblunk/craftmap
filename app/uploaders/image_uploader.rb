@@ -1,6 +1,6 @@
 # encoding: utf-8
 class ImageUploader < CarrierWave::Uploader::Base
-  include CarrierWave::MiniMagick
+  include CarrierWave::RMagick
 
   before :cache, :save_original_filename
 
@@ -9,7 +9,11 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   def filename
-     "#{secure_token}.#{file.extension}" if original_filename.present?
+    "#{secure_token}.#{file.extension}" if original_filename.present?
+  end
+
+  version :thumb do
+    process :resize_to_fill => [ 400, 400 ]
   end
 
   ## IMAGES
