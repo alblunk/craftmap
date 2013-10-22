@@ -5,11 +5,11 @@
     <% if @product.existingline != true %>
       <div class="mid-pic-frame" >
         <div id="p-thumbnails-box">
-          <%= image_tag(@product.primary_image, class: "p-thumbnails") %>
-
           <% @product.secondary_images.map(&:image).each do |image| %>
             <%= image_tag(image, class: "p-thumbnails") %>
           <% end %>
+          
+          <%= image_tag(@product.primary_image, class: "p-thumbnails") %>
         </div>
         <img class="img-responsive" id="product-image" src="<%= image_path(@product.primary_image) %>"/>
       </div>
