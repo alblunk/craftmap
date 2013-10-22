@@ -27,20 +27,11 @@ ActiveRecord::Schema.define(version: 20131021061945) do
     t.string   "home_page"
     t.boolean  "active"
     t.string   "founders"
-  end
-
-  add_index "brands", ["owner_id"], name: "index_brands_on_owner_id"
-
-  create_table "images", force: true do |t|
-    t.integer  "imageable_id"
-    t.string   "imageable_type"
-    t.string   "image"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "primary_image"
     t.string   "original_filename"
   end
 
-  add_index "images", ["imageable_id", "imageable_type"], name: "index_images_on_imageable_id_and_imageable_type"
+  add_index "brands", ["owner_id"], name: "index_brands_on_owner_id"
 
   create_table "products", force: true do |t|
     t.text     "description"
@@ -63,6 +54,8 @@ ActiveRecord::Schema.define(version: 20131021061945) do
     t.boolean  "existingline"
     t.string   "existingurl"
     t.string   "dimensions"
+    t.string   "primary_image"
+    t.string   "original_filename"
   end
 
   add_index "products", ["brand_id"], name: "index_products_on_brand_id"
@@ -77,6 +70,17 @@ ActiveRecord::Schema.define(version: 20131021061945) do
   end
 
   add_index "remote_data", ["product_id"], name: "index_remote_data_on_product_id"
+
+  create_table "secondary_images", force: true do |t|
+    t.integer  "imageable_id"
+    t.string   "imageable_type"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "original_filename"
+  end
+
+  add_index "secondary_images", ["imageable_id", "imageable_type"], name: "index_secondary_images_on_imageable_id_and_imageable_type"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",    null: false
