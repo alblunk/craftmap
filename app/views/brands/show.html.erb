@@ -87,10 +87,10 @@
 
 <div class="col-md-4 product-grid" style="left:20px;"p>
   <div class="row">
-    <div class="col-md-12 hidden-xs">
-      <h6 id="links"class="centerize" ><a href="/home">BACK TO HOME</a></h6>
-      <h3 style="padding-bottom:5px; color:white; pointer-events:none;"class="centerize" >CURRENT PRODUCTS</h3>
-      <hr style="margin:0;padding-bottom:10px;">
+    <div class="col-md-12">
+      <a href="/home" class="links centerize"><h6>BACK TO HOME</h6></a>
+      <h3 style="padding-bottom:5px; color:white; pointer-events:none;"class="centerize" >CURRENT CAMPAIGNS</h3>
+      <hr class="centerize" style="padding-bottom:10px; width:70%">
     </div>
   </div>
   <div class="row">
@@ -100,4 +100,34 @@
       </div>
     <% end %>
   </div>
+  <div class="row">
+    <div class="col-md-12">
+      <a href="#existing-modal-brand" data-toggle="modal"><h4 style="padding-bottom:5px; color:white; pointer-events:none;"class="centerize" >BREAD & BUTTER</h4></a>
+      <hr class="centerize" style="padding-bottom:10px; width:50%">
+    </div>
+  </div>
+  <div class="row">
+    <% @brand.products.each do |product| %>
+      <div class="col-md-4 col-xs-4">
+        <%= link_to image_tag(product.primary_image), product_path(product), class: "thumbnail" %>
+      </div>
+    <% end %>
+  </div>
 </div>
+
+<!-- B&B Modal -->
+          <div class="modal fade" id="existing-modal-brand" tabindex="-1" role="dialog" aria-labelledby="Submit" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h3 class="modal-title">About the 'Bread & Butter Series'</h3>
+                </div>
+                <div class="modal-body" >
+
+                  <p style="text-align:center;">This set of products is part of our 'Bread & Butter' series, which highlights the products that made this brand what it is today or simply new products we think you should be aware of. <br><br>Keep in mind that these are not campaigns. We merely are striving to become your one-stop-shop for product discovery.</p><br><br><br><br><i>Enjoy.</i>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>

@@ -718,19 +718,29 @@
   }
 
 
-  #links {
+  .links {
     padding:0 0 5px 0;
-    margin-left:-20px;
     color:white;
     cursor: pointer;
+    text-decoration:none;
   }
 
-  #links h6{
+  .links h6{
     display:inline-block;
+    color:white;
+    cursor: pointer;
+    text-decoration:none;
   }
 
-  #links h6:hover{
+
+  .links h6:hover{
     border-bottom: 1px solid white;
+    color:white;
+    margin-bottom:9px;
+  }
+
+  #home-links{
+    margin-left:-20px;
   }
 
   .p-hover{
