@@ -3,11 +3,10 @@
 
   <head>
     <title>Farallon Co.</title>
-      <%= stylesheet_link_tag    "application", :media => "all" %>
-      <%= javascript_include_tag "application" %>
-      <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= csrf_meta_tags %>
 
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="https://s3.amazonaws.com/beelineco/FarallonCo-ShortForm.jpg">
@@ -18,11 +17,6 @@
     <script src="//use.edgefonts.net/m-1m:n1,n2,n4,n5,n7.js"></script>
     <script src="//use.edgefonts.net/muli:n3,n4.js"></script> 
     <script src="//use.edgefonts.net/damion.js"></script>
-
-    
-
-    
-
   </head>
   <body>
     <div class="row">
@@ -33,16 +27,18 @@
 
     </div>
     
-      <div id="footer-container"></div>
+    <div id="footer-container"></div>
     <%= render 'layouts/footer' %>
+
+    <%= javascript_include_tag "application" %>
 
     <!-- Intercom.io Scripts -->
     <script id="IntercomSettingsScriptTag">
       window.intercomSettings = {
         // TODO: The current logged in user's email address.
-        email: <%#= current_user.email %>,
+        // email: <%#= current_user.email %>,
         // TODO: The current logged in user's sign-up date as a Unix timestamp.
-        created_at: <%#= current_user.created_at.to_i %>,
+        // created_at: <%#= current_user.created_at.to_i %>,
         app_id: "2488cea808824efb1bcc3b5a9725fa09f3bf0077"
       };
     </script>
