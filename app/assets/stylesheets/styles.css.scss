@@ -259,7 +259,7 @@
     background-color: rgba(0,0,0,0.3);
     border-radius:3px;
     margin-top:20px;
-    padding:10px;
+    padding:20px;
   }
 
   .thumbnail {
@@ -912,7 +912,6 @@
 
     #details .well {
       background-color: white;
-
     }
 
     #details hr{
@@ -988,10 +987,12 @@
 }
 
   #b-midpane{
-    margin-left:40px;
     margin-top:20px;
     background-color:rgba(255,255,255, .9);
-    border-radius:3px;
+    border-bottom-left-radius:3px;
+    border-top-left-radius:3px;
+    margin-left:40px;
+    padding:30px;
     /*position:fixed;*/
   }
 
@@ -1000,6 +1001,14 @@
     margin-bottom:10px;
   }
 
+  #social-places{
+    font-family:m-1c, serif;
+    font-weight: 300;
+    font-size: 1em !important;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display:inline;
+  }
 
   /*INDEX*/
 
@@ -1197,6 +1206,10 @@
       #bullhorn{
         font-size:11em !important;
       }
+      #social-places{
+        font-size: .75em !important;
+
+      }
       #feature-box{
         margin-top:50px;
       }
@@ -1228,6 +1241,7 @@
       }
       #b-midpane{
         position:relative;
+        margin-left:0px;
       }
       #product-image{
         position:relative;
@@ -1304,6 +1318,7 @@
       }
       #b-midpane{
         position:relative;
+        margin-left:0px;
       }
       #product-images{
         position:relative;

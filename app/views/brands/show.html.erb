@@ -58,7 +58,7 @@
       <p><%=@brand.profile.html_safe%></p>
       <hr class="black-hr">
         <div class="centerize">
-        <span style="font-family:m-1c, serif;font-weight: 300;font-size: 1em !important;letter-spacing: 2px;text-transform: uppercase;display:inline;">PLACES TO VISIT:</span>
+        <span id="social-places">PLACES TO VISIT:</span>
           <!-- HOME -->
           <% if @brand.home_page != "" %>
             <a href="http://www.<%= @brand.home_page %>" target="blank"><%= image_tag("home-square.png", class: "brandsocial") %></a>
@@ -85,7 +85,7 @@
 </div>
 
 
-<div class="col-md-3 product-grid" style="left:20px;"p>
+<div class="col-md-3 product-grid" style="border-top-left-radius:0px">
   <div class="row">
     <div class="col-md-12">
       <a href="/home" class="links centerize"><h6>BACK TO HOME</h6></a>
@@ -99,7 +99,7 @@
       <a style="color:white" class="centerize" data-toggle="modal" href="#submit-modal"><p style="margin-top:20px"> Nothing active? Suggest an idea.</p></a>
     <% else %>
       <% @brand.products.each do |product| %>
-        <div class="col-md-12 col-xs-6">
+        <div class="col-md-12 col-xs-12">
           <%= link_to image_tag(product.primary_image), product_path(product), class: "thumbnail" %>
         </div>
       <% end %>

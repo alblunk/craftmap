@@ -98,49 +98,50 @@
 <!-- DESCRIPTION -->
     <div class="row">
       <div class="col-md-12">
-        <h3 style="margin-top:-10px;" class="centerize"><%=@product.name.html_safe%></h3>
-          <% if current_user.try(:admin?) %>
-            <p style="font-size:.55em;margin-bottom:-10px;" class="centerize"><%= link_to "[EDIT PRODUCT]",  edit_brand_product_path(@brand, @product)%></p>
-          <%end%>
+            <h3 style="margin-top:-10px;" class="centerize"><%=@product.name.html_safe%></h3>
+              <% if current_user.try(:admin?) %>
+                <p style="font-size:.55em;margin-bottom:-10px;" class="centerize"><%= link_to "[EDIT PRODUCT]",  edit_brand_product_path(@brand, @product)%></p>
+              <%end%>
           <br>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <blockquote class="pull-right" style="margin-top:-10px;margin-bottom:0px">
-            <p style="font-size:1.2em;font-style:italic;"><%=@product.description.html_safe%></p>
-            <h6 style="font-size:.6em"><small><%= @product.brand.founders%> of <%=@product.brand.name.html_safe%></small></h6>
-          </blockquote>
-        </div>
-      </div>
-      <div class="row" id="product-details">
-        <div class="col-md-6 col-sm-6">
-          <h6 class="centerize">Features</h6>
-          <hr class="black-hr">
-          <%= @product.details.html_safe unless @product.details.blank?%>
-        </div>
-        <div class="col-md-6 col-sm-6">
-          <h6 class="centerize">Materials</h6>
-          <hr class="black-hr">
-          <%= @product.materials.html_safe unless @product.materials.blank?%>
-          <br>
-          <div style="text-align:center;margin-bottom:20px">
-            <h6 class="centerize">Dimensions</h6>
-            <hr class="black-hr">
-            <%= @product.dimensions.html_safe unless @product.dimensions.blank?%>
           </div>
+          <div class="row">
+            <div class="col-md-12">
+              <blockquote class="pull-right" style="margin-top:-10px;margin-bottom:0px">
+                <p style="font-size:1.2em;font-style:italic;"><%=@product.description.html_safe%></p>
+                <h6 style="font-size:.6em"><small><%= @product.brand.founders%> of <%=@product.brand.name.html_safe%></small></h6>
+              </blockquote>
+            </div>
+          </div>
+          <div class="row" id="product-details">
+            <div class="col-md-6 col-sm-6">
+              <h6 class="centerize">Features</h6>
+              <hr class="black-hr">
+              <%= @product.details.html_safe unless @product.details.blank?%>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <h6 class="centerize">Materials</h6>
+              <hr class="black-hr">
+              <%= @product.materials.html_safe unless @product.materials.blank?%>
+              <br>
+              <div style="text-align:center;margin-bottom:20px">
+                <h6 class="centerize">Dimensions</h6>
+                <hr class="black-hr">
+                <%= @product.dimensions.html_safe unless @product.dimensions.blank?%>
+              </div>
+            </div>
+          </div>
+          <% if @product.limited == true %>
+            <h6 class="centerize"><strong>NOTE:</strong> <i><%=@product.limitednumber%></i></h6>
+            <br>
+          <% end %>
+          <% if @product.usa == true %>
+            <div class="centerize" style="pointer-events:none;padding-bottom:15px">
+              <span id="usa-text">Made in USA&nbsp;</span><%= image_tag("usa-flag.jpg", id: "usa") %>
+            </div>
+          <% end %>
+          <hr class="black-hr">
         </div>
-      </div>
-      <% if @product.limited == true %>
-        <h6 class="centerize"><strong>NOTE:</strong> <i><%=@product.limitednumber%></i></h6>
-        <br>
-      <% end %>
-      <% if @product.usa == true %>
-        <div class="centerize" style="pointer-events:none;padding-bottom:15px">
-          <span id="usa-text">Made in USA&nbsp;</span><%= image_tag("usa-flag.jpg", id: "usa") %>
-        </div>
-      <% end %>
-      <hr class="black-hr">
-    </div>
+
 
     
 

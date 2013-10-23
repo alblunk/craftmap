@@ -12,11 +12,11 @@ $(document).ready(function(){
 
 
     // if ($(window).width() > 991) {
-    //      $('.product-grid').mouseenter(function() {
+    //      $('#home-products').mouseenter(function() {
     //         $('.p-hover').fadeTo('fast', 1);
     //         $('#motto').hide()
     //     });  
-    //     $('.product-grid').mouseleave(function(){
+    //     $('#home-products').mouseleave(function(){
     //         $('.p-hover').hide();
     //         $('#motto').show();
     //     });
