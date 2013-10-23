@@ -94,6 +94,7 @@
     </div>
   </div>
   <div class="row">
+    <!-- NEED TO FILTER BY EXISTINGLINE = FALSE -->
     <% @brand.products.each do |product| %>
       <div class="col-md-6 col-xs-6">
         <%= link_to image_tag(product.primary_image), product_path(product), class: "thumbnail" %>
@@ -102,11 +103,12 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <a href="#existing-modal-brand" data-toggle="modal"><h4 style="padding-bottom:5px; color:white; pointer-events:none;"class="centerize" >BREAD & BUTTER</h4></a>
+      <a href="#existing-modal-brand" style="cursor:help;" data-toggle="modal"><h6 style="padding-bottom:5px; color:white; "class="centerize" >BREAD & BUTTER</h6></a>
       <hr class="centerize" style="padding-bottom:10px; width:50%">
     </div>
   </div>
   <div class="row">
+    <!-- NEED TO FILTER BY EXISTINGLINE = TRUE -->
     <% @brand.products.each do |product| %>
       <div class="col-md-4 col-xs-4">
         <%= link_to image_tag(product.primary_image), product_path(product), class: "thumbnail" %>
@@ -125,7 +127,7 @@
                 </div>
                 <div class="modal-body" >
 
-                  <p style="text-align:center;">This set of products is part of our 'Bread & Butter' series, which highlights the products that made this brand what it is today or simply new products we think you should be aware of. <br><br>Keep in mind that these are not campaigns. We merely are striving to become your one-stop-shop for product discovery.</p><br><br><br><br><i>Enjoy.</i>
+                  <p style="text-align:center;">This set of products is part of our 'Bread & Butter' series, which highlights the products that made this brand what it is today or simply new products we think you should be aware of. <br><br>Keep in mind that these are not campaigns. We merely are striving to become your one-stop-shop for product discovery.<br><br><i>Enjoy.</i></p>
                   <br>
                 </div>
               </div>

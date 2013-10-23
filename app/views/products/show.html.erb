@@ -173,6 +173,9 @@
         <h6 class="centerize" style="padding-top:10px;">Keep exploring</h6>
           <hr class="white-hr" style="opacity:.3;margin-top:-1px;width:40% !important;">
             <%= render :partial=>'products/product', :collection => @products, :locals => {:size => 'col-md-4 col-xs-6'}  %>
+            <br>
+          <hr class="white-hr" style="opacity:.3;margin-top:-1px;width:40% !important;">
+            <%= render :partial=>'brands/brand', :collection => @brands, :locals => {:size => 'col-md-3 col-xs-6'}  %>
       </div>
     </div>
 
