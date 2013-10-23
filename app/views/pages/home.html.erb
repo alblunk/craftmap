@@ -28,11 +28,13 @@
 </div>
 
 <div class="col-md-5 product-grid">
+  <div class="row">
     <div class="col-md-12">
-      <div class="centerize links" id="home-links">
-        <h6 id="product-sort">PRODUCTS</h6>&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;<h6 id="brand-sort">BRANDS</h6>
-    </div>
-
+        <div class="centerize links" id="home-links">
+          <h6 id="product-sort">PRODUCTS</h6>&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;<h6 id="brand-sort">BRANDS</h6>
+        </div>
+      </div>
+  </div>
   <div class="row">
     <div id="home-products">
       <%= render :partial=>'products/product', :collection => @products, :locals => {:size => 'col-md-6 col-xs-6'}  %>
