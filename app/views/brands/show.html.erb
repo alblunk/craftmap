@@ -1,4 +1,4 @@
-<div class="col-md-5" id="b-midpane">
+<div class="col-md-6" id="b-midpane">
 
   <div class="row">
     <div class="col-md-12">
@@ -85,7 +85,7 @@
 </div>
 
 
-<div class="col-md-4 product-grid" style="left:20px;"p>
+<div class="col-md-3 product-grid" style="left:20px;"p>
   <div class="row">
     <div class="col-md-12">
       <a href="/home" class="links centerize"><h6>BACK TO HOME</h6></a>
@@ -99,7 +99,7 @@
       <a style="color:white" class="centerize" data-toggle="modal" href="#submit-modal"><p style="margin-top:20px"> Nothing active? Suggest an idea.</p></a>
     <% else %>
       <% @brand.products.each do |product| %>
-        <div class="col-md-6 col-xs-6">
+        <div class="col-md-12 col-xs-6">
           <%= link_to image_tag(product.primary_image), product_path(product), class: "thumbnail" %>
         </div>
       <% end %>
@@ -114,7 +114,7 @@
   <div class="row">
     <!-- NEED TO FILTER BY EXISTINGLINE = TRUE & ACTIVE = TRUE -->
     <% @brand.products.each do |product| %>
-      <div class="col-md-4 col-xs-4">
+      <div class="col-md-6 col-xs-6">
         <%= link_to image_tag(product.primary_image), product_path(product), class: "thumbnail" %>
       </div>
     <% end %>
