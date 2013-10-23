@@ -1,4 +1,4 @@
-<% if product.primary_image and product.active == true and product.archived != true %>
+<% if product.primary_image and product.active == true and product.archived != true and product.existingline != true %>
   <div class="<%= size %>">
     <%= link_to image_tag(product.primary_image), product_path(product),class: 'thumbnail' %>
   </div>
