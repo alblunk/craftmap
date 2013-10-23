@@ -29,6 +29,14 @@
           </a>
     </div>
     <hr class="black-hr">
+    <% if current_user.try(:admin?) %>
+    <div class="centerize" style="padding:5px">
+      <span style="font-size:.65em;"><%= link_to "X", @brand, class: 'x-btn', method: :delete, data: { confirm: 'Are you sure?' } %></span>&nbsp;/
+      <span><%= link_to "EDIT", edit_brand_path%></span>&nbsp;/
+      <span style="padding:0px 10px 5px 10px;font-size:2em;border:1px solid rgba(0,0,0,.1)"><%= link_to "+", new_brand_product_path(@brand)%></span>
+    </div>
+      <hr class="black-hr">
+    <%end%>
   </div>
   
 
@@ -71,14 +79,6 @@
           <% if @brand.tumblr != "" %>
             <a href="http://<%= @brand.tumblr %>.tumblr.com/" target="blank"><%= image_tag("tumblr_square_black.png", class: "brandsocial") %></a>
           <% end %>
-
-        
-
-        <% if current_user.try(:admin?) %>
-        <hr class="black-hr">
-          <span style="font-size:.65em;"><%= link_to "X", @brand, class: 'x-btn', method: :delete, data: { confirm: 'Are you sure?' } %></span>&nbsp;/
-          <span><%= link_to "EDIT", edit_brand_path%></span>
-        <%end%>
       </div>
     </div>
   </div>
