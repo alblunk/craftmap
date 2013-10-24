@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @brand = @product.brand.id
-    @products = Product.find(:all, :order => 'updated_at DESC', :limit => 9)
+    @products = Product.limit(9).order("RANDOM()")
     @brands = Brand.find(:all, :order => 'created_at DESC', :limit => 4)
   end
 
