@@ -8,8 +8,8 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    @products = Product.all(:order => 'updated_at DESC', :limit => 9)
     @brand = @product.brand.id
+    @products = Product.all(:order => 'created_at DESC', :limit => 9)
     @brands = Brand.all(:order => 'created_at DESC', :limit => 4)
   end
 
