@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
 
   def new
     @product = current_brand.products.build
-    6.times { @product.secondary_images.build }
+    9.times { @product.secondary_images.build }
   end
 
   def edit
