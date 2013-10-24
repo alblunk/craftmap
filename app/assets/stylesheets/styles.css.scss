@@ -815,16 +815,17 @@
   #p-thumbnails-box{
     position:absolute;
     right:0;
+    bottom:0;
     z-index:100;
     cursor: pointer;
   }
 
   #p-thumbnails-box .p-thumbnails {
     position:relative;
-    width:50px;
+    width:40px;
     float:right;
     margin:0px;
-    opacity:.6;
+    opacity:.7;
   }
 
   #p-thumbnails-box .p-thumbnails:hover {
