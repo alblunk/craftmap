@@ -16,13 +16,13 @@
       <div class="row">
         <div class="col-md-12">
           <div class="well well-sm detail-well" style="padding-top:10px;padding-bottom:10px;">
-            <div class="col-md-7 col-sm-7" style="z-index:50;">
+            <div class="col-md-8 col-sm-7" style="z-index:50;">
               <a href="#" data-celery="backpack"><div id="backbtn" class="flatbtn centerize">BACK IT</div></a>
                 <hr class="black-hr" style="margin-bottom:5px">
               <a href="#FAQModal" data-toggle="modal"><h3 id="FAQLink" class="centerize">HOW DOES THIS WORK?</h3></a>
                 <hr class="black-hr" style="margin-top:5px">
             </div>
-            <div class="col-md-5 col-sm-5 centerize" id="price-line" style="border-left:1px solid rgba(0,0,0,.1);">
+            <div class="col-md-4 col-sm-5 centerize" id="price-line" style="border-left:1px solid rgba(0,0,0,.1);">
               <h6>$<span id="price"><%= @product.price %></span></h6>
               <div id="delivery">
                 <h5 style="font-size:.9em">Estimated Delivery:</h5> 
@@ -48,17 +48,19 @@
         </div>
         <img class="img-responsive" id="product-image" src="<%= image_path(@product.primary_image) %>"/>
       </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="well well-sm detail-well">
-            <a href="<%= @product.existingurl.html_safe unless @product.existingurl.blank? %>" target="blank">
-              <div class="flatbtn-deux centerize" id="existing-product-btn">Purchase</div>
-            </a>
-              <hr class="black-hr" style="width:45%;margin-bottom:3px;margin-top:10px">
-            <a href="#existing-modal" style="color:black;" data-toggle="modal"><p  class="centerize">About the 'Bread & Butter' Series</p></a>
-              <hr class="black-hr" style="width:45%;margin-top:2px;margin-bottom:-10px">
-            <br>
-          </div>
+      <div class="well well-sm detail-well">
+        <div class="row">
+            <div class="col-md-6">
+              <a href="<%= @product.existingurl.html_safe unless @product.existingurl.blank? %>" target="blank">
+                <div class="flatbtn-deux centerize" id="existing-product-btn">Purchase</div>
+              </a>
+            </div>
+            <div class="col-md-6">
+              <hr class="black-hr" style="width:90%;margin-bottom:3px;margin-top:10px">
+              <a href="#existing-modal" style="color:black;" data-toggle="modal"><p style="font-size:.8em;" class="centerize">About the 'Bread & Butter' Series</p></a>
+                <hr class="black-hr" style="width:90%;margin-top:2px;margin-bottom:-10px">
+              <br>
+            </div>
         </div>
       </div>
     <% end %>
