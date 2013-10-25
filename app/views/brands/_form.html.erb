@@ -1,53 +1,54 @@
 <%= form_for(@brand, html: { multipart: true, class: "form-horizontal" }) do |f| %>
-<div class="col-md-12 white-background" >
-  <div class="row">
-    <div class="form-actions" style="padding:10px;">
+  <div class="col-md-12 white-background" >
+    <div class="row">
+      <div class="form-actions" style="padding:10px;">
         <%= f.submit class: "btn btn-primary" %>
       </div>
-    <div class="col-md-3 forms-admin">
-      <%#= brand.error_notification %>
-      <br>
-      <span class="label label-warning">Active?</span>
-      <%= f.check_box :active %>
-      <br>
-      <br>
+      <div class="col-md-3 forms-admin">
+        <%#= brand.error_notification %>
+        <br>
+        <span class="label label-warning">Active?</span>
+        <%= f.check_box :active %>
+        <br>
+        <br>
 
-      <%= f.text_field :name, placeholder: "Brand Name", label:false;  %>
-      <br>
-      <%= f.text_field :location, placeholder: "Location (City, State)", label:false; %>
-      <%= f.text_field :founders, placeholder: "Founder's First Name(s)?", label:false; %>
+        <%= f.text_field :name, placeholder: "Brand Name", label:false;  %>
+        <br>
+        <%= f.text_field :location, placeholder: "Location (City, State)", label:false; %>
+        <%= f.text_field :founders, placeholder: "Founder's First Name(s)?", label:false; %>
 
-      <br>
-      <br>
-      <h6>Social:</h6>
-        home:<%= f.text_field :home_page,label:'home', placeholder: "Home URL (brand.com)" %>
-        fb:<%= f.text_field :facebook, placeholder: "facebook.com/_____" %>
-        twtr:<%= f.text_field :twitter, placeholder: "twitter.com/_____" %>
-        ig:<%= f.text_field :instagram, placeholder: "instagram.com/_____" %>
-        tmblr:<%= f.text_field :tumblr, placeholder: "_____.tumblr.com/" %>
-    </div>
-    <div class="col-md-9">
-      <div class="row">
-        <div class="col-md-6">
-          <br>
-          <h6>Logo:</h6><p style="margin-top:-10px;font-size:.85em">(Logo on White Background or Map of Business >600x600)<p>
-          <%= f.file_field :logo %>
-        </div>
-        <div class="col-md-6">
-          <br>
-          <h6>Profile Image:</h6><p style="margin-top:-10px;font-size:.85em">(Shop, Product Detail, or Founders)<p>
-          <%= f.fields_for :profile_image do |image_field| %>
-            <%= image_field.file_field :image %>
-          <% end %>
-        </div>
+        <br>
+        <br>
+        <h6>Social:</h6>
+        <p>
+          home:<%= f.text_field :home_page,label:'home', placeholder: "Home URL (brand.com)" %>
+          fb:<%= f.text_field :facebook, placeholder: "facebook.com/_____" %>
+          twtr:<%= f.text_field :twitter, placeholder: "twitter.com/_____" %>
+          ig:<%= f.text_field :instagram, placeholder: "instagram.com/_____" %>
+          tmblr:<%= f.text_field :tumblr, placeholder: "_____.tumblr.com/" %>
+        </p>
       </div>
-      <hr>
-      <h6>Brand Profile:</h6>
-      <%= f.text_area :profile, as: :text, :rows => "10", :cols => "50", class: 'wysihtml5 textbox', label: false;%>
-
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-6">
+            <br>
+            <h6>Logo:</h6><p style="margin-top:-10px;font-size:.85em">(Logo on White Background or Map of Business >600x600)</p>
+            <%= f.file_field :logo %>
+          </div>
+          <div class="col-md-6">
+            <br>
+            <h6>Profile Image:</h6><p style="margin-top:-10px;font-size:.85em">(Shop, Product Detail, or Founders)</p>
+            <%= f.fields_for :profile_image do |image_field| %>
+              <%= image_field.file_field :image %>
+            <% end %>
+          </div>
+        </div>
+        <hr>
+        <h6>Brand Profile:</h6>
+        <%= f.text_area :profile, as: :text, :rows => "10", :cols => "50", class: 'wysihtml5 textbox', label: false;%>
+      </div>
     </div>
   </div>
-</div>
 <% end %>
 
 
