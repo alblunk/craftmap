@@ -49,13 +49,13 @@ ActiveRecord::Schema.define(version: 20131021061945) do
     t.boolean  "archived"
     t.text     "materials"
     t.boolean  "usa"
+    t.string   "primary_image"
+    t.string   "original_filename"
     t.boolean  "limited"
     t.string   "limitednumber"
     t.boolean  "existingline"
     t.string   "existingurl"
     t.string   "dimensions"
-    t.string   "primary_image"
-    t.string   "original_filename"
   end
 
   add_index "products", ["brand_id"], name: "index_products_on_brand_id"
