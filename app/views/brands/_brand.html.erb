@@ -1,5 +1,5 @@
-<% if brand.primary_image and brand.active == true %>
+<% if brand.logo and brand.active == true %>
   <div class="<%= size %>">
-    <%= link_to image_tag(brand.primary_image), brand_path(brand),class: 'thumbnail' %>
+    <%= link_to image_tag(brand.logo), brand_path(brand),class: 'thumbnail' %>
   </div>
 <% end %>

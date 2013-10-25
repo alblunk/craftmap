@@ -14,7 +14,7 @@ class BrandsController < ApplicationController
 
   def new
     @brand = Brand.new
-    @brand.secondary_images.build
+    @brand.build_profile_image
   end
 
   def create
@@ -58,8 +58,8 @@ class BrandsController < ApplicationController
     def brand_params
       params.require(:brand).permit(:name, :profile, :location, :owner, :founders,
                                     :facebook, :twitter, :instagram, :tumblr,
-                                    :home_page, :active, :primary_image,
-                                    secondary_images_attributes: [ :image ])
+                                    :home_page, :active, :logo,
+                                    profile_image_attributes: [ :image ])
     end
 
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131021061945) do
+ActiveRecord::Schema.define(version: 20131025004039) do
 
   create_table "brands", force: true do |t|
     t.string   "name"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20131021061945) do
     t.string   "home_page"
     t.boolean  "active"
     t.string   "founders"
-    t.string   "primary_image"
+    t.string   "logo"
     t.string   "original_filename"
   end
 
