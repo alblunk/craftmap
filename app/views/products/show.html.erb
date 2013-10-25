@@ -151,8 +151,17 @@
 
           <div class="row">
             <div class="col-md-12">
-              <%= image_tag(@product.brand.profile_image.image, id: "brand-image") %>
+              <% if @product.brand.vid_vimeo.blank? && @product.brand.vid_youtube.blank? %>
+                <%= image_tag(@product.brand.profile_image.image, id: "brand-image") %>
+              <% else %>
+                <% if @product.brand.vid_youtube.blank? %>
+                  <iframe class="centerize" src="//player.vimeo.com/video/<%= @product.brand.vid_vimeo.html_safe %>?badge=0" width="93%" height="250" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <% else %>
+                  <iframe class="centerize" width="100%" height="315" src="//www.youtube.com/embed/<%= @product.brand.vid_youtube.html_safe %>" frameborder="0" allowfullscreen></iframe>
+                <% end %>
+              <% end %>
             </div>
+            
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131025004039) do
+ActiveRecord::Schema.define(version: 20131025223016) do
 
   create_table "brands", force: true do |t|
     t.string   "name"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 20131025004039) do
     t.string   "founders"
     t.string   "logo"
     t.string   "original_filename"
+    t.string   "vid_vimeo"
+    t.string   "vid_youtube"
   end
 
   add_index "brands", ["owner_id"], name: "index_brands_on_owner_id"
@@ -49,13 +51,13 @@ ActiveRecord::Schema.define(version: 20131025004039) do
     t.boolean  "archived"
     t.text     "materials"
     t.boolean  "usa"
-    t.string   "primary_image"
-    t.string   "original_filename"
     t.boolean  "limited"
     t.string   "limitednumber"
     t.boolean  "existingline"
     t.string   "existingurl"
     t.string   "dimensions"
+    t.string   "primary_image"
+    t.string   "original_filename"
   end
 
   add_index "products", ["brand_id"], name: "index_products_on_brand_id"
