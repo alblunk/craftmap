@@ -112,7 +112,7 @@
   </div>
   <div class="row">
     <!-- NEED TO FILTER BY EXISTINGLINE = TRUE & ACTIVE = TRUE -->
-    <% @brand.products.each do |product| %>
+    <% @brand.products.select { |p| p.active && p.existingline }.each do |product| %>
       <div class="col-md-6 col-xs-6">
         <%= link_to image_tag(product.primary_image), product_path(product), class: "thumbnail" %>
       </div>
