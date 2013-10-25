@@ -54,9 +54,9 @@
         <%= image_tag(@brand.profile_image.image, id: "brand-image") %>
       <% else %>
         <% if @brand.vid_youtube.blank? %>
-          <iframe class="centerize" src="//player.vimeo.com/video/<%= @brand.vid_vimeo.html_safe %>?badge=0" width="100%" height="250" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <iframe class="centerize" style="padding-bottom:10px;" src="//player.vimeo.com/video/<%= @brand.vid_vimeo.html_safe %>?badge=0" width="100%" height="250" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         <% else %>
-          <iframe class="centerize" width="100%" height="250" src="//www.youtube.com/embed/<%= @brand.vid_youtube.html_safe %>" frameborder="0" allowfullscreen></iframe>
+          <iframe class="centerize" style="padding-bottom:10px;" width="100%" height="250" src="//www.youtube.com/embed/<%= @brand.vid_youtube.html_safe %>" frameborder="0" allowfullscreen></iframe>
         <% end %>
       <% end %>
     </div>
