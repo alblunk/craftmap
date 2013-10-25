@@ -1,0 +1,10 @@
+<div class="well">
+  <%= form_for [@product, @image], :html => { :multipart => true } do |f| %>
+    <%= f.hidden_field :imageable_type %>
+    <%= f.hidden_field :imageable_id %>
+    <p>
+      <%= f.file_field :image %>
+    </p>
+    <p><%= f.button :submit, class: "btn btn-primary" %></p>
+  <% end %>
+</div>

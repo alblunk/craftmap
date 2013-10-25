@@ -1,0 +1,6 @@
+<div class="row">
+  <%= image_tag secondary_image.image.thumb, id: "img-preview" %>
+  <%= form_for [@product, secondary_image], :method => :delete do |form| %>
+    <%= form.submit "DELETE", class: "btn btn-danger btn-xs" %>
+  <% end %>
+</div>

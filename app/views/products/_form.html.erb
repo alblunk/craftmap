@@ -43,14 +43,26 @@
       <div class="row">
         <div class="col-md-6">
           <h6>Primary Image:</h6><p style="margin-top:-10px; font-size:.85em">(Main Picture of Product >600x600)<p>
+          <% if @product.primary_image? %>
+            <p>Image Preview: (upload a new picture to replace)</p>
+            <%= image_tag @product.primary_image, id: "img-preview" %>
+          <% end %>
           <%= f.file_field :primary_image %>
         </div>
-        <div class="col-md-6">
-          <h6>Secondary Images:</h6><p style="margin-top:-10px; font-size:.85em">(Alternate Product Photos >600x600)<p>
-          <%= f.fields_for :secondary_images do |image_field| %>
-            <%= image_field.file_field :image %>
-          <% end %>
-        </div>
+        <% if @product.persisted? %>
+          <div class="col-md-6">
+            <h6>Secondary Images:</h6><p style="margin-top:-10px; font-size:.85em">(Alternate Product Photos >600x600)<p>
+            <% if @product.has_secondary_images? %>
+              <h6>Current Photos:</h6>
+              <% @product.secondary_images.each do |image| %>
+                <%= image_tag image.image, id: "img-preview" %>
+              <% end %>
+            <% else %>
+              <p>No Secondary Photos uploaded yet.</p>
+            <% end %>
+            <%= link_to "Edit secondary photos", product_secondary_images_path(@product) %>
+          </div>
+        <% end %>
       </div>
 
         <hr style="border-color:black;">

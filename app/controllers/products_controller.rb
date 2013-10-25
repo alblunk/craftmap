@@ -15,12 +15,10 @@ class ProductsController < ApplicationController
 
   def new
     @product = current_brand.products.build
-    9.times { @product.secondary_images.build }
   end
 
   def edit
     @product = Product.find(params[:id])
-    @product.secondary_images.build unless @product.has_secondary_images?
   end
 
   def create

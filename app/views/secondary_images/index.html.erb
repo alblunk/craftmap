@@ -1,0 +1,12 @@
+<div class="col-md-offset-1 col-md-7 white-background">
+  <%= link_to "Edit product", edit_product_path(@product) %>
+  <hr>
+  <div>
+    <h2>Current Secondary Photos</h2>
+    <%= render @images %>
+  </div>
+  <div class="row">
+    <h2>Upload another photo:</h2>
+    <%= render 'form' %>
+  </div>
+</div>
