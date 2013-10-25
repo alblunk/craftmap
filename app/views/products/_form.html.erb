@@ -1,7 +1,7 @@
 <%= form_for([@product.brand, @product], html: { class: "form-horizontal" }) do |f| %>
 <div class="col-md-12 white-background" >
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
       <%#= f.error_notification %>
         <div class="form-actions" style="padding:10px;">
           <%= f.submit class: "btn btn-primary" %>
@@ -29,14 +29,24 @@
           <br>
           
           <h6>Campaign Updates?</h6>
-          <%= f.text_area :updates, as: :text, :rows => "5", :cols => "50", class: 'wysihtml5 textbox', label: false;%>
+            <%= f.text_area :updates, as: :text, :rows => "5", :cols => "50", class: 'wysihtml5 textbox', label: false;%>
           <hr>
-          <h6>Dimensions? (i.e. 10"Wx12"H)</h6>
-              <%= f.text_field :dimensions ,label:false %>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+              <h6>Existing Product Information:</h6>
+                <%= f.check_box :existingline %> Enable?
+                <%= f.text_field :existingurl, placeholder: "Product URL",label:false,class:'textbox' %>
+                <hr style="border-color:black;">
+              <h6>Limited Edition Information:</h6>
+              <%= f.check_box :limited %> Enable?
+              <br>
+                <%= f.text_field :limitednumber, placeholder: "i.e. Limited Edition 500 Units", class: 'textbox', label:false %>
+            </div>
+          </div>
     </div>
 
-    <div class="col-md-9">
+    <div class="col-md-8">
 
       <%#= f.full_error :image_file_size, class: "alert alert-error" %>
       <%#= f.full_error :image_content_type, class: "alert alert-error" %>
@@ -66,36 +76,32 @@
         <% end %>
       </div>
 
-        <hr style="border-color:black;">
-        <div class="row">
-          <div class="col-md-12">
+      <hr style="border-color:black;">
+      <div class="row">
+        <div class="col-md-12">
 <!-- BRAND DESCRIPTION -->
-            <h6>Brand Description of Product:</h6>
-            <%= f.text_area :description, as: :text, :rows => "5", :cols => "50", class: 'wysihtml5 textbox', placeholder: "Why is the brand making this product, what makes it special, what inspired the idea?", label:false;%>
-            <h6>Existing Product Information:</h6>
-              <%= f.check_box :existingline %> Enable?
-              <%= f.text_field :existingurl, placeholder: "Product URL",label:false,class:'textbox' %>
-              <hr style="border-color:black;">
-            <h6>Limited Edition Information:</h6>
-            <%= f.check_box :limited %> Enable?
-            
-            <br>
-              <%= f.text_field :limitednumber, placeholder: "i.e. Limited Edition 500 Units", class: 'textbox', label:false %>
-
+          <h6>Brand Description of Product:</h6>
+          <%= f.text_area :description, as: :text, :rows => "8", :cols => "50", class: 'wysihtml5 textbox', placeholder: "Why is the brand making this product, what makes it special, what inspired the idea?", label:false;%>
+          <div class="row">
             <hr style="border-color:black;">
-            <div class="col-md-6">
-<!-- FEATURES & MATERIALS -->     
+            <div class="col-md-12">   
               <h6>FEATURES:</h6>
-             <%= f.text_area :details, as: :text, :rows => "5", :cols => "20", class: 'wysihtml5 textbox', label: false;%>
-            </div>
-            <div class="col-md-6">
-              <h6>MATERIALS:</h6>
-              <%= f.text_area :materials, as: :text, :rows => "5", :cols => "20", class: 'wysihtml5 textbox', label:false;%>
+              <%= f.text_area :details, as: :text, :rows => "10", :cols => "20", class: 'wysihtml5 textbox', label: false;%>
             </div>
           </div>
+          <div class="row">
+            <div class="col-md-5">
+              <h6>Dimensions? (i.e. 10"Wx12"H)</h6>
+              <%= f.text_field :dimensions ,label:false %>
+            </div>
+            <div class="col-md-7">
+              <h6>MATERIALS:</h6>
+              <%= f.text_area :materials, as: :text, :rows => "4", :cols => "20", class: 'wysihtml5 textbox', label:false;%>
+            </div>
+            
+          </div>
         </div>
-
-
+      </div>
     </div>
 
   </div>
