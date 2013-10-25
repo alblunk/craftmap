@@ -32,12 +32,24 @@
         <div class="row">
           <div class="col-md-6">
             <br>
-            <h6>Logo:</h6><p style="margin-top:-10px;font-size:.85em">(Logo on White Background or Map of Business >600x600)</p>
-            <%= f.file_field :logo %>
+            <h6>Logo:</h6>
+            <p style="margin-top:-10px;font-size:.85em">(Logo on White Background or Map of Business >600x600)</p>
+            <div id="preview">
+              <% if @brand.logo? %>
+                <p>Logo Preview: (upload a new picture to replace)</p>
+                <%= image_tag @brand.logo, id: "img-preview" %>
+              <% end %>
+              <%= f.file_field :logo %>
+            </div>
           </div>
           <div class="col-md-6">
             <br>
-            <h6>Profile Image:</h6><p style="margin-top:-10px;font-size:.85em">(Shop, Product Detail, or Founders)</p>
+            <h6>Profile Image:</h6>
+            <p style="margin-top:-10px;font-size:.85em">(Shop, Product Detail, or Founders)</p>
+            <% if @brand.profile_image.persisted? %>
+              <p>Image Preview: (upload a new picture to replace)</p>
+              <%= image_tag @brand.profile_image.image, id: "img-preview" %>
+            <% end %>
             <%= f.fields_for :profile_image do |image_field| %>
               <%= image_field.file_field :image %>
             <% end %>
