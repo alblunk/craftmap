@@ -63,12 +63,12 @@
   </div>
 <% end %>
 
-
-<!-- wysihtml5 -->
-<script type="text/javascript">
-  $(function() {
-    $('.wysihtml5').each(function(i, elem) {
-      $(elem).wysihtml5();
-    });
-  })
-</script>
+<% content_for(:scripts) do %>
+  <script type="text/javascript">
+    $(function() {
+      $('.wysihtml5').each(function(i, elem) {
+        $(elem).wysihtml5();
+      });
+    })
+  </script>
+<% end %>

@@ -32,6 +32,8 @@
 
     <%= javascript_include_tag "application" %>
 
+    <%= yield(:scripts) %>
+
     <!-- Intercom.io Scripts -->
     <script id="IntercomSettingsScriptTag">
       window.intercomSettings = {
