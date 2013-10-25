@@ -77,7 +77,6 @@
           <h5 id="social-title" style="margin-top:-5px;" class="centerize" >SPREAD THE GOOD WORD</h5>
         </div>
       </div>
-
       <div class="row">
         <div class="col-md-12 centerize">
           <!-- FACEBOOK -->
@@ -95,15 +94,12 @@
         </div>
         <hr class="black-hr" style="padding-bottom:20px;">
       </div>
-    </div>
-
-<!-- DESCRIPTION -->
-    <div class="row">
-      <div class="col-md-12">
-            <h3 style="margin-top:-10px;" class="centerize"><%=@product.name.html_safe%></h3>
-              <% if current_user.try(:admin?) %>
-                <p style="font-size:.55em;margin-bottom:-10px;" class="centerize"><%= link_to "[EDIT PRODUCT]",  edit_brand_product_path(@brand, @product)%></p>
-              <%end%>
+      <div class="row">
+        <div class="col-md-12">
+          <h3 style="margin-top:-10px;" class="centerize"><%=@product.name.html_safe%></h3>
+            <% if current_user.try(:admin?) %>
+              <p style="font-size:.55em;margin-bottom:-10px;" class="centerize"><%= link_to "[EDIT PRODUCT]",  edit_brand_product_path(@brand, @product)%></p>
+            <%end%>
           <br>
           <div class="row">
             <div class="col-md-12">
@@ -130,38 +126,35 @@
                 <%= @product.dimensions.html_safe unless @product.dimensions.blank?%>
               </div>
             </div>
+              <% if @product.limited == true %>
+                <h6 class="centerize"><strong>NOTE:</strong> <i><%=@product.limitednumber%></i></h6>
+                <br>
+              <% end %>
+              <% if @product.usa == true %>
+                <div class="centerize" style="pointer-events:none;padding-bottom:15px">
+                  <span id="usa-text">Made in USA&nbsp;</span><%= image_tag("usa-flag.jpg", id: "usa") %>
+                </div>
+              <% end %>
+                <hr class="black-hr">
           </div>
-          <% if @product.limited == true %>
-            <h6 class="centerize"><strong>NOTE:</strong> <i><%=@product.limitednumber%></i></h6>
-            <br>
-          <% end %>
-          <% if @product.usa == true %>
-            <div class="centerize" style="pointer-events:none;padding-bottom:15px">
-              <span id="usa-text">Made in USA&nbsp;</span><%= image_tag("usa-flag.jpg", id: "usa") %>
+          <div class="row">
+            <div class="col-md-12">
+              <h6 style="margin-bottom:-15px">MEET THE MAKER:</h6>
+              <h3><%= link_to @product.brand.name, brand_path(@brand), class:'brand-title' %></h3>
+              <% if current_user.try(:admin?) %>
+                  <p style="font-size:.55em;margin-bottom:10px;margin-top:-5px"><%= link_to "[EDIT BRAND]", edit_brand_path([@brand])%></p>
+              <%end%>
+              <h5 class="location" style="font-size:.85em" ><%=@product.brand.location.html_safe%></h5>
+              
             </div>
-          <% end %>
-          <hr class="black-hr">
-      </div>
-    </div>
+          </div>
 
-    
-
-  <!-- PROFILE -->
-    <div class="row">
-      <div class="col-md-12">
-        <h6 style="margin-bottom:-15px">MEET THE MAKER:</h6>
-        <h3><%= link_to @product.brand.name, brand_path(@brand), class:'brand-title' %></h3>
-        <% if current_user.try(:admin?) %>
-            <p style="font-size:.55em;margin-bottom:10px;margin-top:-5px"><%= link_to "[EDIT BRAND]", edit_brand_path([@brand])%></p>
-        <%end%>
-        <h5 class="location" style="font-size:.85em" ><%=@product.brand.location.html_safe%></h5>
-        
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-12">
-        <%= image_tag(@product.brand.profile_image.image, id: "brand-image") %>
+          <div class="row">
+            <div class="col-md-12">
+              <%= image_tag(@product.brand.profile_image.image, id: "brand-image") %>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
