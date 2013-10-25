@@ -52,6 +52,7 @@
         <% if @product.persisted? %>
           <div class="col-md-6">
             <h6>Secondary Images:</h6><p style="margin-top:-10px; font-size:.85em">(Alternate Product Photos >600x600)<p>
+            <h5 style="font-size:.7em"><%= link_to "Edit secondary photos", product_secondary_images_path(@product) %></h5>
             <% if @product.has_secondary_images? %>
               <h6>Current Photos:</h6>
               <% @product.secondary_images.each do |image| %>
@@ -60,7 +61,7 @@
             <% else %>
               <p>No Secondary Photos uploaded yet.</p>
             <% end %>
-            <%= link_to "Edit secondary photos", product_secondary_images_path(@product) %>
+            
           </div>
         <% end %>
       </div>
