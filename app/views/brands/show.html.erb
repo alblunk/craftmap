@@ -94,7 +94,8 @@
     </div>
   </div>
   <div class="row">
-    <% if @brand.products.count == 0 %> 
+
+    <% if @brand.products.where(:active => true, :existingline => false).count == 0 %> 
       <a style="color:white" class="centerize" data-toggle="modal" href="#submit-modal"><p style="margin-top:20px"> Nothing active? Suggest an idea.</p></a>
     <% else %>
       <% @brand.products.select { |p| p.active && !p.existingline }.each do |product| %>
