@@ -12,6 +12,10 @@ class Product < ActiveRecord::Base
 
   mount_uploader :primary_image, ImageUploader
 
+  def self.active_campaigns
+    where(active: true, archived: false, existingline: false)
+  end
+
   def has_secondary_images?
     secondary_images.count > 0
   end
@@ -19,4 +23,5 @@ class Product < ActiveRecord::Base
   def to_param
     "#{id}-#{name.try(:parameterize) }"
   end
+
 end

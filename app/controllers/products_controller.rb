@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @brand = @product.brand.id
-    @products = Product.order("created_at DESC")
+    @products = Product.active_campaigns.limit(6)
     @brands = Brand.order("created_at DESC").limit(4)
   end
 
