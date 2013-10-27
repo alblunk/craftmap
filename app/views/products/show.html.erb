@@ -1,7 +1,6 @@
 <!-- PRODUCT PICTURE PANE -->
-<div class="col-md-5" >
+<div class="col-md-5">
   <div id="mid-container" >
-
     <% if @product.existingline != true %>
       <div class="mid-pic-frame" >
         <div id="p-thumbnails-box">
@@ -103,10 +102,15 @@
           <br>
           <div class="row">
             <div class="col-md-12">
-              <blockquote class="pull-right" style="margin-top:-10px;margin-bottom:0px">
-                <p style="font-size:1.2em;font-style:italic;"><%=@product.description.html_safe%></p>
-                <h6 style="font-size:.6em"><small><%= @product.brand.founders%> of <%=@product.brand.name.html_safe%></small></h6>
-              </blockquote>
+              <% if @product.description.blank? %>
+                <p style="text-align:left"><%= @product.brand.details.html_safe %></p>
+              <% else %>
+                <blockquote class="pull-right" style="margin-top:-10px;margin-bottom:10px">
+                  <p style="font-size:1.2em;font-style:italic;"><%=@product.description.html_safe%></p>
+                  <h6 style="font-size:.6em"><small><%= @product.brand.founders%> of <%=@product.brand.name.html_safe%></small></h6>
+                </blockquote>
+                <p style="text-align:left"><%= @product.brand.details.html_safe %></p>
+              <% end %>
             </div>
           </div>
           <div class="row" id="product-details">
