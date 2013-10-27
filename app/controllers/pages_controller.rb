@@ -8,7 +8,7 @@ class PagesController < ApplicationController
 
   def home
     @products = Product.active_campaigns
-    @brands = Brand.all
+    @brands = Brand.where(active: true)
   end
 
   def faq; end
