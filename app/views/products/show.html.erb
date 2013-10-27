@@ -103,7 +103,7 @@
           <div class="row">
             <div class="col-md-12">
               <% if @product.description.blank? %>
-                <p style="text-align:left"><%= @product.details.html_safe unless @product.details.blank?%></p>
+                <p style="text-align:left;font-size:.88em;"><%= @product.details.html_safe unless @product.details.blank?%></p>
                 <br>
               <% else %>
                 <blockquote class="pull-right" style="margin-top:-10px;margin-bottom:10px">
