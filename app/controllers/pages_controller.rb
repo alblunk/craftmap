@@ -9,8 +9,8 @@ class PagesController < ApplicationController
   def about; end
 
   def home
-    @products = Product.active_campaigns
-    @brands = Brand.where(active: true)
+    @products = Product.active_campaigns.order("updated_at DESC")
+    @brands = Brand.where(active: true).order("name ASC")
   end
 
   def faq; end
