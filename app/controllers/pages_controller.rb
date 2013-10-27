@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   def about; end
 
   def home
-    @products = Product.all
+    @products = Product.active_campaigns
     @brands = Brand.all
   end
 
