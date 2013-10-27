@@ -3,11 +3,6 @@
 # currently mimics production bucket, no real reason to use different ones right away
 require 'carrierwave'
 
-if Rails.env == 'development'
-  ENV = HashWithIndifferentAccess.new(YAML.load(File.read(File.expand_path('../../amazon_s3_local.yml', __FILE__))))
-end
-
-
 CarrierWave.configure do |config|
   config.fog_credentials = {
     :provider               => 'AWS',                        # required
