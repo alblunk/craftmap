@@ -73,13 +73,13 @@
 <!-- SOCIAL HEADER-->
       <div class="row">
         <div class="col-md-12">   
-          <h5 id="social-title" style="margin-top:-5px;" class="centerize" >SPREAD THE GOOD WORD</h5>
+          <h5 id="social-title" style="margin-top:0px;letter-spacing:1px;" class="centerize" >SPREAD THE GOOD WORD</h5>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12 centerize">
           <!-- FACEBOOK -->
-          <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=<%=request.original_url%>&amp;p[title]=<%= @product.name %>+by+<%= @product.brand.name.html_safe %>+on+Farallon+Co.&amp;p[images][0]=https://s3.amazonaws.com/beelineco/FarallonCo-ShortForm.jpg&amp;p[summary]=Farallon+Co+-+Top+Tier+Brands,+Fan+Backed+Product,+Join+the+Company." target="blank"><%= image_tag("facebook.png", class: "social-show", width: "20") %></a>
+          <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=<%=request.original_url%>&amp;p[title]=<%= @product.name %>+by+<%= @product.brand.name.html_safe %>+on+Farallon+Co.&amp;p[images][0]=https://s3.amazonaws.com/beelineco/FarallonCo-ShortForm.jpg&amp;p[summary]=Farallon+Co+-+Top+Tier+Brands,+Fan+Backed+Product,+Join+the+Company." target="blank"><%= image_tag("facebook.png", id:"fb-social", class: "social-show", width: "20") %></a>
           <!-- TWITTER -->
           <a href="http://twitter.com/home?status=Check+out+the+<%= @product.name %>+by+<%= @product.brand.name %>+on+@farallonco+(<%=request.original_url.html_safe%>)" target="blank" ><%= image_tag("twitter.png", class: "social-show", width: "20") %>
           </a>
