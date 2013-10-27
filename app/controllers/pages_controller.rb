@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_filter :authenticate, only: [ :upload ]
+
   def landing
     @user = User.new
     render layout: false
@@ -20,4 +22,12 @@ class PagesController < ApplicationController
   def jobs; end
 
   def upload; end
+
+  private
+
+    def authenticate
+      authenticate_or_request_with_http_basic do |username, password|
+        username == "farallon" && password == "brandlove"
+      end
+    end
 end
