@@ -3,8 +3,9 @@ class Product < ActiveRecord::Base
   belongs_to :owner, class_name: "User"
 
   has_many :secondary_images, as: :imageable
-  has_many :remote_datas
+  has_one :remote_data
   accepts_nested_attributes_for :secondary_images, allow_destroy: true, :reject_if => lambda {|a| a['image'].blank?}
+  accepts_nested_attributes_for :remote_data, allow_destroy: true
 
   validates :name, presence: true
   validates :brand, presence: true

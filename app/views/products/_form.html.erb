@@ -25,6 +25,10 @@
           <br>
           <%= f.text_field :status, placeholder: "Status?",label:false %>
           
+          <%= f.fields_for :remote_data do |form| %>
+            <%= form.text_field :slug, placeholder: "Celery ID" %>
+          <% end %>
+
           <br>
           <br>
           

@@ -15,10 +15,12 @@ class ProductsController < ApplicationController
 
   def new
     @product = current_brand.products.build
+    @product.build_remote_data
   end
 
   def edit
     @product = Product.find(params[:id])
+    @product.build_remote_data unless @product.remote_data
   end
 
   def create
@@ -28,7 +30,6 @@ class ProductsController < ApplicationController
     if @product.save
       redirect_to [current_brand, @product]
     else
-      # (8 - @product.images.size).times { @product.images.build }
       format.html { render action: "new" }
     end
   end
@@ -40,7 +41,6 @@ class ProductsController < ApplicationController
       if @product.update(product_params)
         format.html { redirect_to [current_brand, @product], notice: 'Product was successfully updated.' }
       else
-        @product.images.build if @product.images.empty?
         format.html { render action: "edit" }
       end
     end
@@ -64,9 +64,10 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).
               permit( :name, :description, :materials, :details, :features, :price, :deliver_date,
-                      :updates, :status, :active, :archived, :usa, :limited,
+                      :updates, :status, :active, :archived, :usa, :limited, :primary_image,
                       :limitednumber, :existingline, :existingurl, :dimensions, :owner,
-                      :primary_image, secondary_images_attributes: [ :image ],
+                      secondary_images_attributes: [ :image ],
+                      remote_data_attributes: [ :slug ],
                       brand_attributes: [ :name, :profile ] )
     end
 end
