@@ -56,15 +56,5 @@ module Beeline
     #Required for Devise on Heroku
     config.assets.initialize_on_precompile = false
 
-    config.action_mailer.smtp_settings = {
-      :address              => "smtp.gmail.com",
-      :port                 => 587,
-      :domain               => "http://thebeeline.co",
-      :user_name            => "ab@thebeeline.co",
-      :password             => "TheBeelineCo",
-      :authentication       => :plain,
-      :enable_starttls_auto => true
-    }
-
   end
 end
