@@ -16,7 +16,7 @@
         <div class="col-md-12">
           <div class="well well-sm detail-well" style="padding-top:10px;padding-bottom:10px;">
             <div class="col-md-8 col-sm-7" style="z-index:50;">
-              <a href="#" data-celery="backpack"><div id="backbtn" class="flatbtn centerize">BACK IT</div></a>
+              <a href="#" data-celery="<%= @product.remote_data.slug if @product.remote_data %>"><div id="backbtn" class="flatbtn centerize">BACK IT</div></a>
                 <hr class="black-hr" style="margin-bottom:5px">
               <a href="#FAQModal" data-toggle="modal"><h3 id="FAQLink" class="centerize">HOW DOES THIS WORK?</h3></a>
                 <hr class="black-hr" style="margin-top:5px">
