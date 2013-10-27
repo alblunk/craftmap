@@ -23,6 +23,11 @@ Beeline::Application.configure do
   config.assets.debug = false
 
   # In production, :host should be set to the actual host of your application.
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
+
+  config.action_mailer.default_url_options = {
+    :host => "localhost:3000"
+  }
 
 end

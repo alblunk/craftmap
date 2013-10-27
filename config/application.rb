@@ -66,8 +66,5 @@ module Beeline
       :enable_starttls_auto => true
     }
 
-    config.action_mailer.default_url_options = {
-      :host => "http://code-beeline-609.herokuapp.com"
-    }
   end
 end
