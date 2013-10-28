@@ -1,4 +1,4 @@
-<div class="col-md-4 white-background" style="padding-bottom:5%" >
+<div class="col-md-4 white-background" >
 
   <div style="padding-top:15px;"><%= render "devise/shared/links" %></div>
   <hr>
@@ -14,10 +14,12 @@
       <%= f.input :email, placeholder: 'EMAIL',label:false, error_html: { id: 'forms-error'} %>
       <br>
       <%= f.input :password, placeholder: 'PASSWORD',label:false, error_html: { id: 'forms-error'}%>
+      <h6 class="centerize" style="padding-top:5px;"><%= link_to "Forgot your password?", new_password_path(resource_name), class:'forgot-password' %></h6>
       <br>
-      <span class="label label-default" style="opacity:.7;">Remember me?</span>
+      <h6 style="display:inline">Remember me?</h6>
       <%= f.input :remember_me, as: :boolean, label: false, error_html: { id: 'forms-error'}%>
     </div>
+    
 
     <hr class="black-hr">
 
