@@ -163,9 +163,9 @@
                 <%= image_tag(@product.brand.profile_image.image, id: "brand-image") %>
               <% else %>
                 <% if @product.brand.vid_youtube.blank? %>
-                  <iframe class="centerize" src="//player.vimeo.com/video/<%= @product.brand.vid_vimeo.html_safe %>?badge=0" width="100%" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                  <iframe class="centerize" src="//player.vimeo.com/video/<%= @product.brand.vid_vimeo.html_safe %>?title=0&amp;byline=0&amp;portrait=0" width="100%" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 <% else %>
-                  <iframe class="centerize" width="100%" height="300" src="//www.youtube.com/embed/<%= @product.brand.vid_youtube.html_safe %>" frameborder="0" allowfullscreen></iframe>
+                  <iframe class="centerize" width="100%" height="300" src="//www.youtube.com/embed/<%= @product.brand.vid_youtube.html_safe %>?rel=0" frameborder="0" allowfullscreen></iframe>
                 <% end %>
               <% end %>
             </div>
