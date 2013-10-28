@@ -9,7 +9,7 @@ class PagesController < ApplicationController
   def about; end
 
   def home
-    @products = Product.active_campaigns.order("updated_at ASC")
+    @products = Product.active_campaigns.order("updated_at DESC")
     @brands = Brand.where(active: true).order("name ASC")
   end
 
@@ -27,7 +27,7 @@ class PagesController < ApplicationController
 
     def authenticate
       authenticate_or_request_with_http_basic do |username, password|
-        username == "farallon" && password == "brandlove"
+        username == "brands" && password == "farallon"
       end
     end
 end
