@@ -108,11 +108,12 @@
                 <p style="text-align:left;font-size:.88em;"><%= @product.details.html_safe unless @product.details.blank?%></p>
                 <br>
               <% else %>
-                <blockquote class="pull-right" style="margin-top:-10px;margin-bottom:10px">
+
+                <blockquote class="pull-right" style="margin-top:-10px;margin-bottom:0px;width:100%">
                   <p style="font-size:1.2em;font-style:italic;"><%=@product.description.html_safe%></p>
                   <h6 style="font-size:.6em"><small><%= @product.brand.founders%> of <%=@product.brand.name.html_safe%></small></h6>
                 </blockquote>
-                <p style="text-align:left"><%= @product.details.html_safe %></p>
+                <p style="text-align:left;font-size:.88em;"><%= @product.details.html_safe %></p>
                 <br>
               <% end %>
             </div>
