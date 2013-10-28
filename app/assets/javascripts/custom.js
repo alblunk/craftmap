@@ -11,20 +11,20 @@ $(document).ready(function(){
 
 
 
-    if ($(window).width() > 991) {
-         $('#home-products').mouseenter(function() {
-            $('.p-hover').fadeTo('fast', 1);
-            $('#motto').hide()
-        });  
-        $('#home-products').mouseleave(function(){
-            $('.p-hover').hide();
-            $('#motto').show();
-        });
-    }
-    else {
-        $('.p-hover').hide();
-        $('#motto').show();
-    }
+    // if ($(window).width() > 991) {
+    //      $('#home-products').mouseenter(function() {
+    //         $('.p-hover').fadeTo('fast', 1);
+    //         $('#motto').hide()
+    //     });  
+    //     $('#home-products').mouseleave(function(){
+    //         $('.p-hover').hide();
+    //         $('#motto').show();
+    //     });
+    // }
+    // else {
+    //     $('.p-hover').hide();
+    //     $('#motto').show();
+    // }
 });
 
 // $('.product-grid').mouseenter(function() {
