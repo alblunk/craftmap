@@ -1,53 +1,57 @@
 
-<div class="col-md-10 white-background">
+<div class="col-md-10 white-background" style="left:40px">
   <div class="row">
-    <h1>OUR USERS</h1>
-    <hr style="border-color: rgba(0,0,0,.3);margin-top:2px">
-    <div class="col-md-6">
-      <h3>Admins</h3>
-      <div class="table-responsive">
-        <table class="table table-striped table-condensed" style="font-size:.75em">
-          <thead>
-            <tr>
-              <th>Delete?</th>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Sign Up Date</th>
-              <th>Last Sign-in</th>
-              <th>Admin?</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <%= render @admins, partial: 'user' %>
-          </tbody>
-        </table>
+    <div class="col-md-12" >
+      <div class="row">
+        <h1>OUR USERS</h1>
+        <hr style="border-color: rgba(0,0,0,.3);margin-top:2px">
+        <div class="col-md-6">
+          <h3>Admins</h3>
+          <div class="table-responsive">
+            <table class="table table-striped table-condensed" style="font-size:.75em">
+              <thead>
+                <tr>
+                  <th>Delete?</th>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Sign Up Date</th>
+                  <th>Last Sign-in</th>
+                  <th>Admin?</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <%= render @admins, partial: 'user' %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h3>Users</h3>
+          <h5 style="font-size:.9em;">Total: <%= User.count(:all) - @admins.count %></h5>
+          <div class="table-responsive">
+            <table class="table table-striped table-condensed" style="font-size:.75em">
+              <thead>
+                <tr>
+                  <th>Delete?</th>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Sign Up Date</th>
+                  <th>Last Sign-in</th>
+                  <th>Admin?</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <%= render @users %>
+              </tbody>
+            </table>
+          </div>
+            <%= paginate @users %>
+        </div>
       </div>
-    </div>
-    <div class="col-md-6">
-      <h3>Users</h3>
-      <h5 style="font-size:.9em;">Total: <%= User.count(:all) - @admins.count %></h5>
-      <div class="table-responsive">
-        <table class="table table-striped table-condensed" style="font-size:.75em">
-          <thead>
-            <tr>
-              <th>Delete?</th>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Sign Up Date</th>
-              <th>Last Sign-in</th>
-              <th>Admin?</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <%= render @users %>
-          </tbody>
-        </table>
-      </div>
-        <%= paginate @users %>
     </div>
   </div>
 </div>
