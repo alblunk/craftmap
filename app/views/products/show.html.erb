@@ -85,7 +85,8 @@
             </div>
             <div class="row">
               <div class="col-md-12 centerize" id="updates">
-                <%=@product.updates.html_safe%>
+                <div style="width:85%" class="centerize" data-celery="<%= @product.remote_data.slug if @product.remote_data %>" data-celery-type="bar"></div>
+                <h6><%=@product.updates.html_safe%></h6>
               </div>
             </div> 
           </div>
