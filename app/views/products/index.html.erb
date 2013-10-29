@@ -7,10 +7,10 @@
       <thead>
         <tr>
           <th>ID</th>
+          <th>Active?</th>
           <th>Campaign?</th>
           <th>Owner</th>
           <th>Brand</th>
-          
           <th>Name</th>
           <th>Pic</th>
           <th>$</th>
@@ -18,7 +18,7 @@
           <th>Status</th>
           <th>Created</th>
           <th>Updated</th>
-          <th>Active?</th>
+          
           <!-- <th>Update?</th> -->
           <th>Delete?</th>
         </tr>
@@ -29,6 +29,12 @@
 
           <tr>
             <td><%= product.id %></td>
+            <td><% if product.active == true %>
+              <span class="glyphicon glyphicon-ok" style="color:#389e39"></span>
+                <% else %>
+              <span class="glyphicon glyphicon-remove" style="color:#A32638"></span>
+              <% end %>
+            </td>
             <td>
               <% if product.existingline == true %>
                 -
@@ -45,12 +51,6 @@
             <td><%= product.status %></td>
             <td><%= product.created_at.strftime("%D") %></td>
             <td><%= time_ago_in_words(product.updated_at) %></td>
-            <td><% if product.active == true %>
-              <span class="glyphicon glyphicon-ok" style="color:#389e39"></span>
-                <% else %>
-              <span class="glyphicon glyphicon-remove" style="color:#A32638"></span>
-              <% end %>
-            </td>
 
             <!-- <%#= form_for([:active, product]) do |f| %>
               <td>
