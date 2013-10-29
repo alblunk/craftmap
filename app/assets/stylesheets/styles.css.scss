@@ -1028,7 +1028,7 @@ img#img-preview {
     width: 65px;
     right:15px;
     position:absolute;
-    border-radius:2px;
+    border-radius:1px;
   }
   #social-places{
     font-family:m-1c, serif;
@@ -1169,10 +1169,10 @@ img#img-preview {
     padding-top:10px;
     padding-bottom:10px;
     width: 100%;
-    margin-top:10%;
+    margin-top:2%;
     margin-bottom:20px;
     bottom:0;
-    position:fixed;
+    position:relative;
   }
 
   footer  a{
@@ -1261,6 +1261,7 @@ img#img-preview {
         text-align:center;
         position:relative;
         padding-bottom:0px;
+        margin-top:10%;
       }
       #footer-credit{
         position:relative;
@@ -1362,6 +1363,7 @@ img#img-preview {
         text-align:center;
         position:relative;
         padding-bottom:0px;
+        margin-top:10%;
       }
       .mid-pic-frame{
         position:relative;
