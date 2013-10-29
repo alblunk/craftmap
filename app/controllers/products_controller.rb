@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   before_action :require_admin, except: [ :show ]
 
   def index
-    @products = Product.order("created_at desc").page(params[:page]).per(50)
+    @products = Product.order("existingline, created_at desc, active").page(params[:page]).per(50)
   end
 
   def show

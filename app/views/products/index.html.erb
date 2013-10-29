@@ -6,6 +6,7 @@
       <thead>
         <tr>
           <th>ID</th>
+          <th>Campaign?</th>
           <th>Owner</th>
           <th>Brand</th>
           
@@ -27,6 +28,13 @@
 
           <tr>
             <td><%= product.id %></td>
+            <td>
+              <% if product.existingline == true %>
+                -
+              <% else %>
+                <span class="glyphicon glyphicon-ok" style="color:#389e39"></span>
+              <% end %>
+            </td>
             <td><%= product.owner_id %></td>
             <td><%= product.brand_id %></td>
             <td><%= link_to product.name, product %></td>
