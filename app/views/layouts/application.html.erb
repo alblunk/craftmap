@@ -22,9 +22,12 @@
       <%= yield %>
 
     </div>
-    
-    <!-- <div id="footer-container"></div> -->
-    <%= render 'layouts/footer' %>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="footer-container"></div>
+        <%= render 'layouts/footer' %>
+      </div>
+    </div>
 
     <%= javascript_include_tag "application" %>
 
