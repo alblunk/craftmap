@@ -9,7 +9,7 @@ class PagesController < ApplicationController
   def about; end
 
   def home
-    @products = Product.active_campaigns.order("created_at asc")
+    @products = Product.active_campaigns.order("created_at asc").group("brand_id")
     @brands = Brand.where(active: true).order("name ASC")
   end
 
