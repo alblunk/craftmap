@@ -10,7 +10,7 @@ class PagesController < ApplicationController
 
   def home
     @products = Product.active_campaigns.order("created_at asc")
-    @products.group_by &:brand_id
+    # @products.group_by &:brand_id <---- CAN I DO THAT?
     @brands = Brand.where(active: true).order("name ASC")
   end
 
