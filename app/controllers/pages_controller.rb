@@ -9,8 +9,7 @@ class PagesController < ApplicationController
   def about; end
 
   def home
-    @products = Product.active_campaigns.order("created_at asc")
-    # @products.group_by &:brand_id <---- CAN I DO THAT?
+    @products = Product.active_campaigns.order("brand_id ASC, created_at asc")
     @brands = Brand.where(active: true).order("name ASC")
   end
 
