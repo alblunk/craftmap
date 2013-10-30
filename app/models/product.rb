@@ -16,6 +16,10 @@ class Product < ActiveRecord::Base
     where(active: true, archived: false, existingline: false)
   end
 
+  def self.active_products
+    where(active: true, archived: false, existingline: true)
+  end
+
   def has_secondary_images?
     secondary_images.count > 0
   end
