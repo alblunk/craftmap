@@ -11,10 +11,7 @@ $(document).ready(function(){
 
     $('#thumbnail-hide').click(function() {
         $('#p-thumbnails-box').toggle("fast");
-    });
-
-    $('#thumbnail-hide').click(function() {
-        $('#thumbnail-hide').replaceWith( $( '#thumbnail-hide' ).text('SHOW') );
+        $('#thumbnail-hide').text($('#thumbnail-hide').text() == 'SHOW' ? 'HIDE' : 'SHOW');
     });
 
     // if ($(window).width() > 991) {
