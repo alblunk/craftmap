@@ -11,9 +11,11 @@ $(document).ready(function(){
 
     $('#thumbnail-hide').click(function() {
         $('#p-thumbnails-box').toggle("fast");
-        // $('#thumbnail-hide').replaceWith( $( '#thumbnail-hide' ).text('SHOW') );
     });
 
+    $('#thumbnail-hide').click(function() {
+        $('#thumbnail-hide').replaceWith( $( '#thumbnail-hide' ).text('SHOW') );
+    });
 
     // if ($(window).width() > 991) {
     //      $('#home-products').mouseenter(function() {
