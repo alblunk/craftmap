@@ -11,6 +11,7 @@ $(document).ready(function(){
 
     $('#thumbnail-hide').click(function() {
         $('#p-thumbnails-box').toggle("fast");
+        // $('#thumbnail-hide').replaceWith( $( '#thumbnail-hide' ).text('SHOW') );
     });
 
 
