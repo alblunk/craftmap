@@ -6,6 +6,8 @@ class Api::RegistrationsController < Api::BaseController
     user = User.new(user_params)
 
     if user.save
+      # Uncomment to start sending the welcome email.
+      # UserMailer.welcome_email(user).deliver
       render :json => { message: "Success! We'll notify you when we're ready to launch!" }, status: 201
     else
       render :json => { errors: user.errors }, status: 422
