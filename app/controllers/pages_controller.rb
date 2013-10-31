@@ -10,7 +10,7 @@ class PagesController < ApplicationController
 
   def home
     @products = Product.active_campaigns.order("brand_id ASC, created_at asc")
-    @brands = Brand.where(active: true).order("name ASC")
+    @brands = Brand.active_brands.order("name ASC")
   end
 
   def faq; end

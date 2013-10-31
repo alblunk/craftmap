@@ -10,6 +10,10 @@ class Brand < ActiveRecord::Base
 
   mount_uploader :logo, ImageUploader
 
+  def self.active_brands
+    where(active: true)
+  end
+
   def to_param
   	"#{id}-#{name.try(:parameterize)}"
   end
