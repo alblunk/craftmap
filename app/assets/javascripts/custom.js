@@ -9,6 +9,9 @@ $(document).ready(function(){
         $('#home-products').show();
     });
 
+    $('#thumbnail-hide').click(function() {
+        $('#p-thumbnails-box').toggle("fast");
+    });
 
 
     // if ($(window).width() > 991) {
