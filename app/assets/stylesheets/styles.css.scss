@@ -367,10 +367,6 @@
   border-radius:3px;
 }
 
-.container{
-  width:1200px;
-  margin: 0 auto;
-}
 
 .x-btn{
   background-color:rgba(163, 38, 56,.85);
@@ -733,9 +729,9 @@ img#img-preview {
   }
 
   .p-hover{
-    opacity:0;
     height:85%;
     position:fixed !important;
+    margin-left:40px;
     margin-top:20px;
   }
 
@@ -778,6 +774,7 @@ img#img-preview {
   #mid-container{
     position:fixed;
     margin-top:20px;
+    margin-left:40px;
   } 
 
   .mid-pic-frame{
@@ -1140,7 +1137,6 @@ img#img-preview {
     opacity:.7;
     letter-spacing: 1px;
     text-align: right;
-    bottom:20px;
   }
 
   #footer-instagram:hover{
@@ -1212,10 +1208,6 @@ img#img-preview {
     margin-bottom:20px;
     bottom:0;
     position:fixed;
-    background-color:rgba(0,0,0,.3);
-    padding-top:10px;
-    padding-bottom:15px;
-    padding-left:30px;
   }
 
   footer a{
@@ -1230,7 +1222,6 @@ img#img-preview {
   #footer-container{
     padding-top:8%;
     bottom:0;
-    width:1200px;
   }
 
 /* RESPONSIVE CSS */
