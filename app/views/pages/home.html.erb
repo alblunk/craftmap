@@ -1,20 +1,19 @@
 <div class="col-md-5">
   <div class="row">
     <div class="col-md-12">
-      <% @products.each do |product| %>
-        <div class="p-hover mid-pic-frame hidden" data-product-id="<%= product.id %>">
-          <div id="p-hover-details">
-            <h3><%= product.brand.name %></h3>
-            <h5><%= product.name %></h5>
-            <hr style="margin-top:5px">
-            <%#= image_tag(product.primary_image) %>
-            <p id="p-hover-status" >
-              <span class="glyphicon glyphicon-signal"></span>
-              90% Funded&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-time"></span> 4 Weeks left
-            </p>
-          </div>
+      <div class="p-hover mid-pic-frame">
+
+        <div id="p-hover-details">
+          <h3>Mission Workshop</h3>
+          <h5>Sanction Backpack AP</h5>
+          <hr style="margin-top:5px">
+          <p id="p-hover-status" >
+            <span class="glyphicon glyphicon-signal"></span>  90% Funded&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-time"></span> 4 Weeks left
+          </p>
         </div>
-      <% end %>
+        <%= image_tag('background-road.jpg') %>
+        <%#= image_tag(@product.primary_image) %>
+      </div>
       <div id="motto">
         <hr>
           <h3 style="font-size:2.5em;">
