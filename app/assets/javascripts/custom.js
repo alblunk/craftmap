@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
   $('#brand-sort').click(function() {
+    $('#home-products').hide();
     $('#home-brands').show();
-    $('#home-products').hide()
   });
   $('#product-sort').click(function(){
     $('#home-brands').hide();
