@@ -734,25 +734,33 @@ img#img-preview {
     margin-left:40px;
     margin-top:20px;
   }
+  #p-hover-pic{
+    position:relative;
+  }
 
-
-  .p-hover #p-hover-details {
-    background-color: rgba(80,80,80,0.6);
+  #p-hover-details {
+    background-color: rgba(0, 35, 64,0.6);
     color:white;
-    height:140px;
-    width:300px;
+    width:100%;
     z-index: 100;
-    float:bottom;
     padding-left:10px;
+    padding-bottom:5px;
+    padding-top:-5px;
     position:absolute;
+    top:0;
   }
 
   #p-hover-status{
     background-color: rgba(56,158,57,.7);
-    padding-bottom:5px;
-    padding-left:5px;
+    padding-bottom:10px;
+    padding-left:10px;
     padding-right:10px;
     padding-top:8px;
+    width:100%;
+    color:white;
+    position:relative;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
   }
 
   .product-grid #links a:hover{
