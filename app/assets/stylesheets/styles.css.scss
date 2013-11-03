@@ -729,10 +729,10 @@ img#img-preview {
   }
 
   .p-hover{
-    height:85%;
     position:fixed !important;
     margin-left:40px;
     margin-top:20px;
+    max-width: 600px;
   }
   #p-hover-pic{
     position:relative;
@@ -760,8 +760,6 @@ img#img-preview {
     width:100%;
     color:white;
     position:relative;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
   }
 
   .product-grid #links a:hover{

@@ -10,7 +10,7 @@
             <h6 style="margin-top:5px"><%= product.brand.name %></h6>
             <h5 style="font-size:.75em;letter-spacing:1px;margin-top:-10px"><%= product.brand.location%></h5>
           </div>
-          <div id="p-hover-pic"><%= image_tag(product.primary_image) %></div>
+          <div id="p-hover-pic"><%= image_tag(product.primary_image, class: "img-responsive") %></div>
           
           <div id="p-hover-status" >
             <h6 class="centerize"><span class="glyphicon glyphicon-signal"></span>
