@@ -24,9 +24,7 @@ $(document).ready(function(){
       var e = $('.p-hover[data-product-id="' + productID +  '"]').removeClass('hidden')
       $('#motto').hide()
     });
-    $('#home-products .thumbnail').mouseenter(function() {
-  }
-  else {
+  } else {
     $('.p-hover').hide();
     $('#motto').show();
   }
