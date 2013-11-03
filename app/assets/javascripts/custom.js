@@ -2,11 +2,14 @@ $(document).ready(function(){
 
   $('#brand-sort').click(function() {
     $('#home-brands').show();
-    $('#home-products').hide()
+    $('#home-products').hide();
+    $('.p-hover').hide();
+
   });
   $('#product-sort').click(function(){
     $('#home-brands').hide();
     $('#home-products').show();
+    $('.p-hover').show();
   });
 
   $('#thumbnail-hide').click(function() {
