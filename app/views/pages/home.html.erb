@@ -5,16 +5,20 @@
         <div class="p-hover mid-pic-frame hidden" id="crap" data-product-id="<%= product.id %>">
           <div id="p-hover-details">
             
-            <h3 style="margin-top:10px;margin-bottom:1px;"><%= product.name %></h3>
+            <h3 style="margin-top:10px;margin-bottom:1px;"><%= product.name %>
+            </h3>
             <hr style="margin:0px;opacity:.6;width:50%">
             <h6 style="margin-top:5px"><%= product.brand.name %></h6>
             <h6 style="font-size:.65em !important;letter-spacing:1px !important;margin-top:-10px"><%= product.brand.location%></h6>
           </div>
-          <div id="p-hover-pic"><%= image_tag(product.primary_image, class: "img-responsive") %></div>
+          <div id="p-hover-pic"><%= link_to image_tag(product.primary_image), product_path(product), class: "img-responsive" %></div>
           
-          <div id="p-hover-status" >
-            <h6 class="centerize"><span class="glyphicon glyphicon-signal"></span>
-            90% Funded&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-time"></span> 4 Weeks left</h6>
+          <div id="p-hover-status">
+            <h6 class="centerize">
+              <span class="glyphicon glyphicon-signal"></span>&nbsp;
+              <%= product.percentage %>% Funded&nbsp;&nbsp;&nbsp;&nbsp;
+              <span class="glyphicon glyphicon-time"></span> 
+              <%= time_ago_in_words(product.end_date).html_safe unless product.end_date.blank? %> LEFT</h6>
           </div>
         </div>
       <% end %>

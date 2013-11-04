@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131027020753) do
+ActiveRecord::Schema.define(version: 20131104044527) do
 
   create_table "brands", force: true do |t|
     t.string   "name"
@@ -59,6 +59,9 @@ ActiveRecord::Schema.define(version: 20131027020753) do
     t.string   "primary_image"
     t.string   "original_filename"
     t.text     "features"
+    t.datetime "end_date"
+    t.decimal  "integer"
+    t.integer  "percentage"
   end
 
   add_index "products", ["brand_id"], name: "index_products_on_brand_id"
