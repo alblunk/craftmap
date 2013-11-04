@@ -19,7 +19,7 @@
                   <span style="font-size:1.35em;">$<%= product.price %></span>&nbsp;&nbsp;
                   <span class="glyphicon glyphicon-signal"></span>&nbsp;
                   <%= product.percentage %>% Funded&nbsp;&nbsp;&nbsp;&nbsp;
-                  <span class="glyphicon glyphicon-time"></span> 
+                  <span class="glyphicon glyphicon-time"></span>&nbsp;
                   <%= time_ago_in_words(product.end_date).html_safe unless product.end_date.blank? %> LEFT</h6>
               </div>
           <% end %>
