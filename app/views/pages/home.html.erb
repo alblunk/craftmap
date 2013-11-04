@@ -11,7 +11,7 @@
             <h6 style="margin-top:5px"><%= product.brand.name %></h6>
             <h6 style="font-size:.65em !important;letter-spacing:1px !important;margin-top:-10px"><%= product.brand.location%></h6>
           </div>
-          <div id="p-hover-pic"><%= link_to image_tag(product.primary_image), product_path(product), class: "img-responsive" %></div>
+          <div id="p-hover-pic"><%= image_tag(product.primary_image, class: "img-responsive") %></div>
           <% if product.percentage.blank? %>
           <% else %>
             <div id="p-hover-status">
