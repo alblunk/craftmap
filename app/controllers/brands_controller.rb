@@ -9,7 +9,9 @@ class BrandsController < ApplicationController
 
   def show
     @brand = Brand.find(params[:id])
-    @products = Product.order("updated_at desc")
+    @products = Product.order("updated_at DESC")
+    @brands = Brand.active_brands.order("created_at ASC").limit(6)
+
   end
 
   def new
