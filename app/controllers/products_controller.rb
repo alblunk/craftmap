@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @brand = @product.brand.id
     @products = Product.active_campaigns.order("updated_at desc").limit(6)
-    @brands = Brand.active_brands.order("created_at DESC").limit(4)
+    @brands = Brand.active_brands.order("RANDOM()").limit(4)
   end
 
   def new
