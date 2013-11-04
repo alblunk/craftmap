@@ -12,14 +12,16 @@
             <h6 style="font-size:.65em !important;letter-spacing:1px !important;margin-top:-10px"><%= product.brand.location%></h6>
           </div>
           <div id="p-hover-pic"><%= link_to image_tag(product.primary_image), product_path(product), class: "img-responsive" %></div>
-          
-          <div id="p-hover-status">
-            <h6 class="centerize">
-              <span class="glyphicon glyphicon-signal"></span>&nbsp;
-              <%= product.percentage %>% Funded&nbsp;&nbsp;&nbsp;&nbsp;
-              <span class="glyphicon glyphicon-time"></span> 
-              <%= time_ago_in_words(product.end_date).html_safe unless product.end_date.blank? %> LEFT</h6>
-          </div>
+          <% if product.percentage.blank? %>
+          <% else %>
+            <div id="p-hover-status">
+                <h6 class="centerize">
+                  <span class="glyphicon glyphicon-signal"></span>&nbsp;
+                  <%= product.percentage %>% Funded&nbsp;&nbsp;&nbsp;&nbsp;
+                  <span class="glyphicon glyphicon-time"></span> 
+                  <%= time_ago_in_words(product.end_date).html_safe unless product.end_date.blank? %> LEFT</h6>
+              </div>
+          <% end %>
         </div>
       <% end %>
       <div id="motto">
