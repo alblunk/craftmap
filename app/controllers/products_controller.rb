@@ -34,6 +34,12 @@ class ProductsController < ApplicationController
     end
   end
 
+  # def clone
+  #   @product = Product.find(params[:id]) 
+  #   @product = Prescription.new(@product.attributes) 
+  #   render :new 
+  # end
+
   def update
     @product = Product.find(params[:id])
 
