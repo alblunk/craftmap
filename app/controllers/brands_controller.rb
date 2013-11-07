@@ -9,7 +9,7 @@ class BrandsController < ApplicationController
 
   def show
     @brand = Brand.find(params[:id])
-    @products = Product.order("created_at ASC")
+    # @products = Product.order("created_at ASC") < Doesnt do anything.
     @brands = Brand.active_brands.order("RANDOM()").limit(4)
   end
 

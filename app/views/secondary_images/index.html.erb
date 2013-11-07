@@ -1,13 +1,14 @@
-<div class="col-md-offset-1 col-md-7 white-background">
+<div class="col-md-offset-1 col-md-5 white-background">
+  <br>
   <h6><%= link_to "Back to Product", edit_product_path(@product) %></h6>
   <hr>
   <div>
-    <h2>Current Secondary Photos</h2>
+    <h4>Current Secondary Photos:</h4>
     <ul class="list-inline">
       <%= render @images %>
     </ul>
   </div>
-    <h2>Upload another photo:</h2>
+    <h4>Upload another photo:</h4>
     <%= render 'form' %>
   </div>
 </div>
