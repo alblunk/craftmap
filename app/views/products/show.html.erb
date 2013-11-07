@@ -127,18 +127,21 @@
                 <%= @product.dimensions.html_safe unless @product.dimensions.blank?%>
               </div>
             </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
               <% if @product.limited == true %>
                 <h6 class="centerize"><strong>NOTE:</strong> <i><%=@product.limitednumber%></i></h6>
                 <br>
               <% end %>
               <% if @product.usa == true %>
-              <br>
-                <div class="centerize" style="pointer-events:none;padding-bottom:15px">
+                <div class="row centerize" style="pointer-events:none;padding-bottom:15px">
                   <span id="usa-text">Made in USA&nbsp;</span><%= image_tag("usa-flag.jpg", id: "usa") %>
                 </div>
               <% end %>
-                <hr class="black-hr">
+            </div>
           </div>
+          <hr class="black-hr">  
           <div class="row">
             <div class="col-md-12">
               <h6 style="margin-bottom:-15px">MEET THE MAKER:</h6>
