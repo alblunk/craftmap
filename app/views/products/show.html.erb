@@ -53,7 +53,7 @@
           <div class="row">
             <div class="col-md-12">
               <% if @product.description.blank? %>
-                <p style="text-align:left;font-size:.88em;"><%= @product.details.html_safe unless @product.details.blank?%></p>
+                <p style="text-align:left;font-size:.95em;"><%= @product.details.html_safe unless @product.details.blank?%></p>
                 <br>
               <% else %>
 
@@ -61,7 +61,7 @@
                   <p style="font-size:1em;font-style:italic;"><%=@product.description.html_safe%></p>
                   <h6 style="font-size:.6em"><small><%= @product.brand.founders%> of <%=@product.brand.name.html_safe%></small></h6>
                 </blockquote>
-                <p style="text-align:left;font-size:.88em;"><%= @product.details.html_safe %></p>
+                <p style="text-align:left;font-size:.95em;"><%= @product.details.html_safe %></p>
                 <br>
               <% end %>
             </div>
