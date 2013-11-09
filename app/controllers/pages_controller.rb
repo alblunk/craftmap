@@ -20,7 +20,7 @@ class PagesController < ApplicationController
   def privacy; end
 
   def all_brands
-    @brands = Brand.all.order("name ASC")
+    @brands = Brand.active_brands.order("name ASC")
   end
 
   def jobs; end
