@@ -19,6 +19,10 @@ class PagesController < ApplicationController
 
   def privacy; end
 
+  def all_brands
+    @brands = Brand.all.order("name ASC")
+  end
+
   def jobs; end
 
   def upload; end
