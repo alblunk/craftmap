@@ -48,10 +48,10 @@
             <br>
             <h6>Profile Image:</h6>
             <p style="margin-top:-10px;font-size:.85em">(Shop, Product Detail, or Founders)</p>
-            <%# if @brand.profile_image.persisted? %>
+            <% if @brand.profile_image.persisted? %>
               <p>Image Preview: (upload a new picture to replace)</p>
-              <%#= image_tag @brand.profile_image.image, id: "img-preview" %>
-            <%# end %>
+              <%= image_tag @brand.profile_image.image, id: "img-preview" %>
+            <% end %>
             <%= f.fields_for :profile_image do |image_field| %>
               <%= image_field.file_field :image %>
             <% end %>
