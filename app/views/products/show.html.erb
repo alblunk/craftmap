@@ -22,8 +22,8 @@
 <!-- SOCIAL HEADER-->
       <div class="row">
         <div class="col-md-12">  
-        <a href="/home" class="backhome-btn"><div class="glyphicon glyphicon-home" ><span id="backhome-text"style="position:absolute;line-height:12px;font-size:.8em;letter-spacing:1px;margin-left:5px">Home</span></div></a>
-          <h5 id="social-title" style="margin-top:0px;letter-spacing:1px;" class="centerize" >SPREAD THE GOOD WORD</h5>
+        <a href="/home" class="backhome-btn"><div class="glyphicon glyphicon-home" ></div></a>
+          <!-- <h5 id="social-title" style="margin-top:0px;letter-spacing:1px;" class="centerize" >SPREAD THE GOOD WORD</h5> -->
           <div class="centerize">
           <!-- FACEBOOK -->
           <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=<%=request.original_url%>&amp;p[title]=<%= @product.name %>+by+<%= @product.brand.name.html_safe %>+on+Farallon+Co.&amp;p[images][0]=https://s3.amazonaws.com/beelineco/FarallonCo-ShortForm.jpg&amp;p[summary]=Farallon+Co+-+Top+Tier+Brands,+Fan+Backed+Product,+Join+the+Company." target="blank"><%= image_tag("facebook.png", id:"fb-social", class: "social-show", width: "20") %></a>
