@@ -12,8 +12,8 @@
           <span class="glyphicon glyphicon-remove" style="color:#A32638"></span>
          <% end %>
          <h6 style="display: inline"><%= link_to brand.name, brand %></h6>
-          <%#= image_tag brand.logo, width:"25"%>
-          <%#= image_tag brand.profile_image.image, width:"50"%>
+          <%= image_tag brand.logo, width:"25"%>
+          <%= image_tag brand.profile_image.image, width:"50"%>
         <span style="font-size:.75em;"><%= link_to "[EDIT]", edit_brand_path(brand)%></span>
         
       </div>
