@@ -1,7 +1,12 @@
 
-<div class="col-md-offset-1 col-md-8 white-background" style="padding-top:20px;padding-bottom:20%">
-	<h6 class="centerize" style="font-size:1.5em !important;">The Brand Family</h6>
-	<hr class="black-hr">
-	<br>
+<div class="col-md-offset-1 col-md-8 white-background" style="padding-top:20px;">
+	<div class="row">
+    <div class="col-md-12">
+			<h6 class="centerize" style="font-size:1.5em !important;">The Brand Family</h6>
+			<a href="/home" class="backhome-btn" style="margin-left:10px;"><div class="glyphicon glyphicon-home" ><span id="backhome-text"style="position:absolute;line-height:12px;font-size:.8em;letter-spacing:1px;margin-left:5px">Home</span></div></a>
+			<hr class="black-hr">
+			<br>
   		<%= render :partial=>'brands/brand', :collection => @brands, :locals => {:size => 'col-md-3 col-xs-4'}  %>
+  	</div>
+  </div>
 </div>

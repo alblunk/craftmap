@@ -6,24 +6,18 @@
           <a href="/home"><%= image_tag("FarallonCo-LongForm-Beta.png", width: "150") %></a>
         </div>
           <hr style="margin:5px 0 -5px 0;">
-        <!-- <ul class="social centerize">
-          <li><a style="margin-right:18px" href="http://facebook.com/farallonco" target="blank"><%#= image_tag("facebook-w.png", width: "20") %></a>
-          <a style="margin-right:18px" href="http://twitter.com/farallonco" target="blank"><%#= image_tag("twitter-w.png", width: "20") %></a>
-          <a style="margin-right:18px" href="http://instagram.com/farallonco" target="blank"><%#= image_tag("instagram.png", width: "18") %></a></li>
-        </ul>
-          <hr style="margin:-5px 0 0 0;"> -->
-        <div class="centerize">
-          <% if user_signed_in? %>
-            <a href="/users/edit" id="h-account">MY ACCOUNT</a>
-            <span id="line"></span>
-            &nbsp;<%= link_to 'LOG OUT', destroy_user_session_path, method: :delete %>
-          <% else %>
-            &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'JOIN US',  new_user_registration_path %>
-            <span id="line"></span>
-            &nbsp;<%= link_to 'SIGN IN',  new_user_session_path %>
-          <% end %>
-          
-        </div>
+          <div class="centerize">
+            <% if user_signed_in? %>
+              <a href="/users/edit" id="h-account">MY ACCOUNT</a>
+              <span id="line"></span>
+              &nbsp;<%= link_to 'LOG OUT', destroy_user_session_path, method: :delete %>
+            <% else %>
+              &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'JOIN US',  new_user_registration_path %>
+              <span id="line"></span>
+              &nbsp;<%= link_to 'SIGN IN',  new_user_session_path %>
+            <% end %>
+            
+          </div>
          
         <% if current_user.try(:admin?) %>
           <div style="background-color:rgba(255, 204, 0,.4); color:white;text-align:center;margin-top:-10px;">
