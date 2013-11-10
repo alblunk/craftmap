@@ -5,20 +5,21 @@
   <ul class="list-unstyled">
     <% @brands.each do |brand| %>
     <li>
-      <div>
-        <% if brand.active == true %>
-          <span class="glyphicon glyphicon-ok" style="color:#389e39"></span>
-         <% else %>
-          <span class="glyphicon glyphicon-remove" style="color:#A32638"></span>
-         <% end %>
-         <h6 style="display: inline;"><%= link_to brand.name, brand %></h6>
-        <span style="font-size:.75em;"><%= link_to "[EDIT]", edit_brand_path(brand)%></span>
         
-      </div>
-      <ul class="list-inline">
+        <ul class="list-inline">
+          <li>
+            <% if brand.active == true %>
+              <span class="glyphicon glyphicon-ok" style="color:#389e39"></span>
+            <% else %>
+              <span class="glyphicon glyphicon-remove" style="color:#A32638"></span>
+            <% end %>
+            <h6 style="display: inline;font-size:.7em !important;"><%= link_to brand.name, edit_brand_path(brand) %></h6>
+          </li>
+        
+      
       	<% brand.products.each do |product| %>
           <% if product.primary_image.url %>
-            <li><%= link_to image_tag(product.primary_image, size: "45x45"), edit_brand_product_path(brand, product)%></li>
+            <li><%= link_to image_tag(product.primary_image, size: "30x30"), edit_brand_product_path(brand, product)%></li>
           <% else %>
             <li style="font-size:.75em;"><%= link_to product.name, edit_brand_product_path(brand, product) %></li>
             <li>|</li>
