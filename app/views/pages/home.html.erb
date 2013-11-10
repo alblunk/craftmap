@@ -5,11 +5,10 @@
         <div class="p-hover mid-pic-frame hidden" id="crap" data-product-id="<%= product.id %>">
           <div id="p-hover-details">
             
-            <h3 style="margin-top:10px;margin-bottom:1px;"><%= product.name %>
-            </h3>
-            <hr style="margin:0px;opacity:.6;width:50%">
-            <h6 style="margin-top:5px"><%= product.brand.name %></h6>
-            <h6 style="font-size:.65em !important;letter-spacing:1px !important;margin-top:-10px"><%= product.brand.location%></h6>
+            <h3 style="margin-bottom:1px;padding-top:5px"><%= product.name %></h3>
+            <hr style="margin:0px;opacity:.6;border-color:rgba(0,0,0,.3)">
+            <h6 style="margin-top:5px;font-weight:400"><%= product.brand.name %></h6>
+            <h6 style="font-size:.65em !important;letter-spacing:1px !important;margin-top:-10px;font-weight:400;padding-bottom:5px;"><%= product.brand.location%></h6>
           </div>
           <div id="p-hover-pic"><%= image_tag(product.primary_image, class: "img-responsive") %></div>
           <% if product.percentage.blank? %>
