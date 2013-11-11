@@ -13,7 +13,7 @@
           <a href="http://www.tumblr.com/share/photo?source=<%=u @brand.logo.url %>&caption=<%=u @brand.name %>+on+Farallon+Co.&clickthru=<%=u request.original_url %>" target="blank" ><%= image_tag("tumblr.png", class: "social-show", width: "20") %>
           </a>
     </div>
-    <hr class="black-hr">
+    <hr class="black-hr" style="width:40%">
     <% if current_user.try(:admin?) %>
     <div class="centerize" style="padding:5px">
       <span style="font-size:.65em;"><%= link_to "X", @brand, class: 'x-btn', method: :delete, data: { confirm: 'Are you sure?' } %></span>&nbsp;/
@@ -23,6 +23,7 @@
       <hr class="black-hr">
     <%end%>
   </div>
+</div>
   
 
   <!-- PROFILE -->
