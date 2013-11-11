@@ -12,7 +12,7 @@
           <!-- TUMBLR -->
           <a href="http://www.tumblr.com/share/photo?source=<%=u @brand.logo.url %>&caption=<%=u @brand.name %>+on+Farallon+Co.&clickthru=<%=u request.original_url %>" target="blank" ><%= image_tag("tumblr.png", class: "social-show", width: "20") %>
           </a>
-          <a href="mailto:?subject=Take a look at Farallon Co...&amp;body=You should check out this brand on Farallon Co.: <%= @brand.name %> (Not a virus.. scout's honor.): <%=request.original_url.html_safe%>" ><%= image_tag("email-message.png", class: "social-show", width: "20") %></a>
+          <a href="mailto:?subject=Take a look at Farallon Co...&amp;body=You should check out <%= @brand.name %> on Farallon Co. (Not a virus.. scout's honor.): <%=request.original_url.html_safe%>" ><%= image_tag("email-message.png", class: "social-show", width: "20") %></a>
     </div>
     <hr class="black-hr" style="width:50%">
     <% if current_user.try(:admin?) %>
