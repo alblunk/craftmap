@@ -1,32 +1,16 @@
 <div class="col-md-6" id="b-midpane">
-
-  <div class="row">
-    <div class="col-md-12">
-      <a href="/home" class="backhome-btn" style="z-index:100;"><div class="glyphicon glyphicon-home" ></div></a>
-        <h5 id="social-title" class="centerize" >SPREAD THE GOOD WORD</h5>
-    </div>
-  </div>
-
   <div class="row">
     <div class="col-md-12 centerize">
-      <!-- FACEBOOK -->
-        <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[url]=<%=request.original_url%>&amp;p[title]=<%= @brand.name %>+on+Farallon+Co.&amp;p[images][0]=https://s3.amazonaws.com/beelineco/FarallonCo-ShortForm.jpg&amp;p[summary]=Farallon+Co+-+Top+Tier+Brands,+Fan+Backed+Product,+Join+the+Company." target="blank"><%= image_tag("facebook.png", id:"fb-social", class: "social-show", width: "20") %>
-        </a>
-
-        <!--   <a href="http://www.facebook.com/sharer/sharer.php?u=<%#=request.original_url%>&[title]=<%#= @brand.name %> on Farallon Co." target="blank"><%#= image_tag("facebook.png", class: "social-show", width: "20") %></a> -->
-
-      <!-- TWITTER -->
-        <a href="http://twitter.com/home?status=Check+out+<%= @brand.name %>+on+@farallonco+(<%=request.original_url.html_safe%>)" target="blank" ><%= image_tag("twitter.png", class: "social-show", width: "20") %>
-        </a>
-
-      <!-- GOOGLE PLUS -->
-        <a href="https://plus.google.com/share?url=<%=request.original_url.html_safe%>" target="blank"><%= image_tag("googleplus.png", class: "social-show", width: "20") %></a>
-
-      <!-- PINTEREST -->
-        <a href="http://pinterest.com/pin/create/bookmarklet/?media=<%#@product.pic1%>&url=<%=request.original_url%>&is_video=false&description=<%=@brand.name%> on Farallon Co." target="blank" ><%= image_tag("pinterest.png", class: "social-show", width: "20") %></a>
-
-      <!-- STUMBLEUPON -->
-        <a href="http://www.stumbleupon.com/submit?url=<%=request.original_url%>&title=<%=@brand.name%> on Farallon Co.+<%=request.original_url%>" target="blank"><%= image_tag("stumbleupon.png", class: "social-show", width: "20") %>
+      <a href="/home" class="backhome-btn" style="z-index:100;"><div class="glyphicon glyphicon-home" ></div></a>
+      <h5 id="social-title" style="margin-top:0px;letter-spacing:2px;font-size:.65em" class="centerize" >SPREAD THE WORD</h5>
+          <div class="centerize">
+            <!-- TWITTER -->
+          <a href="http://twitter.com/home?status=Check+out+<%= @brand.name %>+on+@farallonco+(<%=request.original_url.html_safe%>)" target="blank" ><%= image_tag("twitter.png", id:"fb-social", class: "social-show", width: "25") %>
+          </a>
+          <!-- FACEBOOK -->
+          <a href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=<%=request.original_url%>&p[images][0]=<%= @brand.logo.url %>&p[title]=<%= @brand.name %>+on+Farallon+Co.&p[summary]=Farallon+Co.+-+Top+Tier+Brands,+Fan-Backed+Product,+Join+the+Company." target="blank"><%= image_tag("facebook.png", class: "social-show", width: "20") %></a>
+          <!-- TUMBLR -->
+          <a href="http://www.tumblr.com/share/photo?source=<%=u @brand.logo.url %>&caption=<%=u @brand.name %>+on+Farallon+Co.&clickthru=<%=u request.original_url %>" target="blank" ><%= image_tag("tumblr.png", class: "social-show", width: "20") %>
           </a>
     </div>
     <hr class="black-hr">

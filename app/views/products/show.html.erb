@@ -29,10 +29,11 @@
           <a href="http://twitter.com/home?status=Check+out+the+<%= @product.name %>+by+<%= @product.brand.name %>+on+@farallonco+(<%=request.original_url.html_safe%>)" target="blank" ><%= image_tag("twitter.png", id:"fb-social", class: "social-show", width: "25") %>
           </a>
           <!-- FACEBOOK -->
-          <a href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=<%=request.original_url%>&p[images][0]=<%= @product.primary_image.url %>&p[title]=<%= @product.name %>+by+<%= @product.brand.name.html_safe %>+on+Farallon+Co.&p[summary]=Farallon+Co+-+Top+Tier+Brands,+Fan+Backed+Product,+Join+the+Company." target="blank"><%= image_tag("facebook.png", class: "social-show", width: "20") %></a>
+          <a href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=<%=request.original_url%>&p[images][0]=<%= @product.primary_image.url %>&p[title]=<%= @product.name %>+by+<%= @product.brand.name.html_safe %>+on+Farallon+Co.&p[summary]=Farallon+Co.+-+Top+Tier+Brands,+Fan-Backed+Product,+Join+the+Company." target="blank"><%= image_tag("facebook.png", class: "social-show", width: "20") %></a>
           <!-- TUMBLR -->
           <a href="http://www.tumblr.com/share/photo?source=<%=u @product.primary_image.url %>&caption=<%=u @product.name %>+by+<%=u @product.brand.name %>+on+Farallon+Co.&clickthru=<%=u request.original_url %>" target="blank" ><%= image_tag("tumblr.png", class: "social-show", width: "20") %>
           </a>
+
           <!-- SVPPLY -->
           <a href="javascript:void((function(){var hsb=document.createElement('script');hsb.setAttribute('src','https://svpply.com/bookmarklet/loader/svpk_523896d767ad17bfe10401e5c9e74dd1');hsb.setAttribute('type','text/javascript');document.getElementsByTagName('head')[0].appendChild(hsb);})());" target="blank" ><%= image_tag("svpply.png", class: "social-show", width: "25") %>
           </a>
