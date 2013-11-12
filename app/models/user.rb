@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  include Subscribable
+
   devise :database_authenticatable, :registerable, :recoverable,
          :rememberable, :trackable, :validatable
 
@@ -12,6 +14,7 @@ class User < ActiveRecord::Base
   def self.non_admins
     where(admin: false)
   end
+
 private
 
   # Override Devise method to allow new Users to be created without a password.
@@ -22,4 +25,5 @@ private
       super
     end
   end
+
 end

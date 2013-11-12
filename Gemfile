@@ -18,6 +18,8 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'fog', '~> 1.3.1'
 gem 'delayed_job_active_record'
+gem 'daemons'
+gem 'gibbon'
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
 gem 'bootstrap-wysihtml5-rails'
