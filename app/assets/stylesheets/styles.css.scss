@@ -800,18 +800,19 @@ img#img-preview {
   }
 
   .backhome-btn{
-    font-size:1.5em;
-    left:8px;
-    top:8px;
+    font-size:1.35em;
+    left:10px;
+    top:10px;
     position:absolute;
     padding-left:8px;
     padding-right:10px;
-    padding-top:5px;
-    padding-bottom:5px;
+    padding-top:6px;
+    padding-bottom:3px;
     border:1px rgba(80, 80, 80,.4) solid;
     color:#505050;
     opacity:.5;
     border-radius:3px;
+    z-index:100;
   }
 
   .backhome-btn:hover{
@@ -1357,7 +1358,7 @@ img#img-preview {
         position:relative;
         margin-left:0px !important;
         margin-bottom:5px !important;
-        top:5px !important;
+        margin-top:10px !important;
       }
       #product-image{
         position:relative;

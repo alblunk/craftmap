@@ -19,10 +19,11 @@
 <div class="col-md-5" >  
   <div class="row" id="details">
     <div class="col-md-12">
+      <a href="/home" class="backhome-btn"><div class="glyphicon glyphicon-home" ></div></a>
+      <a class="visible-xs visible-sm pull-right" style="padding-right:15px;" href="mailto:?subject=Take a look at Farallon Co...&amp;body=You should check out this product featured on Farallon Co.: <%= @product.name %> by <%= @product.brand.name %> (Not a virus.. scout's honor.): <%=request.original_url.html_safe%>" ><%= image_tag("email-message.png", class: "social-show", width: "25") %></a>
 <!-- SOCIAL HEADER-->
       <div class="row">
         <div class="col-md-12">  
-        <a href="/home" class="backhome-btn"><div class="glyphicon glyphicon-home" ></div></a>
         <div class="centerize hidden-xs hidden-sm">
           <h5 id="social-title" style="margin-top:0px;letter-spacing:2px;font-size:.65em" class="centerize" >SPREAD THE WORD</h5>
             <!-- TWITTER -->
@@ -54,7 +55,7 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <h3 style="margin-top:-10px;margin-bottom:-15px;" class="centerize"><%=@product.name.html_safe%></h3>
+          <h3 style="margin-top:0px;margin-bottom:-15px;" class="centerize"><%=@product.name.html_safe%></h3>
             <% if current_user.try(:admin?) %>
               <p style="font-size:.55em;margin-bottom:-10px;margin-top:15px;" class="centerize"><%= link_to "[EDIT PRODUCT]",  edit_brand_product_path(@brand, @product)%></p>
             <%end%>
