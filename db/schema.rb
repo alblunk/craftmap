@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131104044527) do
+ActiveRecord::Schema.define(version: 20131112230642) do
 
   create_table "brands", force: true do |t|
     t.string   "name"
@@ -35,6 +35,22 @@ ActiveRecord::Schema.define(version: 20131104044527) do
 
   add_index "brands", ["owner_id"], name: "index_brands_on_owner_id"
 
+  create_table "delayed_jobs", force: true do |t|
+    t.integer  "priority",   default: 0, null: false
+    t.integer  "attempts",   default: 0, null: false
+    t.text     "handler",                null: false
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority"
+
   create_table "products", force: true do |t|
     t.text     "description"
     t.datetime "created_at"
@@ -51,16 +67,15 @@ ActiveRecord::Schema.define(version: 20131104044527) do
     t.boolean  "archived"
     t.text     "materials"
     t.boolean  "usa"
+    t.string   "primary_image"
+    t.string   "original_filename"
     t.boolean  "limited"
     t.string   "limitednumber"
     t.boolean  "existingline"
     t.string   "existingurl"
     t.string   "dimensions"
-    t.string   "primary_image"
-    t.string   "original_filename"
     t.text     "features"
     t.datetime "end_date"
-    t.decimal  "integer"
     t.integer  "percentage"
   end
 
