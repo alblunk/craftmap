@@ -3,7 +3,7 @@
     <div class="col-md-12">
       <div style="margin-top:-20px;margin-bottom:20px">
         <a href="/home" class="backhome-btn" style="margin-top:-15px"><div class="glyphicon glyphicon-home" ></div></a>
-        <a class="visible-xs visible-sm pull-right" style="padding-right:15px;margin-top:5px" href="mailto:?subject=Take a look at Farallon Co...&amp;body=You should check out <%= @brand.name %> on Farallon Co. (Not a virus.. scout's honor.): <%=request.original_url.html_safe%>" ><%= image_tag("email-message.png", class: "social-show", width: "25") %></a>
+        <a class="visible-xs visible-sm pull-right" style="padding-right:15px;margin-top:5px" href="mailto:?subject=Take a look at Farallon Co...&amp;body=You should check out <%= @brand.name %> on Farallon Co.: <%=request.original_url.html_safe%>" ><%= image_tag("email-message.png", class: "social-show", width: "25") %></a>
       </div>
         <div class="row">
           <div class="col-md-12">
@@ -17,7 +17,7 @@
               <!-- TUMBLR -->
               <a href="http://www.tumblr.com/share/photo?source=<%=u @brand.logo.url %>&caption=<%=u @brand.name %>+on+Farallon+Co.&clickthru=<%=u request.original_url %>" target="blank" ><%= image_tag("tumblr.png", class: "social-show", width: "20") %>
               </a>
-              <a href="mailto:?subject=Take a look at Farallon Co...&amp;body=You should check out <%= @brand.name %> on Farallon Co. (Not a virus.. scout's honor.): <%=request.original_url.html_safe%>" ><%= image_tag("email-message.png", class: "social-show", width: "20") %></a>
+              <a href="mailto:?subject=Take a look at Farallon Co...&amp;body=You should check out <%= @brand.name %> on Farallon Co.: <%=request.original_url.html_safe%>" ><%= image_tag("email-message.png", class: "social-show", width: "20") %></a>
               
               <hr class="black-hr" style="width:50%">
           </div>
