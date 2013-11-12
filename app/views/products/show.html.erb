@@ -19,7 +19,7 @@
 <div class="col-md-5" >  
   <div class="row" id="details">
     <div class="col-md-12">
-      <div style="margin-bottom:20px">
+      <div style="margin-bottom:20px;margin-top:15px">
         <a href="/home" class="backhome-btn"><div class="glyphicon glyphicon-home" ></div></a>
         <a class="visible-xs visible-sm pull-right" style="padding-right:15px;" href="mailto:?subject=Take a look at Farallon Co...&amp;body=You should check out this product featured on Farallon Co.: <%= @product.name %> by <%= @product.brand.name %> (Not a virus.. scout's honor.): <%=request.original_url.html_safe%>" ><%= image_tag("email-message.png", class: "social-show", width: "25") %></a>
       </div>
