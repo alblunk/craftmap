@@ -23,7 +23,7 @@
           <%= f.text_field :percentage, placeholder: "% Backed",label:false %>
           <%= f.text_field :end_date, placeholder: "Campaign End (2013-11-15)",label:false %>
           <br>
-          <%= f.text_field :deliver_date, placeholder: "Estimated Delivery Date",label:false %>
+          <%= f.text_field :deliver_date, placeholder: "Estimated Production+Shipping Time",label:false %>
           <br>
           <%= f.text_field :status, placeholder: "Status?",label:false %>
           
@@ -47,7 +47,7 @@
               <h6>Limited Edition Information:</h6>
               <%= f.check_box :limited %> Enable?
               <br>
-                <%= f.text_field :limitednumber, placeholder: "i.e. Limited Edition 500 Units", class: 'textbox', label:false %>
+                <%= f.text_area :limitednumber, :rows => "3", placeholder: "i.e. Limited Edition 500 Units", class: 'textbox', label:false %>
             </div>
           </div>
     </div>
@@ -99,8 +99,9 @@
           </div>
           <div class="row">
             <div class="col-md-5">
-              <h6>Dimensions? (i.e. 10"Wx12"H)</h6>
-              <%= f.text_field :dimensions ,label:false %>
+              <h6>Dimensions?</h6>
+              <p style="font-size:.8em;">(i.e. 10"Wx12"H)</p>
+              <%= f.text_area :dimensions, :rows => "5" ,label:false %>
             </div>
             <div class="col-md-7">
               <h6>MATERIALS:</h6>
