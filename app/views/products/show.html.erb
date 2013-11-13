@@ -104,7 +104,7 @@
             </div> 
             <div class="row">
               <div class="col-md-12 centerize">
-                <h5 style="font-size:.8em;letter-spacing:1px;">Estimated Production + Ship Time:<span style="font-weight:700"> <%= @product.deliver_date.html_safe %></span></h5> 
+                <h5 style="font-size:.8em;letter-spacing:1px;">Estimated Production + Ship Time:<span style="font-weight:700"> <br class="visible-xs visible-sm"><%= @product.deliver_date.html_safe %></span></h5> 
                 <h6><%=@product.updates.html_safe unless @product.updates.blank?%></h6>
               </div>
             </div>
