@@ -5,7 +5,6 @@ Beeline::Application.routes.draw do
   get 'home' => 'pages#home'
   get 'landing' => 'pages#landing'
   get 'about' => 'pages#about'
-  get 'faq' => 'pages#faq'
   get 'terms' => 'pages#terms'
   get 'privacy' => 'pages#privacy'
   get 'jobs' => 'pages#jobs'
