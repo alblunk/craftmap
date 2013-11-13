@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   has_many :brands, foreign_key: 'owner_id'
   has_many :products, foreign_key: 'owner_id'
 
+  after_create :send_welcome_message
+
   def self.admins
     where(admin: true)
   end
@@ -24,6 +26,10 @@ private
     else
       super
     end
+  end
+
+  def send_welcome_message
+    UserMailer.delay.welcome_email(self)
   end
 
 end
