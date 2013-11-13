@@ -9,6 +9,7 @@
           <th>ID</th>
           <th>Active?</th>
           <th>Campaign?</th>
+          <th>End Date?</th>
           <th>Owner</th>
           <th>Brand</th>
           <th>Name</th>
@@ -42,6 +43,7 @@
                 <span class="glyphicon glyphicon-ok" style="color:#389e39"></span>
               <% end %>
             </td>
+            <td><% if product.end_date.blank? %>-<%else%><%= product.end_date.strftime("%e %b") %><%end%></td>
             <td><%= product.owner_id %></td>
             <td><%= product.brand_id %></td>
             <td><%= link_to product.name, product %></td>
