@@ -14,12 +14,13 @@
           <% if product.percentage.blank? %>
           <% else %>
             <div id="p-hover-status">
-                <h6 class="centerize">
+                <h6 class="centerize" style="text-transform:uppercase;">
                   <span style="font-size:1.45em;">$<%= product.price %></span>&nbsp;&nbsp;&nbsp;
                   <span class="glyphicon glyphicon-signal"></span>&nbsp;
                   <%= product.percentage %>% Funded&nbsp;&nbsp;&nbsp;&nbsp;
                   <span class="glyphicon glyphicon-time"></span>&nbsp;
-                  <%= time_ago_in_words(product.end_date).html_safe unless product.end_date.blank? %> LEFT</h6>
+                  <%= time_ago_in_words(product.end_date).html_safe unless product.end_date.blank? %> LEFT
+                </h6>
               </div>
           <% end %>
         </div>
