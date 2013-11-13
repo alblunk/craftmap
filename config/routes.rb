@@ -30,6 +30,6 @@ Beeline::Application.routes.draw do
     resources :registrations, only: [ :create ]
   end
 
-  root :to => 'pages#landing'
+  root :to => 'pages#home'
 
 end
