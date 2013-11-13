@@ -799,6 +799,21 @@ img#img-preview {
     z-index: 1;
   }
 
+  .line-btn{
+    border:1px rgba(80, 80, 80,.4) solid;
+    color:#505050;
+    opacity:.5;
+    border-radius:3px;
+    padding:8px;
+    padding-bottom:6px;
+    width:100px;
+  }
+
+  .line-btn:hover{
+    opacity:1;
+    color:#505050;
+  }
+
   .backhome-btn{
     font-size:1.35em;
     left:10px;
