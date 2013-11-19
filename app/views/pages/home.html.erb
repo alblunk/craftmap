@@ -4,13 +4,16 @@
       <% @products.each do |product| %>
         <div class="p-hover mid-pic-frame hidden" id="crap" data-product-id="<%= product.id %>">
           <div id="p-hover-details">
-            
             <h3 style="margin-bottom:1px;padding-top:5px"><%= product.name %></h3>
             <hr style="margin:0px;margin-left:-10px;opacity:.6;border-color:rgba(0,0,0,.3)">
             <h6 style="margin-top:5px;font-weight:400"><%= product.brand.name %></h6>
             <h6 style="font-size:.65em !important;letter-spacing:1px !important;margin-top:-10px;font-weight:400;padding-bottom:5px;"><%= product.brand.location%></h6>
           </div>
-          <div id="p-hover-pic"><%= image_tag(product.primary_image, class: "img-responsive") %></div>
+          <div id="p-hover-pic">
+            <%= link_to(product) do %>
+              <%= image_tag(product.primary_image, class: "img-responsive") %>
+            <% end %>
+          </div>
           <% if product.percentage.blank? %>
           <% else %>
             <div id="p-hover-status">
@@ -78,7 +81,7 @@
           </p>
             <hr>
           <h6>Brands:</h6>
-          <p>This is a community of the best brands - with great stories to match. Some will be actively promoting 'Projects' & some are there for your discovery. <br><br>Either way, we encourage you to submit project ideas for your favorites.</p>
+          <p>This is a family of the best brands - with great stories to match. Some will be actively promoting 'Projects' & some are there for your discovery. <br><br>Either way, we encourage you to submit project ideas for your favorites & learn about them.</p>
         </div>
       </div>
     </div>

@@ -174,7 +174,9 @@
 
           <div class="row">
             <div class="col-md-12">
-              <%= image_tag(@product.brand.profile_image.image, id: "brand-image") %>
+              <%= link_to(@product.brand) do %>
+                <%= image_tag(@product.brand.profile_image.image, id: "brand-image") %>
+              <%end%>
             </div>
           </div>
         </div>
