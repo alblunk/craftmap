@@ -15,8 +15,10 @@
             <% end %>
             <h6 style="display: inline;font-size:.8em !important;font-weight:500;"><%= link_to brand.name, edit_brand_path(brand) %></h6>
           </li>
-        
-      
+          <li style="border-left:1px solid rgba(80,80,80,.5);border-right:1px solid rgba(80,80,80,.5);margin-right:3px;">
+            <%= image_tag(brand.logo, size: "30x30") %>
+            <%= image_tag(brand.profile_image.image, height:"30") %>
+          </li>
       	<% brand.products.each do |product| %>
           <% if product.primary_image.url %>
             <li><%= link_to image_tag(product.primary_image, size: "30x30"), edit_brand_product_path(brand, product)%></li>
@@ -25,13 +27,15 @@
             <li>|</li>
           <% end %>
       	<% end %>
-      	<li><div id="add-product"><%= link_to "+", new_brand_product_path(brand)%></div></li>
+      	<li>
+          <div id="add-product"><%= link_to "+", new_brand_product_path(brand)%></div>
+        </li>
       </ul>
       <br>
     </li>
     <li>
+      <hr style="margin:-10px;border-color:#505050;opacity:.2;">
     </li>
-    <hr style="margin:-10px;border-color:#505050;opacity:.2;">
     <br>
     <% end %>
   </ul>
