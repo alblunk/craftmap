@@ -608,7 +608,6 @@ img#img-preview {
     bottom:140px;
     left:-10px; 
 
-    border-radius:3px;
     font-size:.9em;
     color:white; 
     font-size: .75em;
@@ -616,11 +615,11 @@ img#img-preview {
 
     margin-top:30%;
     margin-bottom:10%;
-    padding-bottom:3px;
-    padding-left:10px;
+    padding-bottom:2px;
+    padding-left:15px;
     padding-top:3px;
 
-    width:110px;
+    width:120px;
     z-index: 2;
     border:none;
   }
@@ -631,12 +630,10 @@ img#img-preview {
   }
   #emailus:hover{
     background-color:#3276b1;
+    color:#5e9cd2;
   }
 
-  #submit a{
-    text-decoration: none;
-    color:white;
-  }
+  
   #submit-2{
     background-color:#389e39;
     width:50%;
@@ -647,30 +644,34 @@ img#img-preview {
     line-height: 275%;
   }
 
-  #submit{
+  #submit_idea{
     background-color: #389e39;
     position:fixed; 
     bottom:90px; 
     left:-20px; 
 
-    border-radius:3px;
     font-size: .75em;
     color:white; 
 
     margin-bottom:10%;
-    padding-top:2px;
+    padding-top:3px;
     padding-right:5px;
     padding-bottom:2px;
-    padding-left:25px;
+    padding-left:30px;
 
     border:none;
     letter-spacing: 1px;
-    width:140px;
+    width:145px;
   }
 
-  #submit:hover {
+  #submit_idea:hover {
     background-color:#2d802e;
     text-decoration: none;
+    color:#5dc65e;
+  }
+  #submit_idea a{
+    text-decoration: none;
+    color:white;
   }
 
   #social-title{
@@ -1313,7 +1314,7 @@ img#img-preview {
       .p-hover{
         display:none;
       }
-      #submit{
+      #submit_idea{
         position:relative; 
         left:-20px; 
       }
@@ -1425,7 +1426,7 @@ img#img-preview {
       .p-hover{
         display:none;
       }
-      #submit{
+      #submit_idea{
         position:relative; 
         bottom:-20px; 
         left:-20px; 
