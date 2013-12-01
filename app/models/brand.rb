@@ -18,4 +18,7 @@ class Brand < ActiveRecord::Base
   	"#{id}-#{name.try(:parameterize)}"
   end
 
+# Vanity URL: http://blog.teamtreehouse.com/creating-vanity-urls-in-rails
+
+
 end
