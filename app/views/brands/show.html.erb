@@ -28,7 +28,17 @@
       <span style="font-size:.65em;"><%= link_to "X", @brand, class: 'x-btn', method: :delete, data: { confirm: 'Are you sure?' } %></span>&nbsp;/
       <span><%= link_to "EDIT", edit_brand_path%></span>&nbsp;/
       <span style="padding:0px 10px 5px 10px;font-size:2em;border:1px solid rgba(0,0,0,.1)"><%= link_to "+", new_brand_product_path(@brand)%></span>
-    </div>
+      
+        <h6>Brand Contacts & Information:</h6>
+        Main: <%= @brand.main_contact unless @brand.main_contact.blank? %>
+        <br>
+        Fulfillment: <%= @brand.fulfillment_contact unless @brand.fulfillment_contact.blank? %>
+        <br>
+      </div>
+      Notes:
+        <%= @brand.current_notes unless @brand.current_notes.blank? %>
+        <br>
+        <br>
       <hr class="black-hr">
     <%end%>
   </div>

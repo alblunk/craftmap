@@ -60,6 +60,15 @@
         <hr>
         <h6>Brand Profile:</h6>
         <%= f.text_area :profile, as: :text, :rows => "10", :cols => "50", class: 'wysihtml5 textbox', label: false;%>
+        <hr>
+        <div class="forms-admin">
+          <h6>Brand Contacts:</h6>
+          Main Contact:<%= f.text_field :main_contact,label:'home', placeholder: "Name, founder@brand.com, 000-000-0000" %>
+          <br>
+          Fulfillment Contact:<%= f.text_field :fulfillment_contact,label:'home', placeholder: "Name, shipping@brand.com, 000-000-0000", :width => "500" %>
+        </div>
+        <h6>Notes:</h6>
+        <%= f.text_area :current_notes, as: :text, :rows => "7", :cols => "50", class: 'wysihtml5 textbox', label: false;%>
       </div>
     </div>
   </div>
