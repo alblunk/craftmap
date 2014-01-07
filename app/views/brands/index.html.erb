@@ -19,13 +19,14 @@
             <%= image_tag(brand.logo, size: "30x30") %>
             <%= image_tag(brand.profile_image.image, height:"30") %>
           </li>
+          <br>
       	<% brand.products.each do |product| %>
-          <% if product.primary_image.url %>
-            <li><%= link_to image_tag(product.primary_image, size: "30x30"), edit_brand_product_path(brand, product)%></li>
-          <% else %>
-            <li style="font-size:.75em;"><%= link_to product.name, edit_brand_product_path(brand, product) %></li>
+          <%# if product.primary_image.url %>
+            <!-- <li><%#= link_to image_tag(product.primary_image, size: "30x30"), edit_brand_product_path(brand, product)%></li>
+          <%# else %> -->
+            <li style="font-size:.65em;"><%= link_to product.name, edit_brand_product_path(brand, product) %></li>
             <li>|</li>
-          <% end %>
+          <%# end %>
       	<% end %>
       	<li>
           <div id="add-product"><%= link_to "+", new_brand_product_path(brand)%></div>
