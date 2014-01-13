@@ -110,7 +110,7 @@
   <div class="row">
 
     <% if @brand.products.where(:active => true, :existingline => false).count == 0 %> 
-      <a style="color:white" class="centerize" data-toggle="modal" href="#submit-modal"><p style="margin-top:20px"> Nothing here? Suggest an idea.</p></a>
+      <a style="color:white;" class="centerize" data-toggle="modal" href="#submit-modal"><div class="idea-collector"><h6>Nothing here? Suggest an idea.</h6></div></a>
     <% else %>
       <% @brand.products.select { |p| p.active && !p.existingline }.each do |product| %>
         <div class="col-md-6 col-xs-6">

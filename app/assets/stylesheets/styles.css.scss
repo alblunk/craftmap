@@ -1081,6 +1081,7 @@ img#img-preview {
     position:absolute;
     border-radius:1px;
   }
+
   #social-places{
     font-family:m-1c, serif;
     font-weight: 300;
@@ -1088,6 +1089,21 @@ img#img-preview {
     letter-spacing: 2px;
     text-transform: uppercase;
     display:inline;
+  }
+
+  .idea-collector{
+    margin-top:20px;
+    margin-right:-5px;
+    margin-left:-5px;
+    padding:3px 10px;
+    background-color: #3aa63b;
+    font-size:.9em;
+  }
+
+  .idea-collector:hover {
+    background-color:#2d802e;
+    text-decoration: none;
+    color:#5dc65e;
   }
 
 
