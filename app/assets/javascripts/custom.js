@@ -13,6 +13,13 @@ $(document).ready(function(){
     $('#crap2').show("fast")
   });
 
+  $('#home-products').mouseenter(function() {
+    $('.tits').fadeTo('fast', 1);
+  });  
+  $('#home-products').mouseleave(function(){
+    $('.tits').hide();
+  });
+
   $('#brand-sort').click(function() {
     $('#home-brands').show();
     $('#home-products').hide();
