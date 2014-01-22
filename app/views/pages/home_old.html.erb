@@ -1,0 +1,88 @@
+<div class="col-md-5">
+  <div class="row">
+    <div class="col-md-12">
+      <% @products.each do |product| %>
+        <div class="p-hover mid-pic-frame hidden" id="crap" data-product-id="<%= product.id %>">
+          <div id="p-hover-details">
+            <h3 style="margin-bottom:1px;padding-top:5px"><%= product.name %></h3>
+            <hr style="margin:0px;margin-left:-10px;opacity:.6;border-color:rgba(0,0,0,.3)">
+            <h6 style="margin-top:5px;font-weight:400"><%= product.brand.name %></h6>
+            <h6 style="font-size:.65em !important;letter-spacing:1px !important;margin-top:-10px;font-weight:400;padding-bottom:5px;"><%= product.brand.location%></h6>
+          </div>
+          <div id="p-hover-pic">
+            <%= link_to(product) do %>
+              <%= image_tag(product.primary_image, class: "img-responsive") %>
+            <% end %>
+          </div>
+          <% if product.percentage.blank? %>
+          <% else %>
+            <div id="p-hover-status">
+              <h6 class="centerize" style="text-transform:uppercase;">
+                <span style="font-size:1.45em;">$<%= product.price %></span>&nbsp;&nbsp;&nbsp;
+                <span class="glyphicon glyphicon-signal"></span>&nbsp;
+                <%= product.percentage %>% Funded&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="glyphicon glyphicon-time"></span>&nbsp;
+                <%= time_ago_in_words(product.end_date).html_safe unless product.end_date.blank? %> LEFT
+              </h6>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+      <div id="motto">
+        <hr>
+          <h3 style="font-size:2.5em;">
+          TOP TIER BRANDS.<br>
+          FAN-BACKED DEVELOPMENT.<br>
+          JOIN THE COMPANY.
+          </h3>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-5 product-grid">
+  <div style="margin-top:-20px;margin-bottom:20px">
+        <a data-toggle="modal" href="#sort-modal" class="backhome-btn" id="home-question">?</a>
+      </div>
+  <div class="row">
+    <div class="col-md-12">
+        <div class="centerize links" id="home-links">
+          <h6 id="product-sort">PROJECTS</h6><span style="opacity:.2">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span><h6 id="brand-sort">BRANDS</h6>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+    <div id="home-products">
+      <%= render :partial=>'products/product', id: 'indiv-home-prod', :collection => @products, :locals => {:size => 'col-md-6 col-xs-6'}  %>
+    </div>
+    <div id="home-brands" style="display:none;">
+      <h6 class="centerize" style="color:white;pointer-events:none;font-size:.7em !important;padding-bottom:5px;margin-top:-5px;">A-Z</h6>
+      <hr class="centerize" style="color:white;width:40px;margin-top:-5px;margin-bottom:15px;border-color:rgba(255,255,255,.4)">
+      <%= render :partial=>'brands/brand', id: 'indiv-home-brand', :collection => @brands, :locals => {:size => 'col-md-4 col-xs-6'}  %>
+    </div>
+  </div>
+</div>
+
+<!-- Sort Modal -->
+  <div class="modal fade" id="sort-modal" tabindex="-1" role="dialog" aria-labelledby="Submit" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" style="font-size:3em;margin-top:-10px;" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h3 class="modal-title">Projects vs. Brands</h3>
+        </div>
+        <div class="modal-body" >
+
+          <h6>Projects:</h6>
+           <p>These are brand new concepts or collaborations that brands want to test to the masses. If they reach their 'tipping-point' of support, they get produced.
+            <br><br>
+            Customers are only charged when a product reaches its tipping point.
+          </p>
+            <hr>
+          <h6>Brands:</h6>
+          <p>This is a family of the best brands - with great stories to match. Some will be actively promoting 'Projects' & some are there for your discovery. <br><br>Either way, we encourage you to submit project ideas for your favorites & learn about them.</p>
+        </div>
+      </div>
+    </div>
+  </div>

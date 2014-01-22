@@ -3,7 +3,7 @@ Beeline::Application.routes.draw do
   devise_for :users
 
   get 'home' => 'pages#home'
-  get 'home2' => 'pages#home2'
+  get 'home_old' => 'pages#home_old'
   get 'landing' => 'pages#landing'
   get 'about' => 'pages#about'
   get 'terms' => 'pages#terms'
@@ -31,6 +31,6 @@ Beeline::Application.routes.draw do
     resources :registrations, only: [ :create ]
   end
 
-  root :to => 'pages#landing'
+  root :to => 'pages#home'
 
 end
