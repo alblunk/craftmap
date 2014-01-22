@@ -45,7 +45,7 @@ $(document).ready(function(){
     $('.tits').fadeTo('fast', 1);
       });  
     $('#home-products').mouseleave(function(){
-      $('.tits').hide();
+      $('.tits').fadeTo('slow',0);
     });
   } 
   else {
