@@ -5,15 +5,15 @@
       <a href="/"><%= image_tag("FarallonCo-LongForm-Beta-B.png", width: "150") %></a>
     </div>
     <br>
-    <h6 class="centerize" style="font-size:.6em !important;text-decoration:none !important">
+    <h6 class="centerize" >
       <% if user_signed_in? %>
-        <a href="/users/edit" id="h-account" style="color:black">MY ACCOUNT</a>
+        <a href="/users/edit" id="h-account" class="small-black-links" >MY ACCOUNT</a>
         
-        &nbsp;&nbsp;&nbsp;<%= link_to 'LOG OUT', destroy_user_session_path, method: :delete %>
+        &nbsp;&nbsp;&nbsp;<%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class:'small-black-links' %>
       <% else %>
-        &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'JOIN US',  new_user_registration_path %>
+        &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'JOIN US',  new_user_registration_path, class:'small-black-links' %>
 
-        &nbsp;&nbsp;&nbsp;<%= link_to 'SIGN IN',  new_user_session_path %>
+        &nbsp;&nbsp;&nbsp;<%= link_to 'SIGN IN',  new_user_session_path, class:'small-black-links' %>
       <% end %>
     </h6>
     <div class="col-md-12">

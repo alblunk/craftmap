@@ -16,8 +16,8 @@
 </div>
 
     
-<div class="col-md-5" >  
-  <div class="row" id="details">
+<div class="col-md-5 " >  
+  <div class="row grey-border" id="details">
     <div class="col-md-12">
       <div style="margin-bottom:20px;margin-top:15px">
         <a href="/" class="backhome-btn"><div class="glyphicon glyphicon-home" ></div></a>
@@ -183,16 +183,16 @@
       </div>
     </div>
   </div>
-  <div class="row" style="margin-top:20px;color:rgba(255,255,255,.9);background-color: rgba(0,0,0,0.3); border-radius:3px;">
+  <div class="row grey-border" style="margin-top:20px;color:black; border-radius:3px;">
       <div class="col-md-12">
         <h6 class="centerize" style="padding-top:10px;">Keep exploring</h6>
-        <hr class="white-hr" style="opacity:.3;margin-top:-1px;width:40% !important;">
+        <hr style="margin-top:-1px;width:40% !important;">
           <div class="row">
             <%= render :partial=>'products/product', :collection => @products, :locals => {:size => 'col-md-4 col-xs-6'}  %>
           </div>
           <div class="row">
             <h6 class="centerize" style="padding-top:10px;">More Brands</h6>
-            <hr class="white-hr" style="opacity:.3;margin-top:-1px;width:40% !important;">
+            <hr style="margin-top:-1px;width:40% !important;">
             <%= render :partial=>'brands/brand', :collection => @brands, :locals => {:size => 'col-md-3 col-xs-6'}  %>
           </div>
       </div>
