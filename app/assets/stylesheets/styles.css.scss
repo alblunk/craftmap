@@ -3,17 +3,18 @@
 /* GLOBAL CSS */
 /*https://s3.amazonaws.com/beelineco/background.jpg*/
   html{
-      background: url(https://s3.amazonaws.com/beelineco/mtn-background-bw.jpg) no-repeat center center fixed; 
+     /* background: url(https://s3.amazonaws.com/beelineco/mtn-background-bw.jpg) no-repeat center center fixed; 
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
-      background-size: cover;
-
+      background-size: cover;*/
+      height: 100%; 
   }
 
   body{
     background-color:transparent;
-
+    height: 100%; 
+    min-height: 100%;
 
     /*MOUNTAIN*/
     /*http://31.media.tumblr.com/af11755dca949ef912ab7e7dd71fbd29/tumblr_mmx7okf3MU1rkz363o1_1280.jpg*/
@@ -564,10 +565,8 @@ img#img-preview {
 
   }
 
-  #header .logo{
-    margin-left:10px;
-  }
-  #header .logo:hover{
+  
+  .logo:hover{
     opacity: .7;    
   }
 
@@ -600,6 +599,37 @@ img#img-preview {
   #h-account{
     font-size:.8em !important;
     margin-left:20px !important;
+  }
+
+  #emailus2{
+    background-color:#428bca;
+    position:fixed;
+    bottom:140px;
+    left:-10px; 
+
+    font-size:.9em;
+    color:white; 
+    font-size: .75em;
+    letter-spacing: 1px;
+
+    margin-top:30%;
+    margin-bottom:10%;
+    padding-bottom:2px;
+    padding-left:15px;
+    padding-top:3px;
+    border-radius:1px;
+    width:120px;
+    z-index: 2;
+    border:none;
+  }
+
+  #emailus2 a{
+    text-decoration: none;
+    color:white;
+  }
+  #emailus2:hover{
+    background-color:#3276b1;
+    color:#5e9cd2;
   }
 
   #emailus{
@@ -674,6 +704,37 @@ img#img-preview {
     color:white;
   }
 
+  #submit_idea2{
+    background-color: #389e39;
+    position:fixed; 
+    bottom:90px; 
+    left:-20px; 
+
+    font-size: .75em;
+    color:white; 
+
+    margin-bottom:10%;
+    padding-top:3px;
+    padding-right:5px;
+    padding-bottom:2px;
+    padding-left:30px;
+
+    border-radius:1px;
+    border:none;
+    letter-spacing: 1px;
+    width:145px;
+  }
+
+  #submit_idea2:hover {
+    background-color:#2d802e;
+    text-decoration: none;
+    color:#5dc65e;
+  }
+  #submit_idea2 a{
+    text-decoration: none;
+    color:white;
+  }
+
   #social-title{
     pointer-events:none; 
     margin-bottom:0px;
@@ -710,6 +771,13 @@ img#img-preview {
 
   }
 
+  #boob{
+    padding-top:0px !important;
+    padding-left:10px !important;
+    cursor:pointer;
+    margin-bottom:20px !important;
+  }
+
   .links {
     padding:0 0 5px 0;
     color:white;
@@ -725,13 +793,9 @@ img#img-preview {
 
 
   .links h6:hover{
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid black;
     color:white;
     margin-bottom:9px;
-  }
-
-  #home-links{
-    margin-left:-20px;
   }
 
   .forgot-password{
@@ -741,12 +805,12 @@ img#img-preview {
     font-size:.7em;
   }
 
-  .p-hover{
+  /*.p-hover{
     position:fixed !important;
     margin-left:40px;
     max-width: 600px;
     border-radius:3px;
-  }
+  }*/
   #p-hover-pic{
     position:relative;
     height:375px;
@@ -1229,6 +1293,7 @@ img#img-preview {
     border-radius:1px;
     margin-left:-5px;
     margin-right:-5px;
+    color:white !important;
   }
   #footer-svpply:hover{
     background-color:rgba(0,0,0, .9);
@@ -1236,6 +1301,7 @@ img#img-preview {
     border-radius:1px;
     margin-left:-5px;
     margin-right:-5px;
+    color:white !important;
   }
   #footer-twitter:hover{
     background-color:rgba(64, 153, 255, .9);
@@ -1243,6 +1309,7 @@ img#img-preview {
     border-radius:1px;
     margin-right:-5px;
     margin-left:-5px;
+    color:white !important;
   }
   #footer-tumblr:hover{
     background-color:rgba(0, 34, 95, .9);
@@ -1250,6 +1317,7 @@ img#img-preview {
     border-radius:1px;
     margin-right:-5px;
     margin-left:-5px;
+    color:white !important;
   }
   #footer-facebook:hover{
     background-color:rgba(59, 89, 152, .9);
@@ -1257,6 +1325,7 @@ img#img-preview {
     border-radius:1px;
     margin-right:-5px;
     margin-left:-5px;
+    color:white !important;
   }
  
    #background-credit{
@@ -1282,6 +1351,26 @@ img#img-preview {
     padding-top:15px;
   }
 
+  #footer2{
+    position:fixed;
+    padding-bottom:35px;
+    margin:10px;
+    z-index:50;
+
+  }
+  #header2{
+    position:fixed;
+  }
+
+
+  #click:hover{
+    background-color:transparent !important;
+    color:#5dc65e;
+    cursor:pointer;
+  }
+
+
+  
   footer {
     background-color:rgba(0,0,0,.3);
     padding-top:10px;
@@ -1341,6 +1430,16 @@ img#img-preview {
         left:-10px; 
         margin-top:5%;
       }
+      #emailus2{
+        position:relative;
+        left:-25px !important; 
+        margin-top:3%;
+      }
+      #submit_idea2{
+        position:relative; 
+        left:-35px !important; 
+        margin-bottom:30px;
+      }
       #price-line{
         border:none !important;
       }
@@ -1353,6 +1452,10 @@ img#img-preview {
       #social-places{
         font-size: .75em !important;
 
+      }
+      .logo{
+        padding:none !important;
+        position:relative;
       }
       #feature-box{
         margin-top:50px;
@@ -1376,6 +1479,16 @@ img#img-preview {
         position:relative;
         padding-bottom:10px;
         margin-top:10%;
+      }
+      #footer2{
+        position:relative;
+        margin-top:100px;
+      }
+      #header2{
+        position:relative;
+      }
+      #crap2{
+        position:relative !important;
       }
       #footer-credit{
         position:relative;
@@ -1440,6 +1553,10 @@ img#img-preview {
       #admin-flash{
         margin-top:75px !important;
       }
+      .logo{
+        padding:none !important;
+        position:relative;
+      }
       .p-hover{
         display:none;
       }
@@ -1457,7 +1574,17 @@ img#img-preview {
         left:-10px; 
         margin-top:5%;
       }
-
+      #emailus2{
+        position:relative;
+        bottom:-15px;
+        left:-30px; 
+        margin-top:5%;
+      }
+      #submit_idea2{
+        position:relative; 
+        bottom:-20px; 
+        left:-20px;
+      }
       #bullhorn{
         font-size:9em !important;
       }
@@ -1511,6 +1638,15 @@ img#img-preview {
         position:relative;
         padding-bottom:10px;
         margin-top:10%;
+      }
+      #footer2{
+        text-align:center;
+        position:relative;
+        padding-bottom:10px;
+        margin-top:10%;
+      }
+      #crap2{
+        position:relative !important;
       }
       .mid-pic-frame{
         position:relative;

@@ -16,15 +16,9 @@
     <script src="//use.edgefonts.net/maven-pro:n4,n5,n7;m-1c:n2,n3,n4,n5;damion:n4.js"></script>
   </head>
   <body>
-
-      <div class="row">
-        
         <%= render 'layouts/header' %>
         
         <%= yield %>
-
-      </div>
-      <div id="footer-container"></div>
       <%= render 'layouts/footer' %>
 
     <%= javascript_include_tag "application" %>
@@ -42,6 +36,8 @@
       };
     </script>
     <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://static.intercomcdn.com/intercom.v1.js';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}};})()</script>
+
+</body>
 
 <!-- Submit Modal -->
   <div class="modal fade" id="submit-modal" tabindex="-1" role="dialog" aria-labelledby="Submit" aria-hidden="true">
@@ -91,7 +87,6 @@
     </div>
     </div>
   </div>
-
 <!-- FAQ Modal -->
   <div  class="modal fade" id="FAQModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -160,6 +155,29 @@
             </div>
           </div>
     </div>
+<!-- Sort Modal -->
+  <div class="modal fade" id="sort-modal" tabindex="-1" role="dialog" aria-labelledby="Submit" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" style="font-size:3em;margin-top:-10px;" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h3 class="modal-title">Projects vs. Brands</h3>
+        </div>
+        <div class="modal-body" >
+
+          <h6>Projects:</h6>
+           <p>These are brand new concepts or collaborations that brands want to test to the masses. If they reach their 'tipping-point' of support, they get produced.
+            <br><br>
+            Customers are only charged when a product reaches its tipping point.
+          </p>
+            <hr>
+          <h6>Brands:</h6>
+          <p>This is a family of the best brands - with great stories to match. Some will be actively promoting 'Projects' & some are there for your discovery. <br><br>Either way, we encourage you to submit project ideas for your favorites & learn about them.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 <!-- begin olark code -->
 <script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
@@ -183,8 +201,6 @@ olark.identify('4565-963-10-6324');/*]]>*/</script><noscript><a href="https://ww
 <!-- end olark code -->
 
 
-
-</body>
 
   <!-- Google Analytics -->
     <script>
