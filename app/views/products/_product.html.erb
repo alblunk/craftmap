@@ -6,6 +6,6 @@
 		<span style="font-family:maven-pro, serif;font-size:1.6em;"><%= product.name%></span><hr style="margin:0;margin-bottom:-5px"><br>
 		<span class="glyphicon glyphicon-signal" style="color:#3aa63b;font-size:1.9em;"></span>&nbsp;
 		<span style="font-size:1.4em !important;"><%= product.percentage %></span>% Funded<br>
-		<span class="glyphicon glyphicon-time" style="color:#ffd700;font-size:1.9em;"></span>&nbsp;&nbsp;<span style="font-size:1.4em !important"><%= time_ago_in_words(product.end_date).html_safe unless product.end_date.blank? %></span> left
+		<span class="glyphicon glyphicon-time" style="color:white;font-size:1.9em;"></span>&nbsp;&nbsp;<span style="font-size:1.4em !important"><%= time_ago_in_words(product.end_date).html_safe unless product.end_date.blank? %></span> left
 	</h6>
 </div>
