@@ -596,6 +596,20 @@ img#img-preview {
     text-decoration:none !important;
     color:black !important;
   }
+  #ballsack{
+    font-size:.6em !important;
+    text-decoration:none !important;
+    background-color:#3aa63b;
+    color:white;
+    border:2px solid #3aa63b;
+    padding:5px;
+    border-radius:1px;
+  }
+
+  #ballsack:hover{
+    background-color:white;
+    color:#3aa63b !important;
+  }
 
   .social li a{
     opacity:1;
