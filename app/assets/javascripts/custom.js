@@ -1,14 +1,17 @@
 $(document).ready(function(){
   $('#click').click(function() {
     $('#shit').hide("fast")
-    $('#shiz').hide("fast")
     $('#title').hide("fast")
     $('#crap2').hide("fast")
   });
 
+
+  $('#social-click').click(function() {
+    $('#social-toggle').toggle("fast");
+  });
+
   $('#boob').click(function() {
     $('#shit').show("fast")
-    $('#shiz').show("fast")
     $('#title').show("fast")
     $('#crap2').show("fast")
   });

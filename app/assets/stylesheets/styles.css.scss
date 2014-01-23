@@ -612,7 +612,6 @@ img#img-preview {
   #emailus2{
     background-color:#428bca;
     position:fixed;
-    bottom:140px;
     left:-10px; 
 
     font-size:.9em;
@@ -620,7 +619,7 @@ img#img-preview {
     font-size: .75em;
     letter-spacing: 1px;
 
-    margin-top:30%;
+    margin-top:25%;
     margin-bottom:10%;
     padding-bottom:2px;
     padding-left:15px;
@@ -715,7 +714,7 @@ img#img-preview {
   #submit_idea2{
     background-color: #389e39;
     position:fixed; 
-    bottom:90px; 
+    bottom:170px; 
     left:-20px; 
 
     font-size: .75em;
@@ -1288,6 +1287,10 @@ img#img-preview {
 
 /*FOOTER*/
 
+  .footer-text:hover{
+    border-bottom:1px solid black;
+  }
+
   .footer-social{
     position:absolute;
     color:white;
@@ -1368,7 +1371,9 @@ img#img-preview {
     position:fixed;
     padding-bottom:35px;
     margin:10px;
-    z-index:1 !important;
+    width:170px;
+    bottom:0;
+    left:0;
 
   }
   #header2{
@@ -1377,8 +1382,9 @@ img#img-preview {
 
 
   #click:hover{
-    background-color:transparent !important;
-    color:#5dc65e;
+    background-color:rgba(255,255,255,1);
+    /*background-color:#3aa63b;
+    color:white !important;*/
     cursor:pointer;
   }
 
