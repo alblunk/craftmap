@@ -9,6 +9,7 @@ Beeline::Application.routes.draw do
   get 'terms' => 'pages#terms'
   get 'privacy' => 'pages#privacy'
   get 'jobs' => 'pages#jobs'
+  get 'map' => 'pages#map'
   get 'upload' => 'pages#upload'
   get 'all_brands' => 'pages#all_brands'
 

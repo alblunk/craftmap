@@ -20,6 +20,8 @@ class PagesController < ApplicationController
 
   def faq; end
 
+  def map; end
+  
   def terms; end
 
   def privacy; end
