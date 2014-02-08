@@ -1389,12 +1389,10 @@ img#img-preview {
 
   #footer2{
     position:fixed;
-    padding-bottom:35px;
     margin:10px;
     width:170px;
     bottom:0;
     left:0;
-
   }
   #header2{
     position:fixed;
@@ -1526,6 +1524,7 @@ img#img-preview {
       #footer2{
         position:relative;
         margin-top:100px;
+        width:100%;
       }
       #home2grid{
         padding-bottom:10px !important;
@@ -1698,6 +1697,7 @@ img#img-preview {
         position:relative;
         padding-bottom:10px;
         margin-top:10%;
+        width:100%;
       }
       #home2grid{
         padding-bottom:10px !important;
