@@ -31,7 +31,7 @@ class PagesController < ApplicationController
   end
 
   def all_products
-    @products = Product.active_products.order("created_at ASC")
+    @products = Product.active_products.order("created_at desc")
   end
 
 
