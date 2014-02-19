@@ -8,7 +8,15 @@
 			<h6 class="centerize" style="color:black;pointer-events:none;font-size:.8em !important;margin-top:10px;">A-Z</h6>
 			<hr class="centerize" style="width:40px;margin-top:0px;border-color:rgba(0,0,0,.2)">
 			<br>
-  		<%= render :partial=>'products/product', :collection => @products, :locals => {:size => 'col-md-3 col-xs-6'}  %>
+
+	<% @products.select { |p| p.active && p.existingline }.each do |product| %>
+      <div class="col-md-3 col-xs-4">
+        <%= link_to image_tag(product.primary_image), product.existingurl, target: "_blank", class: "thumbnail" %>
+      </div>
+    <% end %>
+
+
+  		<%#= render :partial=>'products/product', :collection => @products, :locals => {:size => 'col-md-3 col-xs-6'}  %>
   	</div>
   </div>
 </div>
