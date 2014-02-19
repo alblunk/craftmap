@@ -889,9 +889,9 @@ img#img-preview {
     border-color:rgba(0, 0, 0, 0.25) !important;
   }
 /*PRODUCT*/
-  #product-paging{
+  .product-paging{
     text-decoration:none;
-    color:black;
+    color:black !important;
     font-size:.8em;
   }
 
