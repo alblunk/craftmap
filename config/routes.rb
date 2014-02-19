@@ -12,6 +12,7 @@ Beeline::Application.routes.draw do
   get 'map' => 'pages#map'
   get 'upload' => 'pages#upload'
   get 'all_brands' => 'pages#all_brands'
+  get 'all_products' => 'pages#all_products'
 
   get 'contact' => 'contact#new'
   post 'contact' => 'contact#create'

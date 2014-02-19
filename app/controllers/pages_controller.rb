@@ -30,6 +30,12 @@ class PagesController < ApplicationController
     @brands = Brand.active_brands.order("name ASC")
   end
 
+  def all_products
+    @products = Product.active_products.order("created_at ASC")
+  end
+
+
+
   def jobs; end
 
   def upload; end
