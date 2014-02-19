@@ -12,8 +12,8 @@
         <%= link_to image_tag(product.primary_image), product.existingurl, target: "_blank", class: "thumbnail" %>
       </div>
     <% end %>
-	<hr style="width:60%;" class="centerize">
-    <h6 class="centerize" > <%= paginate @products, style:"text-decoration:none;color:black;font-size:.8em;" %></h6>
+	<hr>
+    <h6 class="centerize" > <%= paginate @products, id:"product-paging" %></h6>
 
   	</div>
   </div>
