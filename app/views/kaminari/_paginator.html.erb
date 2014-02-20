@@ -7,7 +7,7 @@
     paginator:     the paginator that renders the pagination tags inside
 -%>
 
-<h6 class="centerize" style="text-decoration:none !important;color:black !important;font-size:.8em !important;" >
+<h5 class="centerize" style="letter-spacing:2px;font-size:.8em" >
   <%= paginator.render do -%>
     <nav class="pagination">
       <%= first_page_tag unless current_page.first? %>
@@ -23,4 +23,4 @@
       <%= last_page_tag unless current_page.last? %>
     </nav>
   <% end -%>
-</h6>
+</h5>
