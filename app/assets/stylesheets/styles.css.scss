@@ -752,6 +752,16 @@ img#img-preview {
     width:145px;
   }
 
+  .black-paginate{
+    text-decoration:none;
+    color:black;
+  }
+
+  .black-paginate:hover{
+    border-bottom:1px solid black;
+    color:black;
+  }
+
   #submit_idea2:hover {
     background-color:#2d802e;
     text-decoration: none;
