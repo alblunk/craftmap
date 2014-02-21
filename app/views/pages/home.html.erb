@@ -16,13 +16,14 @@
   <div class="row" id="home2grid" style="padding-bottom:200px;">
     <div style="position:relative;">
       <div class="links centerize" style="position:relative;font-size:1.2em !important;background-color:white;border-bottom:1px solid rgba(0,0,0,.1); width:100%;padding-top:10px"id="home-links">
-          <h6 id="product-sort" style="color:black;">PROJECTS</h6><span style="opacity:.2;color:black;">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span><h6 style="color:black"id="brand-sort">BRANDS</h6>
+          <h6 id="product-sort" style="color:black;">CAMPAIGNS</h6><span style="opacity:.2;color:black;">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span><h6  ><a style="color:black !important; text-decoration:none !important;"href="/all_products" >PRODUCTS</a></h6><span style="opacity:.2;color:black;">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span><h6 style="color:black"id="brand-sort">BRANDS</h6>
           <a id="boob" class="backhome-btn hidden-xs hidden-sm">+</a>
       </div>
       <div style="position:relative;margin-top:10px;">
         <div id="home-products">
           <%= render :partial=>'products/product', id: 'indiv-home-prod', :collection => @products, :locals => {:size => 'col-md-4 col-xs-6'}  %>
         </div>
+
         <div id="home-brands" style="display:none;">
           <h6 class="centerize" style="color:black;pointer-events:none;font-size:.7em !important;padding-bottom:5px;margin-top:-5px;">A-Z</h6>
           <hr class="centerize" style="width:40px;margin-top:-5px;margin-bottom:15px;border-color:rgba(0,0,0,.4)">
