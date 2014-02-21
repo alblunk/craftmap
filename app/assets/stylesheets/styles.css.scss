@@ -758,8 +758,10 @@ img#img-preview {
   }
 
   .black-paginate:hover{
-    border-bottom:1px solid black;
-    color:black;
+    padding:2px 4px 4px;
+    margin:-4px;
+    background-color:#505050;
+    color:white;
   }
 
   #submit_idea2:hover {
