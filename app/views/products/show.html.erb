@@ -1,7 +1,7 @@
 <!-- PRODUCT PICTURE PANE -->
 <div class="col-md-5">
   <div id="mid-container" >
-      <div class="mid-pic-frame" style="border:1px solid rgba(80,80,80,.1)">
+      <div class="mid-pic-frame">
         <div id="p-thumbnails-box">
           <% @product.secondary_images.map(&:image).each do |image| %>
             <%= image_tag(image, class: "p-thumbnails") %>
