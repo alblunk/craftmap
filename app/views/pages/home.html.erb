@@ -7,29 +7,32 @@
 
       <div style="background-color:rgba(0,0,0,.4);position:absolute;color:white;top:0;padding:10px;width:101%;height:100%;margin-left:-1%;" id="crap2">
         <%= image_tag("FarallonCo-LongForm-T.png",width:"600px",class:"hidden-xs hidden-sm centerize img-responsive" ) %>
-        <h2 style="margin-top:0px;text-align:center;font-size:1.9em;"id="title"><i>Supporting the best brands and their stories</i></h2>
-        <h3 id="click" class="centerize hidden-xs hidden-sm"style="color:#5dc65e;text-align:center;border:5px solid #3aa63b; border-radius:1px;width:300px;padding:8px;margin-top:75px;text-decoration:none !important;">Show me the goods</h3>
+        <h2 style="margin-top:0px;text-align:center;font-size:1.9em;"id="title"><i>Supporting the best makers and their stories</i></h2>
+        <h6 style="font-size:1em !important" class="centerize"><i>We find em' & open the phone lines your ideas</i></h6>
+        <h3 id="click" class="centerize hidden-xs hidden-sm"style="color:#5dc65e;text-align:center;border:5px solid #3aa63b; border-radius:1px;width:300px;padding:8px;margin-top:75px;text-decoration:none !important;">Show me the makers</h3>
       </div>
     </div>
   </div>
 
   <div class="row" id="home2grid" >
-    <div style="position:relative;">
-      <div class="links centerize" style="position:relative;font-size:1.2em !important;background-color:white;border-bottom:1px solid rgba(0,0,0,.1); width:100%;padding-top:10px"id="home-links">
-          <!-- <h6 id="product-sort" style="color:black;">CAMPAIGNS</h6><span style="opacity:.2;color:black;">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span> --><h6  ><a style="color:black !important; text-decoration:none !important;"href="/all_products" >PRODUCTS</a></h6><span style="opacity:.2;color:black;">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span><h6 style="color:black"><a style="color:black !important; text-decoration:none !important;"href="/all_brands" >BRANDS</a></h6>
-          <a id="boob" class="backhome-btn hidden-xs hidden-sm">+</a>
-      </div>
+    <!-- <div style="position:relative;"> -->
+      <!-- <div class="links centerize" style="position:relative;font-size:1.2em !important;background-color:white;border-bottom:1px solid rgba(0,0,0,.1); width:100%;padding-top:10px"id="home-links">
+          <h6 id="product-sort" style="color:black;">CAMPAIGNS</h6><span style="opacity:.2;color:black;">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span> <h6  ><a style="color:black !important; text-decoration:none !important;"href="/all_products" >PRODUCTS</a></h6><span style="opacity:.2;color:black;">&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span><h6 style="color:black"><a style="color:black !important; text-decoration:none !important;"href="/all_brands" >BRANDS</a></h6>
+          
+      </div> -->
       <div style="position:relative;margin-top:10px;">
+        <a id="boob" class="backhome-btn hidden-xs hidden-sm">+</a>
         <!-- <div id="home-products">
           <%#= render :partial=>'products/product', id: 'indiv-home-prod', :collection => @products, :locals => {:size => 'col-md-4 col-xs-6'}  %>
         </div> -->
 
-        <!-- <div id="home-brands" style="display:none;">
-          <h6 class="centerize" style="color:black;pointer-events:none;font-size:.7em !important;padding-bottom:5px;margin-top:-5px;">A-Z</h6>
+        <div id="home-brands">
+          <h6 class="centerize" style="font-size:1.5em !important;margin-top:20px">The Brand Family</h6>
+          <h6 class="centerize" style="color:black;pointer-events:none;font-size:.7em !important;padding-bottom:5px;">A-Z</h6>
           <hr class="centerize" style="width:40px;margin-top:-5px;margin-bottom:15px;border-color:rgba(0,0,0,.4)">
-          <%#= render :partial=>'brands/brand', id: 'indiv-home-brand', :collection => @brands, :locals => {:size => 'col-md-3 col-xs-6'}  %>
-        </div> -->
-      </div>
+          <%= render :partial=>'brands/brand', id: 'indiv-home-brand', :collection => @brands, :locals => {:size => 'col-md-3 col-xs-6'}  %>
+        </div>
+     </div>
     </div>
   </div>
 <span id="background-credit" class="hidden-xs hidden-sm">
