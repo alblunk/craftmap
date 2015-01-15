@@ -23,5 +23,3 @@ gem 'gibbon'
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
 gem 'bootstrap-wysihtml5-rails'
-
-gem 'sqlite3'
