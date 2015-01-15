@@ -24,7 +24,4 @@ gem 'gibbon'
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
 gem 'bootstrap-wysihtml5-rails'
 
-group :development, :test do
-	gem 'sqlite3'
-  gem 'minitest-rails'
-end
+gem 'sqlite3'
