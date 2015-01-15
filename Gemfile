@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 ruby '2.0.0'
 
 gem 'rails',            '4.0.0'
-gem 'puma'
+# gem 'puma'
 
 gem 'sass-rails',       '~> 4.0.0'
 gem 'uglifier',         '>= 1.3.0'
@@ -24,10 +24,10 @@ gem 'gibbon'
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
 gem 'bootstrap-wysihtml5-rails'
 
-group :production do
-	gem "pg"
-  gem 'rails_12factor'
-end
+# group :production do
+# 	gem "pg"
+#   gem 'rails_12factor'
+# end
 
 group :development, :test do
 	gem 'sqlite3'
