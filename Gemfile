@@ -24,14 +24,6 @@ gem 'gibbon'
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
 gem 'bootstrap-wysihtml5-rails'
 
-<<<<<<< HEAD
-=======
-group :production do
-	gem "pg"
-  gem 'rails_12factor'
-end
-
->>>>>>> 156ea1031bb70e6da5d0f7e13b60193a30a34da9
 group :development, :test do
 	gem 'sqlite3'
   gem 'minitest-rails'
