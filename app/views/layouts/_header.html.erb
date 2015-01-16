@@ -5,17 +5,17 @@
       <a href="/" style="letter-spacing:3px;font-size:.8em;margin-left:50%">CRAFTMAP</a>
     </div>
     <br>
-<!--     <h6 class="centerize" >
-      <%# if user_signed_in? %>
+    <h6 class="centerize" >
+      <% if user_signed_in? %>
         <a href="/users/edit" id="h-account" class="small-black-links" >MY ACCOUNT</a>
         
-        &nbsp;&nbsp;&nbsp;<%#= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class:'small-black-links' %>
-      <%# else %>
-        &nbsp;&nbsp;&nbsp;&nbsp;<%#= link_to 'JOIN US',  new_user_registration_path, id:'ballsack' %>
+        &nbsp;&nbsp;&nbsp;<%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class:'small-black-links' %>
+      <% else %>
+        &nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'JOIN US',  new_user_registration_path, id:'ballsack' %>
 
-        &nbsp;&nbsp;&nbsp;<%#= link_to 'SIGN IN',  new_user_session_path, class:'small-black-links' %>
-      <%# end %>
-    </h6> -->
+        &nbsp;&nbsp;&nbsp;<%= link_to 'SIGN IN',  new_user_session_path, class:'small-black-links' %>
+      <% end %>
+    </h6>
     <div class="col-md-12">
       <div id="header">
         <% if current_user.try(:admin?) %>

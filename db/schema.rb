@@ -13,8 +13,30 @@
 
 ActiveRecord::Schema.define(version: 20131201035354) do
 
-# Could not dump table "brands" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "brands", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "profile"
+    t.string   "location"
+    t.integer  "owner_id"
+    t.string   "facebook"
+    t.string   "twitter"
+    t.string   "instagram"
+    t.string   "tumblr"
+    t.string   "home_page"
+    t.boolean  "active"
+    t.string   "founders"
+    t.string   "logo"
+    t.string   "original_filename"
+    t.string   "vid_vimeo"
+    t.string   "vid_youtube"
+    t.string   "main_contact"
+    t.text     "current_notes"
+    t.string   "fulfillment_contact"
+  end
+
+  add_index "brands", ["owner_id"], name: "index_brands_on_owner_id"
 
   create_table "delayed_jobs", force: true do |t|
     t.integer  "priority",   default: 0, null: false
@@ -48,16 +70,15 @@ ActiveRecord::Schema.define(version: 20131201035354) do
     t.boolean  "archived"
     t.text     "materials"
     t.boolean  "usa"
+    t.string   "primary_image"
+    t.string   "original_filename"
     t.boolean  "limited"
     t.string   "limitednumber"
     t.boolean  "existingline"
     t.string   "existingurl"
     t.string   "dimensions"
-    t.string   "primary_image"
-    t.string   "original_filename"
     t.text     "features"
     t.datetime "end_date"
-    t.decimal  "integer"
     t.integer  "percentage"
   end
 
