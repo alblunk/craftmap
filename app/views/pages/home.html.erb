@@ -25,10 +25,10 @@
         </div> -->
 
         <div id="home-brands">
-          <h6 class="centerize" style="font-size:1.5em !important;margin-top:20px">The Brand Family</h6>
+          <h6 class="centerize" style="font-size:1.5em !important;margin-top:20px">The Breweries</h6>
           <h6 class="centerize" style="color:black;pointer-events:none;font-size:.7em !important;padding-bottom:5px;">A-Z</h6>
           <hr class="centerize" style="width:40px;margin-top:-5px;margin-bottom:15px;border-color:rgba(0,0,0,.4)">
-          <%#= render :partial=>'brands/brand', id: 'indiv-home-brand', :collection => @brands, :locals => {:size => 'col-md-3 col-xs-6'}  %>
+          <%= render :partial=>'brands/brand', id: 'indiv-home-brand', :collection => @brands, :locals => {:size => 'col-md-3 col-xs-6'}  %>
         </div>
      </div>
     </div>
