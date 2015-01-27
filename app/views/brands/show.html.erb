@@ -125,9 +125,9 @@
     </div>
   </div>
   <div class="row">
-    <% @brand.products.select { |p| p.active && p.existingline }.each do |product| %>
+    <% @brand.products.select { |p| p.active }.each do |product| %>
       <div class="col-md-6 col-xs-6">
-        <%= link_to image_tag(product.primary_image), product.existingurl, target: "_blank", class: "thumbnail" %>
+        <%= link_to image_tag(product.primary_image), product, class: "thumbnail" %>
         <%#= link_to image_tag(product.primary_image), product_path(product), class: "thumbnail" %>
       </div>
     <% end %>

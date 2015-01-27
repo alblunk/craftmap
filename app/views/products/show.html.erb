@@ -36,9 +36,6 @@
           <!-- TUMBLR -->
           <a href="http://www.tumblr.com/share/photo?source=<%=u @product.primary_image.url %>&caption=<%=u @product.name %>+by+<%=u @product.brand.name %>+on+Farallon+Co.&clickthru=<%=u request.original_url %>" target="blank" ><%= image_tag("tumblr.png", class: "social-show", width: "20") %>
           </a>
-          <!-- SVPPLY -->
-          <a href="javascript:void((function(){var hsb=document.createElement('script');hsb.setAttribute('src','https://svpply.com/bookmarklet/loader/svpk_523896d767ad17bfe10401e5c9e74dd1');hsb.setAttribute('type','text/javascript');document.getElementsByTagName('head')[0].appendChild(hsb);})());" target="blank" ><%= image_tag("svpply.png", class: "social-show", width: "25") %>
-          </a>
 
           <a href="mailto:?subject=Take a look at Farallon Co...&amp;body=You should check out this product featured on Farallon Co.: <%= @product.name %> by <%= @product.brand.name %>: <%=request.original_url.html_safe%>" ><%= image_tag("email-message.png", class: "social-show", width: "20") %></a>
 
@@ -78,87 +75,50 @@
               <% end %>
             </div>
           </div>
-          <% if @product.existingline != true %>
       <div class="row">
         <div class="col-md-12">
           <div class="well well-sm detail-well" style="padding-top:10px;padding-bottom:10px;">
-            <div class="col-md-7 col-sm-7" style="z-index:50;">
-              <a href="#" data-celery="<%= @product.remote_data.slug if @product.remote_data %>"><div id="backbtn" class="flatbtn centerize">BACK IT</div></a>
+            <div class="row" id="product-details">
+              <div class="col-md-7 col-sm-6">
+                <h6 class="centerize">Grain Bill</h6>
+                <hr class="black-hr" style="margin-top:0">
+                <%= @product.features.html_safe unless @product.features.blank?%>
 
-                <hr class="black-hr" style="margin-bottom:5px">
-              <a href="#FAQModal" data-toggle="modal"><h3 id="FAQLink" class="centerize">HOW DOES THIS WORK?</h3></a>
-                <hr class="black-hr" style="margin-top:5px">
-            </div>
-            <div class="col-md-5 col-sm-5 centerize" id="price-line" style="border-left:1px solid rgba(0,0,0,.1);">
-              <h6>$<span id="price"><%= @product.price %></span></h6>
-              <div class="delivery">
-                <h5 style="font-size:.9em">Campaign End:</h5> 
-                  <hr class="black-hr" style="margin-top:-8px; margin-bottom:5px"> 
-                <p style="font-size:.9em;text-transform:uppercase;font-weight:700"><%= time_ago_in_words(@product.end_date).html_safe unless @product.end_date.blank? %> LEFT</p>
+                <h6 class="centerize">Hops</h6>
+                <hr class="black-hr" style="margin-top:0">
+                <%= @product.features.html_safe unless @product.features.blank?%>
+
               </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12 centerize" id="updates">
-                <div style="width:85%" class="centerize" data-celery="<%= @product.remote_data.slug if @product.remote_data %>" data-celery-type="bar"></div>
-              </div>
-            </div> 
-            <div class="row">
-              <div class="col-md-12 centerize">
-                <h5 style="font-size:.8em;letter-spacing:1px;">Estimated Production + Ship Time:<span style="font-weight:700"> <br class="visible-xs visible-sm"><%= @product.deliver_date.html_safe %></span></h5> 
-                <h6><%=@product.updates.html_safe unless @product.updates.blank?%></h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% else %>
-      <div class="well well-sm detail-well">
-        <div class="row">
-            <div class="col-md-6">
-              <a href="<%= @product.existingurl.html_safe unless @product.existingurl.blank? %>" target="blank">
-                <div class="flatbtn-deux centerize" id="existing-product-btn">Purchase</div>
-              </a>
-            </div>
-            <div class="col-md-6">
-              <hr class="black-hr" style="width:90%;margin-bottom:3px;margin-top:10px">
-              <a href="#existing-modal" style="color:black;" data-toggle="modal"><p style="font-size:.8em;" class="centerize">About the 'Bread & Butter' Series</p></a>
-                <hr class="black-hr" style="width:90%;margin-top:2px;margin-bottom:-10px">
-              <br>
-            </div>
-        </div>
-      </div>
-    <% end %>
-          <div class="row" id="product-details">
-            <div class="col-md-7 col-sm-6">
-              <h6 class="centerize">Features</h6>
-              <hr class="black-hr">
-              <%= @product.features.html_safe unless @product.features.blank?%>
-            </div>
-            <div class="col-md-5 col-sm-6">
-              <h6 class="centerize">Materials</h6>
-              <hr class="black-hr">
-              <%= @product.materials.html_safe unless @product.materials.blank?%>
-              <br>
-              <div style="text-align:center;margin-bottom:20px">
-                <h6 class="centerize">Dimensions</h6>
-                <hr class="black-hr">
-                <%= @product.dimensions.html_safe unless @product.dimensions.blank?%>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <% if @product.limited == true %>
-                <h6 class="centerize"><strong>NOTE:</strong> <i><%=@product.limitednumber%></i></h6>
+              <div class="col-md-5 col-sm-6">
+                <h6 class="centerize">ABV (%)</h6>
+                <hr class="black-hr" style="margin-top:0;width:75px">
+                <%= @product.materials.html_safe unless @product.materials.blank?%>
                 <br>
-              <% end %>
-              <% if @product.usa == true %>
-                <div class="row centerize" style="pointer-events:none;padding-bottom:15px">
-                  <span id="usa-text">Made in USA&nbsp;</span><%= image_tag("usa-flag.jpg", id: "usa") %>
+                <div style="text-align:center;margin-bottom:20px">
+                  <h6 class="centerize">IBU</h6>
+                  <hr class="black-hr" style="margin-top:0;width:40px;">
+                  <%= @product.dimensions.html_safe unless @product.dimensions.blank?%>
                 </div>
-              <% end %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <% if @product.limited == true %>
+                  <h6 class="centerize"><strong>NOTE:</strong> <i><%=@product.limitednumber%></i></h6>
+                  <br>
+                <% end %>
+                <% if @product.usa == true %>
+                  <div class="row centerize" style="pointer-events:none;padding-bottom:15px">
+                    <span id="usa-text">Made in USA&nbsp;</span><%= image_tag("usa-flag.jpg", id: "usa") %>
+                  </div>
+                <% end %>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+     
+          
           <hr class="black-hr">  
           <div class="row">
             <div class="col-md-12">
@@ -191,7 +151,7 @@
             <%= render :partial=>'products/product', :collection => @products, :locals => {:size => 'col-md-4 col-xs-6'}  %>
           </div>
           <div class="row">
-            <h6 class="centerize" style="padding-top:10px;">More Brands</h6>
+            <h6 class="centerize" style="padding-top:10px;">More Breweries</h6>
             <hr style="margin-top:-1px;width:40% !important;">
             <%= render :partial=>'brands/brand', :collection => @brands, :locals => {:size => 'col-md-3 col-xs-6'}  %>
           </div>

@@ -30,7 +30,21 @@
           <hr class="centerize" style="width:40px;margin-top:-5px;margin-bottom:15px;border-color:rgba(0,0,0,.4)">
           <%= render :partial=>'brands/brand', id: 'indiv-home-brand', :collection => @brands, :locals => {:size => 'col-md-3 col-xs-6'}  %>
         </div>
+
      </div>
+    </div>
+    <div class="row">
+      <h6 class="centerize" >
+          <% if user_signed_in? %>
+            <a href="/users/edit" id="h-account" class="small-black-links" >MY ACCOUNT</a>
+            
+            <%= link_to 'LOG OUT', destroy_user_session_path, method: :delete, class:'small-black-links' %>
+          <% else %>
+            <%= link_to 'JOIN US',  new_user_registration_path, id:'ballsack' %>
+
+            <%= link_to 'SIGN IN',  new_user_session_path, class:'small-black-links' %>
+          <% end %>
+        </h6>
     </div>
   </div>
 <span id="background-credit" class="hidden-xs hidden-sm">
