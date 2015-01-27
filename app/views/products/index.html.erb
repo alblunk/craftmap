@@ -35,7 +35,7 @@
               <% end %>
             </td>
             <td><%= product.owner_id %></td>
-            <td><%= product.brand_id.name %></td>
+            <td><%= product.brand_id %></td>
             <td><%= link_to product.name, product %></td>
             <td><%= link_to image_tag(product.primary_image.thumb, size: "30x30"), product %></td>
             <td><%= product.price %></td>
