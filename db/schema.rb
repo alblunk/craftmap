@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131201035354) do
+ActiveRecord::Schema.define(version: 20150127070124) do
 
   create_table "brands", force: true do |t|
     t.string   "name"
@@ -55,31 +55,27 @@ ActiveRecord::Schema.define(version: 20131201035354) do
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority"
 
   create_table "products", force: true do |t|
-    t.text     "description"
+    t.text     "tasting_notes"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
-    t.integer  "price"
+    t.string   "price"
     t.string   "status"
-    t.text     "updates"
-    t.text     "details"
-    t.string   "deliver_date"
     t.integer  "brand_id"
     t.integer  "owner_id"
     t.boolean  "active"
     t.boolean  "archived"
-    t.text     "materials"
+    t.text     "abv"
     t.boolean  "usa"
     t.string   "primary_image"
     t.string   "original_filename"
     t.boolean  "limited"
-    t.string   "limitednumber"
     t.boolean  "existingline"
     t.string   "existingurl"
-    t.string   "dimensions"
-    t.text     "features"
-    t.datetime "end_date"
-    t.integer  "percentage"
+    t.string   "ibu"
+    t.text     "grain_bill"
+    t.string   "style"
+    t.text     "hops"
   end
 
   add_index "products", ["brand_id"], name: "index_products_on_brand_id"

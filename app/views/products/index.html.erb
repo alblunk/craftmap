@@ -8,14 +8,12 @@
         <tr>
           <th>ID</th>
           <th>Active?</th>
-          <th>Campaign?</th>
-          <th>End Date?</th>
+
           <th>Owner</th>
           <th>Brand</th>
           <th>Name</th>
           <th>Pic</th>
           <th>$</th>
-          <th>Delivery Date</th>
           <th>Status</th>
           <th>Created</th>
           <th>Updated</th>
@@ -36,20 +34,11 @@
               <span class="glyphicon glyphicon-remove" style="color:#A32638"></span>
               <% end %>
             </td>
-            <td>
-              <% if product.existingline == true %>
-                -
-              <% else %>
-                <span class="glyphicon glyphicon-ok" style="color:#389e39"></span>
-              <% end %>
-            </td>
-            <td><% if product.end_date.blank? %>-<%else%><%= product.end_date.strftime("%e %b") %><%end%></td>
             <td><%= product.owner_id %></td>
             <td><%= product.brand_id %></td>
             <td><%= link_to product.name, product %></td>
             <td><%= link_to image_tag(product.primary_image.thumb, size: "30x30"), product %></td>
             <td>$<%= product.price %></td>
-            <td><%= product.deliver_date %></td>
             <td><%= product.status %></td>
             <td><%= product.created_at.strftime("%D") %></td>
             <td><%= time_ago_in_words(product.updated_at) %></td>

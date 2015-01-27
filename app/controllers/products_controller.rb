@@ -70,9 +70,9 @@ class ProductsController < ApplicationController
 
     def product_params
       params.require(:product).
-              permit( :name, :description, :materials, :details, :features, :price, :deliver_date, :percentage, :end_date,
-                      :updates, :status, :active, :archived, :usa, :limited, :primary_image,
-                      :limitednumber, :existingline, :existingurl, :dimensions, :owner,
+              permit( :name, :tasting_notes, :materials, :abv, :hops, :ibu, :style, :price,
+                      :status, :active, :archived, :usa, :limited, :primary_image,
+                      :existingline, :existingurl, :owner, :grain_bill,
                       secondary_images_attributes: [ :image ],
                       remote_data_attributes: [ :slug ],
                       brand_attributes: [ :name, :profile ] )

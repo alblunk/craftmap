@@ -20,7 +20,7 @@
   <div class="row grey-border" id="details">
     <div class="col-md-12">
       <div style="margin-bottom:20px;margin-top:15px">
-        <a href="/" class="backhome-btn"><div class="glyphicon glyphicon-home" ></div></a>
+        <a href="/" class="backhome-btn"><div class="glyphicon glyphicon-globe" ></div></a>
         <a class="visible-xs visible-sm pull-right" style="padding-right:15px;" href="mailto:?subject=Take a look at Farallon Co...&amp;body=You should check out this product featured on Farallon Co.: <%= @product.name %> by <%= @product.brand.name %>: <%=request.original_url.html_safe%>" ><%= image_tag("email-message.png", class: "social-show", width: "25") %></a>
       </div>
 <!-- SOCIAL HEADER-->
@@ -61,18 +61,10 @@
           <br>
           <div class="row">
             <div class="col-md-12">
-              <% if @product.description.blank? %>
-                <p style="text-align:left;font-size:.95em;"><%= @product.details.html_safe unless @product.details.blank?%></p>
-                <br>
-              <% else %>
-
-                <blockquote class="pull-right" style="margin-top:-10px;margin-bottom:0px;width:100%">
-                  <p style="font-size:1em;font-style:italic;"><%=@product.description.html_safe%></p>
+                <blockquote class="pull-right" style="margin-top:-10px;width:100%">
+                  <p style="font-size:1em;font-style:italic;"><%=@product.tasting_notes.html_safe%></p>
                   <h6 style="font-size:.6em"><small><%= @product.brand.founders%> of <%=@product.brand.name.html_safe%></small></h6>
                 </blockquote>
-                <p style="text-align:left;font-size:.95em;"><%= @product.details.html_safe %></p>
-                <br>
-              <% end %>
             </div>
           </div>
       <div class="row">
@@ -82,36 +74,23 @@
               <div class="col-md-7 col-sm-6">
                 <h6 class="centerize">Grain Bill</h6>
                 <hr class="black-hr" style="margin-top:0">
-                <%= @product.features.html_safe unless @product.features.blank?%>
+                <%= @product.grain_bill.html_safe unless @product.grain_bill.blank?%>
 
                 <h6 class="centerize">Hops</h6>
                 <hr class="black-hr" style="margin-top:0">
-                <%= @product.features.html_safe unless @product.features.blank?%>
+                <%= @product.hops.html_safe unless @product.hops.blank?%>
 
               </div>
               <div class="col-md-5 col-sm-6">
-                <h6 class="centerize">ABV (%)</h6>
-                <hr class="black-hr" style="margin-top:0;width:75px">
-                <%= @product.materials.html_safe unless @product.materials.blank?%>
+                <h6 class="centerize">ABV</h6>
+                <hr class="black-hr" style="margin-top:0;width:40px">
+                <span class="centerize"><%= @product.abv.html_safe unless @product.abv.blank?%>%</span>
                 <br>
                 <div style="text-align:center;margin-bottom:20px">
                   <h6 class="centerize">IBU</h6>
                   <hr class="black-hr" style="margin-top:0;width:40px;">
-                  <%= @product.dimensions.html_safe unless @product.dimensions.blank?%>
+                  <%= @product.ibu.html_safe unless @product.ibu.blank?%>
                 </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <% if @product.limited == true %>
-                  <h6 class="centerize"><strong>NOTE:</strong> <i><%=@product.limitednumber%></i></h6>
-                  <br>
-                <% end %>
-                <% if @product.usa == true %>
-                  <div class="row centerize" style="pointer-events:none;padding-bottom:15px">
-                    <span id="usa-text">Made in USA&nbsp;</span><%= image_tag("usa-flag.jpg", id: "usa") %>
-                  </div>
-                <% end %>
               </div>
             </div>
           </div>

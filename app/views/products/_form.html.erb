@@ -11,32 +11,19 @@
         <br>
         <%= f.check_box :archived %> Archive?
         <br>
-        <%= f.check_box :usa %> USA?
-        <br>
 
         <div class="forms-admin">
           <br>
           <%#= f.error_notification %>
 
           <%= f.text_field :name, placeholder: "Enter Product Name",label:false %>
-          <%= f.text_field :price, placeholder: "Price ($)",label:false %>
-          <%= f.text_field :percentage, placeholder: "% Backed",label:false %>
-          <%= f.text_field :end_date, placeholder: "Campaign End (2013-11-15)",label:false %>
-          <br>
-          <%= f.text_field :deliver_date, placeholder: "Est. Production+Ship Time",label:false %>
+          <%= f.text_field :price, placeholder: "Price ($, $$, $$$)",label:false %>
           <br>
           <%= f.text_field :status, placeholder: "Status?",label:false %>
-          
-          <%= f.fields_for :remote_data do |form| %>
-            <%= form.text_field :slug, placeholder: "Celery ID" %>
-          <% end %>
+          <%= f.text_field :abv, placeholder: "ABV (%)",label:false %>
+          <%= f.text_field :ibu, placeholder: "IBU",label:false %>
 
           <br>
-          <br>
-          
-          <h6>Campaign Updates?</h6>
-            <%= f.text_area :updates, as: :text, :rows => "5", :cols => "50", class: 'wysihtml5 textbox', label: false;%>
-          <hr>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -44,10 +31,7 @@
                 <%= f.check_box :existingline %> Enable?
                 <%= f.text_field :existingurl, placeholder: "Product URL",label:false,class:'textbox' %>
                 <hr style="border-color:black;">
-              <h6>Limited Edition Information:</h6>
-              <%= f.check_box :limited %> Enable?
               <br>
-                <%= f.text_area :limitednumber, :rows => "3", placeholder: "i.e. Limited Edition 500 Units", class: 'textbox', label:false %>
             </div>
           </div>
     </div>
@@ -86,26 +70,17 @@
       <div class="row">
         <div class="col-md-12">
           <h6>Details:</h6>
-            <%= f.text_area :details, as: :text, :rows => "8", :cols => "50", class: 'wysihtml5 textbox', placeholder: "Narrative about product", label:false;%>
-          <h6>Brand Description of Product:</h6>
-            <%= f.text_area :description, as: :text, :rows => "3", :cols => "50", class: 'wysihtml5 textbox', placeholder: "Why is the brand making this product, what makes it special, what inspired the idea?", label:false;%>
+            <%= f.text_area :tasting_notes, as: :text, :rows => "8", :cols => "50", class: 'wysihtml5 textbox', placeholder: "Narrative about product", label:false;%>
          
           <div class="row">
-            <hr style="border-color:black;">
-            <div class="col-md-12">   
-              <h6>FEATURES:</h6>
-              <%= f.text_area :features, as: :text, :rows => "10", :cols => "20", class: 'wysihtml5 textbox', label: false;%>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-5">
-              <h6>Dimensions?</h6>
+            <div class="col-md-6">
+              <h6>Grain Bill:</h6>
               <p style="font-size:.8em;">(i.e. 10"Wx12"H)</p>
-              <%= f.text_area :dimensions, :rows => "5" ,label:false %>
+              <%= f.text_area :grain_bill, as: :text, :rows => "6", :cols => "20", class: 'wysihtml5 textbox', label:false;%>
             </div>
-            <div class="col-md-7">
-              <h6>MATERIALS:</h6>
-              <%= f.text_area :materials, as: :text, :rows => "8", :cols => "20", class: 'wysihtml5 textbox', label:false;%>
+            <div class="col-md-6">
+              <h6>Hops:</h6>
+              <%= f.text_area :hops, as: :text, :rows => "6", :cols => "20", class: 'wysihtml5 textbox', label:false;%>
             </div>
             
           </div>
