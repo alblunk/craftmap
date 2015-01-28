@@ -33,7 +33,7 @@
       <%= image_tag(@brand.logo, id: "brand-logo-preview") %>
       <h6 style="margin-bottom:-15px">MEET THE BREWERY:</h6>
       <h3><%=@brand.name.html_safe%></h3>
-      <h5 class="location" style="font-size:.85em;letter-spacing:1px;" ><%=@brand.location.html_safe%></h5>
+      <h5 class="location" style="font-size:.85em;letter-spacing:1px;" ><%=@brand.city.html_safe%>,&nbsp;<%=@brand.state.html_safe%></h5>
 
     </div>
   </div>
@@ -56,6 +56,7 @@
       <p><%=@brand.profile.html_safe%></p>
       <hr class="black-hr">
         <div class="centerize">
+            <h5 style="font-size:.85em;letter-spacing:1px;" ><span style="font-weight:900"><%=@brand.name.html_safe%></span><br><%=@brand.street.html_safe%><br><%=@brand.city.html_safe%>,&nbsp;<%=@brand.state.html_safe%>&nbsp;<%=@brand.zip%></h5>
             <span id="social-places">PLACES TO VISIT:</span>
             <!-- HOME -->
             <% if @brand.home_page != "" %>
@@ -77,6 +78,18 @@
             <% if @brand.tumblr != "" %>
               <a href="http://<%= @brand.tumblr %>.tumblr.com/" target="blank"><%= image_tag("tumblr_square_black.png", class: "brandsocial") %></a>
             <% end %>
+            <!-- UNTAPPD -->
+            <% if @brand.untappd != "" %>
+              <a href="http://untappd.com/<%= @brand.untappd %>" target="blank"><%= image_tag("untappd_square_black.png", class: "brandsocial") %></a>
+            <% end %>
+            <!-- RATE BEER -->
+            <% if @brand.ratebeer != "" %>
+              <a href="http://ratebeer.com/brewers/<%= @brand.ratebeer %>" target="blank"><%= image_tag("ratebeer_square_black.png", class: "brandsocial") %></a>
+            <% end %>
+            <!-- BEER ADVOCATE -->
+            <% if @brand.beeradvocate != "" %>
+              <a href="http://beeradvocate.com/beer/profile/<%= @brand.beeradvocate %>" target="blank"><%= image_tag("beeradvocate_square_black.png", class: "brandsocial") %></a>
+            <% end %>
       </div>
       <% if current_user.try(:admin?) %>
     <hr class="black-hr">
@@ -87,8 +100,6 @@
       
         <h6>Brand Contacts & Information:</h6>
         Main: <%= @brand.main_contact unless @brand.main_contact.blank? %>
-        <br>
-        Fulfillment: <%= @brand.fulfillment_contact unless @brand.fulfillment_contact.blank? %>
         <br>
       </div>
       Notes:
@@ -120,7 +131,7 @@
   </div> -->
   <div class="row">
     <div class="col-md-12">
-      <a href="#existing-modal-brand" style="cursor:help;" data-toggle="modal"><h5 style="padding-bottom:2px; color:black; letter-spacing:1px; font-size:1.1em;"class="centerize" >THE STAPLES</h5></a>
+      <h5 style="padding-bottom:2px; color:black; letter-spacing:1px; font-size:1.1em;"class="centerize" >THE STAPLES</h5>
       <hr class="centerize" style="padding-bottom:10px; width:60%">
     </div>
   </div>

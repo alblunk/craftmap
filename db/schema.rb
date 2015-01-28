@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150127070124) do
+ActiveRecord::Schema.define(version: 20150128045200) do
 
   create_table "brands", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "profile"
-    t.string   "location"
+    t.string   "city"
     t.integer  "owner_id"
     t.string   "facebook"
     t.string   "twitter"
@@ -33,7 +33,12 @@ ActiveRecord::Schema.define(version: 20150127070124) do
     t.string   "vid_youtube"
     t.string   "main_contact"
     t.text     "current_notes"
-    t.string   "fulfillment_contact"
+    t.string   "state"
+    t.integer  "zip"
+    t.string   "street"
+    t.string   "untappd"
+    t.string   "ratebeer"
+    t.string   "beeradvocate"
   end
 
   add_index "brands", ["owner_id"], name: "index_brands_on_owner_id"

@@ -4,7 +4,7 @@
       <div class="form-actions" style="padding:10px;">
         <%= f.submit class: "btn btn-primary" %>
       </div>
-      <div class="col-md-3 forms-admin">
+      <div class="col-md-5 forms-admin">
         <%#= brand.error_notification %>
         <br>
         <span class="label label-warning">Active?</span>
@@ -14,7 +14,10 @@
 
         <%= f.text_field :name, placeholder: "Brand Name", label:false;  %>
         <br>
-        <%= f.text_field :location, placeholder: "Location (City, State)", label:false; %>
+        <%= f.text_field :street, placeholder: "Street", label:false; %>
+        <%= f.text_field :city, placeholder: "City", label:false; %>, <%= f.text_field :state, placeholder: "State", label:false; %>
+        <%= f.text_field :zip, placeholder: "Zip Code", label:false; %>
+        
         <%= f.text_field :founders, placeholder: "Founder's First Name(s)?", label:false; %>
 
         <br>
@@ -28,9 +31,12 @@
           tmblr:<%= f.text_field :tumblr, placeholder: "_____.tumblr.com/" %>
           vimeo:<%= f.text_field :vid_vimeo, placeholder: "Video ID" %>
           youtube:<%= f.text_field :vid_youtube, placeholder: "Video ID" %>
+          untappd:<%= f.text_field :untappd, placeholder: "untappd.com/_________" %>
+          ratebeer:<%= f.text_field :ratebeer, placeholder: "ratebeer.com/brewers/____/____" %>
+          beeradvocate:<%= f.text_field :beeradvocate, placeholder: "beeradvocate.com/beer/profile/______/" %>
         </p>
       </div>
-      <div class="col-md-9">
+      <div class="col-md-7">
         <div class="row">
           <div class="col-md-6">
             <br>

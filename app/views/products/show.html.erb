@@ -106,7 +106,7 @@
               <% if current_user.try(:admin?) %>
                   <p style="font-size:.55em;margin-bottom:10px;margin-top:-5px"><%= link_to "[EDIT BRAND]", edit_brand_path([@brand])%></p>
               <%end%>
-              <h5 class="location" style="font-size:.85em;letter-spacing:1px;" ><%=@product.brand.location.html_safe%></h5>
+              <h5 class="location" style="font-size:.85em;letter-spacing:1px;" ><%=@product.brand.city.html_safe%>,&nbsp;<%=@product.brand.state.html_safe%></h5>
               
             </div>
           </div>
