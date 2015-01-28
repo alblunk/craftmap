@@ -23,4 +23,11 @@ gem 'gibbon'
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
 gem 'bootstrap-wysihtml5-rails'
 
-gem 'sqlite3'
+# group :production do
+# 	gem 'rails_12factor'
+# 	gem "pg"
+# end
+
+group :development, :test do
+	gem 'sqlite3'
+end
