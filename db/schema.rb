@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150128045200) do
+ActiveRecord::Schema.define(version: 20150204061447) do
 
   create_table "brands", force: true do |t|
     t.string   "name"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20150128045200) do
     t.string   "untappd"
     t.string   "ratebeer"
     t.string   "beeradvocate"
+    t.string   "public_information"
   end
 
   add_index "brands", ["owner_id"], name: "index_brands_on_owner_id"

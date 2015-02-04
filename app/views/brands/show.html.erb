@@ -57,6 +57,10 @@
       <hr class="black-hr">
         <div class="centerize">
             <h5 style="font-size:.85em;letter-spacing:1px;" ><span style="font-weight:900"><%=@brand.name.html_safe%></span><br><%=@brand.street.html_safe%><br><%=@brand.city.html_safe%>,&nbsp;<%=@brand.state.html_safe%>&nbsp;<%=@brand.zip%></h5>
+              <hr style="margin-bottom:2px;width:20%;opacity:.6">
+              <h6 style="font-size:.6em !important;pointer-events:none;"><%=@brand.public_information.html_safe%></h6>
+              <hr style="margin-top:2px;width:20%;opacity:.6">
+
             <span id="social-places">PLACES TO VISIT:</span>
             <!-- HOME -->
             <% if @brand.home_page != "" %>

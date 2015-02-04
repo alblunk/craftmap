@@ -58,7 +58,7 @@ class BrandsController < ApplicationController
     # TODO may be missing something here to set owner_id
     def brand_params
       params.require(:brand).permit(:name, :profile, :city, :state, :zip, :street, :untappd, :ratebeer, :beeradvocate, :owner, :founders, :main_contact, :current_notes, 
-                                    :facebook, :twitter, :instagram, :tumblr, :vid_vimeo, :vid_youtube,
+                                    :facebook, :twitter, :instagram, :tumblr, :vid_vimeo, :vid_youtube, :public_information,
                                     :home_page, :active, :logo,
                                     profile_image_attributes: [ :image ])
     end

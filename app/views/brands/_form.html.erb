@@ -12,13 +12,16 @@
         <br>
         <br>
 
+        <span class="label label-success">Public?</span>
+        <%= f.text_field :public_information, placeholder: "Taproom / Not Open to Public", label:false; %>
+
         <%= f.text_field :name, placeholder: "Brand Name", label:false;  %>
         <br>
         <%= f.text_field :street, placeholder: "Street", label:false; %>
         <%= f.text_field :city, placeholder: "City", label:false; %>
         <%= f.text_field :state, placeholder: "State", label:false; %>
         <%= f.text_field :zip, placeholder: "Zip Code", label:false; %>
-        
+                
         <%= f.text_field :founders, placeholder: "Founder's First Name(s)?", label:false; %>
 
         <br>
